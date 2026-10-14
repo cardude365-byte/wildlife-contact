@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07111b" />
+  <meta name="description" content="Wildlife Ops LLC services — bat exclusions, raccoon removal, squirrel removal, skunk removal, rodent control and wildlife exclusion in Ohio." />
+  <title>Services | Wildlife Ops LLC</title>
+  <style>
+    :root{
+      --bg:#07111b;
+      --panel:#0c1823;
+      --panel2:#101f2c;
+      --green:#83d52a;
+      --text:#f4f7f2;
+      --muted:#bac5bc;
+      --line:#253544;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 80% 5%,rgba(55,104,143,.23),transparent 30rem),
+        linear-gradient(180deg,#07111b,#05090d 70%);
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    .nav{
+      position:sticky;top:0;z-index:10;
+      background:rgba(5,12,18,.94);
+      border-bottom:1px solid rgba(255,255,255,.09);
+      backdrop-filter:blur(8px);
+    }
+    .nav-inner{
+      max-width:1180px;margin:auto;padding:15px 20px;
+      display:flex;align-items:center;justify-content:space-between;gap:18px;
+    }
+    .brand{font-weight:900;letter-spacing:.04em;font-size:21px}
+    .brand span{color:var(--green)}
+    .nav-links{display:flex;gap:22px;align-items:center;font-weight:700}
+    .nav-links a:hover{color:var(--green)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      background:var(--green);color:#071109;
+      padding:12px 18px;border-radius:12px;font-weight:900;
+      border:1px solid #a6ed58;
+    }
+    .btn.alt{background:transparent;color:var(--text);border-color:#4b6170}
+    .hero{max-width:1180px;margin:auto;padding:72px 20px 38px}
+    .eyebrow{color:var(--green);font-weight:900;text-transform:uppercase;letter-spacing:.12em}
+    h1{font-size:clamp(44px,8vw,88px);line-height:.95;margin:12px 0 18px;text-transform:uppercase}
+    .lead{max-width:780px;font-size:20px;color:#d9e1da}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .section{max-width:1180px;margin:auto;padding:40px 20px 80px}
+    .section h2{font-size:34px;margin:0 0 10px}
+    .section-intro{color:var(--muted);max-width:760px;margin:0 0 26px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{
+      background:linear-gradient(180deg,var(--panel2),var(--panel));
+      border:1px solid var(--line);border-radius:18px;padding:25px;
+      min-height:270px;display:flex;flex-direction:column;
+      box-shadow:0 16px 35px rgba(0,0,0,.18);
+    }
+    .icon{
+      width:48px;height:48px;border-radius:50%;display:grid;place-items:center;
+      border:2px solid var(--green);color:var(--green);font-size:24px;margin-bottom:14px;
+    }
+    .card h3{font-size:24px;margin:0 0 10px}
+    .card p{color:var(--muted);margin:0 0 20px}
+    .card .link{margin-top:auto;font-weight:900;color:var(--green)}
+    .cta{max-width:1140px;margin:0 auto 70px;padding:0 20px}
+    .cta-box{
+      border:1px solid #3a5b37;border-radius:18px;
+      background:linear-gradient(135deg,#12351b,#0c1d16);
+      padding:28px;display:flex;align-items:center;justify-content:space-between;gap:22px;
+    }
+    .cta-box h2{margin:0 0 8px}
+    .cta-box p{margin:0;color:#cbd7ce}
+    footer{border-top:1px solid var(--line);padding:30px 20px;text-align:center;color:#96a49a}
+    @media(max-width:850px){
+      .grid{grid-template-columns:1fr 1fr}
+      .nav-links a:not(.btn){display:none}
+    }
+    @media(max-width:580px){
+      .grid{grid-template-columns:1fr}
+      .hero{padding-top:48px}
+      .cta-box{display:block}
+      .cta-box .btn{margin-top:18px}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">WILDLIFE <span>OPS</span> LLC</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html" style="color:#83d52a">Services</a>
+        <a class="btn" href="tel:+13305659322">Call Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Ohio Nuisance Wildlife Control</div>
+      <h1>Wildlife Services</h1>
+      <p class="lead">From bats in the attic to nuisance animals around your home, Wildlife Ops provides practical wildlife removal, exclusion, control and property-protection solutions.</p>
+      <div class="hero-actions">
+        <a class="btn" href="tel:+13305659322">Call 330-565-9322</a>
+        <a class="btn alt" href="sms:+13305659322">Text Wildlife Ops</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>What We Handle</h2>
+      <p class="section-intro">Choose a service below. We’ll keep building dedicated pages for each service so homeowners can quickly understand the problem and what Wildlife Ops can do about it.</p>
+
+      <div class="grid">
+        <a class="card" href="bat-exclusions.html">
+          <div class="icon">🦇</div>
+          <h3>Bat Exclusions</h3>
+          <p>Identify bat entry points, use one-way exclusion methods and address openings so bats can leave without simply being sealed inside.</p>
+          <div class="link">View Bat Exclusions →</div>
+        </a>
+
+        <div class="card">
+          <div class="icon">◉</div>
+          <h3>Raccoon Removal</h3>
+          <p>Help with raccoons around roofs, attics, chimneys and structures, including removal and recommendations for preventing repeat entry.</p>
+          <a class="link" href="tel:+13305659322">Call about raccoons →</a>
+        </div>
+
+        <div class="card">
+          <div class="icon">●</div>
+          <h3>Squirrel Removal</h3>
+          <p>Inspection and control for squirrels entering attics, soffits and rooflines, with attention to access points and structural damage.</p>
+          <a class="link" href="tel:+13305659322">Call about squirrels →</a>
+        </div>
+
+        <div class="card">
+          <div class="icon">◆</div>
+          <h3>Skunk Removal</h3>
+          <p>Solutions for skunks under decks, sheds and other structures, with practical removal and prevention recommendations.</p>
+          <a class="link" href="tel:+13305659322">Call about skunks →</a>
+        </div>
+
+        <div class="card">
+          <div class="icon">●</div>
+          <h3>Rodent Control</h3>
+          <p>Mouse and rat control focused on activity, entry points and the conditions that allow rodents to keep returning.</p>
+          <a class="link" href="tel:+13305659322">Call about rodents →</a>
+        </div>
+
+        <div class="card">
+          <div class="icon">⌂</div>
+          <h3>Protect Your Home</h3>
+          <p>Wildlife exclusion and prevention work designed to close vulnerable areas and reduce the chances of future wildlife entry.</p>
+          <a class="link" href="tel:+13305659322">Ask about exclusion work →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta-box">
+        <div>
+          <h2>Not sure what animal is causing the problem?</h2>
+          <p>Call or text Wildlife Ops. Tell us what you’re seeing or hearing and we’ll help you figure out the next step.</p>
+        </div>
+        <a class="btn" href="tel:+13305659322">330-565-9322</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>Wildlife Ops LLC • Nuisance Wildlife Control • Ohio</footer>
+</body>
+</html>
