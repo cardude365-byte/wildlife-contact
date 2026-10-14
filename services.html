@@ -38,10 +38,37 @@
       max-width:1180px;margin:auto;padding:15px 20px;
       display:flex;align-items:center;justify-content:space-between;gap:18px;
     }
-    .brand{font-weight:900;letter-spacing:.04em;font-size:21px}
-    .brand span{color:var(--green)}
+    .brand{
+      display:flex;
+      align-items:center;
+      flex:0 0 auto;
+      line-height:0;
+    }
+    .brand img{
+      display:block;
+      width:220px;
+      height:auto;
+      max-width:32vw;
+    }
     .nav-links{display:flex;gap:22px;align-items:center;font-weight:700}
-    .nav-links a:hover{color:var(--green)}
+    .nav-links a:not(.btn){position:relative;padding:8px 0;transition:color .2s ease}
+    .nav-links a:not(.btn)::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:100%;
+      height:3px;
+      background:var(--green);
+      transform:scaleX(0);
+      transform-origin:left;
+      transition:transform .28s ease;
+      border-radius:3px;
+    }
+    .nav-links a:not(.btn):hover{color:var(--green)}
+    .nav-links a:not(.btn):hover::after,
+    .nav-links a.active::after{transform:scaleX(1)}
+    .nav-links a.active{color:var(--green)}
     .btn{
       display:inline-flex;align-items:center;justify-content:center;
       background:var(--green);color:#071109;
@@ -65,8 +92,13 @@
       box-shadow:0 16px 35px rgba(0,0,0,.18);
     }
     .icon{
-      width:48px;height:48px;border-radius:50%;display:grid;place-items:center;
-      border:2px solid var(--green);color:var(--green);font-size:24px;margin-bottom:14px;
+      width:64px;
+      height:64px;
+      border-radius:50%;
+      display:block;
+      object-fit:cover;
+      margin:0 0 16px 0;
+      flex:0 0 auto;
     }
     .card h3{font-size:24px;margin:0 0 10px}
     .card p{color:var(--muted);margin:0 0 20px}
@@ -85,6 +117,8 @@
       .nav-links a:not(.btn){display:none}
     }
     @media(max-width:580px){
+      .brand img{width:170px;max-width:52vw}
+      .icon{width:56px;height:56px}
       .grid{grid-template-columns:1fr}
       .hero{padding-top:48px}
       .cta-box{display:block}
@@ -95,10 +129,10 @@
 <body>
   <header class="nav">
     <div class="nav-inner">
-      <a class="brand" href="index.html">WILDLIFE <span>OPS</span> LLC</a>
+      <a class="brand" href="index.html" aria-label="Wildlife Ops LLC home"><img src="wildlife-ops-logo.png" alt="Wildlife Ops LLC — Nuisance Wildlife Control"></a>
       <nav class="nav-links" aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="services.html" style="color:#83d52a">Services</a>
+        <a class="active" href="services.html" aria-current="page">Services</a>
         <a class="btn" href="tel:+13305659322">Call Now</a>
       </nav>
     </div>
@@ -121,42 +155,42 @@
 
       <div class="grid">
         <a class="card" href="bat-exclusions.html">
-          <div class="icon">🦇</div>
+          <img class="icon" src="bat-icon.png" alt="Bat icon">
           <h3>Bat Exclusions</h3>
           <p>Identify bat entry points, use one-way exclusion methods and address openings so bats can leave without simply being sealed inside.</p>
           <div class="link">Learn About Bat Exclusions →</div>
         </a>
 
         <div class="card">
-          <div class="icon">◉</div>
+          <img class="icon" src="raccoon-icon.png" alt="Raccoon icon">
           <h3>Raccoon Solutions</h3>
           <p>Help with raccoons around roofs, attics, chimneys and structures, including control and recommendations for preventing repeat entry.</p>
           <a class="link" href="tel:+13305659322">Get Help With Raccoons →</a>
         </div>
 
         <div class="card">
-          <div class="icon">●</div>
-          <h3>Squirrel Control</h3>
-          <p>Inspection and control for squirrels entering attics, soffits and rooflines, with attention to access points and structural damage.</p>
+          <img class="icon" src="squirrel-icon.png" alt="Squirrel icon">
+          <h3>Squirrel Exclusion</h3>
+          <p>Inspection and exclusion work for squirrels entering attics, soffits and rooflines, with attention to access points and structural damage.</p>
           <a class="link" href="tel:+13305659322">Get Help With Squirrels →</a>
         </div>
 
         <div class="card">
-          <div class="icon">◆</div>
-          <h3>Skunk Control</h3>
-          <p>Solutions for skunks under decks, sheds and other structures, with practical control and prevention recommendations.</p>
+          <img class="icon" src="skunk-icon.png" alt="Skunk icon">
+          <h3>Skunk Solutions</h3>
+          <p>Practical solutions for skunks under decks, sheds and other structures, including removal strategies and prevention recommendations.</p>
           <a class="link" href="tel:+13305659322">Get Help With Skunks →</a>
         </div>
 
         <div class="card">
-          <div class="icon">●</div>
+          <img class="icon" src="rodent-icon.png" alt="Rodent icon">
           <h3>Rodent Control</h3>
           <p>Mouse and rat control focused on activity, entry points and the conditions that allow rodents to keep returning.</p>
           <a class="link" href="tel:+13305659322">Get Help With Rodents →</a>
         </div>
 
         <div class="card">
-          <div class="icon">⌂</div>
+          <img class="icon" src="home-icon.png" alt="Home protection icon">
           <h3>Home Protection</h3>
           <p>Wildlife exclusion and prevention work designed to close vulnerable areas and reduce the chances of future wildlife entry.</p>
           <a class="link" href="tel:+13305659322">Protect Your Home →</a>
