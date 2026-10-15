@@ -13,11 +13,49 @@
     .hero{position:relative;width:100%;max-width:1536px;margin:0 auto;line-height:0}
     .hero img{display:block;width:100%;height:auto}
     .hotspot{position:absolute;display:block;z-index:2;border-radius:14px}
-    .call-top{left:81.2%;top:2.4%;width:12.4%;height:5.3%}
+    .logo-home{left:3.0%;top:1.8%;width:27.0%;height:16.0%}
+    .home-nav{left:36.6%;top:2.4%;width:4.9%;height:5.3%}
     .services-nav{left:42.8%;top:2.4%;width:6.9%;height:5.3%}
     .about-nav{left:50.6%;top:2.4%;width:5.5%;height:5.3%}
+    .service-area-nav{left:57.2%;top:2.4%;width:9.0%;height:5.3%}
+    .contact-nav{left:67.3%;top:2.4%;width:6.5%;height:5.3%}
+    .call-top{left:81.2%;top:2.4%;width:12.4%;height:5.3%}
+    .menu-toggle{left:95.3%;top:2.2%;width:3.4%;height:5.8%;border:0;background:transparent;cursor:pointer}
     .call-main{left:3.7%;top:61.6%;width:31.2%;height:11.6%}
-    .bat-service{left:4.5%;top:79.5%;width:11.5%;height:19%}
+
+    .bat-service{left:3.0%;top:78.4%;width:13.8%;height:20.4%}
+    .raccoon-service{left:18.1%;top:78.4%;width:14.0%;height:20.4%}
+    .squirrel-service{left:34.0%;top:78.4%;width:14.0%;height:20.4%}
+    .skunk-service{left:50.3%;top:78.4%;width:14.0%;height:20.4%}
+    .rodent-service{left:66.7%;top:78.4%;width:14.0%;height:20.4%}
+    .home-service{left:83.0%;top:78.4%;width:14.0%;height:20.4%}
+
+    .quick-menu{
+      position:absolute;
+      z-index:8;
+      top:8.8%;
+      right:2.7%;
+      width:260px;
+      padding:14px;
+      border:1px solid #334654;
+      border-radius:16px;
+      background:rgba(5,12,18,.97);
+      box-shadow:0 20px 48px rgba(0,0,0,.42);
+      line-height:1.2;
+      display:none;
+    }
+    .quick-menu.open{display:block}
+    .quick-menu a{
+      display:block;
+      padding:13px 14px;
+      border-radius:10px;
+      color:#fff;
+      text-decoration:none;
+      font-weight:800;
+      font-size:16px;
+    }
+    .quick-menu a:hover{background:#15231a;color:#98db43}
+    .quick-menu .menu-call{background:#91d53c;color:#081007;margin-top:6px;text-align:center}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     @media (max-width:700px){
       body{background:#07111b}
@@ -30,12 +68,54 @@
   <main class="hero" aria-label="Wildlife Ops LLC home page">
     <div class="hero-inner">
       <img src="wildlife-ops-hero.png" alt="Wildlife Ops LLC nuisance wildlife control services in Ohio" />
-      <a class="hotspot call-top" href="tel:+13305659322" aria-label="Call Wildlife Ops at 330-565-9322"><span class="sr-only">Call 330-565-9322</span></a>
+
+      <a class="hotspot logo-home" href="index.html" aria-label="Wildlife Ops home"><span class="sr-only">Wildlife Ops Home</span></a>
+
+      <a class="hotspot home-nav" href="index.html" aria-label="Home"><span class="sr-only">Home</span></a>
       <a class="hotspot services-nav" href="services.html" aria-label="View Wildlife Ops services"><span class="sr-only">Services</span></a>
       <a class="hotspot about-nav" href="about.html" aria-label="About Wildlife Ops"><span class="sr-only">About Wildlife Ops</span></a>
-      <a class="hotspot call-main" href="tel:+13305659322" aria-label="Call or text Wildlife Ops at 330-565-9322"><span class="sr-only">Call or text 330-565-9322</span></a>
-      <a class="hotspot bat-service" href="bat-exclusions.html" aria-label="Learn about Wildlife Ops bat exclusion services"><span class="sr-only">Bat Exclusions</span></a>
+      <a class="hotspot service-area-nav" href="service-area.html" aria-label="Wildlife Ops service area"><span class="sr-only">Service Area</span></a>
+      <a class="hotspot contact-nav" href="contact.html" aria-label="Contact Wildlife Ops"><span class="sr-only">Contact Wildlife Ops</span></a>
+
+      <a class="hotspot call-top" href="tel:+13305659322" aria-label="Call Wildlife Ops at 330-565-9322"><span class="sr-only">Call 330-565-9322</span></a>
+      <button class="hotspot menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false"></button>
+
+      <a class="hotspot call-main" href="tel:+13305659322" aria-label="Call Wildlife Ops at 330-565-9322"><span class="sr-only">Call or text 330-565-9322</span></a>
+
+      <a class="hotspot bat-service" href="bat-exclusions.html" aria-label="Bat Exclusions"><span class="sr-only">Bat Exclusions</span></a>
+      <a class="hotspot raccoon-service" href="raccoon-solutions.html" aria-label="Raccoon Solutions"><span class="sr-only">Raccoon Solutions</span></a>
+      <a class="hotspot squirrel-service" href="squirrel-exclusion.html" aria-label="Squirrel Exclusion"><span class="sr-only">Squirrel Exclusion</span></a>
+      <a class="hotspot skunk-service" href="skunk-solutions.html" aria-label="Skunk Solutions"><span class="sr-only">Skunk Solutions</span></a>
+      <a class="hotspot rodent-service" href="rodent-control.html" aria-label="Rodent Control"><span class="sr-only">Rodent Control</span></a>
+      <a class="hotspot home-service" href="home-protection.html" aria-label="Home Protection"><span class="sr-only">Home Protection</span></a>
+
+      <nav class="quick-menu" id="quickMenu" aria-label="Quick navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="service-area.html">Service Area</a>
+        <a href="contact.html">Contact</a>
+        <a class="menu-call" href="tel:+13305659322">Call 330-565-9322</a>
+      </nav>
     </div>
   </main>
+  <script>
+    (function(){
+      const toggle = document.getElementById('menuToggle');
+      const menu = document.getElementById('quickMenu');
+      if(!toggle || !menu) return;
+      toggle.addEventListener('click', function(e){
+        e.stopPropagation();
+        const open = menu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('click', function(e){
+        if(!menu.contains(e.target) && e.target !== toggle){
+          menu.classList.remove('open');
+          toggle.setAttribute('aria-expanded','false');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
