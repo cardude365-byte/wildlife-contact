@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070d12">
+<meta name="description" content="Contact Wildlife Ops LLC for nuisance wildlife control in Ohio.">
+<title>Contact | Wildlife Ops LLC</title>
+<style>
+
+:root{
+  --bg:#05090d;--nav:#070d12;--panel:#0b141c;--panel2:#101b24;
+  --line:#263744;--green:#93d83e;--text:#f5f7f4;--muted:#c3ccc5;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:linear-gradient(180deg,#07111b 0%,#05090d 70%);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.site-header{position:sticky;top:0;z-index:20;background:rgba(7,13,18,.97);border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(10px)}
+.nav{max-width:1280px;margin:auto;min-height:108px;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.logo img{display:block;width:315px;max-width:42vw;height:auto}
+.navlinks{display:flex;align-items:center;gap:25px;font-size:17px;font-weight:800}
+.navitem{position:relative;padding:13px 0}
+.navitem::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:3px;background:var(--green);border-radius:3px;transform:scaleX(0);transform-origin:left;transition:transform .22s ease}
+.navitem:hover::after,.navitem.active::after{transform:scaleX(1)}
+.navitem.active{color:var(--green)}
+.call{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:14px;color:#081007;background:linear-gradient(180deg,#a9ea58,#86ca35);border:1px solid #bff67a;font-weight:900}
+.secondary{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border:1px solid #526978;border-radius:13px;font-weight:900}
+.hero{max-width:1180px;margin:auto;padding:66px 24px 54px}
+.eyebrow{color:var(--green);font-weight:900;font-size:14px;letter-spacing:.14em;text-transform:uppercase}
+h1{margin:10px 0 16px;font-size:clamp(48px,7vw,82px);line-height:.96;letter-spacing:-.04em}
+.hero p{max-width:760px;margin:0;color:#d8e1da;font-size:20px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.section{max-width:1180px;margin:auto;padding:58px 24px}
+.section h2{margin:0 0 10px;font-size:clamp(32px,5vw,46px)}
+.section-intro{max-width:800px;margin:0 0 30px;color:var(--muted);font-size:18px}
+.card{border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,var(--panel2),var(--panel));box-shadow:0 16px 35px rgba(0,0,0,.18)}
+footer{padding:32px 20px;text-align:center;color:#95a39a;border-top:1px solid var(--line)}
+@media(max-width:900px){
+  .logo img{width:260px;max-width:42vw}
+  .navlinks{gap:16px;font-size:15px}
+}
+@media(max-width:700px){
+  .nav{min-height:84px;padding:9px 14px}
+  .logo img{width:185px;max-width:58vw}
+  .navitem{display:none}
+  .call{padding:11px 14px}
+  .hero{padding:44px 18px 38px}
+  .hero p{font-size:18px}
+  .section{padding:44px 18px}
+}
+
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.contact-card{padding:30px}
+.contact-card h3{margin:0 0 10px;font-size:28px}
+.contact-card p{color:var(--muted);font-size:18px}
+.contact-button{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:17px 18px;margin-top:14px;border-radius:14px;background:#0e1a23;border:1px solid #314655;font-weight:900}
+.contact-button:hover{border-color:#6aa631}
+.checks{list-style:none;margin:0;padding:0}
+.checks li{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.07);color:#d7e0d9}
+.checks li::before{content:"✓";color:var(--green);font-weight:900;margin-right:10px}
+@media(max-width:700px){.contact-grid{grid-template-columns:1fr}}
+
+/* ===== Wildlife Ops unified interior header ===== */
+.wo-header{
+  position:sticky;top:0;z-index:9999;
+  background:#000;
+  border-bottom:1px solid rgba(151,210,62,.26);
+  box-shadow:0 5px 22px rgba(0,0,0,.28);
+}
+.wo-nav{
+  width:min(100%,1360px);
+  min-height:94px;
+  margin:0 auto;
+  padding:8px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+.wo-logo{
+  flex:0 1 390px;
+  min-width:250px;
+  display:flex;
+  align-items:center;
+  line-height:0;
+}
+.wo-logo img{
+  display:block;
+  width:100%;
+  max-width:390px;
+  height:auto;
+  object-fit:contain;
+}
+.wo-desktop-links{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:25px;
+  white-space:nowrap;
+}
+.wo-navlink{
+  position:relative;
+  padding:14px 0 11px;
+  color:#f6f7f3;
+  font-size:16px;
+  font-weight:800;
+  line-height:1;
+}
+.wo-navlink::after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:3px;
+  height:3px;
+  border-radius:4px;
+  background:#9abd45;
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .18s ease;
+}
+.wo-navlink:hover::after,.wo-navlink.active::after{transform:scaleX(1)}
+.wo-navlink.active{color:#a6c94c}
+.wo-call{
+  min-width:198px;
+  min-height:58px;
+  padding:8px 16px;
+  border-radius:13px;
+  background:linear-gradient(180deg,#a9ce4d,#8caf38);
+  color:#071008;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:11px;
+  font-weight:950;
+  line-height:1.02;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.35);
+}
+.wo-call small{
+  display:block;
+  font-size:12px;
+  font-weight:900;
+  margin-bottom:3px;
+}
+.wo-phone-icon{font-size:25px}
+.wo-mobile-actions{display:none;align-items:center;gap:8px}
+.wo-mobile-call{
+  height:43px;
+  padding:0 13px;
+  border-radius:11px;
+  background:#9abd45;
+  color:#071008;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:950;
+  font-size:13px;
+}
+.wo-menu-button{
+  width:44px;height:43px;
+  padding:0;
+  border-radius:11px;
+  border:1px solid #34444d;
+  background:#101820;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  cursor:pointer;
+}
+.wo-menu-button span{
+  display:block;width:20px;height:2px;border-radius:2px;background:#fff;
+}
+.wo-mobile-drawer{
+  display:none;
+  background:#05090d;
+  border-top:1px solid rgba(255,255,255,.06);
+  padding:8px 14px 15px;
+}
+.wo-mobile-drawer.open{display:block}
+.wo-mobile-drawer>a{
+  display:block;
+  padding:14px 12px;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  color:#f5f7f3;
+  font-weight:850;
+  line-height:1.15;
+}
+.wo-mobile-drawer>a.active{color:#a8cd4c}
+.wo-mobile-drawer .wo-drawer-call{
+  margin-top:10px;
+  border:0;
+  border-radius:12px;
+  background:#9abd45;
+  color:#071008;
+  text-align:center;
+}
+@media(max-width:1050px){
+  .wo-nav{min-height:82px;padding:7px 14px}
+  .wo-logo{flex-basis:300px;min-width:220px}
+  .wo-logo img{max-width:300px}
+  .wo-desktop-links{gap:17px}
+  .wo-navlink{font-size:14px}
+  .wo-call{min-width:165px;font-size:14px}
+}
+@media(max-width:790px){
+  .wo-header{position:sticky}
+  .wo-nav{min-height:72px;padding:7px 11px}
+  .wo-logo{flex:0 1 226px;min-width:0}
+  .wo-logo img{width:226px;max-width:55vw}
+  .wo-desktop-links{display:none}
+  .wo-mobile-actions{display:flex}
+}
+@media(max-width:390px){
+  .wo-logo img{width:198px;max-width:52vw}
+  .wo-mobile-call{padding:0 11px}
+}
+
+</style>
+</head>
+<body>
+
+<header class="wo-header">
+  <div class="wo-nav">
+    <a class="wo-logo" href="index.html" aria-label="Wildlife Ops LLC home">
+      <img src="wildlife-ops-header-logo.png" alt="Wildlife Ops LLC - Nuisance Wildlife Control">
+    </a>
+
+    <nav class="wo-desktop-links" aria-label="Primary navigation">
+      <a class="wo-navlink" href="index.html">Home</a>
+      <a class="wo-navlink" href="services.html">Services</a>
+      <a class="wo-navlink" href="about.html">About</a>
+      <a class="wo-navlink" href="service-area.html">Service Area</a>
+      <a class="wo-navlink active" href="contact.html">Contact</a>
+      <a class="wo-call" href="tel:+13305659322">
+        <span class="wo-phone-icon">☎</span>
+        <span><small>Call Now</small>330-565-9322</span>
+      </a>
+    </nav>
+
+    <div class="wo-mobile-actions">
+      <a class="wo-mobile-call" href="tel:+13305659322" aria-label="Call Wildlife Ops">CALL</a>
+      <button class="wo-menu-button" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <nav class="wo-mobile-drawer" aria-label="Mobile navigation">
+    <a class="" href="index.html">Home</a>
+    <a class="" href="services.html">Services</a>
+    <a class="" href="about.html">About</a>
+    <a class="" href="service-area.html">Service Area</a>
+    <a class="active" href="contact.html">Contact</a>
+    <a class="wo-drawer-call" href="tel:+13305659322">Call 330-565-9322</a>
+  </nav>
+</header>
+
+
+<main>
+<section class="hero">
+  <div class="eyebrow">Contact Wildlife Ops</div>
+  <h1>Tell us what's going on.</h1>
+  <p>If you know the animal, great. If you don't, just describe what you're seeing, hearing or smelling and where it's happening.</p>
+</section>
+
+<section class="section">
+  <div class="contact-grid">
+    <article class="card contact-card">
+      <h3>Call, text or email</h3>
+      <p>For the quickest contact, call or text Wildlife Ops directly.</p>
+      <a class="contact-button" href="tel:+13305659322"><span>Call Wildlife Ops</span><span>330-565-9322 →</span></a>
+      <a class="contact-button" href="sms:+13305659322"><span>Send a Text</span><span>330-565-9322 →</span></a>
+      <a class="contact-button" href="mailto:kshallas@outlook.com"><span>Email Wildlife Ops</span><span>Send Email →</span></a>
+    </article>
+
+    <aside class="card contact-card">
+      <h3>Helpful information to include</h3>
+      <ul class="checks">
+        <li>Your city or ZIP code</li>
+        <li>The animal you think you're dealing with</li>
+        <li>Where the activity is occurring</li>
+        <li>What you're seeing, hearing or smelling</li>
+        <li>How long the activity has been happening</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer>Wildlife Ops LLC • Nuisance Wildlife Control • Ohio</footer>
+
+<script>
+(function(){
+  document.querySelectorAll('.wo-header').forEach(function(header){
+    var btn=header.querySelector('.wo-menu-button');
+    var drawer=header.querySelector('.wo-mobile-drawer');
+    if(!btn || !drawer) return;
+    btn.addEventListener('click',function(){
+      var open=drawer.classList.toggle('open');
+      btn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    drawer.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click',function(){
+        drawer.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+      });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
