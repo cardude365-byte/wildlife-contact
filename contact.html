@@ -228,6 +228,27 @@ footer{padding:32px 20px;text-align:center;color:#95a39a;border-top:1px solid va
 .facebook-follow{display:inline-flex;align-items:center;justify-content:center;min-height:44px;margin-top:12px;padding:8px 17px;border:1px solid #72974b;border-radius:6px;background:#192b19;color:#b9e482;font-weight:750}
 .facebook-follow:hover{color:#e4ffc0;background:#263d21;border-color:#a3ce6c}
 .facebook-follow:focus-visible{outline:3px solid #f5f7f4;outline-offset:4px}
+
+/* Inquiry form follows the existing contact-page palette and card treatment. */
+.inquiry{margin-top:22px;padding:30px;scroll-margin-top:110px}
+.inquiry p{color:var(--muted)}
+.inquiry-note{padding:14px 16px;border-left:3px solid var(--green);background:#0e1a23;border-radius:0 10px 10px 0}
+.inquiry-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.inquiry-field{min-width:0}.inquiry-wide{grid-column:1/-1}
+.inquiry label{display:block;font-weight:800;margin-bottom:6px}
+.inquiry input,.inquiry select,.inquiry textarea{width:100%;min-height:48px;border:1px solid #607482;border-radius:10px;background:#07111b;color:var(--text);font:inherit;font-size:16px;padding:11px 12px}
+.inquiry textarea{resize:vertical;min-height:130px}
+.inquiry small{display:block;color:var(--muted);margin-top:5px}
+.inquiry :is(input,select,textarea,button,a):focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.inquiry [aria-invalid=true]{border-color:#ffad9f}
+.inquiry .field-error{color:#ffbdaf;min-height:0}
+.inquiry-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;align-items:center}
+.inquiry button.secondary{background:#101b24;color:var(--text)}.inquiry button:disabled{opacity:.55;cursor:default}.inquiry button{font:inherit;font-weight:900;cursor:pointer;min-height:48px}
+.inquiry [hidden]{display:none!important}
+.inquiry-trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.inquiry-status{scroll-margin-top:110px}
+.inquiry-summary{min-height:300px!important}
+@media(max-width:700px){.inquiry{padding:24px 18px}.inquiry-grid{grid-template-columns:1fr}.inquiry-actions>*{width:100%;text-align:center}.contact-button{flex-wrap:wrap;gap:4px}}
 </style>
 </head>
 <body>
@@ -297,6 +318,41 @@ footer{padding:32px 20px;text-align:center;color:#95a39a;border-top:1px solid va
       </ul>
     </aside>
   </div>
+  <section class="card inquiry" aria-labelledby="inquiry-heading">
+    <div class="eyebrow">Start here</div>
+    <h2 id="inquiry-heading">Tell us about your wildlife problem</h2>
+    <p class="inquiry-note" id="inquiry-notice">Send an inquiry for Wildlife Ops to review. An inquiry does not book a service visit. You can also prepare a message to send by text or email.</p>
+    <noscript><p>Message preparation needs JavaScript. Please use the call, text or email links above.</p></noscript>
+    <form id="inquiry-form" data-endpoint="https://wildlife-ops-stripe-test.kshallas.workers.dev/api/public/inquiries" aria-describedby="inquiry-notice" hidden>
+      <p>Fields marked * are required. Provide a phone number or email address so we can respond.</p>
+      <div id="inquiry-errors" class="inquiry-status" role="alert" tabindex="-1" hidden></div>
+      <fieldset id="inquiry-fields" style="border:0;padding:0;margin:0"><legend class="inquiry-trap">Your contact and service details</legend><div class="inquiry-grid">
+        <div class="inquiry-field inquiry-wide"><label for="customer-name">Your name *</label><input id="customer-name" name="name" autocomplete="name" required maxlength="150"><small class="field-error" id="name-error"></small></div>
+        <div class="inquiry-field"><label for="customer-phone">Phone number</label><input id="customer-phone" name="phone" type="tel" autocomplete="tel" maxlength="30" aria-describedby="contact-hint phone-error"><small class="field-error" id="phone-error"></small></div>
+        <div class="inquiry-field"><label for="customer-email">Email address</label><input id="customer-email" name="email" type="email" autocomplete="email" maxlength="254" aria-describedby="contact-hint email-error"><small class="field-error" id="email-error"></small></div>
+        <small class="inquiry-wide" id="contact-hint">At least one contact method is required.</small>
+        <div class="inquiry-field inquiry-wide"><label for="service-street">Service street address *</label><input id="service-street" name="street" autocomplete="address-line1" required maxlength="200"><small class="field-error" id="street-error"></small></div>
+        <div class="inquiry-field"><label for="service-city">City *</label><input id="service-city" name="city" autocomplete="address-level2" required maxlength="100"><small class="field-error" id="city-error"></small></div>
+        <div class="inquiry-field"><label for="service-state">State *</label><input id="service-state" name="state" autocomplete="address-level1" value="OH" required maxlength="2"><small class="field-error" id="state-error"></small></div>
+        <div class="inquiry-field"><label for="service-zip">ZIP code *</label><input id="service-zip" name="zip" autocomplete="postal-code" inputmode="numeric" required maxlength="10"><small class="field-error" id="zip-error"></small></div>
+        <div class="inquiry-field"><label for="wildlife-concern">Wildlife concern *</label><select id="wildlife-concern" name="concern" required><option value="">Choose a concern</option><option>Bats</option><option>Raccoons</option><option>Squirrels</option><option>Skunks</option><option>Mice or rats</option><option>Chipmunks or voles</option><option>Dead animal removal</option><option>Prevention or exclusion</option><option>Other / not sure</option></select><small class="field-error" id="concern-error"></small></div>
+        <div class="inquiry-field inquiry-wide"><label for="problem-description">Describe the problem *</label><textarea id="problem-description" name="description" required minlength="10" maxlength="1500" aria-describedby="description-hint description-error"></textarea><small id="description-hint">Tell us where the activity is and how long it has been happening (10–1,500 characters). Please leave out payment details, passwords and entry codes.</small><small class="field-error" id="description-error"></small></div>
+      </div>
+      <div class="inquiry-trap" aria-hidden="true"><label for="inquiry-website">Leave this blank</label><input id="inquiry-website" name="website" tabindex="-1" autocomplete="off"></div>
+      <label style="display:flex;gap:12px;margin-top:20px;align-items:flex-start"><input type="checkbox" name="consent" id="inquiry-consent" style="width:22px;min-height:22px;flex:none;margin-top:3px"><span>I agree that Wildlife Ops may store these details and contact me about this inquiry.</span></label></fieldset>
+      <div id="inquiry-challenge" style="margin-top:18px"></div>
+      <p id="inquiry-online-status" role="status">Checking online submission…</p>
+      <div class="inquiry-actions"><button id="send-inquiry" class="call" type="submit" disabled>Send inquiry</button><button id="prepare-inquiry" class="secondary" type="button">Prepare text/email instead</button></div>
+      <p><small>Inquiry details are kept for up to 90 days. Details copied into a customer or job record are kept with that record. Cloudflare checks submissions to help prevent spam. <a style="text-decoration:underline" href="https://wildlife-ops-stripe-test.kshallas.workers.dev/inquiry-privacy">Privacy notice</a></small></p>
+      <section id="inquiry-result" aria-labelledby="summary-heading" hidden>
+        <h3 id="summary-heading">Your message is ready — not sent</h3>
+        <label for="inquiry-summary">Review your message</label>
+        <textarea id="inquiry-summary" class="inquiry-summary" readonly></textarea>
+        <div class="inquiry-actions"><button id="copy-inquiry" class="call" type="button">Copy message</button><a class="secondary" href="sms:+13305659322">Open text message</a><a class="secondary" href="mailto:kyle@wildlife-ops.com">Open email</a></div>
+        <p id="inquiry-feedback" role="status" aria-live="polite"></p>
+      </section>
+    </form>
+  </section>
   <aside class="card review-card" aria-labelledby="review-heading">
     <div>
       <h3 id="review-heading">Have we helped with your wildlife problem?</h3>
@@ -329,5 +385,6 @@ footer{padding:32px 20px;text-align:center;color:#95a39a;border-top:1px solid va
 })();
 </script>
 
+<script src="inquiry.js" defer></script>
 </body>
 </html>
