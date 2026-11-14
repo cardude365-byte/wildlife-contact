@@ -498,4 +498,11 @@ updateUI=function(){gingerUpdateBefore();if(activeMap==='turkey'){document.query
 modeHUD=function(){gingerModeBefore();if(activeMap==='turkey')document.querySelector('#mode-status').textContent=stage<4?'Roll toward the Cookie King Castle!':'MEGA ROLLER! Crunch the big cookie houses.'};
 const gingerEnterBefore=enterTurkeyMap;
 enterTurkeyMap=function(fromCity=false){gingerEnterBefore(fromCity);cornerGinger.style.display='none';document.querySelector('#return-city').textContent='↩ Back to City';document.querySelector('header h1').textContent="Vik's Gingerbread Munch";document.querySelector('header small').textContent='GINGERBREAD HOUSE · CHOMP. GROW. CRUNCH.';announce('GINGERBREAD MUNCH! Find the Cookie King Castle.',phoneClock,1600)};
-</script><script>phoneInitialize();</script></body></html>
+</script><script>
+// Reloading the bonus page should always return Viktor to the main world picker.
+if (performance.getEntriesByType('navigation')[0]?.type === 'reload') {
+  location.replace('game.html');
+} else {
+  phoneInitialize();
+}
+</script></body></html>
