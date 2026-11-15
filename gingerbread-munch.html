@@ -905,6 +905,7 @@ window.createVikHUD=function(adapter){
     while(originalActions.children.length)contexts.append(originalActions.children[0]);
     originalActions.remove();
   }
+  footer.append(contexts);
   const primary=make('div','hud-primary-actions','hud-primary-actions');
   const garage=find('vehicle-open'),trophies=find('garage-open');
   if(garage)primary.append(garage);
