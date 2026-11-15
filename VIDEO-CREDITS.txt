@@ -1,0 +1,12 @@
+Launch: NASA launch and onboard Earth footage, edited for the game; moon-launch.mp4.
+Orbit: NASA Goddard / Scientific Visualization Studio, Apollo 11 CSM Earthrise visualization, model courtesy Smithsonian and lunar data from LRO, https://svs.gsfc.nasa.gov/14938/ ; nasa-orbit.mp4.
+Landing-site view: NASA Scientific Visualization Studio, A New Look at the Apollo 11 Landing Site, based on LRO imagery and elevation data, https://svs.gsfc.nasa.gov/4185/ ; apollo-landing.mp4.
+Launch recording: NASA Apollo 11 “We Have a Lift-Off,” https://www.nasa.gov/historical-sounds/ ; embedded in game.html.
+3D rocket: NASA / Michael D. Carbajal, Saturn V 3D model, https://science.nasa.gov/3d-resources/saturn-v/ . Embedded in game.html.
+3D Earth texture: NASA/Goddard Space Flight Center Scientific Visualization Studio, Blue Marble, https://svs.gsfc.nasa.gov/2915/ .
+3D Moon texture: NASA/Goddard Space Flight Center Scientific Visualization Studio, CGI Moon Kit, https://svs.gsfc.nasa.gov/4720/ .
+3D gantry: NASA / Michael D. Carbajal, https://science.nasa.gov/3d-resources/gantry/ .
+3D lunar module: NASA / Michael D. Carbajal, https://science.nasa.gov/3d-resources/apollo-lunar-module/ .
+Launch and ocean sky: original AI-generated background created for this game.
+Launch-pad and splashdown environment plates: original AI-generated artwork created for this game, composited behind animated 3D spacecraft.
+Ground textures: Poly Haven Asphalt 01, Aerial Grass Rock and Concrete Floor, CC0, https://polyhaven.com/ .
