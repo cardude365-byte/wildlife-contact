@@ -1,3 +1,9 @@
+# v1.53.4 — Viktor spelling and illustrated title
+
+- Restored Viktor with a K across the game, garage, help, accessibility text and ship name.
+- Replaced the yellow home heading with custom illustrated ice-blue title artwork.
+- Preserved saved games, refresh-to-menu, vehicles, garages and the original Moon launch/audio.
+
 # v1.53.3 — Reload returns to the world menu
 
 - Refresh opens the main world picker instead of auto-starting the previous level.
