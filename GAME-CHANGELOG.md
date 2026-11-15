@@ -25,7 +25,7 @@
 - Seasonal City returns open the main City game.
 - Original Moon launch and NASA audio retained.
 
-# Victor's Monster Munch — v1.53.0 Winter Update
+# Viktor's Monster Munch — v1.53.0 Winter Update
 
 - Winter snowplow opening artwork and seven world shortcuts.
 - Quick-access and drive-in vehicle garages, with six choices and saved selection.
