@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Victor’s Monster Munch · Winter Edition</title><meta name="game-release" content="1.53.1-winter"><style>*{box-sizing:border-box}body{margin:0;background:#102a40;font-family:system-ui,sans-serif;color:white;overflow:hidden}canvas{display:block;touch-action:none;width:100vw;height:100dvh}header{position:absolute;top:0;left:0;right:0;padding:14px 18px;background:linear-gradient(#102a40ed,transparent);pointer-events:none;display:flex;justify-content:space-between;gap:10px}h1{font-size:clamp(18px,3vw,30px);margin:0;color:#ffdd65;text-shadow:0 3px #112b40}small{color:#d5edf2}#stats{text-align:right;font-weight:900}#bar{height:8px;background:#375168;border-radius:9px;margin-top:5px;overflow:hidden}#fill{height:100%;background:#ffda55;width:0}footer{position:absolute;bottom:14px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:end;gap:10px}button{border:2px solid #fff4;border-radius:18px;background:#173d54;color:white;padding:12px 16px;font-weight:800;font-size:15px;cursor:pointer}#hint{display:none!important;max-width:280px;background:#102a40da;padding:10px 14px;border-radius:14px;font-size:14px}#cover{position:absolute;inset:0;background:#102a4099;display:grid;place-items:center}.card{text-align:center;background:#14364e;border:3px solid #53d6bf;border-radius:28px;padding:28px;max-width:360px;margin:20px;box-shadow:0 20px 80px #0006}.card h2{font-size:34px;color:#ffda55;margin:0 0 12px}.card button{background:#ffcc4d;color:#173044;font-size:23px;padding:16px 32px}.card p{line-height:1.5}#toast{position:absolute;top:205px;width:100%;text-align:center;font-size:26px;font-weight:900;color:#ffec80;pointer-events:none;text-shadow:0 3px #15334b}.card{max-height:90dvh;overflow:auto}#toast{padding:0 12px;font-size:clamp(18px,4vw,26px)}@media(max-width:520px){header{padding:10px}h1{max-width:175px}header small{font-size:10px}#stats{font-size:12px}#champion{max-width:145px}#hint{font-size:11px;padding:8px;max-width:150px}footer{left:8px;right:8px}footer button{padding:9px;font-size:12px}}#biome-guide{display:none!important}#bomb-warning:empty{display:none}@media(max-width:600px){footer>div:last-child{display:flex;gap:5px;justify-content:flex-end;flex-wrap:wrap;max-width:65vw}footer button{font-size:11px;padding:8px}#hint{max-width:31vw}}
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Victor’s Monster Munch · Winter Edition</title><meta name="game-release" content="1.53.2-winter"><style>*{box-sizing:border-box}body{margin:0;background:#102a40;font-family:system-ui,sans-serif;color:white;overflow:hidden}canvas{display:block;touch-action:none;width:100vw;height:100dvh}header{position:absolute;top:0;left:0;right:0;padding:14px 18px;background:linear-gradient(#102a40ed,transparent);pointer-events:none;display:flex;justify-content:space-between;gap:10px}h1{font-size:clamp(18px,3vw,30px);margin:0;color:#ffdd65;text-shadow:0 3px #112b40}small{color:#d5edf2}#stats{text-align:right;font-weight:900}#bar{height:8px;background:#375168;border-radius:9px;margin-top:5px;overflow:hidden}#fill{height:100%;background:#ffda55;width:0}footer{position:absolute;bottom:14px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:end;gap:10px}button{border:2px solid #fff4;border-radius:18px;background:#173d54;color:white;padding:12px 16px;font-weight:800;font-size:15px;cursor:pointer}#hint{display:none!important;max-width:280px;background:#102a40da;padding:10px 14px;border-radius:14px;font-size:14px}#cover{position:absolute;inset:0;background:#102a4099;display:grid;place-items:center}.card{text-align:center;background:#14364e;border:3px solid #53d6bf;border-radius:28px;padding:28px;max-width:360px;margin:20px;box-shadow:0 20px 80px #0006}.card h2{font-size:34px;color:#ffda55;margin:0 0 12px}.card button{background:#ffcc4d;color:#173044;font-size:23px;padding:16px 32px}.card p{line-height:1.5}#toast{position:absolute;top:205px;width:100%;text-align:center;font-size:26px;font-weight:900;color:#ffec80;pointer-events:none;text-shadow:0 3px #15334b}.card{max-height:90dvh;overflow:auto}#toast{padding:0 12px;font-size:clamp(18px,4vw,26px)}@media(max-width:520px){header{padding:10px}h1{max-width:175px}header small{font-size:10px}#stats{font-size:12px}#champion{max-width:145px}#hint{font-size:11px;padding:8px;max-width:150px}footer{left:8px;right:8px}footer button{padding:9px;font-size:12px}}#biome-guide{display:none!important}#bomb-warning:empty{display:none}@media(max-width:600px){footer>div:last-child{display:flex;gap:5px;justify-content:flex-end;flex-wrap:wrap;max-width:65vw}footer button{font-size:11px;padding:8px}#hint{max-width:31vw}}
 #toast{top:100px;left:18px;right:auto;width:auto;max-width:min(360px,55vw);padding:0;text-align:left;font-size:14px;line-height:1.35}#bomb-warning{top:127px;left:18px;right:auto;width:auto;max-width:min(360px,55vw);text-align:left;font-size:12px;padding:5px 8px}@media(max-width:520px){#toast{top:92px;left:10px;max-width:47vw;font-size:11px}#bomb-warning{top:124px;left:10px;max-width:47vw;font-size:10px}}
  .card{max-width:560px;width:min(560px,92vw);border-color:#95bdad;background:linear-gradient(145deg,#19364d,#102638);padding:24px}.card h2{font-size:clamp(28px,6vw,43px);letter-spacing:2px}.card p{line-height:1.55}.card #moon-play{font-size:clamp(17px,4vw,22px)}#cover{background:radial-gradient(ellipse at top,#456875b0,#0d1d31ef)}details p{margin:10px 0}
 #cover{z-index:20;display:flex;align-items:flex-end;justify-content:center;overflow:auto;background:#0b1928}
@@ -407,7 +407,7 @@ function drawOceanTanker(t){
  for(let x=stern+116;x<bow-65;x+=63){farmEllipse(x,0,22,23,'#8d9e95');farmEllipse(x-3,-3,16,17,'#bdc7ac');g.strokeStyle='#647c78';g.lineWidth=3;g.beginPath();g.arc(x,0,20,0,7);g.stroke();round(x-5,-5,10,10,2,'#d8cfad');for(let y of [-28,25])round(x-25,y,49,3,1,'#efddab')}
  round(stern+16,-28,57,56,5,'#e8ddbc');round(stern+20,-31,49,20,3,'#f7edcf');round(stern+27,-28,35,11,2,'#80b7c3');for(let x=stern+31;x<stern+62;x+=10)round(x,-27,2,9,0,'#355d6d');round(stern+26,6,17,24,3,'#b65e42');round(stern+25,3,19,8,2,'#314b56');round(stern+52,3,5,21,1,'#8a7759');farmEllipse(stern+55,2,10,5,'#c4b89a');
  g.strokeStyle='#eae2bf';g.lineWidth=2;g.beginPath();g.moveTo(stern+9,-34);g.lineTo(bow-40,-35);g.moveTo(stern+9,34);g.lineTo(bow-40,35);g.stroke();for(let x=stern+15;x<bow-35;x+=24){g.beginPath();g.moveTo(x,-37);g.lineTo(x,-30);g.moveTo(x,30);g.lineTo(x,37);g.stroke()}
- g.fillStyle='#e8dfb9';g.font='bold 11px system-ui';g.textAlign='center';g.fillText('VIKTOR OCEAN',mid,-47);g.restore();
+ g.fillStyle='#e8dfb9';g.font='bold 11px system-ui';g.textAlign='center';g.fillText('VICTOR OCEAN',mid,-47);g.restore();
 }
 const preTankerWords=oceanWords;oceanWords=function(s){return preTankerWords(s).replace(/CONVOY/g,'SUPERTANKER').replace(/convoy/g,'supertanker')};
 
@@ -6122,7 +6122,7 @@ gameHud.tick();
 
 </script><script>
 // Release label is separate from saved-game schema versions.
-const gameReleaseLabel=document.createElement('small');gameReleaseLabel.textContent='Winter update · v1.53.1';gameReleaseLabel.style.cssText='display:block;margin-top:10px;color:#b6d5db;font:600 10px system-ui';
+const gameReleaseLabel=document.createElement('small');gameReleaseLabel.textContent='Winter update · v1.53.2';gameReleaseLabel.style.cssText='display:block;margin-top:10px;color:#b6d5db;font:600 10px system-ui';
 document.querySelector('.hud-menu-panel')?.appendChild(gameReleaseLabel);
 </script><script>
 /* TOUCH AND WORLD ROUTE REPAIR */
@@ -6342,7 +6342,7 @@ updateGameSurface();
   const find=id=>document.getElementById(id);
   const isMain=typeof currentBiome!=='undefined'&&typeof biomeMaps!=='undefined';
   const validWorlds=['city','farm','ocean','moon','snow'];
-  const release='1.53.1-winter';
+  const release='1.53.2-winter';
   const query=new URLSearchParams(location.search);
   const resetRide=map=>{if(typeof vehicleGarage!=='undefined')vehicleGarage.resetForWorld?.(map)};
   const clearInput=()=>{keys={};target=null;window.vikTouchControls?.cancel?.()};
@@ -6488,6 +6488,158 @@ updateGameSurface();
   for(const link of document.querySelectorAll('a')){
     const href=link.href||link.getAttribute('href')||'';
     if(/(?:^|\/)(?:game|turkey-munch|gingerbread-munch)\.html(?:[?#]|$)/.test(href))link.href=releaseHref(href);
+  }
+})();
+
+// Apply after the game, seasonal town, HUD and navigation scripts, before RAF.
+// These are display-only fixes: run state, scores, saves and launch media stay owned by the game.
+(function installVikMapNames(){
+  'use strict';
+  if(window.vikMapNamePolish)return;
+  const find=id=>document.getElementById(id);
+  const main=typeof currentBiome!=='undefined';
+  const kind=main?'main':typeof PHONE_KEYS!=='undefined'&&PHONE_KEYS.run.includes('gingerbread')?'gingerbread':'turkey';
+  const brand='Victor’s Monster Munch';
+  const snowText=text=>String(text)
+    .replace(/CITY WIPED OUT/g,'SNOW SUMMIT WIPED OUT').replace(/CITY SAVED/g,'SNOW SUMMIT SAVED')
+    .replace(/\bcats\b/gi,'bunnies').replace(/🐈/g,'🐇')
+    .replace(/\bgoats\b/gi,'bunnies').replace(/🐐/g,'🐇')
+    .replace(/DOZER/g,'SNOWPLOW').replace(/dozer/g,'snowplow');
+  const gingerText=text=>String(text)
+    .replace(/APOLLO/g,'GINGERBREAD MAN').replace(/Apollo/g,'the Gingerbread Man')
+    .replace(/Crumbler/gi,'Gingerbread Man').replace(/🐕/g,'🍪')
+    .replace(/GOBBLE TURBO! 🦃 💨/g,'COCOA BOOST! ☕ 💨');
+  const message=text=>main&&currentBiome==='snow'?snowText(text):kind==='gingerbread'&&activeMap==='turkey'?gingerText(text):text;
+  function polishMessages(){
+    for(const id of ['toast','mode-status','bomb-warning','chase-clock']){
+      const element=find(id);if(element)element.textContent=message(element.textContent);
+    }
+  }
+  function header(){
+    const heading=document.querySelector('header h1');
+    if(heading)heading.textContent=kind==='main'?brand:brand+' · '+(kind==='turkey'?'Turkey Munch':'Gingerbread Munch');
+    document.title=kind==='main'?brand+' · Winter Edition':brand+' · '+(kind==='turkey'?'Turkey Munch':'Gingerbread Munch');
+    const coverHeading=document.querySelector('#cover h2');
+    if(kind!=='main'&&coverHeading)coverHeading.textContent=brand+' · '+(kind==='turkey'?'Turkey Munch':'Gingerbread Munch');
+    if(kind==='turkey'){
+      const subtitle=document.querySelector('header small');if(subtitle)subtitle.textContent='TURKEY MUNCH · Gobble. Grow. Explore.';
+    }else if(kind==='gingerbread'){
+      const subtitle=document.querySelector('header small');if(subtitle)subtitle.textContent='GINGERBREAD LAND · Chomp. Grow. Explore.';
+    }
+  }
+  function mainNames(){
+    header();
+    const guide=find('biome-guide');
+    if(guide&&currentBiome==='moon')guide.textContent='MOON · Lander to Earth · Laser habitat · UFO flight';
+    if(guide&&currentBiome==='snow')guide.textContent='SNOW SUMMIT · Caves to City · Sled hill';
+    if(currentBiome==='snow'&&find('rocket-status'))find('rocket-status').textContent='🏔️ Mountain caves: return to City';
+    polishMessages();
+  }
+  function seasonalNames(){header();polishMessages()}
+  // Existing entry/restore functions update labels in several places. Decorate
+  // those public boundaries so every map entry and resumed run gets the same names.
+  const beforeUI=updateUI;
+  updateUI=function(...args){const result=beforeUI.apply(this,args);main?mainNames():seasonalNames();return result};
+  const beforeMode=modeHUD;
+  modeHUD=function(...args){const result=beforeMode.apply(this,args);polishMessages();return result};
+  const beforeAnnounce=announce;
+  announce=function(text,...args){return beforeAnnounce.call(this,message(text),...args)};
+
+  if(main){
+    const beforeBiome=updateBiomeHUD;
+    updateBiomeHUD=function(...args){const result=beforeBiome.apply(this,args);mainNames();return result};
+    const beforeText=updateFarmText;
+    updateFarmText=function(...args){const result=beforeText.apply(this,args);mainNames();return result};
+    const beforeAftermath=drawAftermathScene;
+    drawAftermathScene=function(t){
+      beforeAftermath(t);
+      // Snow's own scenery replaced the old City panel but omitted its title.
+      if(currentBiome!=='snow')return;
+      g.save();g.fillStyle='#163447b8';g.fillRect(0,0,W,H*.38);g.fillStyle='#fff1cc';
+      g.font='800 '+Math.min(31,W/18)+'px system-ui';g.textAlign='center';
+      g.fillText('SNOW SUMMIT WIPED OUT',W/2,H*.24);
+      g.fillStyle='#d9edf0';g.font='15px system-ui';g.fillText(munches+' munches · Press Restart to rebuild',W/2,H*.24+31);g.restore();
+    };
+    const title=document.querySelector('#cover h2');if(title)title.textContent=brand+' — choose your world';
+    mainNames();
+  }else{
+    const beforeEntry=enterTurkeyMap;
+    enterTurkeyMap=function(...args){const result=beforeEntry.apply(this,args);seasonalNames();return result};
+    const cover=find('cover'),coverTitle=cover?.querySelector('h2');
+    if(coverTitle)coverTitle.textContent=brand+' · '+(kind==='turkey'?'Turkey Munch':'Gingerbread Munch');
+    const instructions=kind==='turkey'?[
+      'Play as a turkey in the autumn farm. Munch cereal bowls and small snacks, grow bigger, and explore the barns and river.',
+      'Five cereal bowls give you Gobble Turbo. Dodge groundhogs, and grow to MEGA Tom to munch the speedboat.',
+      'Apollo is the big farm dog. Follow the red map marker and catch him during his ten-second chase for bonus points. If he gets away, tap Keep Munching to continue.',
+      'Visit the picnic activity to pick apples and try a small addition game. You can leave an activity and keep exploring anytime.',
+      'Open Garage to choose another ride. All six choices use the same touch controls. Home returns to the world menu.',
+      'At MEGA size, collecting ten cats unlocks the yellow dozer. Your score and current run stay saved on this device.'
+    ]:[
+      'Drive the gingerbread roller through Gingerbread Land. Explore cookie streets, shops, parks, Cookie Station and Cookie King Castle.',
+      'Munch small cookies to grow. Five cookies give you Sugar Rush, and cocoa gives you a quick Cocoa Boost.',
+      'The Gingerbread Man is the cookie troublemaker. Catch him during his ten-second chase for bonus points. If he gets away, tap Keep Munching to continue.',
+      'Jimmy Dean is the pig. Give him room when you are little, and grow bigger to munch him. The gingerbread train travels across town too.',
+      'Visit the Candy cottage activity to pick gumdrops and decorate the cookie house. Activities are optional, so keep exploring whenever you like.',
+      'Open Garage to choose another ride with the same touch controls. Back to City opens the city truck map; Home opens the world menu. Your run stays saved.'
+    ];
+    if(cover){
+      const paragraphs=Array.from(cover.querySelectorAll('p'));
+      for(let i=0;i<paragraphs.length;i++)if(i<instructions.length)paragraphs[i].textContent=instructions[i];else paragraphs[i].remove();
+      for(const element of cover.querySelectorAll('small'))if(/iPhone preview|v1\.27\.2/.test(element.textContent))element.textContent='Saved on this device · Easy touch controls';
+    }
+    const escape=find('apollo-escape');
+    if(escape){
+      const copy=escape.querySelector('p');if(kind==='turkey'&&copy)copy.textContent='Victor is on his trail. Better luck next chase!';
+    }
+    if(kind==='gingerbread'){
+      const beforeClock=updateChaseClock;
+      updateChaseClock=function(...args){
+        if(activeMap!=='turkey')return beforeClock.apply(this,args);
+        const treats=Math.max(0,5-cookieCrumbs),seconds=Math.max(0,Math.ceil(chaseWait));
+        find('chase-clock').textContent=bombCarrier?
+          '🍪 CATCH THE GINGERBREAD MAN: '+Math.max(0,Math.ceil(bombFuse))+'s · '+treats+' treats to Sugar Rush':
+          '🍬 '+treats+' treats to Sugar Rush · Gingerbread Man chase in '+Math.floor(seconds/60)+':'+String(seconds%60).padStart(2,'0');
+      };
+      // Preserve the existing pause/continue behavior and its compatibility IDs.
+      // Replace only the visible dog illustration and copy with a cookie scene.
+      if(escape){
+        escape.setAttribute('aria-label','The Gingerbread Man got away');
+        const title=escape.querySelector('h2'),copy=escape.querySelector('p'),art=find('apollo-escape-art');
+        if(title)title.textContent='THE GINGERBREAD MAN GOT AWAY!';
+        if(copy)copy.textContent='He dashed down Cookie Lane. Keep exploring and try the next chase!';
+        if(art){
+          art.alt='The Gingerbread Man running along a cookie street beside gingerbread houses';
+          art.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(cookieEscapeArt());
+        }
+      }
+      updateChaseClock();
+    }
+    // Readable child-name spelling also applies to the real Turkey dog picture.
+    const dogArt=find('apollo-escape-art');
+    if(kind==='turkey'&&dogArt)dogArt.alt='Apollo jumps over a farm fence while Victor chases him';
+    seasonalNames();
+  }
+  window.vikMapNamePolish={kind,refresh:main?mainNames:seasonalNames};
+
+  function cookieEscapeArt(){
+    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">'+
+      '<defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#b9d9d4"/><stop offset="1" stop-color="#fff0c9"/></linearGradient><linearGradient id="cookie" x2="1" y2="1"><stop stop-color="#ce9563"/><stop offset="1" stop-color="#a46543"/></linearGradient></defs>'+
+      '<rect width="800" height="480" fill="url(#sky)"/><circle cx="680" cy="76" r="37" fill="#fff2c5"/>'+
+      '<path d="M0 260Q150 210 290 254T590 240T800 265V480H0Z" fill="#dcb583"/><path d="M0 360L800 310V385L0 447Z" fill="#f3d8ad"/>'+
+      '<g stroke="#915b47" stroke-width="5" stroke-linejoin="round"><path d="M45 254V151H200V257Z" fill="#c98a66"/><path d="M31 154L121 91L215 154Z" fill="#b96c62"/><path d="M35 153L121 98L211 153" fill="none" stroke="#fff0d1" stroke-width="10"/><rect x="103" y="204" width="40" height="53" rx="8" fill="#85583e"/><rect x="65" y="170" width="31" height="31" rx="5" fill="#a7d5cd"/><rect x="153" y="170" width="31" height="31" rx="5" fill="#a7d5cd"/>'+
+      '<path d="M585 250V145H746V258Z" fill="#cd9b74"/><path d="M571 148L665 82L761 148Z" fill="#b97172"/><path d="M576 147L665 90L756 147" fill="none" stroke="#fff0d1" stroke-width="10"/><rect x="641" y="199" width="42" height="59" rx="9" fill="#875c44"/><rect x="600" y="164" width="31" height="32" rx="5" fill="#aed4cf"/><rect x="696" y="164" width="31" height="32" rx="5" fill="#aed4cf"/></g>'+
+      '<g fill="#82a57a"><circle cx="269" cy="240" r="30"/><circle cx="526" cy="251" r="27"/></g><g fill="#fff0cd"><circle cx="258" cy="222" r="5"/><circle cx="280" cy="242" r="5"/><circle cx="520" cy="235" r="5"/></g>'+
+      '<ellipse cx="402" cy="409" rx="105" ry="21" fill="#875a4430"/>'+
+      '<g fill="url(#cookie)" stroke="#774c38" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">'+
+      '<path d="M361 288L318 320Q296 334 289 313Q286 303 302 292L353 253M433 280L471 256Q489 245 499 264Q504 277 486 287L442 314"/>'+
+      '<path d="M369 344L350 392Q341 415 365 419Q379 421 387 402L406 363M413 347L448 381Q465 398 480 383Q489 372 473 358L440 325"/>'+
+      '<path d="M361 253Q344 292 355 334Q361 363 401 366Q443 369 451 336Q461 302 439 259Z"/>'+
+      '<circle cx="400" cy="219" r="58"/></g>'+
+      '<g fill="none" stroke="#fff0d0" stroke-width="7" stroke-linecap="round"><path d="M351 228Q348 255 375 263M432 263Q455 251 453 229M355 297L347 313M470 270L477 283M362 388L376 394M448 367L460 356"/><path d="M379 242Q400 257 419 240"/></g>'+
+      '<g fill="#45392f"><ellipse cx="380" cy="217" rx="5" ry="7"/><ellipse cx="420" cy="214" rx="5" ry="7"/></g><g stroke="#744735" stroke-width="5" stroke-linecap="round"><path d="M371 202L387 198M411 196L428 199"/></g>'+
+      '<circle cx="396" cy="291" r="8" fill="#e96474"/><circle cx="400" cy="319" r="8" fill="#e9bf5d"/><circle cx="404" cy="345" r="7" fill="#84b8ae"/>'+
+      '<g stroke="#ad7854" stroke-width="5" stroke-linecap="round"><path d="M255 343L290 335M260 365L304 357M501 333L534 326"/></g>'+
+      '<g fill="#aa825b"><circle cx="294" cy="383" r="4"/><circle cx="277" cy="397" r="3"/><circle cx="485" cy="410" r="4"/></g></svg>';
   }
 })();
 

@@ -1,3 +1,11 @@
+# v1.53.2 — Gingerbread character and candy polish
+
+- Gingerbread Man labels match the cookie character; Apollo remains the dog.
+- Cookie characters turn or slide safely around obstacles and recover trapped saved positions.
+- Candy canes have an upright rounded hook with peppermint stripes across the full shape.
+- Reviewed names across all seven worlds.
+- Retained repaired touch controls, world selection, garages and the original launch.
+
 # v1.53.1 — Driving and world selection repair
 
 - Quick taps drive to the chosen spot; held drags stop on release.
