@@ -6,7 +6,7 @@
 - Optional world activities, letter recognition, simple addition, and repeat practice.
 - Gingerbread Land rebuilt with connected streets, shops, parks, station and castle.
 - Cookie Express train with a gingerbread locomotive and candy carriages.
-- Grounded Crumbler character; placement and moving-character collision checks.
+- Clearer Gingerbread character with Apollo’s name preserved; placement and moving-character collision checks.
 - Existing touch/drag steering, original Moon launch, NASA audio, and Skip Flight retained.
 - Legacy Gingerbread URL redirects to the updated map. Existing saved runs retain scores and growth when the town layout upgrades.
 
