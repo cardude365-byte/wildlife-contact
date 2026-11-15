@@ -1,4 +1,52 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Victor’s Monster Munch · Winter Edition</title><meta name="game-release" content="1.53.2-winter"><style>*{box-sizing:border-box}body{margin:0;background:#102a40;font-family:system-ui,sans-serif;color:white;overflow:hidden}canvas{display:block;touch-action:none;width:100vw;height:100dvh}header{position:absolute;top:0;left:0;right:0;padding:14px 18px;background:linear-gradient(#102a40ed,transparent);pointer-events:none;display:flex;justify-content:space-between;gap:10px}h1{font-size:clamp(18px,3vw,30px);margin:0;color:#ffdd65;text-shadow:0 3px #112b40}small{color:#d5edf2}#stats{text-align:right;font-weight:900}#bar{height:8px;background:#375168;border-radius:9px;margin-top:5px;overflow:hidden}#fill{height:100%;background:#ffda55;width:0}footer{position:absolute;bottom:14px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:end;gap:10px}button{border:2px solid #fff4;border-radius:18px;background:#173d54;color:white;padding:12px 16px;font-weight:800;font-size:15px;cursor:pointer}#hint{display:none!important;max-width:280px;background:#102a40da;padding:10px 14px;border-radius:14px;font-size:14px}#cover{position:absolute;inset:0;background:#102a4099;display:grid;place-items:center}.card{text-align:center;background:#14364e;border:3px solid #53d6bf;border-radius:28px;padding:28px;max-width:360px;margin:20px;box-shadow:0 20px 80px #0006}.card h2{font-size:34px;color:#ffda55;margin:0 0 12px}.card button{background:#ffcc4d;color:#173044;font-size:23px;padding:16px 32px}.card p{line-height:1.5}#toast{position:absolute;top:205px;width:100%;text-align:center;font-size:26px;font-weight:900;color:#ffec80;pointer-events:none;text-shadow:0 3px #15334b}.card{max-height:90dvh;overflow:auto}#toast{padding:0 12px;font-size:clamp(18px,4vw,26px)}@media(max-width:520px){header{padding:10px}h1{max-width:175px}header small{font-size:10px}#stats{font-size:12px}#champion{max-width:145px}#hint{font-size:11px;padding:8px;max-width:150px}footer{left:8px;right:8px}footer button{padding:9px;font-size:12px}}#biome-guide{display:none!important}#bomb-warning:empty{display:none}@media(max-width:600px){footer>div:last-child{display:flex;gap:5px;justify-content:flex-end;flex-wrap:wrap;max-width:65vw}footer button{font-size:11px;padding:8px}#hint{max-width:31vw}}
+<!doctype html><html lang="en"><script>
+/* RELOAD TO WORLD MENU */
+// Run in <head>, before the game or any saved-run initializer.
+(function returnReloadToWorldMenu(root) {
+  'use strict';
+  const release='1.53.3-winter';
+  let navigationType;
+  try {
+    const entries=root.performance?.getEntriesByType?.('navigation');
+    navigationType=entries&&entries[0]?.type;
+  } catch (_) {}
+  if(!navigationType){
+    try { if(root.performance?.navigation?.type===1)navigationType='reload'; } catch (_) {}
+  }
+  // Links, fresh explicit world selections and browser Back retain their usual behavior.
+  if(navigationType!=='reload')return;
+  let current;
+  try { current=new URL(root.location.href); } catch (_) { return; }
+  const filename=current.pathname.split('/').pop().toLowerCase();
+  const seasonal=/^(?:turkey-munch|gingerbread(?:-munch)?)\.html$/.test(filename);
+  if(filename!=='game.html'&&!seasonal)return;
+  const original=current.href;
+  for(const key of ['world','play','autoplay','resume'])current.searchParams.delete(key);
+  current.searchParams.set('release',release);
+  const state=root.vikReloadMenu={reloaded:true,redirecting:false};
+  function hideUntilNavigation(){
+    if(root.document?.documentElement?.style)root.document.documentElement.style.visibility='hidden';
+  }
+  function replaceLocation(url){
+    if(url===root.location.href)return;
+    state.redirecting=true;hideUntilNavigation();
+    try { root.location.replace(url); } catch (_) { root.location.href=url; }
+  }
+  // Consume the autoplay request synchronously. A history edit does not reload,
+  // and later scripts therefore read a menu-only query on the very first frame.
+  if(current.href!==original){
+    try { root.history.replaceState(root.history.state,'',current.href); }
+    catch (_) {
+      if(!seasonal){replaceLocation(current.href);return;}
+    }
+  }
+  if(seasonal){
+    const menu=new URL('game.html',current);
+    menu.search=current.search;menu.hash='';
+    replaceLocation(menu.href);
+  }
+})(window);
+
+</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Victor’s Monster Munch · Winter Edition</title><meta name="game-release" content="1.53.3-winter"><style>*{box-sizing:border-box}body{margin:0;background:#102a40;font-family:system-ui,sans-serif;color:white;overflow:hidden}canvas{display:block;touch-action:none;width:100vw;height:100dvh}header{position:absolute;top:0;left:0;right:0;padding:14px 18px;background:linear-gradient(#102a40ed,transparent);pointer-events:none;display:flex;justify-content:space-between;gap:10px}h1{font-size:clamp(18px,3vw,30px);margin:0;color:#ffdd65;text-shadow:0 3px #112b40}small{color:#d5edf2}#stats{text-align:right;font-weight:900}#bar{height:8px;background:#375168;border-radius:9px;margin-top:5px;overflow:hidden}#fill{height:100%;background:#ffda55;width:0}footer{position:absolute;bottom:14px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:end;gap:10px}button{border:2px solid #fff4;border-radius:18px;background:#173d54;color:white;padding:12px 16px;font-weight:800;font-size:15px;cursor:pointer}#hint{display:none!important;max-width:280px;background:#102a40da;padding:10px 14px;border-radius:14px;font-size:14px}#cover{position:absolute;inset:0;background:#102a4099;display:grid;place-items:center}.card{text-align:center;background:#14364e;border:3px solid #53d6bf;border-radius:28px;padding:28px;max-width:360px;margin:20px;box-shadow:0 20px 80px #0006}.card h2{font-size:34px;color:#ffda55;margin:0 0 12px}.card button{background:#ffcc4d;color:#173044;font-size:23px;padding:16px 32px}.card p{line-height:1.5}#toast{position:absolute;top:205px;width:100%;text-align:center;font-size:26px;font-weight:900;color:#ffec80;pointer-events:none;text-shadow:0 3px #15334b}.card{max-height:90dvh;overflow:auto}#toast{padding:0 12px;font-size:clamp(18px,4vw,26px)}@media(max-width:520px){header{padding:10px}h1{max-width:175px}header small{font-size:10px}#stats{font-size:12px}#champion{max-width:145px}#hint{font-size:11px;padding:8px;max-width:150px}footer{left:8px;right:8px}footer button{padding:9px;font-size:12px}}#biome-guide{display:none!important}#bomb-warning:empty{display:none}@media(max-width:600px){footer>div:last-child{display:flex;gap:5px;justify-content:flex-end;flex-wrap:wrap;max-width:65vw}footer button{font-size:11px;padding:8px}#hint{max-width:31vw}}
 #toast{top:100px;left:18px;right:auto;width:auto;max-width:min(360px,55vw);padding:0;text-align:left;font-size:14px;line-height:1.35}#bomb-warning{top:127px;left:18px;right:auto;width:auto;max-width:min(360px,55vw);text-align:left;font-size:12px;padding:5px 8px}@media(max-width:520px){#toast{top:92px;left:10px;max-width:47vw;font-size:11px}#bomb-warning{top:124px;left:10px;max-width:47vw;font-size:10px}}
  .card{max-width:560px;width:min(560px,92vw);border-color:#95bdad;background:linear-gradient(145deg,#19364d,#102638);padding:24px}.card h2{font-size:clamp(28px,6vw,43px);letter-spacing:2px}.card p{line-height:1.55}.card #moon-play{font-size:clamp(17px,4vw,22px)}#cover{background:radial-gradient(ellipse at top,#456875b0,#0d1d31ef)}details p{margin:10px 0}
 #cover{z-index:20;display:flex;align-items:flex-end;justify-content:center;overflow:auto;background:#0b1928}
@@ -6122,7 +6170,7 @@ gameHud.tick();
 
 </script><script>
 // Release label is separate from saved-game schema versions.
-const gameReleaseLabel=document.createElement('small');gameReleaseLabel.textContent='Winter update · v1.53.2';gameReleaseLabel.style.cssText='display:block;margin-top:10px;color:#b6d5db;font:600 10px system-ui';
+const gameReleaseLabel=document.createElement('small');gameReleaseLabel.textContent='Winter update · v1.53.3';gameReleaseLabel.style.cssText='display:block;margin-top:10px;color:#b6d5db;font:600 10px system-ui';
 document.querySelector('.hud-menu-panel')?.appendChild(gameReleaseLabel);
 </script><script>
 /* TOUCH AND WORLD ROUTE REPAIR */
@@ -6342,7 +6390,7 @@ updateGameSurface();
   const find=id=>document.getElementById(id);
   const isMain=typeof currentBiome!=='undefined'&&typeof biomeMaps!=='undefined';
   const validWorlds=['city','farm','ocean','moon','snow'];
-  const release='1.53.2-winter';
+  const release='1.53.3-winter';
   const query=new URLSearchParams(location.search);
   const resetRide=map=>{if(typeof vehicleGarage!=='undefined')vehicleGarage.resetForWorld?.(map)};
   const clearInput=()=>{keys={};target=null;window.vikTouchControls?.cancel?.()};

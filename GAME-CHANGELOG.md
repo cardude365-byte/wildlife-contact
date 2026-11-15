@@ -1,3 +1,8 @@
+# v1.53.3 — Reload returns to the world menu
+
+- Refresh opens the main world picker instead of auto-starting the previous level.
+- Fresh world selections, saved progress, garages and the original Moon launch remain intact.
+
 # v1.53.2 — Gingerbread character and candy polish
 
 - Gingerbread Man labels match the cookie character; Apollo remains the dog.
