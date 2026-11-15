@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Viktor's Munch Mayhem · v1.27.2</title><meta name="game-release" content="1.53.0-winter"><style>*{box-sizing:border-box}body{margin:0;background:#102a40;font-family:system-ui,sans-serif;color:white;overflow:hidden}canvas{display:block;touch-action:none;width:100vw;height:100dvh}header{position:absolute;top:0;left:0;right:0;padding:14px 18px;background:linear-gradient(#102a40ed,transparent);pointer-events:none;display:flex;justify-content:space-between;gap:10px}h1{font-size:clamp(18px,3vw,30px);margin:0;color:#ffdd65;text-shadow:0 3px #112b40}small{color:#d5edf2}#stats{text-align:right;font-weight:900}#bar{height:8px;background:#375168;border-radius:9px;margin-top:5px;overflow:hidden}#fill{height:100%;background:#ffda55;width:0}footer{position:absolute;bottom:14px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:end;gap:10px}button{border:2px solid #fff4;border-radius:18px;background:#173d54;color:white;padding:12px 16px;font-weight:800;font-size:15px;cursor:pointer}#hint{max-width:280px;background:#102a40da;padding:10px 14px;border-radius:14px;font-size:14px}#cover{position:absolute;inset:0;background:#102a4099;display:grid;place-items:center}.card{text-align:center;background:#14364e;border:3px solid #53d6bf;border-radius:28px;padding:28px;max-width:360px;margin:20px;box-shadow:0 20px 80px #0006}.card h2{font-size:34px;color:#ffda55;margin:0 0 12px}.card button{background:#ffcc4d;color:#173044;font-size:23px;padding:16px 32px}.card p{line-height:1.5}#toast{position:absolute;top:205px;width:100%;text-align:center;font-size:26px;font-weight:900;color:#ffec80;pointer-events:none;text-shadow:0 3px #15334b}.card{max-height:90dvh;overflow:auto}#toast{padding:0 12px;font-size:clamp(18px,4vw,26px)}@media(max-width:520px){header{padding:10px}h1{max-width:175px}header small{font-size:10px}#stats{font-size:12px}#champion{max-width:145px}#hint{font-size:11px;padding:8px;max-width:150px}footer{left:8px;right:8px}footer button{padding:9px;font-size:12px}}</style><style>body{-webkit-user-select:none;user-select:none;overscroll-behavior:none}header{padding-top:calc(8px + env(safe-area-inset-top));padding-left:calc(12px + env(safe-area-inset-left));padding-right:calc(12px + env(safe-area-inset-right))}footer{bottom:calc(8px + env(safe-area-inset-bottom));left:calc(8px + env(safe-area-inset-left));right:calc(8px + env(safe-area-inset-right))}#phone-pause{position:fixed;inset:0;background:#102a40e8;z-index:20;display:grid;place-items:center}#phone-pause[hidden]{display:none}#hint{max-width:190px;font-size:11px}footer button{min-height:44px;padding:8px 12px;font-size:13px}#toast{top:165px}#bomb-warning{top:130px;z-index:4}@media(orientation:landscape){header{font-size:12px}#stats{font-size:12px}h1{font-size:20px}#champion{font-size:11px!important}#bar{height:5px}#stats>div{font-size:10px!important}#hint{max-width:155px}.card{max-width:520px;padding:16px;max-height:85dvh}.card p{font-size:12px;line-height:1.3}.card h2{font-size:26px}.card>div:first-child{font-size:30px!important}.card button{font-size:19px;padding:12px 22px}}</style><style>#return-city[hidden]{display:none}.card #turkey-play{font-size:18px;padding:12px 20px;background:#d99035}#turkey-play:hover{background:#ffcf75}</style><style>.seasonal-bonus{display:flex!important;flex-direction:column;gap:3px;width:100%;margin:12px 0!important;padding:12px!important;border:2px solid #edc275!important;border-radius:12px!important;background:linear-gradient(110deg,#71372a,#ae642e)!important;color:#fff1ce!important;box-shadow:0 3px 12px #0003}.seasonal-bonus span{font-size:10px;letter-spacing:2px}.seasonal-bonus strong{font-size:14px}#seasonal-game{position:fixed;inset:0;width:100%;height:100dvh;border:0;z-index:100;background:#173044}#seasonal-game[hidden]{display:none}</style></head><body><style>#apollo-escape{position:fixed;inset:0;z-index:40;background:#0c1c25;display:grid;grid-template-rows:1fr auto;text-align:center}#apollo-escape[hidden]{display:none}#apollo-escape img{width:100%;height:100%;min-height:0;object-fit:contain}#apollo-escape div{padding:12px;background:#102b35}#apollo-escape h2{margin:0 0 5px;color:#ffe0a0}#apollo-escape p{margin:0 0 8px}</style><section id="apollo-escape" hidden aria-label="Apollo got away"><img id="apollo-escape-art" src="munch-asset-ac0f105e6fa45564fcc7c788.png" alt="Apollo jumps over a farm fence while Viktor chases him"><div><h2>APOLLO GOT AWAY!</h2><p>Viktor is on his trail. Better luck next chase!</p><button id="apollo-continue">KEEP MUNCHING</button></div></section><canvas id="c"></canvas><img id="blast-art" alt="" style="display:none" src="munch-asset-2810062598f62cee4b9365cc.png"><header><div><h1>Viktor's Munch Mayhem</h1><small>CITY MAYHEM · Chomp. Grow. Explore.</small><small id="version" style="display:block">v1.27.2</small></div><div id="stats"><span id="level">Little Chomper</span><br><span id="count">0 munches</span><div id="champion" style="color:#ffdd65;font-size:13px;margin-top:5px">PERSONAL BEST · Connecting…</div><div id="chase-clock" style="font-size:12px;color:#ffdd65">☢ First chase in 3:00</div><div id="mode-status" style="font-size:12px;color:#ffdd65"></div><div id="streak" style="font-size:12px;color:#ffdd65"></div><div id="rocket-status" style="font-size:12px;color:#d5edf2"></div><div id="bar"><div id="fill"></div></div></div></header><div id="toast"></div><div id="bomb-warning" role="status" style="position:absolute;top:165px;left:8px;right:8px;text-align:center;color:#fff4ad;background:#812e29e8;border-radius:8px;font-weight:900;font-size:clamp(12px,2vw,18px);pointer-events:none"></div><footer><div id="hint">Drag anywhere to drive.<br>Snails pop and shrink you! 🐌</div><div><button id="pause" aria-label="Pause game">Ⅱ Pause</button> <button id="sound">Sound: off</button> <button id="return-city" hidden>Back to City</button><button id="reset">↻ Restart</button></div></footer><div id="phone-pause" hidden><div class="card"><h2>Paused</h2><p>Your game is saved. Ready for more?</p><button id="resume">RESUME</button></div></div><div id="cover"><div class="card"><div style="font-size:65px">🚙 ✨</div><h2>Ready, Viktor?</h2><p>Your truck is hungry! Drive into little cars to grow. Then gobble picnic tables, swing sets, swimming pools, and whole buildings!</p><p>Watch out for snails! They go POP, fart, and shrink your truck. One chupacabra roams the map. Eat it at MEGA size, and another appears 30 seconds later!</p><p>✨ Catch golden cars for extra growth! Keep munching for streak bonuses, and find silly surprises inside houses.</p><p>🚀 Find Lift-Off Park, with its pond and trees! Drive through the water to splash. Visit the launch pad at MEGA size for ROCKET RUSH! Your truck shrinks and flies across the map to another neighborhood, then lands at full MEGA size. A new rocket arrives three minutes later.</p><p>☢ Bomb chase: the first starts after 3 minutes of play, then every 3, 5, or 7 minutes at random. Follow the red map marker and eat the bomb-carrying Chupacabra within 10 seconds at ANY size for +1,000 bonus points! If time runs out, the city explodes. Restart rebuilds the city.</p><p>🚧 At MEGA size, collect 10 cats to unlock 10 seconds as a yellow dozer! Push the city into piles without munching it.</p><button id="turkey-play" class="seasonal-bonus"><span>🦃 SEASONAL BONUS</span><strong>THANKSGIVING · TURKEY MUNCH</strong></button><button id="play">LET'S MUNCH!</button><p style="margin-bottom:0"><span style="color:#d5edf2;font-size:12px">iPhone preview · v1.27.2 · Saved on this device</span></p></div></div><script>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Viktor's Munch Mayhem · v1.27.2</title><meta name="game-release" content="1.53.1-winter"><style>*{box-sizing:border-box}body{margin:0;background:#102a40;font-family:system-ui,sans-serif;color:white;overflow:hidden}canvas{display:block;touch-action:none;width:100vw;height:100dvh}header{position:absolute;top:0;left:0;right:0;padding:14px 18px;background:linear-gradient(#102a40ed,transparent);pointer-events:none;display:flex;justify-content:space-between;gap:10px}h1{font-size:clamp(18px,3vw,30px);margin:0;color:#ffdd65;text-shadow:0 3px #112b40}small{color:#d5edf2}#stats{text-align:right;font-weight:900}#bar{height:8px;background:#375168;border-radius:9px;margin-top:5px;overflow:hidden}#fill{height:100%;background:#ffda55;width:0}footer{position:absolute;bottom:14px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:end;gap:10px}button{border:2px solid #fff4;border-radius:18px;background:#173d54;color:white;padding:12px 16px;font-weight:800;font-size:15px;cursor:pointer}#hint{max-width:280px;background:#102a40da;padding:10px 14px;border-radius:14px;font-size:14px}#cover{position:absolute;inset:0;background:#102a4099;display:grid;place-items:center}.card{text-align:center;background:#14364e;border:3px solid #53d6bf;border-radius:28px;padding:28px;max-width:360px;margin:20px;box-shadow:0 20px 80px #0006}.card h2{font-size:34px;color:#ffda55;margin:0 0 12px}.card button{background:#ffcc4d;color:#173044;font-size:23px;padding:16px 32px}.card p{line-height:1.5}#toast{position:absolute;top:205px;width:100%;text-align:center;font-size:26px;font-weight:900;color:#ffec80;pointer-events:none;text-shadow:0 3px #15334b}.card{max-height:90dvh;overflow:auto}#toast{padding:0 12px;font-size:clamp(18px,4vw,26px)}@media(max-width:520px){header{padding:10px}h1{max-width:175px}header small{font-size:10px}#stats{font-size:12px}#champion{max-width:145px}#hint{font-size:11px;padding:8px;max-width:150px}footer{left:8px;right:8px}footer button{padding:9px;font-size:12px}}</style><style>body{-webkit-user-select:none;user-select:none;overscroll-behavior:none}header{padding-top:calc(8px + env(safe-area-inset-top));padding-left:calc(12px + env(safe-area-inset-left));padding-right:calc(12px + env(safe-area-inset-right))}footer{bottom:calc(8px + env(safe-area-inset-bottom));left:calc(8px + env(safe-area-inset-left));right:calc(8px + env(safe-area-inset-right))}#phone-pause{position:fixed;inset:0;background:#102a40e8;z-index:20;display:grid;place-items:center}#phone-pause[hidden]{display:none}#hint{max-width:190px;font-size:11px}footer button{min-height:44px;padding:8px 12px;font-size:13px}#toast{top:165px}#bomb-warning{top:130px;z-index:4}@media(orientation:landscape){header{font-size:12px}#stats{font-size:12px}h1{font-size:20px}#champion{font-size:11px!important}#bar{height:5px}#stats>div{font-size:10px!important}#hint{max-width:155px}.card{max-width:520px;padding:16px;max-height:85dvh}.card p{font-size:12px;line-height:1.3}.card h2{font-size:26px}.card>div:first-child{font-size:30px!important}.card button{font-size:19px;padding:12px 22px}}</style><style>#return-city[hidden]{display:none}.card #turkey-play{font-size:18px;padding:12px 20px;background:#d99035}#turkey-play:hover{background:#ffcf75}</style><style>.seasonal-bonus{display:flex!important;flex-direction:column;gap:3px;width:100%;margin:12px 0!important;padding:12px!important;border:2px solid #edc275!important;border-radius:12px!important;background:linear-gradient(110deg,#71372a,#ae642e)!important;color:#fff1ce!important;box-shadow:0 3px 12px #0003}.seasonal-bonus span{font-size:10px;letter-spacing:2px}.seasonal-bonus strong{font-size:14px}#seasonal-game{position:fixed;inset:0;width:100%;height:100dvh;border:0;z-index:100;background:#173044}#seasonal-game[hidden]{display:none}</style></head><body><style>#apollo-escape{position:fixed;inset:0;z-index:40;background:#0c1c25;display:grid;grid-template-rows:1fr auto;text-align:center}#apollo-escape[hidden]{display:none}#apollo-escape img{width:100%;height:100%;min-height:0;object-fit:contain}#apollo-escape div{padding:12px;background:#102b35}#apollo-escape h2{margin:0 0 5px;color:#ffe0a0}#apollo-escape p{margin:0 0 8px}</style><section id="apollo-escape" hidden aria-label="Apollo got away"><img id="apollo-escape-art" src="munch-asset-ac0f105e6fa45564fcc7c788.png" alt="Apollo jumps over a farm fence while Viktor chases him"><div><h2>APOLLO GOT AWAY!</h2><p>Viktor is on his trail. Better luck next chase!</p><button id="apollo-continue">KEEP MUNCHING</button></div></section><canvas id="c"></canvas><img id="blast-art" alt="" style="display:none" src="munch-asset-2810062598f62cee4b9365cc.png"><header><div><h1>Viktor's Munch Mayhem</h1><small>CITY MAYHEM · Chomp. Grow. Explore.</small><small id="version" style="display:block">v1.27.2</small></div><div id="stats"><span id="level">Little Chomper</span><br><span id="count">0 munches</span><div id="champion" style="color:#ffdd65;font-size:13px;margin-top:5px">PERSONAL BEST · Connecting…</div><div id="chase-clock" style="font-size:12px;color:#ffdd65">☢ First chase in 3:00</div><div id="mode-status" style="font-size:12px;color:#ffdd65"></div><div id="streak" style="font-size:12px;color:#ffdd65"></div><div id="rocket-status" style="font-size:12px;color:#d5edf2"></div><div id="bar"><div id="fill"></div></div></div></header><div id="toast"></div><div id="bomb-warning" role="status" style="position:absolute;top:165px;left:8px;right:8px;text-align:center;color:#fff4ad;background:#812e29e8;border-radius:8px;font-weight:900;font-size:clamp(12px,2vw,18px);pointer-events:none"></div><footer><div id="hint">Drag anywhere to drive.<br>Snails pop and shrink you! 🐌</div><div><button id="pause" aria-label="Pause game">Ⅱ Pause</button> <button id="sound">Sound: off</button> <button id="return-city" hidden>Back to City</button><button id="reset">↻ Restart</button></div></footer><div id="phone-pause" hidden><div class="card"><h2>Paused</h2><p>Your game is saved. Ready for more?</p><button id="resume">RESUME</button></div></div><div id="cover"><div class="card"><div style="font-size:65px">🚙 ✨</div><h2>Ready, Viktor?</h2><p>Your truck is hungry! Drive into little cars to grow. Then gobble picnic tables, swing sets, swimming pools, and whole buildings!</p><p>Watch out for snails! They go POP, fart, and shrink your truck. One chupacabra roams the map. Eat it at MEGA size, and another appears 30 seconds later!</p><p>✨ Catch golden cars for extra growth! Keep munching for streak bonuses, and find silly surprises inside houses.</p><p>🚀 Find Lift-Off Park, with its pond and trees! Drive through the water to splash. Visit the launch pad at MEGA size for ROCKET RUSH! Your truck shrinks and flies across the map to another neighborhood, then lands at full MEGA size. A new rocket arrives three minutes later.</p><p>☢ Bomb chase: the first starts after 3 minutes of play, then every 3, 5, or 7 minutes at random. Follow the red map marker and eat the bomb-carrying Chupacabra within 10 seconds at ANY size for +1,000 bonus points! If time runs out, the city explodes. Restart rebuilds the city.</p><p>🚧 At MEGA size, collect 10 cats to unlock 10 seconds as a yellow dozer! Push the city into piles without munching it.</p><button id="turkey-play" class="seasonal-bonus"><span>🦃 SEASONAL BONUS</span><strong>THANKSGIVING · TURKEY MUNCH</strong></button><button id="play">LET'S MUNCH!</button><p style="margin-bottom:0"><span style="color:#d5edf2;font-size:12px">iPhone preview · v1.27.2 · Saved on this device</span></p></div></div><script>
 // Bump GAME_VERSION and CHANGELOG.md for every update.
 const GAME_VERSION='1.27.2';
 document.querySelector('#version').textContent='v'+GAME_VERSION;
@@ -377,7 +377,7 @@ round(-19,-1,38,51,8,'#168749');round(-15,4,30,36,5,'#22a95a');round(-11,8,22,21
 g.fillStyle='#eaffd4';g.font='bold 12px system-ui';g.textAlign='center';g.fillText('♻',0,22);g.fillStyle='#d9f36c';g.beginPath();g.moveTo(-14,39);g.lineTo(-5,39);g.lineTo(-11,48);g.lineTo(-18,48);g.fill();g.beginPath();g.moveTo(4,39);g.lineTo(13,39);g.lineTo(18,48);g.lineTo(11,48);g.fill();
 // Friendly front cab with windshield eyes and a wide toothy grille mouth.
 round(-20,-37,40,44,10,'#32bf65');round(-16,-42,32,11,5,'#159449');round(-14,-27,28,15,5,'#a9e8ef');g.fillStyle='#efffff';for(let x of [-8,8]){g.beginPath();g.ellipse(x,-20,6,7,0,0,7);g.fill();g.fillStyle='#20394a';g.beginPath();g.arc(x+1,-21,2.5,0,7);g.fill();g.fillStyle='#efffff'}round(-18,-43,36,16,6,'#163d39');let chomp=Math.sin(t/85)>0?3:0;for(let x=-15;x<16;x+=7){g.fillStyle='#fff4d5';g.beginPath();g.moveTo(x,-42);g.lineTo(x+5,-42);g.lineTo(x+2,-35+chomp);g.fill()}round(-21,-39,5,6,2,'#ffe987');round(16,-39,5,6,2,'#ffe987');round(-9,1,18,4,2,'#b6f08a');
-}g.restore();if(target&&started){g.strokeStyle='#fff9';g.lineWidth=2;g.beginPath();g.arc(target.x,target.y,12,0,7);g.stroke()}g.restore();drawBlast();if(!cityRuined||blast.age<3.3){drawLocator();vehicleGarage.drawLocator();if(typeof worldActivities!=='undefined')worldActivities.drawLocator()}if(t>toastTime)document.querySelector('#toast').textContent='';requestAnimationFrame(frame)}function point(e){if(flight)return;let r=c.getBoundingClientRect();target={x:player.x+e.clientX-r.left-W/2,y:player.y+e.clientY-r.top-H/2}}c.onpointerdown=e=>{c.setPointerCapture(e.pointerId);point(e)};c.onpointermove=e=>{if(e.buttons)point(e)};c.onpointerup=()=>target=null;c.onpointercancel=()=>target=null;addEventListener('keydown',e=>{keys[e.key]=true;if(e.key.startsWith('Arrow'))e.preventDefault()});addEventListener('keyup',e=>keys[e.key]=false);addEventListener('blur',()=>{keys={};target=null});document.querySelector('#play').onclick=()=>{document.querySelector('#sound').textContent='Sound: '+(muted?'off':'on');beep();started=true;document.querySelector('#cover').style.display='none'};document.querySelector('#reset').onclick=()=>finishRun();document.querySelector('#sound').onclick=()=>{muted=!muted;if(muted){stopRocketSound();stopDoomMusic();stopDozerFanfare()}document.querySelector('#sound').textContent='Sound: '+(muted?'off':'on');if(!muted)beep();phoneSettingsSave()};document.querySelector('#turkey-play').onclick=()=>enterTurkeyMap(false);document.querySelector('#return-city').onclick=leaveTurkeyMap;document.querySelector('#apollo-continue').onclick=()=>{document.querySelector('#apollo-escape').hidden=true;phoneResume()};init();requestAnimationFrame(frame);
+}g.restore();if(target&&started){g.strokeStyle='#fff9';g.lineWidth=2;g.beginPath();g.arc(target.x,target.y,12,0,7);g.stroke()}g.restore();drawBlast();if(!cityRuined||blast.age<3.3){drawLocator();vehicleGarage.drawLocator();if(typeof worldActivities!=='undefined')worldActivities.drawLocator()}if(t>toastTime)document.querySelector('#toast').textContent='';requestAnimationFrame(frame)}function point(e){if(flight)return;let r=c.getBoundingClientRect();target={x:player.x+e.clientX-r.left-W/2,y:player.y+e.clientY-r.top-H/2}}c.onpointerdown=e=>{c.setPointerCapture(e.pointerId);point(e)};c.onpointermove=e=>{if(e.buttons)point(e)};c.onpointerup=()=>target=null;c.onpointercancel=()=>target=null;addEventListener('keydown',e=>{keys[e.key]=true;if(e.key.startsWith('Arrow'))e.preventDefault()});addEventListener('keyup',e=>keys[e.key]=false);addEventListener('blur',()=>{keys={};target=null});document.querySelector('#play').onclick=()=>{document.querySelector('#sound').textContent='Sound: '+(muted?'off':'on');beep();started=true;document.querySelector('#cover').style.display='none'};document.querySelector('#reset').onclick=()=>finishRun();document.querySelector('#sound').onclick=()=>{muted=!muted;if(muted){stopRocketSound();stopDoomMusic();stopDozerFanfare()}document.querySelector('#sound').textContent='Sound: '+(muted?'off':'on');if(!muted)beep();phoneSettingsSave()};document.querySelector('#turkey-play').onclick=()=>enterTurkeyMap(false);document.querySelector('#return-city').onclick=leaveTurkeyMap;document.querySelector('#apollo-continue').onclick=()=>{document.querySelector('#apollo-escape').hidden=true;phoneResume()};init();
 </script>
 <style>
 #record-dialog{color:white;background:#14364e;border:3px solid #53d6bf;border-radius:22px;max-width:360px;width:calc(100% - 32px);padding:24px;text-align:center;max-height:90dvh;overflow:auto}
@@ -430,6 +430,7 @@ refreshChampion();
 </style><style>#winter-home{position:fixed;z-index:11;right:12px;bottom:80px;padding:9px 13px;border:1px solid #b9d4d9;border-radius:11px;background:#234e65e8;color:#fff2c5;font:800 12px system-ui;text-decoration:none}</style><script>
 /* FINISHED WINTER GARAGE */
 // Shared vehicle garage for the main game and its seasonal add-ons.
+// Shared vehicle garage for the main game and its seasonal add-ons.
 window.createVikVehicleGarage = function (adapter) {
   const rides = [
     {id:'default', name:'Map favorite', note:adapter.defaultLabel, color:'#63a8ba'},
@@ -439,8 +440,22 @@ window.createVikVehicleGarage = function (adapter) {
     {id:'race', name:'Race car', note:'Red paint and racing stripes', color:'#ef6460'},
     {id:'truck', name:'Work truck', note:'A trusty blue pickup', color:'#58bdd6'}
   ];
-  let choice='default', paused=false, resumeGame=null, nearLatched=false, lastMap='', lastNear=false, readyMessage='';
-  try {const saved=localStorage.getItem('vikChosenRide');if(rides.some(r=>r.id===saved))choice=saved;} catch {}
+  const storageKey='vikVehicleChoices-v2', choices=Object.create(null);
+  const validRide=id=>rides.some(ride=>ride.id===id);
+  const validWorld=world=>typeof world==='string'&&Object.prototype.hasOwnProperty.call(adapter.markers,world);
+  // Old versions saved one ride for every map. Start those saves with the map's
+  // original vehicle instead of carrying an unrelated vehicle into a new world.
+  try {const saved=JSON.parse(localStorage.getItem(storageKey)||'{}');if(saved&&typeof saved==='object'&&!Array.isArray(saved))for(const world of Object.keys(saved))if(validWorld(world)&&validRide(saved[world]))choices[world]=saved[world];} catch {}
+  let choice='default', choiceWorld=null, paused=false, pausedWorld=null, resumeGame=null, nearLatched=false, lastNear=false, readyMessage='';
+  function saveChoices(){try{localStorage.setItem(storageKey,JSON.stringify(choices))}catch{}}
+  function syncWorld(){const world=adapter.map();if(world!==choiceWorld){choiceWorld=world;choice=choices[world]||'default';nearLatched=false;lastNear=false;}return world}
+  function selectDefault(){return resetForWorld(adapter.map())}
+  function resetForWorld(world=adapter.map()){
+    if(validWorld(world)){choices[world]='default';saveChoices()}
+    syncWorld();if(world===choiceWorld)choice='default';
+    return choice;
+  }
+  syncWorld();
   const root=document.createElement('div');root.id='vehicle-ui';
   root.innerHTML='<button id="vehicle-open" hidden aria-haspopup="dialog">🚗 Garage</button><dialog id="vehicle-dialog" aria-labelledby="vehicle-title"><div class="vehicle-heading"><div><p class="vehicle-kicker">PICK A RIDE</p><h2 id="vehicle-title">Victor’s Garage</h2></div><button id="vehicle-close" aria-label="Close vehicle garage">✕</button></div><p class="vehicle-intro">Choose a favorite and keep exploring.</p><div id="vehicle-choices"></div><p class="vehicle-footnote">All rides use the same easy controls. Your score stays with you.</p><button id="vehicle-back">Back to the game ›</button></dialog>';
   document.body.appendChild(root);
@@ -454,16 +469,28 @@ window.createVikVehicleGarage = function (adapter) {
     const note=document.createElement('span');note.textContent=ride.note;
     const status=document.createElement('small');status.textContent=choice===ride.id?'YOUR RIDE':'CHOOSE';
     card.append(preview,title,note,status);list.appendChild(card);previews.push({ride,preview,card,status});
-    card.onclick=()=>{choice=ride.id;try{localStorage.setItem('vikChosenRide',choice)}catch{}readyMessage=ride.name+' ready!';close()};
+    card.onclick=()=>{if(!paused||!dialog.open||adapter.map()!==pausedWorld)return;syncWorld();choice=ride.id;if(validWorld(choiceWorld)){choices[choiceWorld]=choice;saveChoices()}readyMessage=ride.name+' ready!';close()};
   }
   function open(){
-    if(paused||!adapter.canOpen())return false;
-    resumeGame=adapter.pause();paused=true;button.hidden=true;
+    if(paused||dialog.open||!adapter.canOpen())return false;
+    pausedWorld=syncWorld();adapter.clearInput();resumeGame=adapter.pause();paused=true;button.hidden=true;
     for(const p of previews){p.card.setAttribute('aria-pressed',String(p.ride.id===choice));p.status.textContent=p.ride.id===choice?'YOUR RIDE':'CHOOSE'}
-    dialog.showModal();animatePreviews(performance.now());return true;
+    try{dialog.showModal()}catch{finishClose();return false}
+    animatePreviews(performance.now());return true;
   }
-  function close(){if(dialog.open)dialog.close()}
-  dialog.addEventListener('close',()=>{if(!paused)return;paused=false;nearLatched=true;adapter.clearInput();if(resumeGame)resumeGame();resumeGame=null;if(readyMessage){adapter.announce(readyMessage);readyMessage=''}tick()});
+  function finishClose(){
+    if(!paused)return;
+    const sameWorld=adapter.map()===pausedWorld,resume=resumeGame,message=readyMessage;
+    paused=false;resumeGame=null;pausedWorld=null;readyMessage='';syncWorld();nearLatched=true;adapter.clearInput();
+    if(sameWorld&&resume)resume();
+    if(sameWorld&&message)adapter.announce(message);
+    tick();
+  }
+  function close(){if(dialog.open)dialog.close();finishClose()}
+  // Native close events are queued. Ignore an old close event if a new garage
+  // visit has already opened, and resume only once for each visit.
+  dialog.addEventListener('close',()=>{if(!dialog.open)finishClose()});
+  dialog.addEventListener('cancel',event=>{event.preventDefault();close()});
   document.querySelector('#vehicle-close').onclick=close;document.querySelector('#vehicle-back').onclick=close;button.onclick=open;
   addEventListener('keydown',e=>{
     if(dialog.open){if(/^(Arrow|[wasdg]$)/i.test(e.key)||e.code==='Space'){e.stopImmediatePropagation();if(e.code!=='Space')e.preventDefault()}return}
@@ -476,8 +503,8 @@ window.createVikVehicleGarage = function (adapter) {
   }
   function marker(){return adapter.markers[adapter.map()]}
   function tick(){
-    let map=adapter.map(),p=marker();if(map!==lastMap){lastMap=map;nearLatched=false}
-    let allowed=adapter.canOpen();button.hidden=!allowed;
+    let map=syncWorld(),p=marker();if(paused&&map!==pausedWorld){close();return}
+    let allowed=!paused&&adapter.canOpen();button.hidden=!allowed;
     if(!p||!allowed){lastNear=false;return}
     let pos=adapter.player(),dx=adapter.delta(pos.x,p[0]),dy=adapter.delta(pos.y,p[1]+60),d=Math.hypot(dx,dy);
     lastNear=d<175;button.textContent=lastNear?'🚗 Enter garage':'🚗 Garage';
@@ -486,6 +513,7 @@ window.createVikVehicleGarage = function (adapter) {
   }
   function rounded(ctx,x,y,w,h,r,fill){ctx.fillStyle=fill;ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.fill()}
   function drawRide(ctx,t,speed=0,id=choice){
+    if(!validRide(id))id='default';
     if(id==='default'){adapter.drawDefault(ctx,t);return}
     ctx.save();let bob=Math.sin(t/110)*Math.min(1.1,Math.abs(speed)/180);ctx.translate(0,bob);
     let color=rides.find(r=>r.id===id).color,monster=id==='monster',dozer=id==='dozer',plow=id==='plow',race=id==='race';
@@ -512,13 +540,13 @@ window.createVikVehicleGarage = function (adapter) {
     if(lastNear){rounded(ctx,-83,74,166,24,8,'#12394fea');ctx.fillStyle='#ffedb0';ctx.font='bold 11px system-ui';ctx.fillText('DRIVE IN · OR TAP GARAGE',0,90)}ctx.restore();
   }
   function drawLocator(){if(!adapter.canDraw())return;let p=marker();if(!p)return;let ctx=adapter.context(),x=16+p[0]*124/adapter.world,y=Math.max(adapter.locatorTop||130,innerHeight-236)+p[1]*124/adapter.world;ctx.save();ctx.fillStyle='#ffda78';ctx.beginPath();ctx.arc(x,y,6,0,7);ctx.fill();ctx.fillStyle='#214b5c';ctx.font='900 9px system-ui';ctx.textAlign='center';ctx.fillText('G',x,y+3);ctx.restore()}
-  return {open,close,tick,drawRide,drawWorld,drawLocator,get choice(){return choice},get isOpen(){return paused}};
+  return {open,close,tick,drawRide,drawWorld,drawLocator,resetForWorld,selectDefault,get choice(){syncWorld();return choice},get isOpen(){return paused}};
 };
 
 var vehicleGarage=window.createVikVehicleGarage({
   defaultLabel:'Play as the original turkey',locatorTop:132,
   
-  player:()=>player,context:()=>g,delta,world,clearInput:()=>{keys={};target=null},
+  player:()=>player,context:()=>g,delta,world,clearInput:()=>{keys={};target=null;window.vikTouchControls?.cancel?.()},
   drawDefault:(ctx,t)=>{ctx.save();ctx.textAlign='center';ctx.font='64px system-ui';ctx.fillText((activeMap==='turkey'?'🦃':'🚛'),0,20);ctx.restore()},
 
   map:()=>activeMap==='turkey'?'turkey':'city',markers:{city:[780,1300],turkey:[1300,1040]},
@@ -903,6 +931,374 @@ gameHud.tick();
 
 </script><script>
 // Release label is separate from saved-game schema versions.
-const gameReleaseLabel=document.createElement('small');gameReleaseLabel.textContent='Winter update · v1.53.0';gameReleaseLabel.style.cssText='display:block;margin-top:10px;color:#b6d5db;font:600 10px system-ui';
+const gameReleaseLabel=document.createElement('small');gameReleaseLabel.textContent='Winter update · v1.53.1';gameReleaseLabel.style.cssText='display:block;margin-top:10px;color:#b6d5db;font:600 10px system-ui';
 document.querySelector('.hud-menu-panel')?.appendChild(gameReleaseLabel);
+</script><script>
+/* TOUCH AND WORLD ROUTE REPAIR */
+/* Shared touch/mouse steering for Monster Munch and its seasonal worlds. */
+(function (root) {
+  'use strict';
+
+  root.createVikInput = function createVikInput(adapter) {
+    var canvas = adapter.canvas;
+    var events = adapter.eventTarget || root;
+    var doc = adapter.document || root.document;
+    var clock = adapter.now || function () {
+      return root.performance && root.performance.now ? root.performance.now() : Date.now();
+    };
+    var held = null;
+    var tapDestination = null;
+    var destroyed = false;
+    var lastAllowed = !!adapter.canDrive();
+    var lastContext = context();
+    var previousTouchAction = canvas.style ? canvas.style.touchAction : undefined;
+    var previous = {};
+    var handlers;
+
+    function context() {
+      return adapter.contextKey ? adapter.contextKey() : null;
+    }
+
+    function prevent(event) {
+      if (event && event.cancelable !== false && event.preventDefault) event.preventDefault();
+    }
+
+    function release(pointerId) {
+      try {
+        if (canvas.releasePointerCapture && (!canvas.hasPointerCapture || canvas.hasPointerCapture(pointerId))) {
+          canvas.releasePointerCapture(pointerId);
+        }
+      } catch (_) { /* Capture can already be gone after a browser cancellation. */ }
+    }
+
+    function cancel(clearKeys) {
+      var pointerId = held && held.id;
+      held = null;
+      tapDestination = null;
+      adapter.setTarget(null);
+      if (clearKeys !== false) adapter.clearKeys();
+      if (pointerId !== null && pointerId !== undefined) release(pointerId);
+    }
+
+    function isAllowed() {
+      var allowed = !!adapter.canDrive();
+      var currentContext = context();
+      if ((!allowed && (lastAllowed || held || tapDestination)) || currentContext !== lastContext) cancel();
+      lastAllowed = allowed;
+      lastContext = currentContext;
+      return allowed;
+    }
+
+    function location(event) {
+      var rect = canvas.getBoundingClientRect();
+      var width = Number(adapter.width());
+      var height = Number(adapter.height());
+      var player = adapter.player();
+      if (!rect || !(rect.width > 0) || !(rect.height > 0) || !(width > 0) || !(height > 0) ||
+          !player || !Number.isFinite(player.x) || !Number.isFinite(player.y) ||
+          !Number.isFinite(event.clientX) || !Number.isFinite(event.clientY)) return null;
+      var localX = event.clientX - rect.left;
+      var localY = event.clientY - rect.top;
+      return {
+        x: player.x + localX * width / rect.width - width / 2,
+        y: player.y + localY * height / rect.height - height / 2,
+        inside: localX >= 0 && localX <= rect.width && localY >= 0 && localY <= rect.height
+      };
+    }
+
+    function targetAt(point) {
+      return { x: point.x, y: point.y };
+    }
+
+    function noteMovement(event) {
+      if (!Number.isFinite(event.clientX) || !Number.isFinite(event.clientY)) return;
+      var dx = event.clientX - held.startX;
+      var dy = event.clientY - held.startY;
+      held.distanceSquared = Math.max(held.distanceSquared, dx * dx + dy * dy);
+    }
+
+    function down(event) {
+      if (destroyed || held || event.isPrimary === false || (event.pointerType === 'mouse' && event.button !== 0)) return;
+      if (!isAllowed()) return;
+      var point = location(event);
+      if (!point || !point.inside) return;
+      tapDestination = null;
+      held = {
+        id: event.pointerId,
+        startX: event.clientX,
+        startY: event.clientY,
+        started: clock(),
+        distanceSquared: 0,
+        destination: targetAt(point)
+      };
+      adapter.setTarget(targetAt(point));
+      try { if (canvas.setPointerCapture) canvas.setPointerCapture(event.pointerId); } catch (_) {}
+      prevent(event);
+    }
+
+    function move(event) {
+      if (destroyed || !held || event.pointerId !== held.id) return;
+      if (!isAllowed() || !held) return;
+      noteMovement(event);
+      var point = location(event);
+      if (point) adapter.setTarget(targetAt(point));
+      prevent(event);
+    }
+
+    function up(event) {
+      if (destroyed || !held || event.pointerId !== held.id) return;
+      if (!isAllowed() || !held) return;
+      noteMovement(event);
+      var point = location(event);
+      var gesture = held;
+      held = null;
+      // A quick tap is a destination. A held or dragged finger steers only while down.
+      var tapped = point && point.inside && gesture.distanceSquared <= 64 && clock() - gesture.started <= 250;
+      tapDestination = tapped ? gesture.destination : null;
+      adapter.setTarget(tapDestination ? targetAt(tapDestination) : null);
+      release(gesture.id);
+      prevent(event);
+    }
+
+    function pointerCancelled(event) {
+      if (held && event.pointerId === held.id) cancel();
+    }
+
+    function blur() { cancel(); }
+    function visibility() { if (doc.hidden) cancel(); }
+    function keydown(event) {
+      if (/^(Arrow(Left|Right|Up|Down)|[wasd])$/i.test(event.key || '')) cancel(false);
+    }
+
+    handlers = {
+      onpointerdown: down,
+      onpointermove: move,
+      onpointerup: up,
+      onpointercancel: pointerCancelled,
+      onlostpointercapture: pointerCancelled
+    };
+    Object.keys(handlers).forEach(function (name) {
+      previous[name] = canvas[name];
+      canvas[name] = handlers[name];
+    });
+    if (canvas.style) canvas.style.touchAction = 'none';
+    if (events.addEventListener) {
+      events.addEventListener('blur', blur);
+      events.addEventListener('keydown', keydown);
+    }
+    if (doc && doc.addEventListener) doc.addEventListener('visibilitychange', visibility);
+
+    return {
+      tick: function () {
+        if (destroyed || !isAllowed() || !tapDestination || held) return;
+        var player = adapter.player();
+        if (!player) return;
+        var dx = adapter.delta ? adapter.delta(player.x, tapDestination.x) : tapDestination.x - player.x;
+        var dy = adapter.delta ? adapter.delta(player.y, tapDestination.y) : tapDestination.y - player.y;
+        var radius = typeof adapter.arrivalRadius === 'function' ? adapter.arrivalRadius() : adapter.arrivalRadius;
+        if (!(radius >= 0)) radius = 16;
+        if (dx * dx + dy * dy <= radius * radius) {
+          tapDestination = null;
+          adapter.setTarget(null);
+        }
+      },
+      cancel: function () { if (!destroyed) cancel(); },
+      destroy: function () {
+        if (destroyed) return;
+        cancel();
+        destroyed = true;
+        Object.keys(handlers).forEach(function (name) {
+          if (canvas[name] === handlers[name]) canvas[name] = previous[name];
+        });
+        if (canvas.style && canvas.style.touchAction === 'none') canvas.style.touchAction = previousTouchAction;
+        if (events.removeEventListener) {
+          events.removeEventListener('blur', blur);
+          events.removeEventListener('keydown', keydown);
+        }
+        if (doc && doc.removeEventListener) doc.removeEventListener('visibilitychange', visibility);
+      },
+      getState: function () {
+        return {
+          held: held ? held.id : null,
+          destination: tapDestination ? targetAt(tapDestination) : null
+        };
+      }
+    };
+  };
+})(typeof window !== 'undefined' ? window : globalThis);
+
+
+window.vikTouchControls=window.createVikInput({canvas:c,player:()=>player,width:()=>W,height:()=>H,
+  canDrive:()=>started&&!document.hidden&&!phonePaused&&!flight&&!cityRuined&&!recordBusy&&!vehicleGarage.isOpen,setTarget:value=>{target=value},clearKeys:()=>{keys={}},delta,
+  contextKey:()=>(activeMap==='turkey'?'turkey':'city')+'|'+String(specialMode||'normal')});
+const beforeTouchRepairFrame=frame;let gameFrameNumber=0;
+function updateGameSurface(){
+ const worldName=(activeMap==='turkey'?'turkey':'city');const stock={city:'garbage-truck',farm:'tractor',ocean:'tugboat',moon:'moon-rover',snow:'snowplow',turkey:'turkey',gingerbread:'gingerbread-roller'}[worldName];
+ c.dataset.world=worldName;c.dataset.vehicle=vehicleGarage.choice!=='default'?vehicleGarage.choice:specialMode==='dozer'?'bulldozer':stock;
+ c.dataset.playerX=player.x.toFixed(2);c.dataset.playerY=player.y.toFixed(2);c.dataset.frame=String(gameFrameNumber);
+ c.dataset.playState=vehicleGarage.isOpen?'garage':(flight)?'cinematic':(started&&!document.hidden&&!phonePaused&&!flight&&!cityRuined&&!recordBusy&&!vehicleGarage.isOpen)?'playing':'paused';
+ const inputState=window.vikTouchControls.getState();c.dataset.input=inputState.held!==null?'held':inputState.destination?'destination':'idle';c.dataset.destination=target?target.x.toFixed(2)+','+target.y.toFixed(2):'';
+ c.setAttribute('aria-label',worldName+' · '+c.dataset.vehicle+' · tap or drag to drive');
+}
+frame=function(t){window.vikTouchControls.tick();beforeTouchRepairFrame(t);gameFrameNumber++;updateGameSurface()};
+updateGameSurface();
+
+// Append after the existing game, garage, HUD and seasonal town scripts.
+// World buttons are destinations; in-world portals retain their original behavior.
+(function installVikWorldNavigation(){
+  'use strict';
+  if(window.vikWorldNavigation)return;
+  const find=id=>document.getElementById(id);
+  const isMain=typeof currentBiome!=='undefined'&&typeof biomeMaps!=='undefined';
+  const validWorlds=['city','farm','ocean','moon','snow'];
+  const release='1.53.1-winter';
+  const query=new URLSearchParams(location.search);
+  const resetRide=map=>{if(typeof vehicleGarage!=='undefined')vehicleGarage.resetForWorld?.(map)};
+  const clearInput=()=>{keys={};target=null;window.vikTouchControls?.cancel?.()};
+  const stopSounds=()=>{
+    if(typeof stopRadio==='function')stopRadio();
+    if(typeof stopMoonAudio==='function')stopMoonAudio();
+    if(typeof stopMarineAudio==='function')stopMarineAudio();
+    if(typeof stopSpaceMusic==='function')stopSpaceMusic();
+    if(typeof stopTripAudio==='function')stopTripAudio();
+    if(typeof stopLaunchVideo==='function')stopLaunchVideo();
+    if(typeof stopRocketSound==='function')stopRocketSound();
+    if(typeof stopDoomMusic==='function')stopDoomMusic();
+    if(typeof stopDozerFanfare==='function')stopDozerFanfare();
+    window.speechSynthesis?.cancel();
+  };
+  const clearPowerVehicle=()=>{
+    // A selected world always starts in its stock vehicle. Earned totals remain.
+    specialMode=null;modeLeft=0;secretGoats=0;
+  };
+  function closePanels(){
+    if(typeof vehicleGarage!=='undefined'&&vehicleGarage.isOpen)vehicleGarage.close();
+    for(const dialog of document.querySelectorAll('dialog'))if(dialog.open)dialog.close();
+    for(const id of ['hud-menu','hud-details'])if(find(id))find(id).open=false;
+  }
+  function releaseHref(url){
+    const hashAt=url.indexOf('#'),hash=hashAt>=0?url.slice(hashAt):'';
+    const withoutHash=hashAt>=0?url.slice(0,hashAt):url;
+    const queryAt=withoutHash.indexOf('?'),pathname=queryAt>=0?withoutHash.slice(0,queryAt):withoutHash;
+    const params=new URLSearchParams(queryAt>=0?withoutHash.slice(queryAt+1):'');
+    params.set('release',release);return pathname+'?'+params.toString()+hash;
+  }
+  function go(url){location.href=releaseHref(url);return true}
+
+  if(isMain){
+    let homeAt=null;
+    function resumeHomeTimers(t){
+      if(homeAt===null)return;
+      const elapsed=Math.max(0,t-homeAt),shift=v=>v>homeAt?v+elapsed:v;
+      boostUntil=shift(boostUntil);hurtUntil=shift(hurtUntil);streakUntil=shift(streakUntil);
+      toastTime=shift(toastTime);openingThemeUntil=shift(openingThemeUntil);
+      spaceMusicNext=shift(spaceMusicNext);musicNext=shift(musicNext);
+      const trains=new Set(),objectsToShift=new Set();
+      for(const state of [captureBiome(),...Object.values(biomeMaps)]){
+        if(state.train)trains.add(state.train);
+        for(const object of state.objects||[])objectsToShift.add(object);
+      }
+      for(const trainState of trains)for(const key of ['next','bounceUntil'])if(trainState[key]>homeAt)trainState[key]+=elapsed;
+      for(const object of objectsToShift)for(const key of ['hitUntil','bounceUntil'])if(object[key]>homeAt)object[key]+=elapsed;
+      homeAt=null;
+    }
+    function loadWorld(next,t){
+      const progress={score,stage,munches,bonusPoints,streak,streakUntil,goldenClock,catsSaved,modeSerial,boostUntil,hurtUntil};
+      const leaving=currentBiome;
+      if(leaving!==next)biomeMaps[leaving]=captureBiome();
+      currentBiome=next;
+      const cached=leaving===next?captureBiome():biomeMaps[next];
+      if(cached&&!cached.cityRuined&&!cached.flight)restoreBiome(cached);else initMap();
+      ({score,stage,munches,bonusPoints,streak,streakUntil,goldenClock,catsSaved,modeSerial,boostUntil,hurtUntil}=progress);
+      clearPowerVehicle();
+      // A menu destination begins a calm visit; a cached chase cannot block the
+      // Moon button or make the newly selected level appear frozen.
+      resetBomb();for(const object of objects)if(object.armed)object.armed=false;
+      flight=null;lunarTransit=null;snowTransit=null;snowRide=null;
+      particles=[];gas=[];surprises=[];groundDust=[];groundSpeed=0;moonSpeed=0;seaSpeed=0;
+      waterInside=false;wormholeExit=null;wormholeCooldown=2;
+      tunnelLocked=true;dockLocked=true;moonLaunchLock=true;snowLocked=true;
+      const spawn={city:[1300,1300,0],farm:[farmTunnel.x,farmTunnel.y+160,Math.PI],ocean:[1300,1100,Math.PI],snow:[snowCave.x,snowCave.y-190,0]}[next];
+      if(spawn)player={x:spawn[0],y:spawn[1],a:spawn[2]};
+      clearInput();hurtUntil=Math.max(hurtUntil,t+2000);
+      train.next=t+10000;train.bounceUntil=0;
+      resetRide(next);updateUI();updateBiomeHUD();updateFarmText();
+    }
+    function selectWorld(next){
+      if(next==='turkey'||next==='gingerbread')return go(next+'-munch.html?world='+next+'&play=1');
+      if(!validWorlds.includes(next))return false;
+      closePanels();stopSounds();
+      const t=performance.now();resumeHomeTimers(t);
+      // The original outbound film starts in City and commits Moon on finish/Skip.
+      // No cinematic function, audio clip, timing or Skip handler is replaced.
+      loadWorld(next==='moon'?'city':next,t);
+      if(next==='moon')resetRide('moon');
+      startMenuCity();prev=t;
+      if(next==='moon')return beginMoonTrip(t,false);
+      return true;
+    }
+    function home(){
+      if(flight||lunarTransit||snowTransit||snowRide||barnGame||ufoFlight)return false;
+      closePanels();stopSounds();clearInput();
+      if(started&&homeAt===null)homeAt=performance.now();
+      started=false;find('cover').style.display='flex';
+      document.querySelector('header').hidden=true;document.querySelector('footer').hidden=true;
+      document.body.classList.add('hud-hidden');if(find('hud-activity'))find('hud-activity').hidden=true;
+      return true;
+    }
+    function bindMenu(){
+      for(const [id,next] of Object.entries({play:'city','farm-play':'farm','ocean-play':'ocean','moon-play':'moon','snow-play':'snow'}))if(find(id))find(id).onclick=()=>selectWorld(next);
+      for(const kind of ['turkey','gingerbread']){
+        const entry=document.querySelector('a[href*="'+kind+'-munch.html"]');
+        if(entry)entry.href=releaseHref(kind+'-munch.html?world='+kind+'&play=1');
+      }
+    }
+    const previousInstall=installWorldMenu;
+    installWorldMenu=function(){previousInstall();bindMenu()};
+    bindMenu();
+    let homeButton=find('winter-home');
+    if(!homeButton){homeButton=document.createElement('button');homeButton.id='winter-home';homeButton.type='button';homeButton.textContent='⌂ Worlds';(document.querySelector('.hud-settings')||document.body).appendChild(homeButton)}
+    homeButton.onclick=event=>{event?.preventDefault?.();home()};
+    window.vikWorldNavigation={kind:'main',selectWorld,home,current:()=>currentBiome};
+    // A direct return link explicitly selects its destination after all old init code.
+    const requested=query.get('world');
+    if(query.get('play')==='1'&&validWorlds.includes(requested))selectWorld(requested);
+    else if(query.has('world'))home();
+  }else if(typeof activeMap!=='undefined'&&typeof PHONE_KEYS!=='undefined'){
+    const kind=PHONE_KEYS.run.includes('gingerbread')?'gingerbread':'turkey';
+    const restoreOwnMap=phoneRestore;
+    phoneRestore=function(snapshot){
+      // The add-on's inherited City save is never a playable destination here.
+      if(!snapshot||snapshot.activeMap!=='turkey')return false;
+      return restoreOwnMap(snapshot);
+    };
+    function saveSeason(){if(activeMap==='turkey'&&started)phoneSave()}
+    function selectSeason(){
+      closePanels();stopSounds();clearInput();
+      if(activeMap!=='turkey'||cityRuined||flight)enterTurkeyMap(false);
+      activeMap='turkey';cityVisit=null;phonePaused=false;phoneLastReal=null;prev=phoneClock;
+      if(find('phone-pause'))find('phone-pause').hidden=true;
+      clearPowerVehicle();resetRide(kind);started=true;
+      find('cover').style.display='none';find('return-city').hidden=false;
+      clearInput();updateUI();phoneSave();return true;
+    }
+    leaveTurkeyMap=function(){saveSeason();stopSounds();clearInput();return go('game.html?world=city&play=1')};
+    find('return-city').onclick=leaveTurkeyMap;
+    for(const id of ['play','turkey-play'])if(find(id))find(id).onclick=selectSeason;
+    const homeButton=find('winter-home');
+    if(homeButton){homeButton.href=releaseHref('game.html');homeButton.onclick=()=>{saveSeason();stopSounds();clearInput()}}
+    window.vikWorldNavigation={kind,selectWorld:next=>next===kind?selectSeason():go('game.html?world='+encodeURIComponent(next)+'&play=1'),home:()=>{saveSeason();return go('game.html')},current:()=>kind};
+    // The previous embedded ?play handler can run before the last town wrapper.
+    // Reconcile at the very end so late initializers cannot select the wrong map.
+    if(query.get('play')==='1')selectSeason();
+  }
+  // Cover links also carry the build identifier, so moving between the three
+  // standalone pages cannot reopen the previous cached seasonal build.
+  for(const link of document.querySelectorAll('a')){
+    const href=link.href||link.getAttribute('href')||'';
+    if(/(?:^|\/)(?:game|turkey-munch|gingerbread-munch)\.html(?:[?#]|$)/.test(href))link.href=releaseHref(href);
+  }
+})();
+
+requestAnimationFrame(frame);
 </script></html>

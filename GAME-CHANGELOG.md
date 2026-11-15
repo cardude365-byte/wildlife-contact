@@ -1,3 +1,11 @@
+# v1.53.1 — Driving and world selection repair
+
+- Quick taps drive to the chosen spot; held drags stop on release.
+- Explicit world selections load the correct map and original vehicle.
+- Garage choices are validated per world and resume play cleanly.
+- Seasonal City returns open the main City game.
+- Original Moon launch and NASA audio retained.
+
 # Victor's Monster Munch — v1.53.0 Winter Update
 
 - Winter snowplow opening artwork and seven world shortcuts.
