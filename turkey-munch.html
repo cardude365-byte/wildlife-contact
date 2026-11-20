@@ -3,7 +3,7 @@
 // Run in <head>, before the game or any saved-run initializer.
 (function returnReloadToWorldMenu(root) {
   'use strict';
-  const release='1.53.4-winter';
+  const release='1.53.5-winter';
   let navigationType;
   try {
     const entries=root.performance?.getEntriesByType?.('navigation');
@@ -46,7 +46,7 @@
   }
 })(window);
 
-</script><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Viktor’s Monster Munch · Turkey Munch</title><meta name="game-release" content="1.53.4-winter"><style>*{box-sizing:border-box}body{margin:0;background:#102a40;font-family:system-ui,sans-serif;color:white;overflow:hidden}canvas{display:block;touch-action:none;width:100vw;height:100dvh}header{position:absolute;top:0;left:0;right:0;padding:14px 18px;background:linear-gradient(#102a40ed,transparent);pointer-events:none;display:flex;justify-content:space-between;gap:10px}h1{font-size:clamp(18px,3vw,30px);margin:0;color:#ffdd65;text-shadow:0 3px #112b40}small{color:#d5edf2}#stats{text-align:right;font-weight:900}#bar{height:8px;background:#375168;border-radius:9px;margin-top:5px;overflow:hidden}#fill{height:100%;background:#ffda55;width:0}footer{position:absolute;bottom:14px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:end;gap:10px}button{border:2px solid #fff4;border-radius:18px;background:#173d54;color:white;padding:12px 16px;font-weight:800;font-size:15px;cursor:pointer}#hint{max-width:280px;background:#102a40da;padding:10px 14px;border-radius:14px;font-size:14px}#cover{position:absolute;inset:0;background:#102a4099;display:grid;place-items:center}.card{text-align:center;background:#14364e;border:3px solid #53d6bf;border-radius:28px;padding:28px;max-width:360px;margin:20px;box-shadow:0 20px 80px #0006}.card h2{font-size:34px;color:#ffda55;margin:0 0 12px}.card button{background:#ffcc4d;color:#173044;font-size:23px;padding:16px 32px}.card p{line-height:1.5}#toast{position:absolute;top:205px;width:100%;text-align:center;font-size:26px;font-weight:900;color:#ffec80;pointer-events:none;text-shadow:0 3px #15334b}.card{max-height:90dvh;overflow:auto}#toast{padding:0 12px;font-size:clamp(18px,4vw,26px)}@media(max-width:520px){header{padding:10px}h1{max-width:175px}header small{font-size:10px}#stats{font-size:12px}#champion{max-width:145px}#hint{font-size:11px;padding:8px;max-width:150px}footer{left:8px;right:8px}footer button{padding:9px;font-size:12px}}</style><style>body{-webkit-user-select:none;user-select:none;overscroll-behavior:none}header{padding-top:calc(8px + env(safe-area-inset-top));padding-left:calc(12px + env(safe-area-inset-left));padding-right:calc(12px + env(safe-area-inset-right))}footer{bottom:calc(8px + env(safe-area-inset-bottom));left:calc(8px + env(safe-area-inset-left));right:calc(8px + env(safe-area-inset-right))}#phone-pause{position:fixed;inset:0;background:#102a40e8;z-index:20;display:grid;place-items:center}#phone-pause[hidden]{display:none}#hint{max-width:190px;font-size:11px}footer button{min-height:44px;padding:8px 12px;font-size:13px}#toast{top:165px}#bomb-warning{top:130px;z-index:4}@media(orientation:landscape){header{font-size:12px}#stats{font-size:12px}h1{font-size:20px}#champion{font-size:11px!important}#bar{height:5px}#stats>div{font-size:10px!important}#hint{max-width:155px}.card{max-width:520px;padding:16px;max-height:85dvh}.card p{font-size:12px;line-height:1.3}.card h2{font-size:26px}.card>div:first-child{font-size:30px!important}.card button{font-size:19px;padding:12px 22px}}</style><style>#return-city[hidden]{display:none}.card #turkey-play{font-size:18px;padding:12px 20px;background:#d99035}#turkey-play:hover{background:#ffcf75}</style><style>.seasonal-bonus{display:flex!important;flex-direction:column;gap:3px;width:100%;margin:12px 0!important;padding:12px!important;border:2px solid #edc275!important;border-radius:12px!important;background:linear-gradient(110deg,#71372a,#ae642e)!important;color:#fff1ce!important;box-shadow:0 3px 12px #0003}.seasonal-bonus span{font-size:10px;letter-spacing:2px}.seasonal-bonus strong{font-size:14px}#seasonal-game{position:fixed;inset:0;width:100%;height:100dvh;border:0;z-index:100;background:#173044}#seasonal-game[hidden]{display:none}</style></head><body><style>#apollo-escape{position:fixed;inset:0;z-index:40;background:#0c1c25;display:grid;grid-template-rows:1fr auto;text-align:center}#apollo-escape[hidden]{display:none}#apollo-escape img{width:100%;height:100%;min-height:0;object-fit:contain}#apollo-escape div{padding:12px;background:#102b35}#apollo-escape h2{margin:0 0 5px;color:#ffe0a0}#apollo-escape p{margin:0 0 8px}</style><section id="apollo-escape" hidden aria-label="Apollo got away"><img id="apollo-escape-art" src="munch-asset-ac0f105e6fa45564fcc7c788.png" alt="Apollo jumps over a farm fence while Viktor chases him"><div><h2>APOLLO GOT AWAY!</h2><p>Viktor is on his trail. Better luck next chase!</p><button id="apollo-continue">KEEP MUNCHING</button></div></section><canvas id="c"></canvas><img id="blast-art" alt="" style="display:none" src="munch-asset-2810062598f62cee4b9365cc.png"><header><div><h1>Viktor's Munch Mayhem</h1><small>CITY MAYHEM · Chomp. Grow. Explore.</small><small id="version" style="display:block">v1.27.2</small></div><div id="stats"><span id="level">Little Chomper</span><br><span id="count">0 munches</span><div id="champion" style="color:#ffdd65;font-size:13px;margin-top:5px">PERSONAL BEST · Connecting…</div><div id="chase-clock" style="font-size:12px;color:#ffdd65">☢ First chase in 3:00</div><div id="mode-status" style="font-size:12px;color:#ffdd65"></div><div id="streak" style="font-size:12px;color:#ffdd65"></div><div id="rocket-status" style="font-size:12px;color:#d5edf2"></div><div id="bar"><div id="fill"></div></div></div></header><div id="toast"></div><div id="bomb-warning" role="status" style="position:absolute;top:165px;left:8px;right:8px;text-align:center;color:#fff4ad;background:#812e29e8;border-radius:8px;font-weight:900;font-size:clamp(12px,2vw,18px);pointer-events:none"></div><footer><div id="hint">Drag anywhere to drive.<br>Snails pop and shrink you! 🐌</div><div><button id="pause" aria-label="Pause game">Ⅱ Pause</button> <button id="sound">Sound: off</button> <button id="return-city" hidden>Back to City</button><button id="reset">↻ Restart</button></div></footer><div id="phone-pause" hidden><div class="card"><h2>Paused</h2><p>Your game is saved. Ready for more?</p><button id="resume">RESUME</button></div></div><div id="cover"><div class="card"><h1 class="winter-title seasonal-wordmark"><img id="viktor-wordmark" src="munch-asset-4fd20f013e68f7a720b61cb8.png" alt="Viktor's Monster Munch"></h1><h2>Ready, Viktor?</h2><p>Your truck is hungry! Drive into little cars to grow. Then gobble picnic tables, swing sets, swimming pools, and whole buildings!</p><p>Watch out for snails! They go POP, fart, and shrink your truck. One chupacabra roams the map. Eat it at MEGA size, and another appears 30 seconds later!</p><p>✨ Catch golden cars for extra growth! Keep munching for streak bonuses, and find silly surprises inside houses.</p><p>🚀 Find Lift-Off Park, with its pond and trees! Drive through the water to splash. Visit the launch pad at MEGA size for ROCKET RUSH! Your truck shrinks and flies across the map to another neighborhood, then lands at full MEGA size. A new rocket arrives three minutes later.</p><p>☢ Bomb chase: the first starts after 3 minutes of play, then every 3, 5, or 7 minutes at random. Follow the red map marker and eat the bomb-carrying Chupacabra within 10 seconds at ANY size for +1,000 bonus points! If time runs out, the city explodes. Restart rebuilds the city.</p><p>🚧 At MEGA size, collect 10 cats to unlock 10 seconds as a yellow dozer! Push the city into piles without munching it.</p><button id="turkey-play" class="seasonal-bonus"><span>🦃 SEASONAL BONUS</span><strong>THANKSGIVING · TURKEY MUNCH</strong></button><button id="play">LET'S MUNCH!</button><p style="margin-bottom:0"><span style="color:#d5edf2;font-size:12px">iPhone preview · v1.27.2 · Saved on this device</span></p></div></div><script>
+</script><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Viktor’s Monster Munch · Turkey Munch</title><meta name="game-release" content="1.53.5-winter"><style>*{box-sizing:border-box}body{margin:0;background:#102a40;font-family:system-ui,sans-serif;color:white;overflow:hidden}canvas{display:block;touch-action:none;width:100vw;height:100dvh}header{position:absolute;top:0;left:0;right:0;padding:14px 18px;background:linear-gradient(#102a40ed,transparent);pointer-events:none;display:flex;justify-content:space-between;gap:10px}h1{font-size:clamp(18px,3vw,30px);margin:0;color:#ffdd65;text-shadow:0 3px #112b40}small{color:#d5edf2}#stats{text-align:right;font-weight:900}#bar{height:8px;background:#375168;border-radius:9px;margin-top:5px;overflow:hidden}#fill{height:100%;background:#ffda55;width:0}footer{position:absolute;bottom:14px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:end;gap:10px}button{border:2px solid #fff4;border-radius:18px;background:#173d54;color:white;padding:12px 16px;font-weight:800;font-size:15px;cursor:pointer}#hint{max-width:280px;background:#102a40da;padding:10px 14px;border-radius:14px;font-size:14px}#cover{position:absolute;inset:0;background:#102a4099;display:grid;place-items:center}.card{text-align:center;background:#14364e;border:3px solid #53d6bf;border-radius:28px;padding:28px;max-width:360px;margin:20px;box-shadow:0 20px 80px #0006}.card h2{font-size:34px;color:#ffda55;margin:0 0 12px}.card button{background:#ffcc4d;color:#173044;font-size:23px;padding:16px 32px}.card p{line-height:1.5}#toast{position:absolute;top:205px;width:100%;text-align:center;font-size:26px;font-weight:900;color:#ffec80;pointer-events:none;text-shadow:0 3px #15334b}.card{max-height:90dvh;overflow:auto}#toast{padding:0 12px;font-size:clamp(18px,4vw,26px)}@media(max-width:520px){header{padding:10px}h1{max-width:175px}header small{font-size:10px}#stats{font-size:12px}#champion{max-width:145px}#hint{font-size:11px;padding:8px;max-width:150px}footer{left:8px;right:8px}footer button{padding:9px;font-size:12px}}</style><style>body{-webkit-user-select:none;user-select:none;overscroll-behavior:none}header{padding-top:calc(8px + env(safe-area-inset-top));padding-left:calc(12px + env(safe-area-inset-left));padding-right:calc(12px + env(safe-area-inset-right))}footer{bottom:calc(8px + env(safe-area-inset-bottom));left:calc(8px + env(safe-area-inset-left));right:calc(8px + env(safe-area-inset-right))}#phone-pause{position:fixed;inset:0;background:#102a40e8;z-index:20;display:grid;place-items:center}#phone-pause[hidden]{display:none}#hint{max-width:190px;font-size:11px}footer button{min-height:44px;padding:8px 12px;font-size:13px}#toast{top:165px}#bomb-warning{top:130px;z-index:4}@media(orientation:landscape){header{font-size:12px}#stats{font-size:12px}h1{font-size:20px}#champion{font-size:11px!important}#bar{height:5px}#stats>div{font-size:10px!important}#hint{max-width:155px}.card{max-width:520px;padding:16px;max-height:85dvh}.card p{font-size:12px;line-height:1.3}.card h2{font-size:26px}.card>div:first-child{font-size:30px!important}.card button{font-size:19px;padding:12px 22px}}</style><style>#return-city[hidden]{display:none}.card #turkey-play{font-size:18px;padding:12px 20px;background:#d99035}#turkey-play:hover{background:#ffcf75}</style><style>.seasonal-bonus{display:flex!important;flex-direction:column;gap:3px;width:100%;margin:12px 0!important;padding:12px!important;border:2px solid #edc275!important;border-radius:12px!important;background:linear-gradient(110deg,#71372a,#ae642e)!important;color:#fff1ce!important;box-shadow:0 3px 12px #0003}.seasonal-bonus span{font-size:10px;letter-spacing:2px}.seasonal-bonus strong{font-size:14px}#seasonal-game{position:fixed;inset:0;width:100%;height:100dvh;border:0;z-index:100;background:#173044}#seasonal-game[hidden]{display:none}</style></head><body><style>#apollo-escape{position:fixed;inset:0;z-index:40;background:#0c1c25;display:grid;grid-template-rows:1fr auto;text-align:center}#apollo-escape[hidden]{display:none}#apollo-escape img{width:100%;height:100%;min-height:0;object-fit:contain}#apollo-escape div{padding:12px;background:#102b35}#apollo-escape h2{margin:0 0 5px;color:#ffe0a0}#apollo-escape p{margin:0 0 8px}</style><section id="apollo-escape" hidden aria-label="Apollo got away"><img id="apollo-escape-art" src="munch-asset-ac0f105e6fa45564fcc7c788.png" alt="Apollo jumps over a farm fence while Viktor chases him"><div><h2>APOLLO GOT AWAY!</h2><p>Viktor is on his trail. Better luck next chase!</p><button id="apollo-continue">KEEP MUNCHING</button></div></section><canvas id="c"></canvas><img id="blast-art" alt="" style="display:none" src="munch-asset-2810062598f62cee4b9365cc.png"><header><div><h1>Viktor's Munch Mayhem</h1><small>CITY MAYHEM · Chomp. Grow. Explore.</small><small id="version" style="display:block">v1.27.2</small></div><div id="stats"><span id="level">Little Chomper</span><br><span id="count">0 munches</span><div id="champion" style="color:#ffdd65;font-size:13px;margin-top:5px">PERSONAL BEST · Connecting…</div><div id="chase-clock" style="font-size:12px;color:#ffdd65">☢ First chase in 3:00</div><div id="mode-status" style="font-size:12px;color:#ffdd65"></div><div id="streak" style="font-size:12px;color:#ffdd65"></div><div id="rocket-status" style="font-size:12px;color:#d5edf2"></div><div id="bar"><div id="fill"></div></div></div></header><div id="toast"></div><div id="bomb-warning" role="status" style="position:absolute;top:165px;left:8px;right:8px;text-align:center;color:#fff4ad;background:#812e29e8;border-radius:8px;font-weight:900;font-size:clamp(12px,2vw,18px);pointer-events:none"></div><footer><div id="hint">Drag anywhere to drive.<br>Snails pop and shrink you! 🐌</div><div><button id="pause" aria-label="Pause game">Ⅱ Pause</button> <button id="sound">Sound: off</button> <button id="return-city" hidden>Back to City</button><button id="reset">↻ Restart</button></div></footer><div id="phone-pause" hidden><div class="card"><h2>Paused</h2><p>Your game is saved. Ready for more?</p><button id="resume">RESUME</button></div></div><div id="cover"><div class="card"><h1 class="winter-title seasonal-wordmark"><img id="viktor-wordmark" src="munch-asset-4fd20f013e68f7a720b61cb8.png" alt="Viktor's Monster Munch"></h1><h2>Ready, Viktor?</h2><p>Your truck is hungry! Drive into little cars to grow. Then gobble picnic tables, swing sets, swimming pools, and whole buildings!</p><p>Watch out for snails! They go POP, fart, and shrink your truck. One chupacabra roams the map. Eat it at MEGA size, and another appears 30 seconds later!</p><p>✨ Catch golden cars for extra growth! Keep munching for streak bonuses, and find silly surprises inside houses.</p><p>🚀 Find Lift-Off Park, with its pond and trees! Drive through the water to splash. Visit the launch pad at MEGA size for ROCKET RUSH! Your truck shrinks and flies across the map to another neighborhood, then lands at full MEGA size. A new rocket arrives three minutes later.</p><p>☢ Bomb chase: the first starts after 3 minutes of play, then every 3, 5, or 7 minutes at random. Follow the red map marker and eat the bomb-carrying Chupacabra within 10 seconds at ANY size for +1,000 bonus points! If time runs out, the city explodes. Restart rebuilds the city.</p><p>🚧 At MEGA size, collect 10 cats to unlock 10 seconds as a yellow dozer! Push the city into piles without munching it.</p><button id="turkey-play" class="seasonal-bonus"><span>🦃 SEASONAL BONUS</span><strong>THANKSGIVING · TURKEY MUNCH</strong></button><button id="play">LET'S MUNCH!</button><p style="margin-bottom:0"><span style="color:#d5edf2;font-size:12px">iPhone preview · v1.27.2 · Saved on this device</span></p></div></div><script>
 // Bump GAME_VERSION and CHANGELOG.md for every update.
 const GAME_VERSION='1.27.2';
 document.querySelector('#version').textContent='v'+GAME_VERSION;
@@ -400,7 +400,7 @@ round(-9,25,18,31,3,'#785644');round(-7,28,14,5,2,'#a77c55');g.fillStyle='#f4d57
 // flower box and small foundation trim
 round(-43,19,21,5,2,'#eee2c8');for(let x=-40;x<-24;x+=7){g.fillStyle=['#de6d66','#f1bd58','#d887a3'][Math.abs(x)%3];g.beginPath();g.arc(x,17,3,0,7);g.fill()}round(-50,53,100,5,2,'#eee1c9');
 }g.restore()}
-let prev=0;function frame(realTime){if(typeof vehicleGarage!=='undefined'){vehicleGarage.tick();if(vehicleGarage.isOpen){phoneLastReal=realTime;prev=phoneClock;requestAnimationFrame(frame);return}}let t=phoneTimeline(realTime);if(!phonePaused){tickTurkeyPortal(t);if(activeMap==='turkey'&&started&&t<boostUntil)turkeyGobble();tickBarnyard(Math.min(.035,Math.max(0,(t-prev)/1000)),t)}if(phonePaused||document.hidden){prev=t;requestAnimationFrame(frame);return}phoneAutoSave();let clockDt=Math.max(0,(t-prev)/1000),dt=Math.min(clockDt,.035);prev=t;let radius=stages[stage][2];if(started&&!document.hidden)tickConstruction(clockDt,t);if(started&&!cityRuined&&activeMap==='city')tickRocket(dt,t);if(started&&!flight&&!cityRuined){tickExtras(dt,t);respawnBeast(dt);let dx=0,dy=0;if(target){dx=delta(target.x,player.x);dy=delta(target.y,player.y);if(Math.hypot(dx,dy)<8){dx=dy=0}}dx+=(keys.ArrowRight||keys.d?1:0)*100;dx-=(keys.ArrowLeft||keys.a?1:0)*100;dy+=(keys.ArrowDown||keys.s?1:0)*100;dy-=(keys.ArrowUp||keys.w?1:0)*100;let len=Math.hypot(dx,dy);if(len>1){let oldX=player.x,oldY=player.y;player.x+=dx/len*(t<boostUntil?430:220)*dt;player.y+=dy/len*(t<boostUntil?430:220)*dt;player.a=Math.atan2(dy,dx)+Math.PI/2;if(stage<3){if(houseBlocked(player.x,oldY))player.x=oldX;if(houseBlocked(player.x,player.y))player.y=oldY}}player.x=wrap(player.x);player.y=wrap(player.y);tickWater(dt,len>1);if(!train.next)train.next=t+10000;if(t>=train.next){train.x=-100;train.cars=7;train.next=t+10000}if(train.cars>0){train.x+=420*dt;let dx=delta(player.x,wrap(train.x)),dy=delta(player.y,train.y);let aligned=dx>0&&dx<radius+65&&Math.abs(dy)<32&&Math.sin(player.a)<-.7;if(!specialMode&&stage===4&&aligned){train.cars=0;score+=14;munches+=7;beep();document.querySelector('#toast').textContent='WHOLE TRAIN CRUNCH! 🚂 ✨';toastTime=t+2600;for(let i=0;i<70;i++)particles.push({x:train.x-rnd(0,530),y:train.y,vx:rnd(-150,150),vy:rnd(-150,150),life:1});updateUI()}else if(t>train.bounceUntil&&dx>-(train.cars-1)*88-45-radius&&dx<45+radius&&Math.abs(dy)<radius+24){train.bounceUntil=t+1200;if(specialMode){train.y=wrap(train.y+(dy<0?1:-1)*180);train.x=wrap(train.x-(specialMode==="flipper"?500:0))}else{target=null;let side=dy===0?-1:Math.sign(dy);player.y=wrap(train.y+side*(radius+100));document.querySelector('#toast').textContent='BOING! Watch the train! 🚂';toastTime=t+1400}}}let anyChasing=false;roamClock+=dt;if(roamClock>9){roamClock=0;if(objects.filter(o=>o.type===11&&!o.dead).length<14)objects.push(spawnSnail(Math.floor(rnd(0,100))));}for(let o of objects){if(o.dead)continue;if(specialMode&&o!==bombCarrier){modeObject(o,dt,t);continue}if(o.air)continue;if(o.type===11){if(!o.modeMoved)o.x=wrap(o.x+Math.cos(o.phase)*(activeMap==='turkey'?32:8)*dt);o.y=wrap(o.y+Math.sin(o.phase)*(activeMap==='turkey'?32:8)*dt);if(t>hurtUntil&&Math.hypot(delta(o.x,player.x),delta(o.y,player.y))<stages[stage][2]+20)popSnail(o,t);continue}if(o.type===7&&!o.modeMoved){o.x=wrap(o.x+Math.cos(t/2400+o.phase)*55*dt);o.y=wrap(o.y+Math.sin(t/1900+o.phase)*55*dt);if(t>hurtUntil&&Math.hypot(delta(o.x,player.x),delta(o.y,player.y))<radius+27){streak=0;streakUntil=0;hurtUntil=t+3500;boostUntil=0;if(stage>0){stage--;score=stages[stage][1]}else score=Math.max(0,score-2);document.querySelector('#toast').textContent='WHOOOOSH! One size smaller 🌪️';toastTime=t+2200;updateUI()}}if(o.type===8){o.armed=o===bombCarrier;let dx=delta(player.x,o.x),dy=delta(player.y,o.y),dist=Math.hypot(dx,dy);let chasing=dist<480&&((t/1000+o.phase*4)%16)<3;if(chasing)anyChasing=true;let heading=o.armed?Math.atan2(-dy,-dx):chasing?Math.atan2(dy,dx):o.dir+Math.sin(t/1100+o.phase)*.4;o.facingLeft=Math.cos(heading)<0;o.x=wrap(o.x+Math.cos(heading)*(o.armed?115:o.v)*dt);o.y=wrap(o.y+Math.sin(heading)*(o.armed?115:o.v)*dt);if(!o.armed&&stage<4&&dist<radius+58&&t>hurtUntil){streak=0;streakUntil=0;hurtUntil=t+3500;boostUntil=0;if(stage>0){stage--;score=stages[stage][1]}else score=Math.max(0,score-2);player.x=wrap(player.x-Math.cos(heading)*100);player.y=wrap(player.y-Math.sin(heading)*100);document.querySelector('#toast').textContent=activeMap==='turkey'?'APOLLO! Dodge the big farm dog!':'CHUPACABRA! Dodge the beast!';toastTime=t+2200;updateUI()}}if(o.type===6&&!o.modeMoved){o.x=wrap(o.x+Math.cos(t/950)*90*dt);o.y=wrap(o.y+Math.sin(t/730)*90*dt)}if(o.type<3&&!o.modeMoved&&activeMap==='city'){o.y+=Math.cos(o.a)*o.v*dt;o.x+=Math.sin(o.a)*o.v*dt;o.y=wrap(o.y);o.x=wrap(o.x)}let required=[0,1,2,2,3,0,0,99,4,99,99,99,1,2,1,0,0][o.type];if(((o.type===8&&o.armed)||required<=stage)&&Math.hypot(delta(o.x,player.x),delta(o.y,player.y))<radius+[13,17,22,20,35,12,15,27,58,20,0,20,28,36,22,10,15][o.type]){if(o.type===8)saveCity(o,t);collectCat(o,t);collectTurkeySnack(o,t);o.dead=true;if(o.type===8)beastRespawn=30;if(o.type===6){fart();boostUntil=t+5000;document.querySelector('#toast').textContent=activeMap==='turkey'?'GOBBLE TURBO! 🦃 💨':'GOAT GAS TURBO! 🐐 💨';toastTime=t+2200}score+=o.golden?5:o.type===5?.2:o.type===4?3:o.type===8?2:1;munches++;recordMunch(t);if(o.golden){goldenClock=0;announce("GOLDEN MUNCH! Extra growth! ✨",t,2400)}if(o.type===4)buildingSurprise(o,t);if(o.type!==6)beep();for(let i=0;i<8;i++)particles.push({x:o.x,y:o.y,vx:rnd(-90,90),vy:rnd(-90,90),life:1});if(stage<4&&score>=stages[stage+1][1]){stage++;document.querySelector('#toast').textContent=stages[stage][0]+' ✨';toastTime=t+2400}updateUI()}}moveModeProps(dt);if(!specialMode)moveDumpsters(dt,t,stages[stage][2]);chaseMusic(t,anyChasing);objects=objects.filter(o=>!o.dead);if(objects.filter(o=>o.type===0).length<15)for(let i=0;i<25;i++)objects.push({...spawnCar(i),v:activeMap==='turkey'?0:25})}if(started&&!document.hidden){if(activeMap==='city')tickBomb(clockDt,t);else tickApolloChase(clockDt,t);}tickDoomMusic();g.fillStyle='#88bd98';g.fillRect(0,0,W,H);let camx=player.x-W/2,camy=player.y-H/2;g.save();g.translate(-camx,-camy);for(let tx=-1;tx<=1;tx++)for(let ty=-1;ty<=1;ty++){g.save();g.translate(tx*world,ty*world);g.fillStyle='#5c9b76';g.fillRect(0,0,world,world);if(activeMap==='turkey'){drawHarvestTerrain()}else{g.fillStyle='#91c39a';g.fillRect(0,0,world,world);
+let prev=0;function frame(realTime){if(typeof vehicleGarage!=='undefined'){vehicleGarage.tick();if(vehicleGarage.isOpen){phoneLastReal=realTime;prev=phoneClock;requestAnimationFrame(frame);return}}let t=phoneTimeline(realTime);if(!phonePaused){tickTurkeyPortal(t);if(activeMap==='turkey'&&started&&t<boostUntil)turkeyGobble();tickBarnyard(Math.min(.035,Math.max(0,(t-prev)/1000)),t)}if(phonePaused||document.hidden){prev=t;requestAnimationFrame(frame);return}phoneAutoSave();let clockDt=Math.max(0,(t-prev)/1000),dt=Math.min(clockDt,.035);prev=t;let radius=stages[stage][2];if(started&&!document.hidden)tickConstruction(clockDt,t);if(started&&!cityRuined&&activeMap==='city')tickRocket(dt,t);if(started&&!flight&&!cityRuined){tickExtras(dt,t);respawnBeast(dt);let dx=0,dy=0;if(target){dx=delta(target.x,player.x);dy=delta(target.y,player.y);if(Math.hypot(dx,dy)<8){dx=dy=0}}dx+=(keys.ArrowRight||keys.d?1:0)*100;dx-=(keys.ArrowLeft||keys.a?1:0)*100;dy+=(keys.ArrowDown||keys.s?1:0)*100;dy-=(keys.ArrowUp||keys.w?1:0)*100;if(window.vikGamepadInput){const pad=window.vikGamepadInput.getVector();if(pad.active){dx=pad.x*100;dy=pad.y*100}}let len=Math.hypot(dx,dy);if(len>1){let oldX=player.x,oldY=player.y;player.x+=dx/len*(t<boostUntil?430:220)*dt;player.y+=dy/len*(t<boostUntil?430:220)*dt;player.a=Math.atan2(dy,dx)+Math.PI/2;if(stage<3){if(houseBlocked(player.x,oldY))player.x=oldX;if(houseBlocked(player.x,player.y))player.y=oldY}}player.x=wrap(player.x);player.y=wrap(player.y);tickWater(dt,len>1);if(!train.next)train.next=t+10000;if(t>=train.next){train.x=-100;train.cars=7;train.next=t+10000}if(train.cars>0){train.x+=420*dt;let dx=delta(player.x,wrap(train.x)),dy=delta(player.y,train.y);let aligned=dx>0&&dx<radius+65&&Math.abs(dy)<32&&Math.sin(player.a)<-.7;if(!specialMode&&stage===4&&aligned){train.cars=0;score+=14;munches+=7;beep();document.querySelector('#toast').textContent='WHOLE TRAIN CRUNCH! 🚂 ✨';toastTime=t+2600;for(let i=0;i<70;i++)particles.push({x:train.x-rnd(0,530),y:train.y,vx:rnd(-150,150),vy:rnd(-150,150),life:1});updateUI()}else if(t>train.bounceUntil&&dx>-(train.cars-1)*88-45-radius&&dx<45+radius&&Math.abs(dy)<radius+24){train.bounceUntil=t+1200;if(specialMode){train.y=wrap(train.y+(dy<0?1:-1)*180);train.x=wrap(train.x-(specialMode==="flipper"?500:0))}else{target=null;let side=dy===0?-1:Math.sign(dy);player.y=wrap(train.y+side*(radius+100));document.querySelector('#toast').textContent='BOING! Watch the train! 🚂';toastTime=t+1400}}}let anyChasing=false;roamClock+=dt;if(roamClock>9){roamClock=0;if(objects.filter(o=>o.type===11&&!o.dead).length<14)objects.push(spawnSnail(Math.floor(rnd(0,100))));}for(let o of objects){if(o.dead)continue;if(specialMode&&o!==bombCarrier){modeObject(o,dt,t);continue}if(o.air)continue;if(o.type===11){if(!o.modeMoved)o.x=wrap(o.x+Math.cos(o.phase)*(activeMap==='turkey'?32:8)*dt);o.y=wrap(o.y+Math.sin(o.phase)*(activeMap==='turkey'?32:8)*dt);if(t>hurtUntil&&Math.hypot(delta(o.x,player.x),delta(o.y,player.y))<stages[stage][2]+20)popSnail(o,t);continue}if(o.type===7&&!o.modeMoved){o.x=wrap(o.x+Math.cos(t/2400+o.phase)*55*dt);o.y=wrap(o.y+Math.sin(t/1900+o.phase)*55*dt);if(t>hurtUntil&&Math.hypot(delta(o.x,player.x),delta(o.y,player.y))<radius+27){streak=0;streakUntil=0;hurtUntil=t+3500;boostUntil=0;if(stage>0){stage--;score=stages[stage][1]}else score=Math.max(0,score-2);document.querySelector('#toast').textContent='WHOOOOSH! One size smaller 🌪️';toastTime=t+2200;updateUI()}}if(o.type===8){o.armed=o===bombCarrier;let dx=delta(player.x,o.x),dy=delta(player.y,o.y),dist=Math.hypot(dx,dy);let chasing=dist<480&&((t/1000+o.phase*4)%16)<3;if(chasing)anyChasing=true;let heading=o.armed?Math.atan2(-dy,-dx):chasing?Math.atan2(dy,dx):o.dir+Math.sin(t/1100+o.phase)*.4;o.facingLeft=Math.cos(heading)<0;o.x=wrap(o.x+Math.cos(heading)*(o.armed?115:o.v)*dt);o.y=wrap(o.y+Math.sin(heading)*(o.armed?115:o.v)*dt);if(!o.armed&&stage<4&&dist<radius+58&&t>hurtUntil){streak=0;streakUntil=0;hurtUntil=t+3500;boostUntil=0;if(stage>0){stage--;score=stages[stage][1]}else score=Math.max(0,score-2);player.x=wrap(player.x-Math.cos(heading)*100);player.y=wrap(player.y-Math.sin(heading)*100);document.querySelector('#toast').textContent=activeMap==='turkey'?'APOLLO! Dodge the big farm dog!':'CHUPACABRA! Dodge the beast!';toastTime=t+2200;updateUI()}}if(o.type===6&&!o.modeMoved){o.x=wrap(o.x+Math.cos(t/950)*90*dt);o.y=wrap(o.y+Math.sin(t/730)*90*dt)}if(o.type<3&&!o.modeMoved&&activeMap==='city'){o.y+=Math.cos(o.a)*o.v*dt;o.x+=Math.sin(o.a)*o.v*dt;o.y=wrap(o.y);o.x=wrap(o.x)}let required=[0,1,2,2,3,0,0,99,4,99,99,99,1,2,1,0,0][o.type];if(((o.type===8&&o.armed)||required<=stage)&&Math.hypot(delta(o.x,player.x),delta(o.y,player.y))<radius+[13,17,22,20,35,12,15,27,58,20,0,20,28,36,22,10,15][o.type]){if(o.type===8)saveCity(o,t);collectCat(o,t);collectTurkeySnack(o,t);o.dead=true;if(o.type===8)beastRespawn=30;if(o.type===6){fart();boostUntil=t+5000;document.querySelector('#toast').textContent=activeMap==='turkey'?'GOBBLE TURBO! 🦃 💨':'GOAT GAS TURBO! 🐐 💨';toastTime=t+2200}score+=o.golden?5:o.type===5?.2:o.type===4?3:o.type===8?2:1;munches++;recordMunch(t);if(o.golden){goldenClock=0;announce("GOLDEN MUNCH! Extra growth! ✨",t,2400)}if(o.type===4)buildingSurprise(o,t);if(o.type!==6)beep();for(let i=0;i<8;i++)particles.push({x:o.x,y:o.y,vx:rnd(-90,90),vy:rnd(-90,90),life:1});if(stage<4&&score>=stages[stage+1][1]){stage++;document.querySelector('#toast').textContent=stages[stage][0]+' ✨';toastTime=t+2400}updateUI()}}moveModeProps(dt);if(!specialMode)moveDumpsters(dt,t,stages[stage][2]);chaseMusic(t,anyChasing);objects=objects.filter(o=>!o.dead);if(objects.filter(o=>o.type===0).length<15)for(let i=0;i<25;i++)objects.push({...spawnCar(i),v:activeMap==='turkey'?0:25})}if(started&&!document.hidden){if(activeMap==='city')tickBomb(clockDt,t);else tickApolloChase(clockDt,t);}tickDoomMusic();g.fillStyle='#88bd98';g.fillRect(0,0,W,H);let camx=player.x-W/2,camy=player.y-H/2;g.save();g.translate(-camx,-camy);for(let tx=-1;tx<=1;tx++)for(let ty=-1;ty<=1;ty++){g.save();g.translate(tx*world,ty*world);g.fillStyle='#5c9b76';g.fillRect(0,0,world,world);if(activeMap==='turkey'){drawHarvestTerrain()}else{g.fillStyle='#91c39a';g.fillRect(0,0,world,world);
 g.fillStyle='#a8d0a2';for(let bx=520;bx<world+1;bx+=block)for(let by=520;by<world+1;by+=block){if(Math.abs(delta(by,1670))<125)continue;round(bx-236,by-236,472,472,12,'#a6ce9f');round(bx-222,by-222,444,444,10,'#9bc99a')}// Paint the entire street network first, so later streets cannot cover intersections.
 for(let p of roads){g.fillStyle='#d4d7cb';g.fillRect(p-62,0,124,world);g.fillRect(0,p-62,world,124)}
 for(let p of roads){g.fillStyle='#53677a';g.fillRect(p-45,0,90,world);g.fillRect(0,p-45,world,90)}
@@ -979,7 +979,7 @@ gameHud.tick();
 
 </script><script>
 // Release label is separate from saved-game schema versions.
-const gameReleaseLabel=document.createElement('small');gameReleaseLabel.textContent='Winter update · v1.53.4';gameReleaseLabel.style.cssText='display:block;margin-top:10px;color:#b6d5db;font:600 10px system-ui';
+const gameReleaseLabel=document.createElement('small');gameReleaseLabel.textContent='Winter update · v1.53.5';gameReleaseLabel.style.cssText='display:block;margin-top:10px;color:#b6d5db;font:600 10px system-ui';
 document.querySelector('.hud-menu-panel')?.appendChild(gameReleaseLabel);
 </script><script>
 /* TOUCH AND WORLD ROUTE REPAIR */
@@ -1199,7 +1199,7 @@ updateGameSurface();
   const find=id=>document.getElementById(id);
   const isMain=typeof currentBiome!=='undefined'&&typeof biomeMaps!=='undefined';
   const validWorlds=['city','farm','ocean','moon','snow'];
-  const release='1.53.4-winter';
+  const release='1.53.5-winter';
   const query=new URLSearchParams(location.search);
   const resetRide=map=>{if(typeof vehicleGarage!=='undefined')vehicleGarage.resetForWorld?.(map)};
   const clearInput=()=>{keys={};target=null;window.vikTouchControls?.cancel?.()};
@@ -1499,6 +1499,182 @@ updateGameSurface();
       '<g fill="#aa825b"><circle cx="294" cy="383" r="4"/><circle cx="277" cy="397" r="3"/><circle cx="485" cy="410" r="4"/></g></svg>';
   }
 })();
+
+
+/* ADDITIVE XBOX CONTROLLER STEERING */
+/* Optional Xbox-style steering. Touch and keyboard keep owning their own state. */
+(function (root) {
+  'use strict';
+
+  root.createVikGamepadInput = function createVikGamepadInput(adapter) {
+    adapter = adapter || {};
+    var events = adapter.eventTarget || adapter.window || root;
+    var doc = adapter.document || events.document || root.document;
+    var navigatorObject = adapter.navigator || events.navigator || root.navigator;
+    var readGamepads = adapter.getGamepads || function () {
+      return navigatorObject && typeof navigatorObject.getGamepads === 'function'
+        ? navigatorObject.getGamepads() : null;
+    };
+    var deadzone = Number(adapter.deadzone);
+    if (!(deadzone >= 0 && deadzone < 1)) deadzone = 0.22;
+    var vector = {x:0, y:0, active:false};
+    var selectedKey = null, selectedIndex = null, selectedId = '';
+    var connected = false, needsCenter = true, blurred = false, destroyed = false;
+    var reason = 'waiting', source = null, lastStatus = '';
+    var lastContext = context();
+
+    function context() {
+      try { return adapter.contextKey ? adapter.contextKey() : null; }
+      catch (_) { return null; }
+    }
+    function truth(getter) {
+      try { return !!(getter && getter()); } catch (_) { return true; }
+    }
+    function clear(nextReason) {
+      vector = {x:0, y:0, active:false};
+      needsCenter = true;
+      source = null;
+      reason = nextReason;
+    }
+    function state() {
+      return {
+        connected:connected, active:vector.active, needsCenter:needsCenter,
+        source:source, reason:reason, index:selectedIndex, id:selectedId,
+        vector:{x:vector.x, y:vector.y, active:vector.active}
+      };
+    }
+    function report() {
+      var key = [connected, vector.active, needsCenter, source, reason, selectedIndex, selectedId].join('|');
+      if (key === lastStatus) return;
+      lastStatus = key;
+      if (adapter.onStatus) { try { adapter.onStatus(state()); } catch (_) {} }
+    }
+    function forget(nextReason) {
+      selectedKey = null; selectedIndex = null; selectedId = ''; connected = false;
+      clear(nextReason);
+    }
+    function identity(pad, slot) {
+      return String(pad.index === undefined ? slot : pad.index) + '|' + String(pad.id || '');
+    }
+    function valid(pad) { return !!pad && pad.connected !== false && pad.mapping === 'standard'; }
+    function pressed(button) {
+      return !!button && (button.pressed === true || Number(button.value) > 0.5);
+    }
+    function direction(pad) {
+      var buttons = pad.buttons || [];
+      var up = pressed(buttons[12]), down = pressed(buttons[13]);
+      var left = pressed(buttons[14]), right = pressed(buttons[15]);
+      var x, y, length;
+      if (up || down || left || right) {
+        x = Number(right) - Number(left); y = Number(down) - Number(up);
+        length = Math.hypot(x, y);
+        return {x:length ? x / length : 0, y:length ? y / length : 0,
+          active:length > 0, source:'dpad', centered:false};
+      }
+      var axes = pad.axes || [];
+      x = Number(axes[0]); y = Number(axes[1]);
+      if (!Number.isFinite(x)) x = 0;
+      if (!Number.isFinite(y)) y = 0;
+      x = Math.max(-1, Math.min(1, x)); y = Math.max(-1, Math.min(1, y));
+      length = Math.hypot(x, y);
+      return length > deadzone
+        ? {x:x / length, y:y / length, active:true, source:'stick', centered:false}
+        : {x:0, y:0, active:false, source:null, centered:true};
+    }
+    function manualKey(event) {
+      if (/^(Arrow(?:Left|Right|Up|Down)|[wasd])$/i.test(event.key || '')) {
+        clear('manual-input'); report();
+      }
+    }
+    function manualPointer(event) {
+      if (event.isPrimary === false || (event.button !== undefined && event.button !== 0)) return;
+      clear('manual-input'); report();
+    }
+    function blur() { blurred = true; clear('blurred'); report(); }
+    function focus() { blurred = false; clear('center-controller'); report(); }
+    function visibility() { clear(doc && doc.hidden ? 'hidden' : 'center-controller'); report(); }
+    function disconnected(event) {
+      if (selectedIndex === null || !event.gamepad || event.gamepad.index === selectedIndex) {
+        forget('disconnected'); report();
+      }
+    }
+    var listeners = [
+      ['keydown', manualKey, true], ['pointerdown', manualPointer, true],
+      ['blur', blur], ['focus', focus], ['gamepaddisconnected', disconnected]
+    ];
+    if (events.addEventListener) listeners.forEach(function (entry) { events.addEventListener.apply(events, entry); });
+    if (doc && doc.addEventListener) doc.addEventListener('visibilitychange', visibility);
+
+    return {
+      tick:function () {
+        if (destroyed) return;
+        var nextContext = context();
+        if (nextContext !== lastContext) { clear('context-changed'); lastContext = nextContext; }
+        if (blurred || (doc && doc.hidden) || !truth(adapter.canDrive)) {
+          clear(blurred ? 'blurred' : doc && doc.hidden ? 'hidden' : 'paused'); report(); return;
+        }
+        var pads;
+        try { pads = readGamepads(); }
+        catch (_) { forget('unavailable'); report(); return; }
+        if (!pads || typeof pads.length !== 'number') { forget('unavailable'); report(); return; }
+        var pad = null, slot = -1;
+        for (var i = 0; i < pads.length; i++) {
+          if (!valid(pads[i])) continue;
+          if (pad === null || identity(pads[i], i) === selectedKey) { pad = pads[i]; slot = i; }
+          if (identity(pads[i], i) === selectedKey) break;
+        }
+        if (!pad) { forget('disconnected'); report(); return; }
+        var key = identity(pad, slot);
+        if (key !== selectedKey) {
+          clear('center-controller'); selectedKey = key;
+          selectedIndex = pad.index === undefined ? slot : pad.index;
+          selectedId = String(pad.id || '');
+        }
+        connected = true;
+        var input = direction(pad);
+        if (truth(adapter.hasManualDirection) || truth(adapter.touchHeld)) {
+          clear('manual-input'); report(); return;
+        }
+        if (input.centered) {
+          vector = {x:0, y:0, active:false}; needsCenter = false;
+          source = null; reason = 'ready'; report(); return;
+        }
+        if (needsCenter) { clear('center-controller'); report(); return; }
+        if (!input.active) {
+          vector = {x:0, y:0, active:false}; source = null; reason = 'ready'; report(); return;
+        }
+        if (!vector.active && adapter.cancelTouch) {
+          try { adapter.cancelTouch(); }
+          catch (_) { clear('center-controller'); report(); return; }
+        }
+        vector = {x:input.x, y:input.y, active:true};
+        source = input.source; reason = 'controller'; report();
+      },
+      getVector:function () { return {x:vector.x, y:vector.y, active:vector.active}; },
+      getState:state,
+      cancel:function () { if (!destroyed) { clear('center-controller'); report(); } },
+      destroy:function () {
+        if (destroyed) return;
+        destroyed = true; forget('destroyed');
+        if (events.removeEventListener) listeners.forEach(function (entry) { events.removeEventListener.apply(events, entry); });
+        if (doc && doc.removeEventListener) doc.removeEventListener('visibilitychange', visibility);
+        report();
+      }
+    };
+  };
+})(typeof window !== 'undefined' ? window : globalThis);
+
+const controllerStatus=document.createElement('p');controllerStatus.id='controller-status';controllerStatus.setAttribute('role','status');controllerStatus.style.cssText='margin:10px 0 0;font:600 11px/1.4 system-ui;color:#c4e3ed';controllerStatus.textContent='Xbox: press a controller button, then use the left stick or D-pad.';
+(document.querySelector('.hud-menu-panel')||document.querySelector('.hud-settings')||document.body).appendChild(controllerStatus);
+window.vikGamepadInput=window.createVikGamepadInput({
+ canDrive:()=>started&&!document.hidden&&!phonePaused&&!flight&&!cityRuined&&!recordBusy&&!vehicleGarage.isOpen,contextKey:()=>(activeMap==='turkey'?'turkey':'city')+'|'+String(specialMode||'normal'),
+ hasManualDirection:()=>['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','a','d','w','s','A','D','W','S'].some(key=>keys[key]),
+ touchHeld:()=>window.vikTouchControls.getState().held!==null,
+ cancelTouch:()=>window.vikTouchControls.cancel(),
+ onStatus:state=>{controllerStatus.textContent=state.connected?(state.needsCenter?'Xbox connected: center the left stick and release the D-pad.':'Xbox ready: left stick or D-pad to drive. Touch and keyboard also work.'):'Xbox: press a controller button, then use the left stick or D-pad.'}
+});
+const beforeControllerFrame=frame;
+frame=function(t){window.vikGamepadInput.tick();beforeControllerFrame(t);const pad=window.vikGamepadInput.getState();c.dataset.controllerConnected=String(pad.connected);c.dataset.controllerInput=pad.active?pad.source:'idle';c.dataset.controllerVector=pad.vector.x.toFixed(3)+','+pad.vector.y.toFixed(3)};
 
 requestAnimationFrame(frame);
 </script><style id="viktor-brand-style">

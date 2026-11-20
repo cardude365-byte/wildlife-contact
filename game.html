@@ -3,7 +3,7 @@
 // Run in <head>, before the game or any saved-run initializer.
 (function returnReloadToWorldMenu(root) {
   'use strict';
-  const release='1.53.4-winter';
+  const release='1.53.5-winter';
   let navigationType;
   try {
     const entries=root.performance?.getEntriesByType?.('navigation');
@@ -46,7 +46,7 @@
   }
 })(window);
 
-</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Viktor’s Monster Munch · Winter Edition</title><meta name="game-release" content="1.53.4-winter"><style>*{box-sizing:border-box}body{margin:0;background:#102a40;font-family:system-ui,sans-serif;color:white;overflow:hidden}canvas{display:block;touch-action:none;width:100vw;height:100dvh}header{position:absolute;top:0;left:0;right:0;padding:14px 18px;background:linear-gradient(#102a40ed,transparent);pointer-events:none;display:flex;justify-content:space-between;gap:10px}h1{font-size:clamp(18px,3vw,30px);margin:0;color:#ffdd65;text-shadow:0 3px #112b40}small{color:#d5edf2}#stats{text-align:right;font-weight:900}#bar{height:8px;background:#375168;border-radius:9px;margin-top:5px;overflow:hidden}#fill{height:100%;background:#ffda55;width:0}footer{position:absolute;bottom:14px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:end;gap:10px}button{border:2px solid #fff4;border-radius:18px;background:#173d54;color:white;padding:12px 16px;font-weight:800;font-size:15px;cursor:pointer}#hint{display:none!important;max-width:280px;background:#102a40da;padding:10px 14px;border-radius:14px;font-size:14px}#cover{position:absolute;inset:0;background:#102a4099;display:grid;place-items:center}.card{text-align:center;background:#14364e;border:3px solid #53d6bf;border-radius:28px;padding:28px;max-width:360px;margin:20px;box-shadow:0 20px 80px #0006}.card h2{font-size:34px;color:#ffda55;margin:0 0 12px}.card button{background:#ffcc4d;color:#173044;font-size:23px;padding:16px 32px}.card p{line-height:1.5}#toast{position:absolute;top:205px;width:100%;text-align:center;font-size:26px;font-weight:900;color:#ffec80;pointer-events:none;text-shadow:0 3px #15334b}.card{max-height:90dvh;overflow:auto}#toast{padding:0 12px;font-size:clamp(18px,4vw,26px)}@media(max-width:520px){header{padding:10px}h1{max-width:175px}header small{font-size:10px}#stats{font-size:12px}#champion{max-width:145px}#hint{font-size:11px;padding:8px;max-width:150px}footer{left:8px;right:8px}footer button{padding:9px;font-size:12px}}#biome-guide{display:none!important}#bomb-warning:empty{display:none}@media(max-width:600px){footer>div:last-child{display:flex;gap:5px;justify-content:flex-end;flex-wrap:wrap;max-width:65vw}footer button{font-size:11px;padding:8px}#hint{max-width:31vw}}
+</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Viktor’s Monster Munch · Winter Edition</title><meta name="game-release" content="1.53.5-winter"><style>*{box-sizing:border-box}body{margin:0;background:#102a40;font-family:system-ui,sans-serif;color:white;overflow:hidden}canvas{display:block;touch-action:none;width:100vw;height:100dvh}header{position:absolute;top:0;left:0;right:0;padding:14px 18px;background:linear-gradient(#102a40ed,transparent);pointer-events:none;display:flex;justify-content:space-between;gap:10px}h1{font-size:clamp(18px,3vw,30px);margin:0;color:#ffdd65;text-shadow:0 3px #112b40}small{color:#d5edf2}#stats{text-align:right;font-weight:900}#bar{height:8px;background:#375168;border-radius:9px;margin-top:5px;overflow:hidden}#fill{height:100%;background:#ffda55;width:0}footer{position:absolute;bottom:14px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:end;gap:10px}button{border:2px solid #fff4;border-radius:18px;background:#173d54;color:white;padding:12px 16px;font-weight:800;font-size:15px;cursor:pointer}#hint{display:none!important;max-width:280px;background:#102a40da;padding:10px 14px;border-radius:14px;font-size:14px}#cover{position:absolute;inset:0;background:#102a4099;display:grid;place-items:center}.card{text-align:center;background:#14364e;border:3px solid #53d6bf;border-radius:28px;padding:28px;max-width:360px;margin:20px;box-shadow:0 20px 80px #0006}.card h2{font-size:34px;color:#ffda55;margin:0 0 12px}.card button{background:#ffcc4d;color:#173044;font-size:23px;padding:16px 32px}.card p{line-height:1.5}#toast{position:absolute;top:205px;width:100%;text-align:center;font-size:26px;font-weight:900;color:#ffec80;pointer-events:none;text-shadow:0 3px #15334b}.card{max-height:90dvh;overflow:auto}#toast{padding:0 12px;font-size:clamp(18px,4vw,26px)}@media(max-width:520px){header{padding:10px}h1{max-width:175px}header small{font-size:10px}#stats{font-size:12px}#champion{max-width:145px}#hint{font-size:11px;padding:8px;max-width:150px}footer{left:8px;right:8px}footer button{padding:9px;font-size:12px}}#biome-guide{display:none!important}#bomb-warning:empty{display:none}@media(max-width:600px){footer>div:last-child{display:flex;gap:5px;justify-content:flex-end;flex-wrap:wrap;max-width:65vw}footer button{font-size:11px;padding:8px}#hint{max-width:31vw}}
 #toast{top:100px;left:18px;right:auto;width:auto;max-width:min(360px,55vw);padding:0;text-align:left;font-size:14px;line-height:1.35}#bomb-warning{top:127px;left:18px;right:auto;width:auto;max-width:min(360px,55vw);text-align:left;font-size:12px;padding:5px 8px}@media(max-width:520px){#toast{top:92px;left:10px;max-width:47vw;font-size:11px}#bomb-warning{top:124px;left:10px;max-width:47vw;font-size:10px}}
  .card{max-width:560px;width:min(560px,92vw);border-color:#95bdad;background:linear-gradient(145deg,#19364d,#102638);padding:24px}.card h2{font-size:clamp(28px,6vw,43px);letter-spacing:2px}.card p{line-height:1.55}.card #moon-play{font-size:clamp(17px,4vw,22px)}#cover{background:radial-gradient(ellipse at top,#456875b0,#0d1d31ef)}details p{margin:10px 0}
 #cover{z-index:20;display:flex;align-items:flex-end;justify-content:center;overflow:auto;background:#0b1928}
@@ -479,7 +479,7 @@ const oceanOneInitMap=initMap;initMap=function(){oceanOneInitMap();if(currentBio
 const oceanOneTravel=travelOcean;travelOcean=function(t){stopMarineAudio();oceanOneTravel(t);seaSpeed=0;seaRudder=0;seaFoam=[];seaPuffs=[]};
 function turnAngle(a,b){return Math.atan2(Math.sin(a-b),Math.cos(a-b))}
 function sailOcean(dt,t){
- let dx=(keys.ArrowRight||keys.d?1:0)-(keys.ArrowLeft||keys.a?1:0),dy=(keys.ArrowDown||keys.s?1:0)-(keys.ArrowUp||keys.w?1:0);
+ let dx=(keys.ArrowRight||keys.d?1:0)-(keys.ArrowLeft||keys.a?1:0),dy=(keys.ArrowDown||keys.s?1:0)-(keys.ArrowUp||keys.w?1:0);if(!dx&&!dy&&window.vikGamepadInput){const pad=window.vikGamepadInput.getVector();if(pad.active){dx=pad.x;dy=pad.y}}
  if(!dx&&!dy&&target){dx=delta(target.x,player.x);dy=delta(target.y,player.y);if(Math.hypot(dx,dy)<15){dx=dy=0}}
  let moving=Math.hypot(dx,dy)>0,desired=moving?Math.atan2(dy,dx)+Math.PI/2:player.a,turn=turnAngle(desired,player.a),step=Math.max(-2.3*dt,Math.min(2.3*dt,turn));player.a+=step;seaRudder+=(Math.max(-.45,Math.min(.45,turn)) -seaRudder)*Math.min(1,dt*7);
  let desiredSpeed=moving?(t<boostUntil?400:210)*Math.max(.3,1-Math.abs(turn)/Math.PI):0;seaSpeed+=(desiredSpeed-seaSpeed)*(1-Math.exp(-dt*(moving?2.2:3.1)));
@@ -597,7 +597,7 @@ tickRocket=function(dt,t){if(lunarTransit){lunarTransit.elapsed+=dt;if(flight)fl
 const moonTickBombBefore=tickBomb;tickBomb=function(dt,t){if(!lunarTransit)moonTickBombBefore(dt,t)};
 const moonTunnelBefore=tickTunnel;tickTunnel=function(t){if(currentBiome!=='moon')moonTunnelBefore(t)};
 const moonHouseBefore=houseBlocked;houseBlocked=function(x,y){return currentBiome==='moon'?onMoonObstacle(x,y,10):moonHouseBefore(x,y)};
-function driveMoon(dt,t){let dx=(keys.ArrowRight||keys.d?1:0)-(keys.ArrowLeft||keys.a?1:0),dy=(keys.ArrowDown||keys.s?1:0)-(keys.ArrowUp||keys.w?1:0);if(!dx&&!dy&&target){dx=delta(target.x,player.x);dy=delta(target.y,player.y);if(Math.hypot(dx,dy)<15)dx=dy=0}let moving=Math.hypot(dx,dy)>0,want=moving?Math.atan2(dy,dx)+Math.PI/2:player.a,turn=turnAngle(want,player.a);player.a+=Math.max(-dt*2.1,Math.min(dt*2.1,turn));moonRudder+=(Math.max(-.4,Math.min(.4,turn))-moonRudder)*Math.min(1,dt*5);let desired=moving?(t<boostUntil?360:205)*Math.max(.3,1-Math.abs(turn)/Math.PI):0;moonSpeed+=(desired-moonSpeed)*(1-Math.exp(-dt*(moving?2:2.8)));let x=wrap(player.x+Math.sin(player.a)*moonSpeed*dt),y=wrap(player.y-Math.cos(player.a)*moonSpeed*dt);if(!onMoonObstacle(x,player.y,12))player.x=x;else moonSpeed*=.65;if(!onMoonObstacle(player.x,y,12))player.y=y;else moonSpeed*=.65;moonTrackClock+=dt;if(moonSpeed>12&&moonTrackClock>.07){moonTrackClock=0;let scale=stages[stage][2]/23;for(let side of [-1,1]){moonTracks.push({x:wrap(player.x+Math.cos(player.a)*side*23*scale),y:wrap(player.y+Math.sin(player.a)*side*23*scale),a:player.a,life:10,scale});moonDust.push({x:player.x-Math.sin(player.a)*30*scale,y:player.y+Math.cos(player.a)*30*scale,vx:rnd(-12,12),vy:rnd(-12,12),life:1.3,max:1.3,r:rnd(3,7)*scale})}}for(let p of moonTracks)p.life-=dt;moonTracks=moonTracks.filter(p=>p.life>0).slice(-260);for(let p of moonDust){p.life-=dt;p.r+=dt*12;p.x=wrap(p.x+p.vx*dt);p.y=wrap(p.y+p.vy*dt)}moonDust=moonDust.filter(p=>p.life>0).slice(-100);for(let o of objects){if(o.dead||o.modeMoved||o.air)continue;if(o.type<3&&!o.moonStatic){let a=o.a+Math.sin(t/4000+(o.phase||0))*.15*dt,x=wrap(o.x+Math.sin(a)*o.v*dt),y=wrap(o.y+Math.cos(a)*o.v*dt);if(!onMoonObstacle(x,y,55)){o.x=x;o.y=y;o.a=a}else o.a+=dt*2.5}else if(o.type===6){let a=t/4000+o.phase,x=wrap(o.x+Math.cos(a)*40*dt),y=wrap(o.y+Math.sin(a)*30*dt);if(!onMoonObstacle(x,y,30)){o.x=x;o.y=y}}}}
+function driveMoon(dt,t){let dx=(keys.ArrowRight||keys.d?1:0)-(keys.ArrowLeft||keys.a?1:0),dy=(keys.ArrowDown||keys.s?1:0)-(keys.ArrowUp||keys.w?1:0);if(!dx&&!dy&&window.vikGamepadInput){const pad=window.vikGamepadInput.getVector();if(pad.active){dx=pad.x;dy=pad.y}}if(!dx&&!dy&&target){dx=delta(target.x,player.x);dy=delta(target.y,player.y);if(Math.hypot(dx,dy)<15)dx=dy=0}let moving=Math.hypot(dx,dy)>0,want=moving?Math.atan2(dy,dx)+Math.PI/2:player.a,turn=turnAngle(want,player.a);player.a+=Math.max(-dt*2.1,Math.min(dt*2.1,turn));moonRudder+=(Math.max(-.4,Math.min(.4,turn))-moonRudder)*Math.min(1,dt*5);let desired=moving?(t<boostUntil?360:205)*Math.max(.3,1-Math.abs(turn)/Math.PI):0;moonSpeed+=(desired-moonSpeed)*(1-Math.exp(-dt*(moving?2:2.8)));let x=wrap(player.x+Math.sin(player.a)*moonSpeed*dt),y=wrap(player.y-Math.cos(player.a)*moonSpeed*dt);if(!onMoonObstacle(x,player.y,12))player.x=x;else moonSpeed*=.65;if(!onMoonObstacle(player.x,y,12))player.y=y;else moonSpeed*=.65;moonTrackClock+=dt;if(moonSpeed>12&&moonTrackClock>.07){moonTrackClock=0;let scale=stages[stage][2]/23;for(let side of [-1,1]){moonTracks.push({x:wrap(player.x+Math.cos(player.a)*side*23*scale),y:wrap(player.y+Math.sin(player.a)*side*23*scale),a:player.a,life:10,scale});moonDust.push({x:player.x-Math.sin(player.a)*30*scale,y:player.y+Math.cos(player.a)*30*scale,vx:rnd(-12,12),vy:rnd(-12,12),life:1.3,max:1.3,r:rnd(3,7)*scale})}}for(let p of moonTracks)p.life-=dt;moonTracks=moonTracks.filter(p=>p.life>0).slice(-260);for(let p of moonDust){p.life-=dt;p.r+=dt*12;p.x=wrap(p.x+p.vx*dt);p.y=wrap(p.y+p.vy*dt)}moonDust=moonDust.filter(p=>p.life>0).slice(-100);for(let o of objects){if(o.dead||o.modeMoved||o.air)continue;if(o.type<3&&!o.moonStatic){let a=o.a+Math.sin(t/4000+(o.phase||0))*.15*dt,x=wrap(o.x+Math.sin(a)*o.v*dt),y=wrap(o.y+Math.cos(a)*o.v*dt);if(!onMoonObstacle(x,y,55)){o.x=x;o.y=y;o.a=a}else o.a+=dt*2.5}else if(o.type===6){let a=t/4000+o.phase,x=wrap(o.x+Math.cos(a)*40*dt),y=wrap(o.y+Math.sin(a)*30*dt);if(!onMoonObstacle(x,y,30)){o.x=x;o.y=y}}}}
 function drawMoonGround(){g.fillStyle=oceanGradient(0,0,world,world,[[0,'#686b72'],[.5,'#8b8e92'],[1,'#5b626b']]);g.fillRect(0,0,world,world);for(let i=0;i<210;i++){let x=(i*397.3+125)%world,y=(i*773.7+311)%world,r=5+(i%7)*2;farmEllipse(x+2,y+3,r*1.2,r*.7,'#3f45472a');farmEllipse(x,y,r,r*.7,i%3?'#aaa99a22':'#d1cbb333')}for(let i=0;i<moonCraters.length;i++)drawRealMoonCrater(moonCraters[i],i);
  g.strokeStyle='#c2b99e22';g.lineWidth=16;for(let p of moonHabitats){g.beginPath();g.moveTo(lunarLander.x,lunarLander.y);g.quadraticCurveTo(p.x,lunarLander.y,p.x,p.y);g.stroke()}for(let p of moonHabitats)drawMoonHabitat(p);for(let p of moonTracks){g.save();g.translate(player.x+delta(p.x,player.x),player.y+delta(p.y,player.y));g.rotate(p.a);g.globalAlpha=Math.min(.35,p.life/10*.35);round(-3*p.scale,-4*p.scale,6*p.scale,8*p.scale,1,'#454c51');g.restore()}}
 function drawMoonHabitat(p){g.save();g.translate(p.x,p.y);farmEllipse(15,20,p.r+10,p.r*.62,'#343d4855');farmEllipse(0,0,p.r,p.r*.75,'#c9c4af');g.fillStyle=oceanGradient(-p.r,-p.r,p.r,p.r,[[0,'#f0e6c9'],[.45,'#aebbbb'],[1,'#526779']]);g.beginPath();g.ellipse(0,-14,p.r*.9,p.r*.73,0,0,7);g.fill();g.strokeStyle='#e0dbc088';g.lineWidth=2;for(let k=-2;k<=2;k++){g.beginPath();g.ellipse(k*p.r*.16,-14,p.r*(.5-Math.abs(k)*.07),p.r*.68,0,-Math.PI/2,Math.PI/2);g.stroke()}for(let x of [-p.r*.48,0,p.r*.48]){round(x-12,-p.r*.25,24,17,4,'#294e67');round(x-9,-p.r*.23,7,4,1,'#9fc5c9')}round(-18,p.r*.37,36,35,5,'#d8caa6');round(-12,p.r*.42,24,26,4,'#526777');g.fillStyle='#e9dbb6';g.font='bold 10px system-ui';g.textAlign='center';g.fillText('TRANQUILITY BASE',0,p.r*.99);g.restore()}
@@ -686,7 +686,7 @@ const polishInitMapBefore=initMap;initMap=function(){polishInitMapBefore();if(cu
  }groundSpeed=0;groundSteer=0;groundDust=[];updateUI()};
 const polishGoldenBefore=spawnGolden;spawnGolden=function(){polishGoldenBefore();if(currentBiome==='city'){let o=objects.find(o=>o.golden&&!o.dead);if(o){let nearest=cityStreetsX.reduce((a,b)=>Math.abs(delta(a,player.x))<Math.abs(delta(b,player.x))?a:b);o.x=wrap(nearest+31);o.y=wrap(player.y-170);if(offCityDock(o.x,o.y)){o.x=1651;o.y=wrap(player.y-180)}}}};
 const polishHouseBefore=houseBlocked;houseBlocked=function(x,y){if(currentBiome!=='city')return polishHouseBefore(x,y);if(offCityDock(x,y))return true;return objects.some(o=>o.type===4&&!o.dead&&stage<requiredStage(o)&&Math.abs(delta(x,o.x))<(o.bw||92)*.42+stages[stage][2]*.2&&Math.abs(delta(y,o.y+8))<(o.bh||86)*.38+stages[stage][2]*.2)};
-function driveGround(dt,t){if(motionBiome!==currentBiome){groundSpeed=0;groundSteer=0;groundDust=[];motionBiome=currentBiome}let dx=(keys.ArrowRight||keys.d?1:0)-(keys.ArrowLeft||keys.a?1:0),dy=(keys.ArrowDown||keys.s?1:0)-(keys.ArrowUp||keys.w?1:0);if(!dx&&!dy&&target){dx=delta(target.x,player.x);dy=delta(target.y,player.y);if(Math.hypot(dx,dy)<12)dx=dy=0}let moving=Math.hypot(dx,dy)>0,desired=moving?Math.atan2(dy,dx)+Math.PI/2:player.a,turn=turnAngle(desired,player.a);player.a+=Math.max(-dt*6.5,Math.min(dt*6.5,turn));groundSteer+=(Math.max(-.4,Math.min(.4,turn))-groundSteer)*Math.min(1,dt*9);let want=moving?(t<boostUntil?430:220)*Math.max(.42,1-Math.abs(turn)/Math.PI*.6):0;groundSpeed+=(want-groundSpeed)*(1-Math.exp(-dt*(moving?8:11)));let x=wrap(player.x+Math.sin(player.a)*groundSpeed*dt),y=wrap(player.y-Math.cos(player.a)*groundSpeed*dt);if(!houseBlocked(x,player.y))player.x=x;else groundSpeed*=.5;if(!houseBlocked(player.x,y))player.y=y;else groundSpeed*=.5;tickTunnel(t);tickWormholes(dt,t);tickWater(dt,groundSpeed>10);groundDustClock+=dt;if(currentBiome==='farm'&&groundSpeed>70&&groundDustClock>.09){groundDustClock=0;let scale=stages[stage][2]/23;for(let side of [-1,1])groundDust.push({x:wrap(player.x-Math.sin(player.a)*34*scale+Math.cos(player.a)*side*18*scale),y:wrap(player.y+Math.cos(player.a)*34*scale+Math.sin(player.a)*side*18*scale),life:.75,r:4*scale})}for(let p of groundDust){p.life-=dt;p.r+=dt*17}groundDust=groundDust.filter(p=>p.life>0).slice(-70)}
+function driveGround(dt,t){if(motionBiome!==currentBiome){groundSpeed=0;groundSteer=0;groundDust=[];motionBiome=currentBiome}let dx=(keys.ArrowRight||keys.d?1:0)-(keys.ArrowLeft||keys.a?1:0),dy=(keys.ArrowDown||keys.s?1:0)-(keys.ArrowUp||keys.w?1:0);if(!dx&&!dy&&window.vikGamepadInput){const pad=window.vikGamepadInput.getVector();if(pad.active){dx=pad.x;dy=pad.y}}if(!dx&&!dy&&target){dx=delta(target.x,player.x);dy=delta(target.y,player.y);if(Math.hypot(dx,dy)<12)dx=dy=0}let moving=Math.hypot(dx,dy)>0,desired=moving?Math.atan2(dy,dx)+Math.PI/2:player.a,turn=turnAngle(desired,player.a);player.a+=Math.max(-dt*6.5,Math.min(dt*6.5,turn));groundSteer+=(Math.max(-.4,Math.min(.4,turn))-groundSteer)*Math.min(1,dt*9);let want=moving?(t<boostUntil?430:220)*Math.max(.42,1-Math.abs(turn)/Math.PI*.6):0;groundSpeed+=(want-groundSpeed)*(1-Math.exp(-dt*(moving?8:11)));let x=wrap(player.x+Math.sin(player.a)*groundSpeed*dt),y=wrap(player.y-Math.cos(player.a)*groundSpeed*dt);if(!houseBlocked(x,player.y))player.x=x;else groundSpeed*=.5;if(!houseBlocked(player.x,y))player.y=y;else groundSpeed*=.5;tickTunnel(t);tickWormholes(dt,t);tickWater(dt,groundSpeed>10);groundDustClock+=dt;if(currentBiome==='farm'&&groundSpeed>70&&groundDustClock>.09){groundDustClock=0;let scale=stages[stage][2]/23;for(let side of [-1,1])groundDust.push({x:wrap(player.x-Math.sin(player.a)*34*scale+Math.cos(player.a)*side*18*scale),y:wrap(player.y+Math.cos(player.a)*34*scale+Math.sin(player.a)*side*18*scale),life:.75,r:4*scale})}for(let p of groundDust){p.life-=dt;p.r+=dt*17}groundDust=groundDust.filter(p=>p.life>0).slice(-70)}
 function drawGroundDust(){if(currentBiome!=='farm')return;g.save();for(let p of groundDust){g.globalAlpha=p.life*.3;farmEllipse(player.x+delta(p.x,player.x),player.y+delta(p.y,player.y),p.r,p.r*.6,'#d5c29a')}g.restore()}
 function drawCityGround(){g.fillStyle='#a8bc98';g.fillRect(0,0,world,world);for(let d of cityDistricts){round(d.x-d.w/2-14,d.y-d.h/2-14,d.w+28,d.h+28,20,d.kind==='downtown'||d.kind==='depot'?'#b7b9aa':'#90b291');round(d.x-d.w/2,d.y-d.h/2,d.w,d.h,16,d.kind==='play'?'#d7bd8e':d.kind==='school'?'#c8c5a8':d.kind==='downtown'?'#d2c9b1':d.kind==='park'||d.kind==='civic'?'#91b282':'#b4bf9f');if(d.kind==='play'){round(d.x-185,d.y-145,370,285,34,'#d6b78d');round(d.x-160,d.y+45,320,98,25,'#b8ad86');g.strokeStyle='#b39068';g.lineWidth=2;g.strokeRect(d.x-180,d.y-141,360,280)}if(d.kind==='school'){round(d.x+65,d.y+45,120,80,4,'#8ea399');g.strokeStyle='#e8e2c4';g.lineWidth=2;g.strokeRect(d.x+71,d.y+51,108,68);g.beginPath();g.arc(d.x+125,d.y+85,21,0,7);g.moveTo(d.x+71,d.y+85);g.lineTo(d.x+179,d.y+85);g.stroke()}if(['park','civic'].includes(d.kind)){g.strokeStyle='#d6cdb0';g.lineWidth=20;g.beginPath();g.moveTo(d.x-d.w/2,d.y+d.h*.25);g.bezierCurveTo(d.x-70,d.y-50,d.x+75,d.y+45,d.x+d.w/2,d.y-d.h*.25);g.stroke()}}
  for(let x of cityStreetsX){g.fillStyle='#d6d2bd';g.fillRect(x-94,0,188,world);g.fillStyle='#5c6e78';g.fillRect(x-73,0,146,world);g.fillStyle='#aeb8ae';g.fillRect(x-80,0,4,world);g.fillRect(x+76,0,4,world)}for(let y of cityStreetsY){g.fillStyle='#d6d2bd';g.fillRect(0,y-94,world,188);g.fillStyle='#5c6e78';g.fillRect(0,y-73,world,146);g.fillStyle='#aeb8ae';g.fillRect(0,y-80,world,4);g.fillRect(0,y+76,world,4)}
@@ -6170,7 +6170,7 @@ gameHud.tick();
 
 </script><script>
 // Release label is separate from saved-game schema versions.
-const gameReleaseLabel=document.createElement('small');gameReleaseLabel.textContent='Winter update · v1.53.4';gameReleaseLabel.style.cssText='display:block;margin-top:10px;color:#b6d5db;font:600 10px system-ui';
+const gameReleaseLabel=document.createElement('small');gameReleaseLabel.textContent='Winter update · v1.53.5';gameReleaseLabel.style.cssText='display:block;margin-top:10px;color:#b6d5db;font:600 10px system-ui';
 document.querySelector('.hud-menu-panel')?.appendChild(gameReleaseLabel);
 </script><script>
 /* TOUCH AND WORLD ROUTE REPAIR */
@@ -6390,7 +6390,7 @@ updateGameSurface();
   const find=id=>document.getElementById(id);
   const isMain=typeof currentBiome!=='undefined'&&typeof biomeMaps!=='undefined';
   const validWorlds=['city','farm','ocean','moon','snow'];
-  const release='1.53.4-winter';
+  const release='1.53.5-winter';
   const query=new URLSearchParams(location.search);
   const resetRide=map=>{if(typeof vehicleGarage!=='undefined')vehicleGarage.resetForWorld?.(map)};
   const clearInput=()=>{keys={};target=null;window.vikTouchControls?.cancel?.()};
@@ -6690,6 +6690,182 @@ updateGameSurface();
       '<g fill="#aa825b"><circle cx="294" cy="383" r="4"/><circle cx="277" cy="397" r="3"/><circle cx="485" cy="410" r="4"/></g></svg>';
   }
 })();
+
+
+/* ADDITIVE XBOX CONTROLLER STEERING */
+/* Optional Xbox-style steering. Touch and keyboard keep owning their own state. */
+(function (root) {
+  'use strict';
+
+  root.createVikGamepadInput = function createVikGamepadInput(adapter) {
+    adapter = adapter || {};
+    var events = adapter.eventTarget || adapter.window || root;
+    var doc = adapter.document || events.document || root.document;
+    var navigatorObject = adapter.navigator || events.navigator || root.navigator;
+    var readGamepads = adapter.getGamepads || function () {
+      return navigatorObject && typeof navigatorObject.getGamepads === 'function'
+        ? navigatorObject.getGamepads() : null;
+    };
+    var deadzone = Number(adapter.deadzone);
+    if (!(deadzone >= 0 && deadzone < 1)) deadzone = 0.22;
+    var vector = {x:0, y:0, active:false};
+    var selectedKey = null, selectedIndex = null, selectedId = '';
+    var connected = false, needsCenter = true, blurred = false, destroyed = false;
+    var reason = 'waiting', source = null, lastStatus = '';
+    var lastContext = context();
+
+    function context() {
+      try { return adapter.contextKey ? adapter.contextKey() : null; }
+      catch (_) { return null; }
+    }
+    function truth(getter) {
+      try { return !!(getter && getter()); } catch (_) { return true; }
+    }
+    function clear(nextReason) {
+      vector = {x:0, y:0, active:false};
+      needsCenter = true;
+      source = null;
+      reason = nextReason;
+    }
+    function state() {
+      return {
+        connected:connected, active:vector.active, needsCenter:needsCenter,
+        source:source, reason:reason, index:selectedIndex, id:selectedId,
+        vector:{x:vector.x, y:vector.y, active:vector.active}
+      };
+    }
+    function report() {
+      var key = [connected, vector.active, needsCenter, source, reason, selectedIndex, selectedId].join('|');
+      if (key === lastStatus) return;
+      lastStatus = key;
+      if (adapter.onStatus) { try { adapter.onStatus(state()); } catch (_) {} }
+    }
+    function forget(nextReason) {
+      selectedKey = null; selectedIndex = null; selectedId = ''; connected = false;
+      clear(nextReason);
+    }
+    function identity(pad, slot) {
+      return String(pad.index === undefined ? slot : pad.index) + '|' + String(pad.id || '');
+    }
+    function valid(pad) { return !!pad && pad.connected !== false && pad.mapping === 'standard'; }
+    function pressed(button) {
+      return !!button && (button.pressed === true || Number(button.value) > 0.5);
+    }
+    function direction(pad) {
+      var buttons = pad.buttons || [];
+      var up = pressed(buttons[12]), down = pressed(buttons[13]);
+      var left = pressed(buttons[14]), right = pressed(buttons[15]);
+      var x, y, length;
+      if (up || down || left || right) {
+        x = Number(right) - Number(left); y = Number(down) - Number(up);
+        length = Math.hypot(x, y);
+        return {x:length ? x / length : 0, y:length ? y / length : 0,
+          active:length > 0, source:'dpad', centered:false};
+      }
+      var axes = pad.axes || [];
+      x = Number(axes[0]); y = Number(axes[1]);
+      if (!Number.isFinite(x)) x = 0;
+      if (!Number.isFinite(y)) y = 0;
+      x = Math.max(-1, Math.min(1, x)); y = Math.max(-1, Math.min(1, y));
+      length = Math.hypot(x, y);
+      return length > deadzone
+        ? {x:x / length, y:y / length, active:true, source:'stick', centered:false}
+        : {x:0, y:0, active:false, source:null, centered:true};
+    }
+    function manualKey(event) {
+      if (/^(Arrow(?:Left|Right|Up|Down)|[wasd])$/i.test(event.key || '')) {
+        clear('manual-input'); report();
+      }
+    }
+    function manualPointer(event) {
+      if (event.isPrimary === false || (event.button !== undefined && event.button !== 0)) return;
+      clear('manual-input'); report();
+    }
+    function blur() { blurred = true; clear('blurred'); report(); }
+    function focus() { blurred = false; clear('center-controller'); report(); }
+    function visibility() { clear(doc && doc.hidden ? 'hidden' : 'center-controller'); report(); }
+    function disconnected(event) {
+      if (selectedIndex === null || !event.gamepad || event.gamepad.index === selectedIndex) {
+        forget('disconnected'); report();
+      }
+    }
+    var listeners = [
+      ['keydown', manualKey, true], ['pointerdown', manualPointer, true],
+      ['blur', blur], ['focus', focus], ['gamepaddisconnected', disconnected]
+    ];
+    if (events.addEventListener) listeners.forEach(function (entry) { events.addEventListener.apply(events, entry); });
+    if (doc && doc.addEventListener) doc.addEventListener('visibilitychange', visibility);
+
+    return {
+      tick:function () {
+        if (destroyed) return;
+        var nextContext = context();
+        if (nextContext !== lastContext) { clear('context-changed'); lastContext = nextContext; }
+        if (blurred || (doc && doc.hidden) || !truth(adapter.canDrive)) {
+          clear(blurred ? 'blurred' : doc && doc.hidden ? 'hidden' : 'paused'); report(); return;
+        }
+        var pads;
+        try { pads = readGamepads(); }
+        catch (_) { forget('unavailable'); report(); return; }
+        if (!pads || typeof pads.length !== 'number') { forget('unavailable'); report(); return; }
+        var pad = null, slot = -1;
+        for (var i = 0; i < pads.length; i++) {
+          if (!valid(pads[i])) continue;
+          if (pad === null || identity(pads[i], i) === selectedKey) { pad = pads[i]; slot = i; }
+          if (identity(pads[i], i) === selectedKey) break;
+        }
+        if (!pad) { forget('disconnected'); report(); return; }
+        var key = identity(pad, slot);
+        if (key !== selectedKey) {
+          clear('center-controller'); selectedKey = key;
+          selectedIndex = pad.index === undefined ? slot : pad.index;
+          selectedId = String(pad.id || '');
+        }
+        connected = true;
+        var input = direction(pad);
+        if (truth(adapter.hasManualDirection) || truth(adapter.touchHeld)) {
+          clear('manual-input'); report(); return;
+        }
+        if (input.centered) {
+          vector = {x:0, y:0, active:false}; needsCenter = false;
+          source = null; reason = 'ready'; report(); return;
+        }
+        if (needsCenter) { clear('center-controller'); report(); return; }
+        if (!input.active) {
+          vector = {x:0, y:0, active:false}; source = null; reason = 'ready'; report(); return;
+        }
+        if (!vector.active && adapter.cancelTouch) {
+          try { adapter.cancelTouch(); }
+          catch (_) { clear('center-controller'); report(); return; }
+        }
+        vector = {x:input.x, y:input.y, active:true};
+        source = input.source; reason = 'controller'; report();
+      },
+      getVector:function () { return {x:vector.x, y:vector.y, active:vector.active}; },
+      getState:state,
+      cancel:function () { if (!destroyed) { clear('center-controller'); report(); } },
+      destroy:function () {
+        if (destroyed) return;
+        destroyed = true; forget('destroyed');
+        if (events.removeEventListener) listeners.forEach(function (entry) { events.removeEventListener.apply(events, entry); });
+        if (doc && doc.removeEventListener) doc.removeEventListener('visibilitychange', visibility);
+        report();
+      }
+    };
+  };
+})(typeof window !== 'undefined' ? window : globalThis);
+
+const controllerStatus=document.createElement('p');controllerStatus.id='controller-status';controllerStatus.setAttribute('role','status');controllerStatus.style.cssText='margin:10px 0 0;font:600 11px/1.4 system-ui;color:#c4e3ed';controllerStatus.textContent='Xbox: press a controller button, then use the left stick or D-pad.';
+(document.querySelector('.hud-menu-panel')||document.querySelector('.hud-settings')||document.body).appendChild(controllerStatus);
+window.vikGamepadInput=window.createVikGamepadInput({
+ canDrive:()=>started&&!document.hidden&&!flight&&!lunarTransit&&!snowTransit&&!snowRide&&!barnGame&&!ufoFlight&&!cityRuined&&!recordBusy&&!garage.open&&!vehicleGarage.isOpen,contextKey:()=>currentBiome+'|'+String(specialMode||'normal'),
+ hasManualDirection:()=>['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','a','d','w','s','A','D','W','S'].some(key=>keys[key]),
+ touchHeld:()=>window.vikTouchControls.getState().held!==null,
+ cancelTouch:()=>window.vikTouchControls.cancel(),
+ onStatus:state=>{controllerStatus.textContent=state.connected?(state.needsCenter?'Xbox connected: center the left stick and release the D-pad.':'Xbox ready: left stick or D-pad to drive. Touch and keyboard also work.'):'Xbox: press a controller button, then use the left stick or D-pad.'}
+});
+const beforeControllerFrame=frame;
+frame=function(t){window.vikGamepadInput.tick();beforeControllerFrame(t);const pad=window.vikGamepadInput.getState();c.dataset.controllerConnected=String(pad.connected);c.dataset.controllerInput=pad.active?pad.source:'idle';c.dataset.controllerVector=pad.vector.x.toFixed(3)+','+pad.vector.y.toFixed(3)};
 
 requestAnimationFrame(frame);
 </script><style id="viktor-brand-style">

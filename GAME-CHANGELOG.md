@@ -1,3 +1,11 @@
+# v1.53.5 — Optional Xbox driving
+
+- A connected standard Xbox controller can steer with the left stick or D-pad.
+- Existing touch and keyboard driving remain live.
+- Releasing the controls slows the vehicle using each map's existing motion.
+- Manual input, interruptions and reconnects cannot leave held controller steering stuck.
+- Original maps, vehicles, garage, saves, reload menu and Moon launch retained.
+
 # v1.53.4 — Viktor spelling and illustrated title
 
 - Restored Viktor with a K across the game, garage, help, accessibility text and ship name.
