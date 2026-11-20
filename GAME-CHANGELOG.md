@@ -1,3 +1,19 @@
+# v1.53.6 — Cartoon munch cannon
+
+- Xbox D-pad navigates the world picker, Garage and pause menu. A selects, B returns, and View (Select) pauses or resumes.
+
+- Reduced decorative duck and balloon bursts, skipped scenery outside the view, and stopped drawing the game behind the home screen.
+
+- Added an Abrams-style tank and an explicit Moon Rover choice to the garage in every world.
+- Home-screen garage lets Viktor choose a ride before picking a world.
+
+- The Abrams fires from its turret. The selectable Moon Rover and stock Moon ride fire short laser pulses. Other vehicles use the side blaster.
+- Fire with Xbox A or RT, keyboard Space, or a touch double-tap.
+- Launch a lock-on rocket or the tugboat’s bow harpoon with Xbox LT, keyboard R, or the matching touch button. Both recharge over ten seconds of play.
+- Hits remove world objects through the same reward flow as munching, including growth, streaks, golden bonuses and seasonal snacks.
+- The cannon stays inactive during travel, pauses, garages and menus.
+- Preserved touch and keyboard steering, controller driving, saved progress, world picker reload and the original Moon launch.
+
 # v1.53.5 — Optional Xbox driving
 
 - A connected standard Xbox controller can steer with the left stick or D-pad.

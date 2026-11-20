@@ -3,7 +3,7 @@
 // Run in <head>, before the game or any saved-run initializer.
 (function returnReloadToWorldMenu(root) {
   'use strict';
-  const release='1.53.5-winter';
+  const release='1.53.6-winter';
   let navigationType;
   try {
     const entries=root.performance?.getEntriesByType?.('navigation');
@@ -46,7 +46,7 @@
   }
 })(window);
 
-</script><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Viktor’s Monster Munch · Gingerbread Munch</title><meta name="game-release" content="1.53.5-winter"><style>*{box-sizing:border-box}body{margin:0;background:#102a40;font-family:system-ui,sans-serif;color:white;overflow:hidden}canvas{display:block;touch-action:none;width:100vw;height:100dvh}header{position:absolute;top:0;left:0;right:0;padding:14px 18px;background:linear-gradient(#102a40ed,transparent);pointer-events:none;display:flex;justify-content:space-between;gap:10px}h1{font-size:clamp(18px,3vw,30px);margin:0;color:#ffdd65;text-shadow:0 3px #112b40}small{color:#d5edf2}#stats{text-align:right;font-weight:900}#bar{height:8px;background:#375168;border-radius:9px;margin-top:5px;overflow:hidden}#fill{height:100%;background:#ffda55;width:0}footer{position:absolute;bottom:14px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:end;gap:10px}button{border:2px solid #fff4;border-radius:18px;background:#173d54;color:white;padding:12px 16px;font-weight:800;font-size:15px;cursor:pointer}#hint{max-width:280px;background:#102a40da;padding:10px 14px;border-radius:14px;font-size:14px}#cover{position:absolute;inset:0;background:#102a4099;display:grid;place-items:center}.card{text-align:center;background:#14364e;border:3px solid #53d6bf;border-radius:28px;padding:28px;max-width:360px;margin:20px;box-shadow:0 20px 80px #0006}.card h2{font-size:34px;color:#ffda55;margin:0 0 12px}.card button{background:#ffcc4d;color:#173044;font-size:23px;padding:16px 32px}.card p{line-height:1.5}#toast{position:absolute;top:205px;width:100%;text-align:center;font-size:26px;font-weight:900;color:#ffec80;pointer-events:none;text-shadow:0 3px #15334b}.card{max-height:90dvh;overflow:auto}#toast{padding:0 12px;font-size:clamp(18px,4vw,26px)}@media(max-width:520px){header{padding:10px}h1{max-width:175px}header small{font-size:10px}#stats{font-size:12px}#champion{max-width:145px}#hint{font-size:11px;padding:8px;max-width:150px}footer{left:8px;right:8px}footer button{padding:9px;font-size:12px}}</style><style>body{-webkit-user-select:none;user-select:none;overscroll-behavior:none}header{padding-top:calc(8px + env(safe-area-inset-top));padding-left:calc(12px + env(safe-area-inset-left));padding-right:calc(12px + env(safe-area-inset-right))}footer{bottom:calc(8px + env(safe-area-inset-bottom));left:calc(8px + env(safe-area-inset-left));right:calc(8px + env(safe-area-inset-right))}#phone-pause{position:fixed;inset:0;background:#102a40e8;z-index:20;display:grid;place-items:center}#phone-pause[hidden]{display:none}#hint{max-width:190px;font-size:11px}footer button{min-height:44px;padding:8px 12px;font-size:13px}#toast{top:165px}#bomb-warning{top:130px;z-index:4}@media(orientation:landscape){header{font-size:12px}#stats{font-size:12px}h1{font-size:20px}#champion{font-size:11px!important}#bar{height:5px}#stats>div{font-size:10px!important}#hint{max-width:155px}.card{max-width:520px;padding:16px;max-height:85dvh}.card p{font-size:12px;line-height:1.3}.card h2{font-size:26px}.card>div:first-child{font-size:30px!important}.card button{font-size:19px;padding:12px 22px}}</style><style>#return-city[hidden]{display:none}.card #turkey-play{font-size:18px;padding:12px 20px;background:#d99035}#turkey-play:hover{background:#ffcf75}</style><style>.seasonal-bonus{display:flex!important;flex-direction:column;gap:3px;width:100%;margin:12px 0!important;padding:12px!important;border:2px solid #edc275!important;border-radius:12px!important;background:linear-gradient(110deg,#71372a,#ae642e)!important;color:#fff1ce!important;box-shadow:0 3px 12px #0003}.seasonal-bonus span{font-size:10px;letter-spacing:2px}.seasonal-bonus strong{font-size:14px}#seasonal-game{position:fixed;inset:0;width:100%;height:100dvh;border:0;z-index:100;background:#173044}#seasonal-game[hidden]{display:none}</style></head><body><style>#apollo-escape{position:fixed;inset:0;z-index:40;background:#0c1c25;display:grid;grid-template-rows:1fr auto;text-align:center}#apollo-escape[hidden]{display:none}#apollo-escape img{width:100%;height:100%;min-height:0;object-fit:contain}#apollo-escape div{padding:12px;background:#102b35}#apollo-escape h2{margin:0 0 5px;color:#ffe0a0}#apollo-escape p{margin:0 0 8px}</style><section id="apollo-escape" hidden aria-label="Apollo got away"><img id="apollo-escape-art" src="munch-asset-ac0f105e6fa45564fcc7c788.png" alt="Apollo jumps over a farm fence while Viktor chases him"><div><h2>APOLLO GOT AWAY!</h2><p>Viktor is on his trail. Better luck next chase!</p><button id="apollo-continue">KEEP MUNCHING</button></div></section><canvas id="c"></canvas><img id="blast-art" alt="" style="display:none" src="munch-asset-2810062598f62cee4b9365cc.png"><header><div><h1>Viktor's Munch Mayhem</h1><small>CITY MAYHEM · Chomp. Grow. Explore.</small><small id="version" style="display:block">v1.27.2</small></div><div id="stats"><span id="level">Little Chomper</span><br><span id="count">0 munches</span><div id="champion" style="color:#ffdd65;font-size:13px;margin-top:5px">PERSONAL BEST · Connecting…</div><div id="chase-clock" style="font-size:12px;color:#ffdd65">☢ First chase in 3:00</div><div id="mode-status" style="font-size:12px;color:#ffdd65"></div><div id="streak" style="font-size:12px;color:#ffdd65"></div><div id="rocket-status" style="font-size:12px;color:#d5edf2"></div><div id="bar"><div id="fill"></div></div></div></header><div id="toast"></div><div id="bomb-warning" role="status" style="position:absolute;top:165px;left:8px;right:8px;text-align:center;color:#fff4ad;background:#812e29e8;border-radius:8px;font-weight:900;font-size:clamp(12px,2vw,18px);pointer-events:none"></div><footer><div id="hint">Drag anywhere to drive.<br>Snails pop and shrink you! 🐌</div><div><button id="pause" aria-label="Pause game">Ⅱ Pause</button> <button id="sound">Sound: off</button> <button id="return-city" hidden>Back to City</button><button id="reset">↻ Restart</button></div></footer><div id="phone-pause" hidden><div class="card"><h2>Paused</h2><p>Your game is saved. Ready for more?</p><button id="resume">RESUME</button></div></div><div id="cover"><div class="card"><h1 class="winter-title seasonal-wordmark"><img id="viktor-wordmark" src="munch-asset-4fd20f013e68f7a720b61cb8.png" alt="Viktor's Monster Munch"></h1><h2>Ready, Viktor?</h2><p>Your truck is hungry! Drive into little cars to grow. Then gobble picnic tables, swing sets, swimming pools, and whole buildings!</p><p>Watch out for snails! They go POP, fart, and shrink your truck. One chupacabra roams the map. Eat it at MEGA size, and another appears 30 seconds later!</p><p>✨ Catch golden cars for extra growth! Keep munching for streak bonuses, and find silly surprises inside houses.</p><p>🚀 Find Lift-Off Park, with its pond and trees! Drive through the water to splash. Visit the launch pad at MEGA size for ROCKET RUSH! Your truck shrinks and flies across the map to another neighborhood, then lands at full MEGA size. A new rocket arrives three minutes later.</p><p>☢ Bomb chase: the first starts after 3 minutes of play, then every 3, 5, or 7 minutes at random. Follow the red map marker and eat the bomb-carrying Chupacabra within 10 seconds at ANY size for +1,000 bonus points! If time runs out, the city explodes. Restart rebuilds the city.</p><p>🚧 At MEGA size, collect 10 cats to unlock 10 seconds as a yellow dozer! Push the city into piles without munching it.</p><button id="turkey-play" class="seasonal-bonus"><span>🦃 SEASONAL BONUS</span><strong>THANKSGIVING · TURKEY MUNCH</strong></button><button id="play">LET'S MUNCH!</button><p style="margin-bottom:0"><span style="color:#d5edf2;font-size:12px">iPhone preview · v1.27.2 · Saved on this device</span></p></div></div><script>
+</script><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Viktor’s Monster Munch · Gingerbread Munch</title><meta name="game-release" content="1.53.6-winter"><style>*{box-sizing:border-box}body{margin:0;background:#102a40;font-family:system-ui,sans-serif;color:white;overflow:hidden}canvas{display:block;touch-action:none;width:100vw;height:100dvh}header{position:absolute;top:0;left:0;right:0;padding:14px 18px;background:linear-gradient(#102a40ed,transparent);pointer-events:none;display:flex;justify-content:space-between;gap:10px}h1{font-size:clamp(18px,3vw,30px);margin:0;color:#ffdd65;text-shadow:0 3px #112b40}small{color:#d5edf2}#stats{text-align:right;font-weight:900}#bar{height:8px;background:#375168;border-radius:9px;margin-top:5px;overflow:hidden}#fill{height:100%;background:#ffda55;width:0}footer{position:absolute;bottom:14px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:end;gap:10px}button{border:2px solid #fff4;border-radius:18px;background:#173d54;color:white;padding:12px 16px;font-weight:800;font-size:15px;cursor:pointer}#hint{max-width:280px;background:#102a40da;padding:10px 14px;border-radius:14px;font-size:14px}#cover{position:absolute;inset:0;background:#102a4099;display:grid;place-items:center}.card{text-align:center;background:#14364e;border:3px solid #53d6bf;border-radius:28px;padding:28px;max-width:360px;margin:20px;box-shadow:0 20px 80px #0006}.card h2{font-size:34px;color:#ffda55;margin:0 0 12px}.card button{background:#ffcc4d;color:#173044;font-size:23px;padding:16px 32px}.card p{line-height:1.5}#toast{position:absolute;top:205px;width:100%;text-align:center;font-size:26px;font-weight:900;color:#ffec80;pointer-events:none;text-shadow:0 3px #15334b}.card{max-height:90dvh;overflow:auto}#toast{padding:0 12px;font-size:clamp(18px,4vw,26px)}@media(max-width:520px){header{padding:10px}h1{max-width:175px}header small{font-size:10px}#stats{font-size:12px}#champion{max-width:145px}#hint{font-size:11px;padding:8px;max-width:150px}footer{left:8px;right:8px}footer button{padding:9px;font-size:12px}}</style><style>body{-webkit-user-select:none;user-select:none;overscroll-behavior:none}header{padding-top:calc(8px + env(safe-area-inset-top));padding-left:calc(12px + env(safe-area-inset-left));padding-right:calc(12px + env(safe-area-inset-right))}footer{bottom:calc(8px + env(safe-area-inset-bottom));left:calc(8px + env(safe-area-inset-left));right:calc(8px + env(safe-area-inset-right))}#phone-pause{position:fixed;inset:0;background:#102a40e8;z-index:20;display:grid;place-items:center}#phone-pause[hidden]{display:none}#hint{max-width:190px;font-size:11px}footer button{min-height:44px;padding:8px 12px;font-size:13px}#toast{top:165px}#bomb-warning{top:130px;z-index:4}@media(orientation:landscape){header{font-size:12px}#stats{font-size:12px}h1{font-size:20px}#champion{font-size:11px!important}#bar{height:5px}#stats>div{font-size:10px!important}#hint{max-width:155px}.card{max-width:520px;padding:16px;max-height:85dvh}.card p{font-size:12px;line-height:1.3}.card h2{font-size:26px}.card>div:first-child{font-size:30px!important}.card button{font-size:19px;padding:12px 22px}}</style><style>#return-city[hidden]{display:none}.card #turkey-play{font-size:18px;padding:12px 20px;background:#d99035}#turkey-play:hover{background:#ffcf75}</style><style>.seasonal-bonus{display:flex!important;flex-direction:column;gap:3px;width:100%;margin:12px 0!important;padding:12px!important;border:2px solid #edc275!important;border-radius:12px!important;background:linear-gradient(110deg,#71372a,#ae642e)!important;color:#fff1ce!important;box-shadow:0 3px 12px #0003}.seasonal-bonus span{font-size:10px;letter-spacing:2px}.seasonal-bonus strong{font-size:14px}#seasonal-game{position:fixed;inset:0;width:100%;height:100dvh;border:0;z-index:100;background:#173044}#seasonal-game[hidden]{display:none}</style></head><body><style>#apollo-escape{position:fixed;inset:0;z-index:40;background:#0c1c25;display:grid;grid-template-rows:1fr auto;text-align:center}#apollo-escape[hidden]{display:none}#apollo-escape img{width:100%;height:100%;min-height:0;object-fit:contain}#apollo-escape div{padding:12px;background:#102b35}#apollo-escape h2{margin:0 0 5px;color:#ffe0a0}#apollo-escape p{margin:0 0 8px}</style><section id="apollo-escape" hidden aria-label="Apollo got away"><img id="apollo-escape-art" src="munch-asset-ac0f105e6fa45564fcc7c788.png" alt="Apollo jumps over a farm fence while Viktor chases him"><div><h2>APOLLO GOT AWAY!</h2><p>Viktor is on his trail. Better luck next chase!</p><button id="apollo-continue">KEEP MUNCHING</button></div></section><canvas id="c"></canvas><img id="blast-art" alt="" style="display:none" src="munch-asset-2810062598f62cee4b9365cc.png"><header><div><h1>Viktor's Munch Mayhem</h1><small>CITY MAYHEM · Chomp. Grow. Explore.</small><small id="version" style="display:block">v1.27.2</small></div><div id="stats"><span id="level">Little Chomper</span><br><span id="count">0 munches</span><div id="champion" style="color:#ffdd65;font-size:13px;margin-top:5px">PERSONAL BEST · Connecting…</div><div id="chase-clock" style="font-size:12px;color:#ffdd65">☢ First chase in 3:00</div><div id="mode-status" style="font-size:12px;color:#ffdd65"></div><div id="streak" style="font-size:12px;color:#ffdd65"></div><div id="rocket-status" style="font-size:12px;color:#d5edf2"></div><div id="bar"><div id="fill"></div></div></div></header><div id="toast"></div><div id="bomb-warning" role="status" style="position:absolute;top:165px;left:8px;right:8px;text-align:center;color:#fff4ad;background:#812e29e8;border-radius:8px;font-weight:900;font-size:clamp(12px,2vw,18px);pointer-events:none"></div><footer><div id="hint">Drag anywhere to drive.<br>Snails pop and shrink you! 🐌</div><div><button id="pause" aria-label="Pause game">Ⅱ Pause</button> <button id="sound">Sound: off</button> <button id="return-city" hidden>Back to City</button><button id="reset">↻ Restart</button></div></footer><div id="phone-pause" hidden><div class="card"><h2>Paused</h2><p>Your game is saved. Ready for more?</p><button id="resume">RESUME</button></div></div><div id="cover"><div class="card"><h1 class="winter-title seasonal-wordmark"><img id="viktor-wordmark" src="munch-asset-4fd20f013e68f7a720b61cb8.png" alt="Viktor's Monster Munch"></h1><h2>Ready, Viktor?</h2><p>Your truck is hungry! Drive into little cars to grow. Then gobble picnic tables, swing sets, swimming pools, and whole buildings!</p><p>Watch out for snails! They go POP, fart, and shrink your truck. One chupacabra roams the map. Eat it at MEGA size, and another appears 30 seconds later!</p><p>✨ Catch golden cars for extra growth! Keep munching for streak bonuses, and find silly surprises inside houses.</p><p>🚀 Find Lift-Off Park, with its pond and trees! Drive through the water to splash. Visit the launch pad at MEGA size for ROCKET RUSH! Your truck shrinks and flies across the map to another neighborhood, then lands at full MEGA size. A new rocket arrives three minutes later.</p><p>☢ Bomb chase: the first starts after 3 minutes of play, then every 3, 5, or 7 minutes at random. Follow the red map marker and eat the bomb-carrying Chupacabra within 10 seconds at ANY size for +1,000 bonus points! If time runs out, the city explodes. Restart rebuilds the city.</p><p>🚧 At MEGA size, collect 10 cats to unlock 10 seconds as a yellow dozer! Push the city into piles without munching it.</p><button id="turkey-play" class="seasonal-bonus"><span>🦃 SEASONAL BONUS</span><strong>THANKSGIVING · TURKEY MUNCH</strong></button><button id="play">LET'S MUNCH!</button><p style="margin-bottom:0"><span style="color:#d5edf2;font-size:12px">iPhone preview · v1.27.2 · Saved on this device</span></p></div></div><script>
 // Bump GAME_VERSION and CHANGELOG.md for every update.
 const GAME_VERSION='1.27.2';
 document.querySelector('#version').textContent='v'+GAME_VERSION;
@@ -251,8 +251,37 @@ function announce(text,t,duration=2000){document.querySelector('#toast').textCon
 function spawnGolden(){if(objects.some(o=>o.golden&&!o.dead))return;let o=spawnCar(0);let road=roads.reduce((best,r)=>Math.abs(delta(r,player.x))<Math.abs(delta(best,player.x))?r:best,roads[0]);o.x=wrap(road+19);o.y=wrap(player.y-230);o.a=0;o.color='#ffd43b';o.golden=true;objects.push(o)}
 function tickExtras(dt,t){if(streak&&t>streakUntil){streak=0;updateUI()}goldenClock+=dt;if(goldenClock>=15){goldenClock=0;spawnGolden()}}
 function recordMunch(t){streak=t<=streakUntil?streak+1:1;streakUntil=t+3000;if([3,6,10].includes(streak)||(streak>10&&streak%5===0)){let bonus=streak*10;bonusPoints+=bonus;announce((streak>=10?'MUNCH MANIAC!':streak>=6?'CHOMP CHAMP!':'TRIPLE CHOMP!')+' '+streak+' in a row · +'+bonus+' bonus',t)}}
-function buildingSurprise(o,t){if(Math.random()>.4)return;let kind=Math.floor(rnd(0,3));announce(['BALLOON BONANZA! 🎈','QUACK ATTACK! 🦆','BUUURP! Excuse you! 💨'][kind],t);if(kind===2)fart();for(let i=0;i<10;i++)surprises.push({x:o.x,y:o.y,vx:rnd(-95,95),vy:rnd(-150,-60),life:2,emoji:['🎈','🦆','💨'][kind],spin:rnd(-.5,.5)})}
-function drawSurprises(dt){for(let p of surprises){p.life-=dt;p.x=wrap(p.x+p.vx*dt);p.y=wrap(p.y+p.vy*dt);g.save();g.translate(player.x+delta(p.x,player.x),player.y+delta(p.y,player.y));g.rotate(p.spin*(2-p.life));g.globalAlpha=Math.min(1,Math.max(0,p.life));g.font='30px system-ui';g.textAlign='center';g.fillText(p.emoji,0,0);g.restore()}surprises=surprises.filter(p=>p.life>0)}
+function buildingSurprise(o,t){
+ if(Math.random()>.4)return;
+ const kind=Math.floor(rnd(0,3));
+ announce(['BALLOON BONANZA! 🎈','QUACK ATTACK! 🦆','BUUURP! Excuse you! 💨'][kind],t);
+ if(kind===2)fart();
+ surprises=surprises.filter(p=>p.life>0).slice(-6);
+ const count=Math.min(3,6-surprises.length);
+ for(let i=0;i<count;i++)surprises.push({x:o.x,y:o.y,vx:rnd(-95,95),vy:rnd(-150,-60),life:1.05,emoji:['🎈','🦆','💨'][kind]});
+}
+// Rasterize each of the three decorative emoji once, outside the frame loop.
+const surpriseSpriteCache=Object.create(null);
+function surpriseSprite(emoji){
+ if(surpriseSpriteCache[emoji])return surpriseSpriteCache[emoji];
+ const sprite=document.createElement('canvas');sprite.width=sprite.height=48;
+ const ink=sprite.getContext('2d');if(!ink)return null;
+ ink.font='30px system-ui';ink.textAlign='center';ink.textBaseline='middle';ink.fillText(emoji,24,24);
+ surpriseSpriteCache[emoji]=sprite;return sprite;
+}
+function drawSurprises(dt){
+ if(!surprises.length)return;
+ for(const p of surprises){
+  p.life-=dt;if(p.life<=0)continue;
+  p.x=wrap(p.x+p.vx*dt);p.y=wrap(p.y+p.vy*dt);
+  const dx=delta(p.x,player.x),dy=delta(p.y,player.y);
+  if(Math.abs(dx)>W/2+32||Math.abs(dy)>H/2+40)continue;
+  const sprite=surpriseSprite(p.emoji);if(!sprite)continue;
+  g.globalAlpha=Math.min(1,p.life/.4);
+  g.drawImage(sprite,player.x+dx-24,player.y+dy-36,48,48);
+ }
+ g.globalAlpha=1;surprises=surprises.filter(p=>p.life>0).slice(-6);
+}
 
 
 let rocketReady=true,rocketRespawn=0,flight=null,rocketSmoke=[],rocketSound=null;
@@ -334,7 +363,7 @@ function drawModeGoats(x,y,scale){if(specialMode!=='dozer')return;g.fillStyle='#
 
 function respawnBeast(dt){if(beastRespawn===null)return;beastRespawn-=dt;if(beastRespawn<=0){if(!objects.some(o=>o.type===8&&!o.dead))objects.push(beast());beastRespawn=null}}
 function beast(){let kind=0;return {x:rnd(150,world-150),y:rnd(150,world-150),type:8,a:0,kind,phase:rnd(0,7),v:58,dir:rnd(0,Math.PI*2)}}
-function moveDumpsters(dt,t,radius){for(let d of objects){if(d.type!==9||d.air)continue;d.vx||=0;d.vy||=0;let dx=delta(d.x,player.x),dy=delta(d.y,player.y),dist=Math.hypot(dx,dy),reach=radius+25;if(dist<reach){let nx=dist>.01?dx/dist:Math.sin(player.a),ny=dist>.01?dy/dist:-Math.cos(player.a);d.x=player.x+nx*(reach+2);d.y=player.y+ny*(reach+2);d.vx=nx*(t<boostUntil?620:390);d.vy=ny*(t<boostUntil?620:390)}d.x=wrap(d.x+d.vx*dt);d.y=wrap(d.y+d.vy*dt);let friction=Math.exp(-2.3*dt);d.vx*=friction;d.vy*=friction;d.a+=d.vx*dt*.0015;for(let o of objects){if(o===d||o.dead||o.type===6||o.type===7||o.type===8||o.type===5||o.type===11)continue;let dx=delta(d.x,o.x),dy=delta(d.y,o.y),dist=Math.hypot(dx,dy),reach=o.type===4?82:o.type===3?50:o.type===9?48:43;if(dist>=reach||dist<.001)continue;let nx=dx/dist,ny=dy/dist,approach=d.vx*nx+d.vy*ny;if(approach>=0)continue;d.x=wrap(o.x+nx*(reach+1));d.y=wrap(o.y+ny*(reach+1));let impact=-approach;d.vx-=1.65*approach*nx;d.vy-=1.65*approach*ny;if(o.type===9){o.vx=(o.vx||0)-nx*impact*.65;o.vy=(o.vy||0)-ny*impact*.65}else{o.hitUntil=t+260;if(o.type<3){o.x-=nx*14;o.y-=ny*14}}if(impact>60)for(let i=0;i<4;i++)particles.push({x:d.x,y:d.y,vx:rnd(-60,60),vy:rnd(-60,60),life:.4})}}}
+function moveDumpsters(dt,t,radius){for(let d of objects){if(d.type!==9||d.air)continue;d.vx||=0;d.vy||=0;let dx=delta(d.x,player.x),dy=delta(d.y,player.y),dist=Math.hypot(dx,dy),reach=radius+25;if(dist<reach){let nx=dist>.01?dx/dist:Math.sin(player.a),ny=dist>.01?dy/dist:-Math.cos(player.a);d.x=player.x+nx*(reach+2);d.y=player.y+ny*(reach+2);d.vx=nx*(t<boostUntil?620:390);d.vy=ny*(t<boostUntil?620:390)}d.x=wrap(d.x+d.vx*dt);d.y=wrap(d.y+d.vy*dt);let friction=Math.exp(-2.3*dt);d.vx*=friction;d.vy*=friction;d.a+=d.vx*dt*.0015;if(d.vx===0&&d.vy===0)continue;for(let o of objects){if(o===d||o.dead||o.type===6||o.type===7||o.type===8||o.type===5||o.type===11)continue;let dx=delta(d.x,o.x),dy=delta(d.y,o.y),dist=Math.hypot(dx,dy),reach=o.type===4?82:o.type===3?50:o.type===9?48:43;if(dist>=reach||dist<.001)continue;let nx=dx/dist,ny=dy/dist,approach=d.vx*nx+d.vy*ny;if(approach>=0)continue;d.x=wrap(o.x+nx*(reach+1));d.y=wrap(o.y+ny*(reach+1));let impact=-approach;d.vx-=1.65*approach*nx;d.vy-=1.65*approach*ny;if(o.type===9){o.vx=(o.vx||0)-nx*impact*.65;o.vy=(o.vy||0)-ny*impact*.65}else{o.hitUntil=t+260;if(o.type<3){o.x-=nx*14;o.y-=ny*14}}if(impact>60)for(let i=0;i<4;i++)particles.push({x:d.x,y:d.y,vx:rnd(-60,60),vy:rnd(-60,60),life:.4})}}}
 // Only the house core blocks driving; roof, porch and siding edges allow overlap.
 function houseBlocked(x,y){if(stage>=3)return false;let clearance=stages[stage][2]*.35;return objects.some(o=>o.type===4&&!o.dead&&Math.abs(delta(x,o.x))<34+clearance&&Math.abs(delta(y,o.y+4))<37+clearance)}
 function spawnSnail(i=0){let road=roads[i%roads.length];return {x:wrap(road+(i%2?82:-82)),y:wrap(980+i*179),type:11,a:0,phase:rnd(0,7)}}
@@ -400,7 +429,7 @@ round(-9,25,18,31,3,'#785644');round(-7,28,14,5,2,'#a77c55');g.fillStyle='#f4d57
 // flower box and small foundation trim
 round(-43,19,21,5,2,'#eee2c8');for(let x=-40;x<-24;x+=7){g.fillStyle=['#de6d66','#f1bd58','#d887a3'][Math.abs(x)%3];g.beginPath();g.arc(x,17,3,0,7);g.fill()}round(-50,53,100,5,2,'#eee1c9');
 }g.restore()}
-let prev=0;function frame(realTime){if(typeof vehicleGarage!=='undefined'){vehicleGarage.tick();if(vehicleGarage.isOpen){phoneLastReal=realTime;prev=phoneClock;requestAnimationFrame(frame);return}}let t=phoneTimeline(realTime);if(!phonePaused){tickTurkeyPortal(t);if(activeMap==='turkey'&&started&&t<boostUntil)turkeyGobble();tickBarnyard(Math.min(.035,Math.max(0,(t-prev)/1000)),t)}if(phonePaused||document.hidden){prev=t;requestAnimationFrame(frame);return}phoneAutoSave();let clockDt=Math.max(0,(t-prev)/1000),dt=Math.min(clockDt,.035);prev=t;let radius=stages[stage][2];if(started&&!document.hidden)tickConstruction(clockDt,t);if(started&&!cityRuined&&activeMap==='city')tickRocket(dt,t);if(started&&!flight&&!cityRuined){tickExtras(dt,t);respawnBeast(dt);let dx=0,dy=0;if(target){dx=delta(target.x,player.x);dy=delta(target.y,player.y);if(Math.hypot(dx,dy)<8){dx=dy=0}}dx+=(keys.ArrowRight||keys.d?1:0)*100;dx-=(keys.ArrowLeft||keys.a?1:0)*100;dy+=(keys.ArrowDown||keys.s?1:0)*100;dy-=(keys.ArrowUp||keys.w?1:0)*100;if(window.vikGamepadInput){const pad=window.vikGamepadInput.getVector();if(pad.active){dx=pad.x*100;dy=pad.y*100}}let len=Math.hypot(dx,dy);if(len>1){let oldX=player.x,oldY=player.y;player.x+=dx/len*(t<boostUntil?430:220)*dt;player.y+=dy/len*(t<boostUntil?430:220)*dt;player.a=Math.atan2(dy,dx)+Math.PI/2;if(stage<3){if(houseBlocked(player.x,oldY))player.x=oldX;if(houseBlocked(player.x,player.y))player.y=oldY}}player.x=wrap(player.x);player.y=wrap(player.y);tickWater(dt,len>1);if(!train.next)train.next=t+10000;if(t>=train.next){train.x=-100;train.cars=7;train.next=t+10000;if(activeMap==='turkey'){train.y=1670;train.gingerbreadExpress=true}}if(train.cars>0){train.x+=420*dt;let dx=delta(player.x,wrap(train.x)),dy=delta(player.y,train.y);let aligned=dx>0&&dx<radius+65&&Math.abs(dy)<32&&Math.sin(player.a)<-.7;if(!specialMode&&stage===4&&aligned){train.cars=0;score+=14;munches+=7;beep();document.querySelector('#toast').textContent='WHOLE TRAIN CRUNCH! 🚂 ✨';toastTime=t+2600;for(let i=0;i<70;i++)particles.push({x:train.x-rnd(0,530),y:train.y,vx:rnd(-150,150),vy:rnd(-150,150),life:1});updateUI()}else if(t>train.bounceUntil&&dx>-(train.cars-1)*88-45-radius&&dx<45+radius&&Math.abs(dy)<radius+24){train.bounceUntil=t+1200;if(specialMode){train.y=wrap(train.y+(dy<0?1:-1)*180);train.x=wrap(train.x-(specialMode==="flipper"?500:0))}else{target=null;let side=dy===0?-1:Math.sign(dy);player.y=wrap(train.y+side*(radius+100));document.querySelector('#toast').textContent='BOING! Watch the train! 🚂';toastTime=t+1400}}}let anyChasing=false;roamClock+=dt;if(roamClock>9){roamClock=0;if(objects.filter(o=>o.type===11&&!o.dead).length<14)objects.push(spawnSnail(Math.floor(rnd(0,100))));}for(let o of objects){if(o.dead)continue;if(specialMode&&o!==bombCarrier){modeObject(o,dt,t);continue}if(o.air)continue;if(o.type===11){if(activeMap==='turkey'&&typeof gingerTown!=='undefined'){gingerTown.moveActor(o,o.x+(o.modeMoved?0:Math.cos(o.phase)*32*dt),o.y+Math.sin(o.phase)*32*dt)}else{if(!o.modeMoved)o.x=wrap(o.x+Math.cos(o.phase)*8*dt);o.y=wrap(o.y+Math.sin(o.phase)*8*dt)}if(t>hurtUntil&&Math.hypot(delta(o.x,player.x),delta(o.y,player.y))<stages[stage][2]+20)popSnail(o,t);continue}if(o.type===7&&!o.modeMoved){o.x=wrap(o.x+Math.cos(t/2400+o.phase)*55*dt);o.y=wrap(o.y+Math.sin(t/1900+o.phase)*55*dt);if(t>hurtUntil&&Math.hypot(delta(o.x,player.x),delta(o.y,player.y))<radius+27){streak=0;streakUntil=0;hurtUntil=t+3500;boostUntil=0;if(stage>0){stage--;score=stages[stage][1]}else score=Math.max(0,score-2);document.querySelector('#toast').textContent='WHOOOOSH! One size smaller 🌪️';toastTime=t+2200;updateUI()}}if(o.type===8){o.armed=o===bombCarrier;let dx=delta(player.x,o.x),dy=delta(player.y,o.y),dist=Math.hypot(dx,dy);let chasing=dist<480&&((t/1000+o.phase*4)%16)<3;if(chasing)anyChasing=true;let heading=o.armed?Math.atan2(-dy,-dx):chasing?Math.atan2(dy,dx):o.dir+Math.sin(t/1100+o.phase)*.4;o.facingLeft=Math.cos(heading)<0;if(activeMap==='turkey'&&typeof gingerTown!=='undefined'){gingerTown.moveActor(o,o.x+Math.cos(heading)*(o.armed?115:o.v)*dt,o.y+Math.sin(heading)*(o.armed?115:o.v)*dt)}else{o.x=wrap(o.x+Math.cos(heading)*(o.armed?115:o.v)*dt);o.y=wrap(o.y+Math.sin(heading)*(o.armed?115:o.v)*dt)}if(!o.armed&&stage<4&&dist<radius+58&&t>hurtUntil){streak=0;streakUntil=0;hurtUntil=t+3500;boostUntil=0;if(stage>0){stage--;score=stages[stage][1]}else score=Math.max(0,score-2);player.x=wrap(player.x-Math.cos(heading)*100);player.y=wrap(player.y-Math.sin(heading)*100);document.querySelector('#toast').textContent=activeMap==='turkey'?'GINGERBREAD MAN! Give him some room!':'CHUPACABRA! Dodge the beast!';toastTime=t+2200;updateUI()}}if(o.type===6&&!o.modeMoved){if(activeMap==='turkey'&&typeof gingerTown!=='undefined'){gingerTown.moveActor(o,o.x+Math.cos(t/950)*90*dt,o.y+Math.sin(t/730)*90*dt)}else{o.x=wrap(o.x+Math.cos(t/950)*90*dt);o.y=wrap(o.y+Math.sin(t/730)*90*dt)}}if(o.type<3&&!o.modeMoved&&activeMap==='city'){o.y+=Math.cos(o.a)*o.v*dt;o.x+=Math.sin(o.a)*o.v*dt;o.y=wrap(o.y);o.x=wrap(o.x)}let required=[0,1,2,2,3,0,0,99,4,99,99,99,1,2,1,0,0][o.type];if(((o.type===8&&o.armed)||required<=stage)&&Math.hypot(delta(o.x,player.x),delta(o.y,player.y))<radius+[13,17,22,20,35,12,15,27,58,20,0,20,28,36,22,10,15][o.type]){if(o.type===8)saveCity(o,t);collectCat(o,t);collectTurkeySnack(o,t);o.dead=true;if(o.type===8)beastRespawn=30;if(o.type===6){fart();boostUntil=t+5000;document.querySelector('#toast').textContent=activeMap==='turkey'?'COCOA BOOST! ☕ 💨':'GOAT GAS TURBO! 🐐 💨';toastTime=t+2200}score+=o.golden?5:o.type===5?.2:o.type===4?3:o.type===8?2:1;munches++;recordMunch(t);if(o.golden){goldenClock=0;announce("GOLDEN MUNCH! Extra growth! ✨",t,2400)}if(o.type===4)buildingSurprise(o,t);if(o.type!==6)beep();for(let i=0;i<8;i++)particles.push({x:o.x,y:o.y,vx:rnd(-90,90),vy:rnd(-90,90),life:1});if(stage<4&&score>=stages[stage+1][1]){stage++;document.querySelector('#toast').textContent=stages[stage][0]+' ✨';toastTime=t+2400}updateUI()}}moveModeProps(dt);if(!specialMode)moveDumpsters(dt,t,stages[stage][2]);chaseMusic(t,anyChasing);objects=objects.filter(o=>!o.dead);if(objects.filter(o=>o.type===0).length<15)for(let i=0;i<25;i++)objects.push({...spawnCar(i),v:activeMap==='turkey'?0:25})}if(started&&!document.hidden){if(activeMap==='city')tickBomb(clockDt,t);else tickApolloChase(clockDt,t);}tickDoomMusic();g.fillStyle='#88bd98';g.fillRect(0,0,W,H);let camx=player.x-W/2,camy=player.y-H/2;g.save();g.translate(-camx,-camy);for(let tx=-1;tx<=1;tx++)for(let ty=-1;ty<=1;ty++){g.save();g.translate(tx*world,ty*world);g.fillStyle='#5c9b76';g.fillRect(0,0,world,world);if(activeMap==='turkey'){drawHarvestTerrain()}else{g.fillStyle='#91c39a';g.fillRect(0,0,world,world);
+let prev=0;function frame(realTime){if(typeof vehicleGarage!=='undefined'){vehicleGarage.tick();if(vehicleGarage.isOpen){phoneLastReal=realTime;prev=phoneClock;requestAnimationFrame(frame);return}}let t=phoneTimeline(realTime);if(!phonePaused){tickTurkeyPortal(t);if(activeMap==='turkey'&&started&&t<boostUntil)turkeyGobble();tickBarnyard(Math.min(.035,Math.max(0,(t-prev)/1000)),t)}if(phonePaused||document.hidden){prev=t;requestAnimationFrame(frame);return}phoneAutoSave();let clockDt=Math.max(0,(t-prev)/1000),dt=Math.min(clockDt,.035);prev=t;let radius=stages[stage][2];if(started&&!document.hidden)tickConstruction(clockDt,t);if(started&&!cityRuined&&activeMap==='city')tickRocket(dt,t);if(started&&!flight&&!cityRuined){tickExtras(dt,t);respawnBeast(dt);let dx=0,dy=0;if(target){dx=delta(target.x,player.x);dy=delta(target.y,player.y);if(Math.hypot(dx,dy)<8){dx=dy=0}}dx+=(keys.ArrowRight||keys.d?1:0)*100;dx-=(keys.ArrowLeft||keys.a?1:0)*100;dy+=(keys.ArrowDown||keys.s?1:0)*100;dy-=(keys.ArrowUp||keys.w?1:0)*100;if(window.vikGamepadInput){const pad=window.vikGamepadInput.getVector();if(pad.active){dx=pad.x*100;dy=pad.y*100}}let len=Math.hypot(dx,dy);if(len>1){let oldX=player.x,oldY=player.y;player.x+=dx/len*(t<boostUntil?430:220)*dt;player.y+=dy/len*(t<boostUntil?430:220)*dt;player.a=Math.atan2(dy,dx)+Math.PI/2;if(stage<3){if(houseBlocked(player.x,oldY))player.x=oldX;if(houseBlocked(player.x,player.y))player.y=oldY}}player.x=wrap(player.x);player.y=wrap(player.y);tickWater(dt,len>1);if(!train.next)train.next=t+10000;if(t>=train.next){train.x=-100;train.cars=7;train.next=t+10000;if(activeMap==='turkey'){train.y=1670;train.gingerbreadExpress=true}}if(train.cars>0){train.x+=420*dt;let dx=delta(player.x,wrap(train.x)),dy=delta(player.y,train.y);let aligned=dx>0&&dx<radius+65&&Math.abs(dy)<32&&Math.sin(player.a)<-.7;if(!specialMode&&stage===4&&aligned){train.cars=0;score+=14;munches+=7;beep();document.querySelector('#toast').textContent='WHOLE TRAIN CRUNCH! 🚂 ✨';toastTime=t+2600;for(let i=0;i<70;i++)particles.push({x:train.x-rnd(0,530),y:train.y,vx:rnd(-150,150),vy:rnd(-150,150),life:1});updateUI()}else if(t>train.bounceUntil&&dx>-(train.cars-1)*88-45-radius&&dx<45+radius&&Math.abs(dy)<radius+24){train.bounceUntil=t+1200;if(specialMode){train.y=wrap(train.y+(dy<0?1:-1)*180);train.x=wrap(train.x-(specialMode==="flipper"?500:0))}else{target=null;let side=dy===0?-1:Math.sign(dy);player.y=wrap(train.y+side*(radius+100));document.querySelector('#toast').textContent='BOING! Watch the train! 🚂';toastTime=t+1400}}}let anyChasing=false;roamClock+=dt;if(roamClock>9){roamClock=0;if(objects.filter(o=>o.type===11&&!o.dead).length<14)objects.push(spawnSnail(Math.floor(rnd(0,100))));}for(let o of objects){if(o.dead)continue;if(specialMode&&o!==bombCarrier){modeObject(o,dt,t);continue}if(o.air)continue;if(o.type===11){if(activeMap==='turkey'&&typeof gingerTown!=='undefined'){gingerTown.moveActor(o,o.x+(o.modeMoved?0:Math.cos(o.phase)*32*dt),o.y+Math.sin(o.phase)*32*dt)}else{if(!o.modeMoved)o.x=wrap(o.x+Math.cos(o.phase)*8*dt);o.y=wrap(o.y+Math.sin(o.phase)*8*dt)}if(t>hurtUntil&&Math.hypot(delta(o.x,player.x),delta(o.y,player.y))<stages[stage][2]+20)popSnail(o,t);continue}if(o.type===7&&!o.modeMoved){o.x=wrap(o.x+Math.cos(t/2400+o.phase)*55*dt);o.y=wrap(o.y+Math.sin(t/1900+o.phase)*55*dt);if(t>hurtUntil&&Math.hypot(delta(o.x,player.x),delta(o.y,player.y))<radius+27){streak=0;streakUntil=0;hurtUntil=t+3500;boostUntil=0;if(stage>0){stage--;score=stages[stage][1]}else score=Math.max(0,score-2);document.querySelector('#toast').textContent='WHOOOOSH! One size smaller 🌪️';toastTime=t+2200;updateUI()}}if(o.type===8){o.armed=o===bombCarrier;let dx=delta(player.x,o.x),dy=delta(player.y,o.y),dist=Math.hypot(dx,dy);let chasing=dist<480&&((t/1000+o.phase*4)%16)<3;if(chasing)anyChasing=true;let heading=o.armed?Math.atan2(-dy,-dx):chasing?Math.atan2(dy,dx):o.dir+Math.sin(t/1100+o.phase)*.4;o.facingLeft=Math.cos(heading)<0;if(activeMap==='turkey'&&typeof gingerTown!=='undefined'){gingerTown.moveActor(o,o.x+Math.cos(heading)*(o.armed?115:o.v)*dt,o.y+Math.sin(heading)*(o.armed?115:o.v)*dt)}else{o.x=wrap(o.x+Math.cos(heading)*(o.armed?115:o.v)*dt);o.y=wrap(o.y+Math.sin(heading)*(o.armed?115:o.v)*dt)}if(!o.armed&&stage<4&&dist<radius+58&&t>hurtUntil){streak=0;streakUntil=0;hurtUntil=t+3500;boostUntil=0;if(stage>0){stage--;score=stages[stage][1]}else score=Math.max(0,score-2);player.x=wrap(player.x-Math.cos(heading)*100);player.y=wrap(player.y-Math.sin(heading)*100);document.querySelector('#toast').textContent=activeMap==='turkey'?'GINGERBREAD MAN! Give him some room!':'CHUPACABRA! Dodge the beast!';toastTime=t+2200;updateUI()}}if(o.type===6&&!o.modeMoved){if(activeMap==='turkey'&&typeof gingerTown!=='undefined'){gingerTown.moveActor(o,o.x+Math.cos(t/950)*90*dt,o.y+Math.sin(t/730)*90*dt)}else{o.x=wrap(o.x+Math.cos(t/950)*90*dt);o.y=wrap(o.y+Math.sin(t/730)*90*dt)}}if(o.type<3&&!o.modeMoved&&activeMap==='city'){o.y+=Math.cos(o.a)*o.v*dt;o.x+=Math.sin(o.a)*o.v*dt;o.y=wrap(o.y);o.x=wrap(o.x)}let required=[0,1,2,2,3,0,0,99,4,99,99,99,1,2,1,0,0][o.type];if(((o.type===8&&o.armed)||required<=stage)&&Math.hypot(delta(o.x,player.x),delta(o.y,player.y))<radius+[13,17,22,20,35,12,15,27,58,20,0,20,28,36,22,10,15][o.type]){munchObject(o,t)}}moveModeProps(dt);if(!specialMode)moveDumpsters(dt,t,stages[stage][2]);chaseMusic(t,anyChasing);objects=objects.filter(o=>!o.dead);if(objects.filter(o=>o.type===0).length<15)for(let i=0;i<25;i++)objects.push({...spawnCar(i),v:activeMap==='turkey'?0:25})}if(started&&!document.hidden){if(activeMap==='city')tickBomb(clockDt,t);else tickApolloChase(clockDt,t);}tickDoomMusic();g.fillStyle='#88bd98';g.fillRect(0,0,W,H);let camx=player.x-W/2,camy=player.y-H/2;g.save();g.translate(-camx,-camy);for(let tx=-1;tx<=1;tx++)for(let ty=-1;ty<=1;ty++){if((tx+1)*world<player.x-W/2-200||tx*world>player.x+W/2+200||(ty+1)*world<player.y-H/2-200||ty*world>player.y+H/2+200)continue;g.save();g.translate(tx*world,ty*world);g.fillStyle='#5c9b76';g.fillRect(0,0,world,world);if(activeMap==='turkey'){drawHarvestTerrain()}else{g.fillStyle='#91c39a';g.fillRect(0,0,world,world);
 g.fillStyle='#a8d0a2';for(let bx=520;bx<world+1;bx+=block)for(let by=520;by<world+1;by+=block){if(Math.abs(delta(by,1670))<125)continue;round(bx-236,by-236,472,472,12,'#a6ce9f');round(bx-222,by-222,444,444,10,'#9bc99a')}// Paint the entire street network first, so later streets cannot cover intersections.
 for(let p of roads){g.fillStyle='#d4d7cb';g.fillRect(p-62,0,124,world);g.fillRect(0,p-62,world,124)}
 for(let p of roads){g.fillStyle='#53677a';g.fillRect(p-45,0,90,world);g.fillRect(0,p-45,world,90)}
@@ -425,7 +454,7 @@ round(-19,-1,38,51,8,'#168749');round(-15,4,30,36,5,'#22a95a');round(-11,8,22,21
 g.fillStyle='#eaffd4';g.font='bold 12px system-ui';g.textAlign='center';g.fillText('♻',0,22);g.fillStyle='#d9f36c';g.beginPath();g.moveTo(-14,39);g.lineTo(-5,39);g.lineTo(-11,48);g.lineTo(-18,48);g.fill();g.beginPath();g.moveTo(4,39);g.lineTo(13,39);g.lineTo(18,48);g.lineTo(11,48);g.fill();
 // Friendly front cab with windshield eyes and a wide toothy grille mouth.
 round(-20,-37,40,44,10,'#32bf65');round(-16,-42,32,11,5,'#159449');round(-14,-27,28,15,5,'#a9e8ef');g.fillStyle='#efffff';for(let x of [-8,8]){g.beginPath();g.ellipse(x,-20,6,7,0,0,7);g.fill();g.fillStyle='#20394a';g.beginPath();g.arc(x+1,-21,2.5,0,7);g.fill();g.fillStyle='#efffff'}round(-18,-43,36,16,6,'#163d39');let chomp=Math.sin(t/85)>0?3:0;for(let x=-15;x<16;x+=7){g.fillStyle='#fff4d5';g.beginPath();g.moveTo(x,-42);g.lineTo(x+5,-42);g.lineTo(x+2,-35+chomp);g.fill()}round(-21,-39,5,6,2,'#ffe987');round(16,-39,5,6,2,'#ffe987');round(-9,1,18,4,2,'#b6f08a');
-}g.restore();if(target&&started){g.strokeStyle='#fff9';g.lineWidth=2;g.beginPath();g.arc(target.x,target.y,12,0,7);g.stroke()}g.restore();drawBlast();if(!cityRuined||blast.age<3.3){drawLocator();vehicleGarage.drawLocator();if(typeof worldActivities!=='undefined')worldActivities.drawLocator()}if(t>toastTime)document.querySelector('#toast').textContent='';requestAnimationFrame(frame)}function point(e){if(flight)return;let r=c.getBoundingClientRect();target={x:player.x+e.clientX-r.left-W/2,y:player.y+e.clientY-r.top-H/2}}c.onpointerdown=e=>{c.setPointerCapture(e.pointerId);point(e)};c.onpointermove=e=>{if(e.buttons)point(e)};c.onpointerup=()=>target=null;c.onpointercancel=()=>target=null;addEventListener('keydown',e=>{keys[e.key]=true;if(e.key.startsWith('Arrow'))e.preventDefault()});addEventListener('keyup',e=>keys[e.key]=false);addEventListener('blur',()=>{keys={};target=null});document.querySelector('#play').onclick=()=>{document.querySelector('#sound').textContent='Sound: '+(muted?'off':'on');beep();started=true;document.querySelector('#cover').style.display='none'};document.querySelector('#reset').onclick=()=>finishRun();document.querySelector('#sound').onclick=()=>{muted=!muted;if(muted){stopRocketSound();stopDoomMusic();stopDozerFanfare()}document.querySelector('#sound').textContent='Sound: '+(muted?'off':'on');if(!muted)beep();phoneSettingsSave()};document.querySelector('#turkey-play').onclick=()=>enterTurkeyMap(false);document.querySelector('#return-city').onclick=leaveTurkeyMap;document.querySelector('#apollo-continue').onclick=()=>{document.querySelector('#apollo-escape').hidden=true;phoneResume()};init();
+}if(window.vikCannon)window.vikCannon.drawMount(t);g.restore();if(window.vikCannon)window.vikCannon.drawWorld(t);if(target&&started){g.strokeStyle='#fff9';g.lineWidth=2;g.beginPath();g.arc(target.x,target.y,12,0,7);g.stroke()}g.restore();drawBlast();if(!cityRuined||blast.age<3.3){drawLocator();vehicleGarage.drawLocator();if(typeof worldActivities!=='undefined')worldActivities.drawLocator()}if(t>toastTime)document.querySelector('#toast').textContent='';requestAnimationFrame(frame)}function point(e){if(flight)return;let r=c.getBoundingClientRect();target={x:player.x+e.clientX-r.left-W/2,y:player.y+e.clientY-r.top-H/2}}c.onpointerdown=e=>{c.setPointerCapture(e.pointerId);point(e)};c.onpointermove=e=>{if(e.buttons)point(e)};c.onpointerup=()=>target=null;c.onpointercancel=()=>target=null;addEventListener('keydown',e=>{keys[e.key]=true;if(e.key.startsWith('Arrow'))e.preventDefault()});addEventListener('keyup',e=>keys[e.key]=false);addEventListener('blur',()=>{keys={};target=null});document.querySelector('#play').onclick=()=>{document.querySelector('#sound').textContent='Sound: '+(muted?'off':'on');beep();started=true;document.querySelector('#cover').style.display='none'};document.querySelector('#reset').onclick=()=>finishRun();document.querySelector('#sound').onclick=()=>{muted=!muted;if(muted){stopRocketSound();stopDoomMusic();stopDozerFanfare()}document.querySelector('#sound').textContent='Sound: '+(muted?'off':'on');if(!muted)beep();phoneSettingsSave()};document.querySelector('#turkey-play').onclick=()=>enterTurkeyMap(false);document.querySelector('#return-city').onclick=leaveTurkeyMap;document.querySelector('#apollo-continue').onclick=()=>{document.querySelector('#apollo-escape').hidden=true;phoneResume()};init();
 </script>
 <style>
 #record-dialog{color:white;background:#14364e;border:3px solid #53d6bf;border-radius:22px;max-width:360px;width:calc(100% - 32px);padding:24px;text-align:center;max-height:90dvh;overflow:auto}
@@ -548,7 +577,13 @@ const gingerEnterBefore=enterTurkeyMap;
 enterTurkeyMap=function(fromCity=false){gingerEnterBefore(fromCity);cornerGinger.style.display='none';document.querySelector('#return-city').textContent='↩ Back to City';document.querySelector('header h1').textContent="Viktor's Gingerbread Munch";document.querySelector('header small').textContent='GINGERBREAD HOUSE · CHOMP. GROW. CRUNCH.';announce('GINGERBREAD MUNCH! Find the Cookie King Castle.',phoneClock,1600)};
 </script><script>
 phoneInitialize();
-</script></body><style id="finished-vehicle-style">#vehicle-open{position:fixed;top:auto;bottom:62px;left:12px;z-index:11;padding:9px 13px;font:800 13px system-ui;border:2px solid #f4d38c;border-radius:12px;background:#234e65e8;color:#fff2c5;box-shadow:0 3px 12px #06172444}
+</script><style>
+.vik-compact-hud footer.hud-footer .touch-rocket{display:none}
+@media(any-pointer:coarse){.vik-compact-hud footer.hud-footer .touch-rocket:not([hidden]){display:inline-flex;align-items:center;justify-content:center;min-width:66px;min-height:44px;touch-action:manipulation;white-space:nowrap}.vik-compact-hud footer.hud-footer .touch-rocket:disabled{opacity:.65}}
+</style>
+
+<style id="home-garage-style">#cover #home-garage{display:inline-flex;align-items:center;justify-content:center;min-height:42px;max-width:100%;padding:10px 16px;border:1px solid #a6d9df;border-radius:12px;background:linear-gradient(145deg,#31677e,#173c55);color:#eefbff;font:850 13px/1.2 system-ui;cursor:pointer;box-shadow:0 3px 12px #041b2b55}#cover #home-garage:focus-visible{outline:3px solid #e2f8ff;outline-offset:3px}#cover .menu-bottom{flex-wrap:wrap}#cover .menu-bottom>span{min-width:180px}@media(max-width:700px){#cover #home-garage{width:100%;font-size:12px;padding:9px 12px}#cover .menu-bottom{gap:9px}}</style>
+</body><style id="finished-vehicle-style">#vehicle-open{position:fixed;top:auto;bottom:62px;left:12px;z-index:11;padding:9px 13px;font:800 13px system-ui;border:2px solid #f4d38c;border-radius:12px;background:#234e65e8;color:#fff2c5;box-shadow:0 3px 12px #06172444}
 #vehicle-open[hidden]{display:none!important}
 #vehicle-dialog{width:min(780px,94vw);max-height:92dvh;overflow:auto;padding:22px;background:linear-gradient(145deg,#234e64,#102f42);color:#e7f5f2;border:2px solid #e4cc8a;border-radius:22px;box-shadow:0 25px 100px #00111ccc;font-family:system-ui}
 #vehicle-dialog::backdrop{background:#061927c9;backdrop-filter:blur(5px)}
@@ -573,7 +608,9 @@ window.createVikVehicleGarage = function (adapter) {
     {id:'dozer', name:'Bulldozer', note:'Chunky tracks and a big blade', color:'#edc54d'},
     {id:'monster', name:'Monster truck', note:'Huge tires, ready to rumble', color:'#b982df'},
     {id:'race', name:'Race car', note:'Red paint and racing stripes', color:'#ef6460'},
-    {id:'truck', name:'Work truck', note:'A trusty blue pickup', color:'#58bdd6'}
+    {id:'truck', name:'Work truck', note:'A trusty blue pickup', color:'#58bdd6'},
+    {id:'tank', name:'Abrams tank', note:'Armored tracks and a big turret', color:'#a5ad78'},
+    {id:'moon-rover', name:'Moon Rover', note:'White-and-gold lunar buggy with quick lasers', color:'#b5dfda'}
   ];
   const storageKey='vikVehicleChoices-v2', choices=Object.create(null);
   const validRide=id=>rides.some(ride=>ride.id===id);
@@ -581,9 +618,19 @@ window.createVikVehicleGarage = function (adapter) {
   // Old versions saved one ride for every map. Start those saves with the map's
   // original vehicle instead of carrying an unrelated vehicle into a new world.
   try {const saved=JSON.parse(localStorage.getItem(storageKey)||'{}');if(saved&&typeof saved==='object'&&!Array.isArray(saved))for(const world of Object.keys(saved))if(validWorld(world)&&validRide(saved[world]))choices[world]=saved[world];} catch {}
-  let choice='default', choiceWorld=null, paused=false, pausedWorld=null, resumeGame=null, nearLatched=false, lastNear=false, readyMessage='';
+  let choice='default', choiceWorld=null, paused=false, pausedWorld=null, resumeGame=null, nearLatched=false, lastNear=false, readyMessage='', homePick=false, pendingHomeRide=null;
   function saveChoices(){try{localStorage.setItem(storageKey,JSON.stringify(choices))}catch{}}
   function syncWorld(){const world=adapter.map();if(world!==choiceWorld){choiceWorld=world;choice=choices[world]||'default';nearLatched=false;lastNear=false;}return world}
+  function updateHomeLabel(){
+    const button=document.querySelector('#home-garage');
+    if(button){const ride=rides.find(ride=>ride.id===pendingHomeRide);button.textContent='Choose your ride'+(ride?' · '+ride.name:'');button.dataset.ride=pendingHomeRide||'default'}
+  }
+  function setHomeChoice(id){if(!validRide(id))return false;pendingHomeRide=id;updateHomeLabel();return true}
+  function takeHomeChoice(){const id=pendingHomeRide;pendingHomeRide=null;updateHomeLabel();return id}
+  function applyHomeChoice(world){
+    if(pendingHomeRide===null||!validWorld(world))return false;
+    const id=takeHomeChoice();choices[world]=id;saveChoices();syncWorld();if(choiceWorld===world)choice=id;return true;
+  }
   function selectDefault(){return resetForWorld(adapter.map())}
   function resetForWorld(world=adapter.map()){
     if(validWorld(world)){choices[world]='default';saveChoices()}
@@ -604,21 +651,25 @@ window.createVikVehicleGarage = function (adapter) {
     const note=document.createElement('span');note.textContent=ride.note;
     const status=document.createElement('small');status.textContent=choice===ride.id?'YOUR RIDE':'CHOOSE';
     card.append(preview,title,note,status);list.appendChild(card);previews.push({ride,preview,card,status});
-    card.onclick=()=>{if(!paused||!dialog.open||adapter.map()!==pausedWorld)return;syncWorld();choice=ride.id;if(validWorld(choiceWorld)){choices[choiceWorld]=choice;saveChoices()}readyMessage=ride.name+' ready!';close()};
+    card.onclick=()=>{if(!paused||!dialog.open||adapter.map()!==pausedWorld)return;if(homePick){setHomeChoice(ride.id);close();return}syncWorld();choice=ride.id;if(validWorld(choiceWorld)){choices[choiceWorld]=choice;saveChoices()}readyMessage=ride.name+' ready!';close()};
   }
-  function open(){
-    if(paused||dialog.open||!adapter.canOpen())return false;
-    pausedWorld=syncWorld();adapter.clearInput();resumeGame=adapter.pause();paused=true;button.hidden=true;
-    for(const p of previews){p.card.setAttribute('aria-pressed',String(p.ride.id===choice));p.status.textContent=p.ride.id===choice?'YOUR RIDE':'CHOOSE'}
+  function open(home=false){
+    const fromHome=home===true,cover=document.querySelector('#cover');
+    if(paused||dialog.open||(fromHome?(!cover||cover.style.display==='none'||document.hidden):!adapter.canOpen()))return false;
+    homePick=fromHome;pausedWorld=syncWorld();adapter.clearInput();resumeGame=fromHome?null:adapter.pause();paused=true;button.hidden=true;
+    document.querySelector('#vehicle-back').textContent=fromHome?'Choose a world ›':'Back to the game ›';
+    document.querySelector('.vehicle-intro').textContent=fromHome?'Pick a ride, then choose any world.':'Choose a favorite and keep exploring.';
+    const selected=fromHome?(pendingHomeRide||'default'):choice;
+    for(const p of previews){p.card.setAttribute('aria-pressed',String(p.ride.id===selected));p.status.textContent=p.ride.id===selected?'YOUR RIDE':'CHOOSE'}
     try{dialog.showModal()}catch{finishClose();return false}
     animatePreviews(performance.now());return true;
   }
   function finishClose(){
     if(!paused)return;
-    const sameWorld=adapter.map()===pausedWorld,resume=resumeGame,message=readyMessage;
-    paused=false;resumeGame=null;pausedWorld=null;readyMessage='';syncWorld();nearLatched=true;adapter.clearInput();
-    if(sameWorld&&resume)resume();
-    if(sameWorld&&message)adapter.announce(message);
+    const sameWorld=adapter.map()===pausedWorld,resume=resumeGame,message=readyMessage,wasHome=homePick;
+    paused=false;homePick=false;resumeGame=null;pausedWorld=null;readyMessage='';syncWorld();nearLatched=true;adapter.clearInput();
+    if(!wasHome&&sameWorld&&resume)resume();
+    if(!wasHome&&sameWorld&&message)adapter.announce(message);updateHomeLabel();
     tick();
   }
   function close(){if(dialog.open)dialog.close();finishClose()}
@@ -650,7 +701,76 @@ window.createVikVehicleGarage = function (adapter) {
   function drawRide(ctx,t,speed=0,id=choice){
     if(!validRide(id))id='default';
     if(id==='default'){adapter.drawDefault(ctx,t);return}
-    ctx.save();let bob=Math.sin(t/110)*Math.min(1.1,Math.abs(speed)/180);ctx.translate(0,bob);
+    ctx.save();let bob=(id==='tank'||id==='moon-rover')?0:Math.sin(t/110)*Math.min(1.1,Math.abs(speed)/180);ctx.translate(0,bob);
+
+    if(id==='tank'){
+      // Vehicle coordinates point toward -Y, like every garage ride.
+      // Compact Abrams silhouette: continuous tracks, sloped hull, broad
+      // turret, and the central main barrel. Blaster effects remain separate.
+      ctx.fillStyle='#09233355';ctx.beginPath();ctx.ellipse(4,12,42,49,0,0,Math.PI*2);ctx.fill();
+      for(const side of [-1,1]){
+        rounded(ctx,side*29-10,-42,20,89,7,'#29363b');
+        rounded(ctx,side*29-7,-37,14,79,5,'#657379');
+        const travel=Math.abs(speed)>2?(t/38)%8:0;
+        for(let y=-41;y<43;y+=8){rounded(ctx,side*29-10,y+travel,20,3,1,'#bac4c5');rounded(ctx,side*29-7,y+travel+1,14,1,0,'#44535b')}
+        for(let y=-29;y<=32;y+=15){ctx.fillStyle='#d2d9d8';ctx.beginPath();ctx.ellipse(side*30,y,4,5,0,0,Math.PI*2);ctx.fill()}
+      }
+      // Winter-white armor with broad angular gray and charcoal snow camouflage.
+      rounded(ctx,-27,-39,54,83,8,'#e7edeb');
+      ctx.fillStyle='#77878d';ctx.beginPath();ctx.moveTo(-26,-33);ctx.lineTo(-8,-29);ctx.lineTo(-12,-11);ctx.lineTo(-26,-3);ctx.closePath();ctx.fill();
+      ctx.fillStyle='#3e4b52';ctx.beginPath();ctx.moveTo(7,4);ctx.lineTo(25,-2);ctx.lineTo(26,18);ctx.lineTo(11,32);ctx.lineTo(0,26);ctx.closePath();ctx.fill();
+      ctx.fillStyle='#f4f6f2';ctx.beginPath();ctx.moveTo(-25,-34);ctx.lineTo(0,-45);ctx.lineTo(25,-34);ctx.lineTo(21,-17);ctx.lineTo(-21,-17);ctx.closePath();ctx.fill();
+      ctx.fillStyle='#8b9a9f';ctx.beginPath();ctx.moveTo(4,-43);ctx.lineTo(23,-34);ctx.lineTo(18,-25);ctx.lineTo(3,-28);ctx.closePath();ctx.fill();
+      rounded(ctx,-24,20,48,20,3,'#c2cccd');
+      for(let x=-18;x<=18;x+=6)rounded(ctx,x,24,3,12,1,'#46545b');
+      rounded(ctx,-29,-17,7,49,2,'#f1f4f0');rounded(ctx,22,-17,7,49,2,'#a8b6bb');
+      ctx.fillStyle='#e2e9e7';ctx.beginPath();ctx.moveTo(-21,-17);ctx.lineTo(-12,-27);ctx.lineTo(17,-23);ctx.lineTo(25,-10);ctx.lineTo(21,15);ctx.lineTo(-17,18);ctx.lineTo(-25,6);ctx.closePath();ctx.fill();
+      ctx.strokeStyle='#829297';ctx.lineWidth=2;ctx.stroke();
+      ctx.fillStyle='#45545c';ctx.beginPath();ctx.moveTo(-22,-11);ctx.lineTo(-12,-21);ctx.lineTo(-3,-16);ctx.lineTo(-7,-2);ctx.lineTo(-20,5);ctx.closePath();ctx.fill();
+      ctx.fillStyle='#87969a';ctx.beginPath();ctx.moveTo(12,-20);ctx.lineTo(22,-9);ctx.lineTo(17,0);ctx.lineTo(5,-5);ctx.lineTo(5,-15);ctx.closePath();ctx.fill();
+      ctx.fillStyle='#526269';ctx.beginPath();ctx.moveTo(8,8);ctx.lineTo(21,6);ctx.lineTo(20,13);ctx.lineTo(7,15);ctx.closePath();ctx.fill();
+      rounded(ctx,-4,-70,8,51,2,'#8d9da1');rounded(ctx,-3,-69,3,49,1,'#edf2ee');
+      rounded(ctx,-6,-74,12,10,2,'#60747c');rounded(ctx,-5,-74,10,3,1,'#e4ebe8');
+      rounded(ctx,-9,-24,18,12,3,'#b3c0c3');
+      ctx.fillStyle='#83959b';ctx.beginPath();ctx.ellipse(4,-3,10,8,-.2,0,Math.PI*2);ctx.fill();ctx.strokeStyle='#f4f6ef';ctx.lineWidth=2;ctx.stroke();
+      rounded(ctx,0,-8,8,3,1,'#d8e2df');rounded(ctx,-18,1,7,10,2,'#f0eee0');
+      ctx.strokeStyle='#687e87';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(-17,9);ctx.lineTo(-20,-13);ctx.stroke();
+      for(const x of [-23,18]){rounded(ctx,x,-35,5,5,1,'#fff4b3');rounded(ctx,x,37,5,4,1,'#cb7758')}
+      ctx.restore();return;
+    }
+
+    if(id==='moon-rover'){
+      // Open white-and-gold lunar buggy; the fixed laser origin is (0,-43).
+      // Six exposed wire-mesh wheels echo the stock Moon exploration rover.
+      ctx.fillStyle='#17343f44';ctx.beginPath();ctx.ellipse(4,10,42,49,0,0,Math.PI*2);ctx.fill();
+      for(const side of [-1,1])for(const y of [-27,3,33]){
+        ctx.strokeStyle='#a7bbbf';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(side*15,y-5);ctx.lineTo(side*27,y);ctx.moveTo(side*15,y+6);ctx.lineTo(side*27,y);ctx.stroke();
+        ctx.fillStyle='#263d49';ctx.strokeStyle='#becdcb';ctx.lineWidth=1.4;ctx.beginPath();ctx.ellipse(side*31,y,8,13,0,0,Math.PI*2);ctx.fill();ctx.stroke();
+        ctx.save();ctx.beginPath();ctx.ellipse(side*31,y,6.3,11,0,0,Math.PI*2);ctx.clip();
+        const travel=Math.abs(speed)>2?(t/60)%5:0;
+        ctx.strokeStyle='#91aaa9';ctx.lineWidth=.8;for(let wire=-15;wire<=15;wire+=5){ctx.beginPath();ctx.moveTo(side*31-8,y+wire+travel);ctx.lineTo(side*31+8,y+wire+7+travel);ctx.moveTo(side*31-8,y+wire+7+travel);ctx.lineTo(side*31+8,y+wire+travel);ctx.stroke()}
+        ctx.restore();ctx.fillStyle='#dbe4db';ctx.beginPath();ctx.ellipse(side*31,y,2.7,4,0,0,Math.PI*2);ctx.fill();
+      }
+      rounded(ctx,-22,-36,44,76,6,'#dce7e3');rounded(ctx,-18,-31,36,64,4,'#aa925b');
+      rounded(ctx,-17,-21,34,34,3,'#304e5a');
+      // Separate seats and exposed silver hand rails keep the cabin visibly open.
+      for(const side of [-1,1]){
+        rounded(ctx,side*10-6,-15,12,20,3,'#f3f2dd');rounded(ctx,side*10-5,-15,10,7,2,'#91acae');
+        ctx.strokeStyle='#f0f5e7';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(side*20,-25);ctx.lineTo(side*23,-17);ctx.lineTo(side*23,13);ctx.lineTo(side*18,18);ctx.stroke();
+      }
+      rounded(ctx,-18,15,36,21,3,'#c2a366');
+      ctx.strokeStyle='#ecddad';ctx.lineWidth=1;for(let x=-12;x<=12;x+=6){ctx.beginPath();ctx.moveTo(x,18);ctx.lineTo(x,33);ctx.stroke()}for(let y=20;y<=32;y+=6){ctx.beginPath();ctx.moveTo(-15,y);ctx.lineTo(15,y);ctx.stroke()}
+      rounded(ctx,-19,-35,38,9,3,'#edf4e9');rounded(ctx,-12,-32,24,4,1,'#7ea7b3');
+      for(const x of [-15,12])rounded(ctx,x,-36,4,4,1,'#fff0a9');
+      // Small front emitter ends exactly where the common laser profile fires.
+      rounded(ctx,-6,-43,12,13,3,'#668b96');rounded(ctx,-4,-43,8,3,1,'#bafcff');rounded(ctx,-2,-41,4,7,1,'#75dce7');
+      rounded(ctx,-24,9,7,18,2,'#567c85');rounded(ctx,-23,12,5,10,1,'#a5f3b0');
+      rounded(ctx,18,8,7,15,2,'#d6b36b');rounded(ctx,20,10,3,5,1,'#70e1dc');
+      ctx.strokeStyle='#d9e9df';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(12,28);ctx.lineTo(12,45);ctx.stroke();
+      ctx.save();ctx.translate(12,28);ctx.rotate(Math.sin(t/2200)*.18);ctx.strokeStyle='#dce9d9';ctx.lineWidth=2;ctx.beginPath();ctx.arc(0,0,9,Math.PI,Math.PI*2);ctx.moveTo(-9,0);ctx.lineTo(9,0);ctx.moveTo(0,-8);ctx.lineTo(0,4);ctx.stroke();ctx.fillStyle='#9cf3d4';ctx.beginPath();ctx.arc(0,-2,2,0,Math.PI*2);ctx.fill();ctx.restore();
+      ctx.restore();return;
+    }
+
     let color=rides.find(r=>r.id===id).color,monster=id==='monster',dozer=id==='dozer',plow=id==='plow',race=id==='race';
     ctx.fillStyle='#09233344';ctx.beginPath();ctx.ellipse(3,8,monster?40:32,48,0,0,7);ctx.fill();
     if(dozer){for(let side of [-1,1]){rounded(ctx,side*27-9,-35,18,76,6,'#233c48');for(let y=-32;y<39;y+=9){let shift=Math.abs(speed)>2?(t/35)%9:0;rounded(ctx,side*27-8,y+shift,16,3,1,'#7d9295')}}}
@@ -675,7 +795,7 @@ window.createVikVehicleGarage = function (adapter) {
     if(lastNear){rounded(ctx,-83,74,166,24,8,'#12394fea');ctx.fillStyle='#ffedb0';ctx.font='bold 11px system-ui';ctx.fillText('DRIVE IN · OR TAP GARAGE',0,90)}ctx.restore();
   }
   function drawLocator(){if(!adapter.canDraw())return;let p=marker();if(!p)return;let ctx=adapter.context(),x=16+p[0]*124/adapter.world,y=Math.max(adapter.locatorTop||130,innerHeight-236)+p[1]*124/adapter.world;ctx.save();ctx.fillStyle='#ffda78';ctx.beginPath();ctx.arc(x,y,6,0,7);ctx.fill();ctx.fillStyle='#214b5c';ctx.font='900 9px system-ui';ctx.textAlign='center';ctx.fillText('G',x,y+3);ctx.restore()}
-  return {open,close,tick,drawRide,drawWorld,drawLocator,resetForWorld,selectDefault,get choice(){syncWorld();return choice},get isOpen(){return paused}};
+  return {open,pauseGame:adapter.pause,openHome:()=>open(true),close,tick,drawRide,drawWorld,drawLocator,resetForWorld,selectDefault,setHomeChoice,takeHomeChoice,applyHomeChoice,get homeChoice(){return pendingHomeRide},get rides(){return rides.map(ride=>({...ride}))},get choice(){syncWorld();return choice},get isOpen(){return paused}};
 };
 
 var vehicleGarage=window.createVikVehicleGarage({
@@ -1387,7 +1507,7 @@ if(activeMap==='turkey'){
 
 </script><script>
 // Release label is separate from saved-game schema versions.
-const gameReleaseLabel=document.createElement('small');gameReleaseLabel.textContent='Winter update · v1.53.5';gameReleaseLabel.style.cssText='display:block;margin-top:10px;color:#b6d5db;font:600 10px system-ui';
+const gameReleaseLabel=document.createElement('small');gameReleaseLabel.textContent='Winter update · v1.53.6';gameReleaseLabel.style.cssText='display:block;margin-top:10px;color:#b6d5db;font:600 10px system-ui';
 document.querySelector('.hud-menu-panel')?.appendChild(gameReleaseLabel);
 </script><script>
 /* TOUCH AND WORLD ROUTE REPAIR */
@@ -1587,14 +1707,14 @@ document.querySelector('.hud-menu-panel')?.appendChild(gameReleaseLabel);
 window.vikTouchControls=window.createVikInput({canvas:c,player:()=>player,width:()=>W,height:()=>H,
   canDrive:()=>started&&!document.hidden&&!phonePaused&&!flight&&!cityRuined&&!recordBusy&&!vehicleGarage.isOpen,setTarget:value=>{target=value},clearKeys:()=>{keys={}},delta,
   contextKey:()=>(activeMap==='turkey'?'gingerbread':'city')+'|'+String(specialMode||'normal')});
-const beforeTouchRepairFrame=frame;let gameFrameNumber=0;
+const beforeTouchRepairFrame=frame;let gameFrameNumber=0,gameSurfaceAriaKey='';
 function updateGameSurface(){
  const worldName=(activeMap==='turkey'?'gingerbread':'city');const stock={city:'garbage-truck',farm:'tractor',ocean:'tugboat',moon:'moon-rover',snow:'snowplow',turkey:'turkey',gingerbread:'gingerbread-roller'}[worldName];
  c.dataset.world=worldName;c.dataset.vehicle=vehicleGarage.choice!=='default'?vehicleGarage.choice:specialMode==='dozer'?'bulldozer':stock;
  c.dataset.playerX=player.x.toFixed(2);c.dataset.playerY=player.y.toFixed(2);c.dataset.frame=String(gameFrameNumber);
  c.dataset.playState=vehicleGarage.isOpen?'garage':(flight)?'cinematic':(started&&!document.hidden&&!phonePaused&&!flight&&!cityRuined&&!recordBusy&&!vehicleGarage.isOpen)?'playing':'paused';
  const inputState=window.vikTouchControls.getState();c.dataset.input=inputState.held!==null?'held':inputState.destination?'destination':'idle';c.dataset.destination=target?target.x.toFixed(2)+','+target.y.toFixed(2):'';
- c.setAttribute('aria-label',worldName+' · '+c.dataset.vehicle+' · tap or drag to drive');
+ const nextAriaKey=worldName+'|'+c.dataset.vehicle;if(nextAriaKey!==gameSurfaceAriaKey){c.setAttribute('aria-label',worldName+' · '+c.dataset.vehicle+' · tap or drag to drive');gameSurfaceAriaKey=nextAriaKey}
 }
 frame=function(t){window.vikTouchControls.tick();beforeTouchRepairFrame(t);gameFrameNumber++;updateGameSurface()};
 updateGameSurface();
@@ -1607,10 +1727,11 @@ updateGameSurface();
   const find=id=>document.getElementById(id);
   const isMain=typeof currentBiome!=='undefined'&&typeof biomeMaps!=='undefined';
   const validWorlds=['city','farm','ocean','moon','snow'];
-  const release='1.53.5-winter';
+  const release='1.53.6-winter';
   const query=new URLSearchParams(location.search);
   const resetRide=map=>{if(typeof vehicleGarage!=='undefined')vehicleGarage.resetForWorld?.(map)};
-  const clearInput=()=>{keys={};target=null;window.vikTouchControls?.cancel?.()};
+  if(query.get('play')==='1')vehicleGarage.setHomeChoice(query.get('ride'));
+  const clearInput=()=>{keys={};target=null;window.vikTouchControls?.cancel?.();window.vikCannon?.cancel?.()};
   const stopSounds=()=>{
     if(typeof stopRadio==='function')stopRadio();
     if(typeof stopMoonAudio==='function')stopMoonAudio();
@@ -1681,7 +1802,7 @@ updateGameSurface();
       resetRide(next);updateUI();updateBiomeHUD();updateFarmText();
     }
     function selectWorld(next){
-      if(next==='turkey'||next==='gingerbread')return go(next+'-munch.html?world='+next+'&play=1');
+      if(next==='turkey'||next==='gingerbread'){const ride=vehicleGarage.takeHomeChoice();return go(next+'-munch.html?world='+next+'&play=1'+(ride?'&ride='+encodeURIComponent(ride):''))}
       if(!validWorlds.includes(next))return false;
       closePanels();stopSounds();
       const t=performance.now();resumeHomeTimers(t);
@@ -1689,6 +1810,7 @@ updateGameSurface();
       // No cinematic function, audio clip, timing or Skip handler is replaced.
       loadWorld(next==='moon'?'city':next,t);
       if(next==='moon')resetRide('moon');
+      vehicleGarage.applyHomeChoice(next);
       startMenuCity();prev=t;
       if(next==='moon')return beginMoonTrip(t,false);
       return true;
@@ -1706,12 +1828,15 @@ updateGameSurface();
       for(const [id,next] of Object.entries({play:'city','farm-play':'farm','ocean-play':'ocean','moon-play':'moon','snow-play':'snow'}))if(find(id))find(id).onclick=()=>selectWorld(next);
       for(const kind of ['turkey','gingerbread']){
         const entry=document.querySelector('a[href*="'+kind+'-munch.html"]');
-        if(entry)entry.href=releaseHref(kind+'-munch.html?world='+kind+'&play=1');
+        if(entry){entry.href=releaseHref(kind+'-munch.html?world='+kind+'&play=1');entry.onclick=event=>{event?.preventDefault?.();selectWorld(kind)}}
       }
     }
     const previousInstall=installWorldMenu;
     installWorldMenu=function(){previousInstall();bindMenu()};
     bindMenu();
+    let homeGarage=find('home-garage');
+    if(!homeGarage){homeGarage=document.createElement('button');homeGarage.id='home-garage';homeGarage.type='button';homeGarage.textContent='Choose your ride';homeGarage.setAttribute('aria-haspopup','dialog');(document.querySelector('#cover .menu-bottom')||document.querySelector('#cover .world-menu')||find('cover')).appendChild(homeGarage)}
+    homeGarage.onclick=event=>{event?.preventDefault?.();vehicleGarage.openHome()};
     let homeButton=find('winter-home');
     if(!homeButton){homeButton=document.createElement('button');homeButton.id='winter-home';homeButton.type='button';homeButton.textContent='⌂ Worlds';(document.querySelector('.hud-settings')||document.body).appendChild(homeButton)}
     homeButton.onclick=event=>{event?.preventDefault?.();home()};
@@ -1734,7 +1859,7 @@ updateGameSurface();
       if(activeMap!=='turkey'||cityRuined||flight)enterTurkeyMap(false);
       activeMap='turkey';cityVisit=null;phonePaused=false;phoneLastReal=null;prev=phoneClock;
       if(find('phone-pause'))find('phone-pause').hidden=true;
-      clearPowerVehicle();resetRide(kind);started=true;
+      clearPowerVehicle();resetRide(kind);vehicleGarage.applyHomeChoice(kind);started=true;
       find('cover').style.display='none';find('return-city').hidden=false;
       clearInput();updateUI();phoneSave();return true;
     }
@@ -2123,15 +2248,489 @@ updateGameSurface();
 const controllerStatus=document.createElement('p');controllerStatus.id='controller-status';controllerStatus.setAttribute('role','status');controllerStatus.style.cssText='margin:10px 0 0;font:600 11px/1.4 system-ui;color:#c4e3ed';controllerStatus.textContent='Xbox: press a controller button, then use the left stick or D-pad.';
 (document.querySelector('.hud-menu-panel')||document.querySelector('.hud-settings')||document.body).appendChild(controllerStatus);
 window.vikGamepadInput=window.createVikGamepadInput({
- canDrive:()=>started&&!document.hidden&&!phonePaused&&!flight&&!cityRuined&&!recordBusy&&!vehicleGarage.isOpen,contextKey:()=>(activeMap==='turkey'?'gingerbread':'city')+'|'+String(specialMode||'normal'),
+ getGamepads:()=>window.vikControllerMenus?.getGamepads()||navigator.getGamepads?.()||[],
+ canDrive:()=>!window.vikControllerMenus?.blocksDriving()&&started&&!document.hidden&&!phonePaused&&!flight&&!cityRuined&&!recordBusy&&!vehicleGarage.isOpen,contextKey:()=>(activeMap==='turkey'?'gingerbread':'city')+'|'+String(specialMode||'normal'),
  hasManualDirection:()=>['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','a','d','w','s','A','D','W','S'].some(key=>keys[key]),
  touchHeld:()=>window.vikTouchControls.getState().held!==null,
  cancelTouch:()=>window.vikTouchControls.cancel(),
- onStatus:state=>{controllerStatus.textContent=state.connected?(state.needsCenter?'Xbox connected: center the left stick and release the D-pad.':'Xbox ready: left stick or D-pad to drive. Touch and keyboard also work.'):'Xbox: press a controller button, then use the left stick or D-pad.'}
+ onStatus:state=>{controllerStatus.textContent=state.connected?(state.needsCenter?'Xbox connected: center the left stick and release the D-pad.':'Xbox ready: left stick or D-pad to drive. A or RT to fire. Touch and keyboard also work.'):'Xbox: press a controller button, then use the left stick or D-pad.'}
 });
 const beforeControllerFrame=frame;
-frame=function(t){window.vikGamepadInput.tick();beforeControllerFrame(t);const pad=window.vikGamepadInput.getState();c.dataset.controllerConnected=String(pad.connected);c.dataset.controllerInput=pad.active?pad.source:'idle';c.dataset.controllerVector=pad.vector.x.toFixed(3)+','+pad.vector.y.toFixed(3)};
+frame=function(t){window.vikGamepadInput.tick();if(window.vikCannon)window.vikCannon.tick(t);beforeControllerFrame(t);const pad=window.vikGamepadInput.getState();c.dataset.controllerConnected=String(pad.connected);c.dataset.controllerInput=pad.active?pad.source:'idle';c.dataset.controllerVector=pad.vector.x.toFixed(3)+','+pad.vector.y.toFixed(3)};
 
+
+/* SHARED CONTACT AND RANGED MUNCH REWARDS */
+function munchObject(o,t){if(!o||o.dead)return false;if(o.type===8)saveCity(o,t);collectCat(o,t);collectTurkeySnack(o,t);o.dead=true;if(o.type===8)beastRespawn=30;if(o.type===6){fart();boostUntil=t+5000;document.querySelector('#toast').textContent=activeMap==='turkey'?'COCOA BOOST! ☕ 💨':'GOAT GAS TURBO! 🐐 💨';toastTime=t+2200}score+=o.golden?5:o.type===5?.2:o.type===4?3:o.type===8?2:1;munches++;recordMunch(t);if(o.golden){goldenClock=0;announce("GOLDEN MUNCH! Extra growth! ✨",t,2400)}if(o.type===4)buildingSurprise(o,t);if(o.type!==6)beep();for(let i=0;i<8;i++)particles.push({x:o.x,y:o.y,vx:rnd(-90,90),vy:rnd(-90,90),life:1});if(stage<4&&score>=stages[stage+1][1]){stage++;document.querySelector('#toast').textContent=stages[stage][0]+' ✨';toastTime=t+2400}updateUI();return true}
+/* OPTIONAL CARTOON CANNON: input and projectiles never enter saved game state. */
+/* Compact vehicle blaster: additive input, swept hits and bounded comic effects. */
+(function(root){
+  'use strict';
+  let soundContext;
+  root.vikCannonSound=function(kind,muted){
+    if(muted||root.document?.hidden)return;
+    try{
+      const Context=root.AudioContext||root.webkitAudioContext;if(!Context)return;
+      soundContext ||= new Context();const ac=soundContext;ac.resume();
+      const t=ac.currentTime,impact=kind==='impact'||kind==='rocket-impact',laser=kind==='laser',rocket=kind==='rocket'||kind==='rocket-impact';
+      const duration=laser?.10:impact?(rocket?.30:.23):rocket?.19:.095;
+      const gain=ac.createGain(),filter=ac.createBiquadFilter();
+      filter.type='lowpass';filter.frequency.value=laser?3100:impact?1100:2200;
+      gain.gain.setValueAtTime(impact?.075:.045,t);gain.gain.exponentialRampToValueAtTime(.001,t+duration);
+      filter.connect(gain).connect(ac.destination);
+      const oscillator=ac.createOscillator();oscillator.type='triangle';
+      oscillator.frequency.setValueAtTime(laser?1260:impact?150:rocket?190:360,t);oscillator.frequency.exponentialRampToValueAtTime(laser?480:impact?42:rocket?340:110,t+duration);
+      oscillator.connect(filter);oscillator.start(t);oscillator.stop(t+duration+.02);
+      if(laser)return;
+      const size=Math.ceil(ac.sampleRate*duration),buffer=ac.createBuffer(1,size,ac.sampleRate),data=buffer.getChannelData(0);
+      for(let i=0;i<size;i++)data[i]=(Math.random()*2-1)*.32*(1-i/size);
+      const noise=ac.createBufferSource();noise.buffer=buffer;noise.connect(filter);noise.start(t);noise.stop(t+duration+.02);
+    }catch(_){}
+  };
+  root.createVikCannon=function(adapter){
+    const canvas=adapter.canvas,events=adapter.events||root,doc=adapter.document||root.document;
+    const clock=adapter.now||(()=>root.performance.now());
+    let shots=[],bursts=[],shotsFired=0,hits=0,lastTime=null,nextShot=0,flashUntil=0;
+    let keyHeld=false,padHeld=false,needsRelease=true,blurred=false,destroyed=false,requested=false;
+    let primaryQueued=false,rocketQueued=false;
+    let rocketCooldownMs=0,rocketFlashUntil=0,rocketRequested=false,rocketPadHeld=false,rocketNeedsRelease=true;
+    let padIdentity=null,lastContext=adapter.contextKey(),gesture=null,lastTap=null,reason='waiting';
+    const previous={},handlers={},listeners=[];
+    const allowed=()=>!destroyed&&!blurred&&!doc.hidden&&!!adapter.canFire();
+    function clear(why){shots=[];bursts=[];flashUntil=0;rocketFlashUntil=0;requested=false;rocketRequested=false;primaryQueued=false;rocketQueued=false;gesture=null;lastTap=null;needsRelease=true;rocketNeedsRelease=true;lastTime=null;reason=why;}
+    function sound(kind){try{adapter.sound?.(kind)}catch(_){}}
+    function textInput(e){return /^(INPUT|TEXTAREA|SELECT)$/.test(e.target?.tagName||'')||e.target?.isContentEditable;}
+    function keydown(e){if(textInput(e)||!allowed()||e.ctrlKey||e.metaKey||e.altKey)return;
+      if(e.code==='KeyR'||String(e.key).toLowerCase()==='r'){e.preventDefault?.();if(!e.repeat)requestRocket();return}
+      if(!(e.code==='Space'||e.key===' '||e.key==='Spacebar'))return;
+      e.preventDefault?.();if(!e.repeat)keyHeld=true;}
+    function keyup(e){if(e.code==='Space'||e.key===' '||e.key==='Spacebar')keyHeld=false;}
+    function blur(){blurred=true;keyHeld=false;clear('blurred')}
+    function focus(){blurred=false;clear('release-fire')}
+    function visibility(){keyHeld=false;clear(doc.hidden?'hidden':'release-fire')}
+    function disconnected(){padIdentity=null;padHeld=false;clear('disconnected')}
+    function listen(target,type,fn){target.addEventListener?.(type,fn);listeners.push([target,type,fn])}
+    listen(events,'keydown',keydown);listen(events,'keyup',keyup);listen(events,'blur',blur);listen(events,'focus',focus);
+    listen(events,'gamepaddisconnected',disconnected);listen(doc,'visibilitychange',visibility);
+    function point(e){return {x:Number(e.clientX),y:Number(e.clientY)}}
+    function move(e){if(!gesture||gesture.id!==e.pointerId)return;const p=point(e);gesture.distance=Math.max(gesture.distance,Math.hypot(p.x-gesture.x,p.y-gesture.y));}
+    function down(e){if(!allowed()||e.isPrimary===false||e.button!==undefined&&e.button!==0)return;
+      const p=point(e),rect=canvas.getBoundingClientRect();
+      if(!Number.isFinite(p.x)||!Number.isFinite(p.y)||p.x<rect.left||p.y<rect.top||p.x>rect.left+rect.width||p.y>rect.top+rect.height)return;
+      if(gesture){gesture=null;lastTap=null;return}
+      gesture={id:e.pointerId,x:p.x,y:p.y,time:clock(),distance:0};}
+    function up(e){if(!gesture||gesture.id!==e.pointerId)return;move(e);const tap=gesture;gesture=null;const now=clock(),p=point(e);
+      if(!allowed()||tap.distance>8||now-tap.time>250){lastTap=null;return}
+      if(lastTap&&now-lastTap.time<=280&&Math.hypot(p.x-lastTap.x,p.y-lastTap.y)<=48){requested=true;lastTap=null}
+      else lastTap={x:p.x,y:p.y,time:now};}
+    function cancelPointer(){gesture=null;lastTap=null}
+    function lostCapture(e){if(gesture&&gesture.id===e.pointerId)cancelPointer()}
+    for(const [name,fn]of Object.entries({onpointerdown:down,onpointermove:move,onpointerup:up,onpointercancel:cancelPointer,onlostpointercapture:lostCapture})){
+      previous[name]=canvas[name];handlers[name]=function(e){previous[name]?.call(canvas,e);fn(e)};canvas[name]=handlers[name];
+    }
+    function buttons(){
+      let pads;try{pads=root.vikControllerMenus?.getGamepads()||events.navigator?.getGamepads?.()||[]}catch(_){pads=[]}
+      const preferred=root.vikGamepadInput?.getState?.().index;
+      let pad=null;for(const p of pads){if(p?.connected!==false&&p?.mapping==='standard'&&(!pad||p.index===preferred))pad=p;if(pad&&pad.index===preferred)break}
+      const identity=pad?String(pad.index)+'|'+String(pad.id):null;
+      if(identity!==padIdentity){padIdentity=identity;clear(identity?'release-fire':'disconnected')}
+      const pressed=b=>!!b&&(b.pressed===true||Number(b.value)>.5);
+      padHeld=!!pad&&(pressed(pad.buttons?.[0])||pressed(pad.buttons?.[7]));
+      return !!pad&&pressed(pad.buttons?.[6]);
+    }
+    const blaster={kind:'blaster',x:29,y:-35,speed:900,life:1.05};
+    const tank={kind:'tank',x:0,y:-74,speed:900,life:1.05};
+    const laser={kind:'laser',x:0,y:-43,speed:1450,life:.65};
+    const rocket={kind:'rocket',x:-32,y:-31,speed:680,life:1.4};
+    const harpoon={kind:'harpoon',x:0,y:-58,speed:680,life:1.4};
+    function primaryProfile(){const ride=adapter.ride?.();return ride==='tank'?tank:ride==='moon-rover'?laser:blaster;}
+    function secondaryProfile(){return adapter.ride?.()==='tugboat'?harpoon:rocket;}
+    function mount(profile){
+      const p=adapter.player(),scale=adapter.radius()/23,sin=Math.sin(p.a),cos=Math.cos(p.a);
+      return {x:adapter.wrap(p.x+(cos*profile.x-sin*profile.y)*scale),y:adapter.wrap(p.y+(sin*profile.x+cos*profile.y)*scale),vx:sin*profile.speed,vy:-cos*profile.speed};
+    }
+    function makeShot(profile){return {...mount(profile),kind:profile.kind,age:0,life:profile.life,speed:profile.speed};}
+    function fire(t){
+      if(shots.length>=12)return;
+      const profile=primaryProfile();shots.push(makeShot(profile));shotsFired++;flashUntil=t+85;nextShot=t+280;
+      sound(profile===laser?'laser':'fire');
+    }
+    function requestRocket(){if(!allowed()||rocketCooldownMs>0)return false;rocketRequested=true;return true;}
+    function findRocketTarget(shot){
+      let nearest=null,best=620;
+      for(const object of adapter.objects()){
+        if(object.dead||object.air)continue;
+        const dx=adapter.delta(object.x,shot.x),dy=adapter.delta(object.y,shot.y),distance=Math.hypot(dx,dy);
+        const forward=(dx*shot.vx+dy*shot.vy)/shot.speed;
+        if(distance>30&&distance<best&&forward>distance*.28){nearest=object;best=distance;}
+      }
+      return nearest;
+    }
+    function fireRocket(t){
+      const profile=secondaryProfile(),shot=makeShot(profile);
+      shot.target=findRocketTarget(shot);shots.push(shot);shotsFired++;
+      rocketCooldownMs=10000;rocketFlashUntil=t+105;sound(profile===harpoon?'fire':'rocket');
+    }
+    function hitRadius(o){if(o.type===4)return Math.min(80,Math.max(38,(o.bw||80)*.45));return [19,23,29,27,42,16,20,31,40,25,18,19,30,38,25,13,22][o.type]||24}
+    function burst(x,y,kind){bursts.push({x,y,kind,age:0,seed:hits%7,snow:String(adapter.contextKey()).split('|')[0]==='snow'});if(bursts.length>14)bursts.shift();sound(kind==='rocket'?'rocket-impact':'impact')}
+    function simulate(dt,t){
+      if(!shots.length&&!bursts.length)return;
+      const objects=adapter.objects();
+      for(const shot of shots){
+        if(shot.target&&(shot.target.dead||shot.target.air||!objects.includes(shot.target)))shot.target=null;
+        if(shot.target){
+          const dx=adapter.delta(shot.target.x,shot.x),dy=adapter.delta(shot.target.y,shot.y),distance=Math.hypot(dx,dy);
+          if(distance>1){
+            const turn=Math.min(1,dt*11),vx=shot.vx*(1-turn)+dx/distance*shot.speed*turn,vy=shot.vy*(1-turn)+dy/distance*shot.speed*turn;
+            const length=Math.hypot(vx,vy)||shot.speed;shot.vx=vx/length*shot.speed;shot.vy=vy/length*shot.speed;
+          }
+        }
+        const sx=shot.vx*dt,sy=shot.vy*dt,length2=sx*sx+sy*sy;let collision=null,best=Infinity;
+        for(const o of shot.target?[shot.target]:objects){
+          if(o.dead||o.air||!Number.isFinite(o.x)||!Number.isFinite(o.y))continue;
+          const dx=adapter.delta(o.x,shot.x),dy=adapter.delta(o.y,shot.y),r=hitRadius(o)+4;
+          const b=dx*sx+dy*sy,disc=b*b-length2*(dx*dx+dy*dy-r*r);
+          let fraction=dx*dx+dy*dy<=r*r?0:disc>=0&&length2>0?(b-Math.sqrt(disc))/length2:Infinity;
+          if(fraction>=0&&fraction<=1&&fraction<best){best=fraction;collision=o}
+        }
+        if(collision){const x=adapter.wrap(shot.x+sx*best),y=adapter.wrap(shot.y+sy*best);adapter.consume(collision,t);hits++;shot.dead=true;burst(x,y,shot.kind)}
+        else{shot.x=adapter.wrap(shot.x+sx);shot.y=adapter.wrap(shot.y+sy);shot.age+=dt;if(shot.age>=shot.life){shot.dead=true;if(shot.kind!=='laser')burst(shot.x,shot.y,shot.kind)}}
+      }
+      if(shots.some(shot=>shot.dead))shots=shots.filter(shot=>!shot.dead);
+      for(const b of bursts)b.age+=dt;
+      if(bursts[0]?.age>=.48)bursts=bursts.filter(b=>b.age<.48);
+    }
+    function drawBlaster(g,kick){g.save();g.translate(blaster.x,kick);
+      g.fillStyle='#263b45';g.beginPath();g.roundRect(-8,-17,16,27,4);g.fill();
+      g.fillStyle='#6b8790';g.beginPath();g.roundRect(-6,-27,12,19,3);g.fill();
+      for(let i=0;i<3;i++){g.fillStyle=i===1?'#a8bbc0':'#526d78';g.fillRect(-6+i*4,-35,3,21)}
+      g.fillStyle='#dbb069';g.fillRect(-8,-21,16,3);g.fillStyle='#233740';g.fillRect(-7,-36,14,4);
+      g.restore();}
+    function drawFlash(g,profile,timeLeft){
+      const light=profile===laser,large=profile===tank||profile===rocket;
+      g.save();g.translate(profile.x,profile.y);g.scale(large?1.23:1,large?1.23:1);
+      g.fillStyle=light?'#64e9d4':'#ffac4b';g.beginPath();g.moveTo(-6,1);g.lineTo(-11,-9);g.lineTo(-4,-7);g.lineTo(0,-18-6*Math.min(1,timeLeft/85));g.lineTo(4,-7);g.lineTo(11,-9);g.lineTo(6,1);g.closePath();g.fill();
+      g.fillStyle=light?'#e9fffb':'#fff5c2';g.beginPath();g.ellipse(0,-5,3.5,7,0,0,7);g.fill();g.restore();
+    }
+    function drawSecondary(g,profile){
+      g.save();g.translate(profile.x,profile.y);
+      if(profile===harpoon){
+        g.fillStyle='#334c54';g.beginPath();g.roundRect(-7,12,14,12,4);g.fill();
+        g.fillStyle='#b0bebe';g.fillRect(-2,1,4,20);
+        if(rocketCooldownMs===0){g.fillStyle='#e7f5ed';g.beginPath();g.moveTo(0,0);g.lineTo(-5,8);g.lineTo(5,8);g.closePath();g.fill();}
+      }else{
+        g.fillStyle='#263b45';g.fillRect(-8,9,14,12);
+        if(rocketCooldownMs===0){
+          g.fillStyle='#cdded9';g.beginPath();g.moveTo(0,0);g.quadraticCurveTo(-5,5,-5,9);g.lineTo(-5,17);g.lineTo(-8,23);g.lineTo(8,23);g.lineTo(5,17);g.lineTo(5,9);g.quadraticCurveTo(5,5,0,0);g.fill();
+          g.fillStyle='#ecae66';g.fillRect(-5,16,10,3);
+        }else{g.fillStyle='#728b96';g.fillRect(-4,4,8,18);}
+      }
+      g.restore();
+    }
+    function drawMount(){
+      if(!allowed())return;
+      const t=lastTime??clock(),g=adapter.context(),profile=primaryProfile();
+      // Driving has finished for this frame. Emit from the pose being drawn.
+      if(primaryQueued){primaryQueued=false;fire(t);}
+      if(rocketQueued){rocketQueued=false;fireRocket(t);adapter.onRocketStatus?.(true,rocketCooldownMs);}
+      if(profile===blaster)drawBlaster(g,t<flashUntil?2:0);
+      if(profile===laser&&adapter.stockRover?.()){
+        g.fillStyle='#567c86';g.beginPath();g.roundRect(-6,-43,12,10,3);g.fill();
+        g.fillStyle='#b6ebed';g.fillRect(-4,-43,8,3);
+      }
+      if(t<flashUntil)drawFlash(g,profile,flashUntil-t);
+      const secondary=secondaryProfile();drawSecondary(g,secondary);
+      if(t<rocketFlashUntil&&secondary!==harpoon)drawFlash(g,secondary,rocketFlashUntil-t);
+    }
+    function worldPoint(p){const player=adapter.player();return {x:player.x+adapter.delta(p.x,player.x),y:player.y+adapter.delta(p.y,player.y)}}
+    function drawWorld(){if((!shots.length&&!bursts.length)||!allowed())return;const g=adapter.context();g.save();g.lineCap='round';
+      for(const shot of shots){
+        const p=worldPoint(shot),dx=shot.vx/shot.speed,dy=shot.vy/shot.speed;
+        const laser=shot.kind==='laser',rocket=shot.kind==='rocket',harpoonShot=shot.kind==='harpoon',trail=Math.min(shot.age*shot.speed,rocket?34:laser?28:18);
+        if(rocket||harpoonShot){
+          if(shot.target){const target=worldPoint(shot.target);g.strokeStyle='#f6d387';g.lineWidth=2;g.beginPath();g.arc(target.x,target.y,hitRadius(shot.target)+6,0,7);g.stroke();}
+          if(harpoonShot){
+            const bow=worldPoint(mount(harpoon));g.strokeStyle='#ead8aa';g.lineWidth=1.7;g.beginPath();g.moveTo(bow.x,bow.y);g.quadraticCurveTo((bow.x+p.x)/2,(bow.y+p.y)/2+9,p.x,p.y);g.stroke();
+          }else if(trail>0){g.strokeStyle='#e9b77699';g.lineWidth=4;g.beginPath();g.moveTo(p.x-dx*trail,p.y-dy*trail);g.lineTo(p.x-dx*6,p.y-dy*6);g.stroke();}
+          g.fillStyle='#e8f1ef';g.beginPath();g.moveTo(p.x+dx*9,p.y+dy*9);g.lineTo(p.x-dx*6+dy*4,p.y-dy*6-dx*4);g.lineTo(p.x-dx*4,p.y-dy*4);g.lineTo(p.x-dx*6-dy*4,p.y-dy*6+dx*4);g.closePath();g.fill();
+          continue;
+        }
+        g.strokeStyle=laser?'#43d7c7':'#ed923e';g.lineWidth=laser?6:7;g.beginPath();g.moveTo(p.x-dx*trail,p.y-dy*trail);g.lineTo(p.x+dx*3,p.y+dy*3);g.stroke();g.strokeStyle=laser?'#dcfff7':'#fff4bc';g.lineWidth=2.7;g.stroke();
+      }
+      for(const b of bursts){const p=worldPoint(b),u=b.age/.48,rocket=b.kind==='rocket',laser=b.kind==='laser',water=b.kind==='harpoon';g.save();g.translate(p.x,p.y);g.globalAlpha=Math.min(1,(1-u)*2.4);g.rotate(b.seed*.23);const size=(10+Math.sin(Math.min(1,u*2)*Math.PI/2)*29)*(rocket?1.45:laser?.76:1);
+        g.fillStyle=b.snow||water?'#d5ecf6':laser?'#6ae0ca':'#f18c48';g.strokeStyle=b.snow||water?'#6b9fb8':laser?'#39857e':'#754737';g.lineWidth=2;g.beginPath();for(let i=0;i<20;i++){const a=i*Math.PI/10,r=size*(i%2?.55:1);if(i===0)g.moveTo(Math.cos(a)*r,Math.sin(a)*r);else g.lineTo(Math.cos(a)*r,Math.sin(a)*r)}g.closePath();g.fill();g.stroke();
+        g.fillStyle=b.snow||laser?'#f2fffb':'#ffe6a1';g.beginPath();for(let i=0;i<14;i++){const a=i*Math.PI/7,r=size*(i%2?.29:.68);if(!i)g.moveTo(Math.cos(a)*r,Math.sin(a)*r);else g.lineTo(Math.cos(a)*r,Math.sin(a)*r)}g.closePath();g.fill();
+        if(b.snow){g.fillStyle='#f4fbff';for(let i=0;i<7;i++){const a=i*Math.PI*2/7,reach=size*(.9+u);g.beginPath();g.arc(Math.cos(a)*reach,Math.sin(a)*reach,3*(1-u)+1,0,7);g.fill()}}
+        g.fillStyle=b.snow||water?'#40657e':laser?'#26645e':'#674331';g.font=rocket?'900 14px system-ui':'900 11px system-ui';g.textAlign='center';g.textBaseline='middle';g.rotate(-b.seed*.23);g.fillText(water?'SPLASH!':rocket?'BOOM!':'POP!',0,1);g.restore();}
+      g.restore();}
+    return {
+      tick(t){if(destroyed)return;const ltHeld=buttons(),context=adapter.contextKey();if(context!==lastContext){lastContext=context;clear('context-changed')}
+        if(!allowed()){clear(doc.hidden?'hidden':blurred?'blurred':'paused');rocketPadHeld=ltHeld;adapter.onRocketStatus?.(false,rocketCooldownMs);return}
+        const elapsed=lastTime===null?0:Math.max(0,t-lastTime),dt=Math.min(.05,elapsed/1000);lastTime=t;
+        rocketCooldownMs=Math.max(0,rocketCooldownMs-Math.min(150,elapsed));
+        if(!ltHeld)rocketNeedsRelease=false;
+        if(ltHeld&&!rocketPadHeld&&!rocketNeedsRelease)requestRocket();
+        rocketPadHeld=ltHeld;
+        const held=keyHeld||padHeld;if(!held)needsRelease=false;
+        simulate(dt,t);
+        primaryQueued=(requested||held&&!needsRelease)&&t>=nextShot;
+        rocketQueued=rocketRequested&&rocketCooldownMs===0;
+        requested=false;rocketRequested=false;reason=needsRelease?'release-fire':'ready';adapter.onRocketStatus?.(true,rocketCooldownMs);
+      },drawMount,drawWorld,
+      requestRocket,
+      cancel(){clear('reset')},
+      getState(){return {shotsFired,hits,needsRelease,held:keyHeld||padHeld,reason,rocketReady:rocketCooldownMs===0,rocketCooldownMs,projectiles:shots.map(({target,...p})=>({...p,targetX:target?.x,targetY:target?.y})),bursts:bursts.map(b=>({...b}))}},
+      destroy(){if(destroyed)return;clear('destroyed');destroyed=true;for(const [target,type,fn]of listeners)target.removeEventListener?.(type,fn);for(const name of Object.keys(handlers))if(canvas[name]===handlers[name])canvas[name]=previous[name]}
+    };
+  };
+})(typeof window!=='undefined'?window:globalThis);
+
+const firingOverlays=[...document.querySelectorAll('dialog'),document.getElementById('hud-menu'),document.getElementById('hud-details')].filter(Boolean);
+const touchRocket=document.createElement('button');
+touchRocket.type='button';touchRocket.id='touch-rocket';touchRocket.className='touch-rocket';touchRocket.hidden=true;
+let touchRocketLabel='',touchRocketWeapon='';
+document.getElementById('hud-context-actions')?.appendChild(touchRocket);
+window.vikCannon=window.createVikCannon({
+ canvas:c,events:window,document,
+ canFire:()=>!window.vikControllerMenus?.blocksFire()&&started&&!document.hidden&&!phonePaused&&!flight&&!cityRuined&&!recordBusy&&!vehicleGarage.isOpen&&!firingOverlays.some(dialog=>dialog.open),
+ contextKey:()=>(activeMap==='turkey'?'gingerbread':'city')+'|'+String(specialMode||'normal')+'|'+vehicleGarage.choice,
+ ride:()=>(false)?'moon-rover':(false)?'tugboat':vehicleGarage.choice,
+ stockRover:()=>false,
+ player:()=>player,objects:()=>objects,world,wrap,delta,radius:()=>stages[stage][2],
+ consume:(o,t)=>munchObject(o,phoneClock),
+ sound:kind=>window.vikCannonSound(kind,muted),context:()=>g,
+ onRocketStatus:(active,recharge)=>{
+   if(touchRocket.hidden===active)touchRocket.hidden=!active;
+   if(!active)return;
+   const remaining=Math.ceil(recharge/1000),isShip=false,weapon=isShip?'Harpoon':'Rocket',icon=isShip?'⚓':'🚀';
+   const label=icon+' '+weapon+(remaining?' '+remaining+'s':'');
+   if(touchRocket.disabled!==Boolean(remaining))touchRocket.disabled=Boolean(remaining);
+   if(touchRocketLabel!==label){touchRocketLabel=label;touchRocket.textContent=label;}
+   if(touchRocketWeapon!==weapon){touchRocketWeapon=weapon;touchRocket.setAttribute('aria-label','Fire '+weapon.toLowerCase());}
+ }
+});
+touchRocket.onclick=()=>window.vikCannon.requestRocket();
+const beforeCannonInit=init;
+init=function(){window.vikCannon?.cancel?.();return beforeCannonInit.apply(this,arguments)};
+const cannonHelp=document.querySelector('.hud-help-extra');
+if(cannonHelp)cannonHelp.textContent+=' Xbox: D-pad in menus, A to choose, B to go back, and View (Select) to pause. Cannon: A or RT when driving, Space on keyboard, or double-tap. Rocket or harpoon: LT on Xbox, R on keyboard, or the matching touch button.';
+
+
+/* Controller navigation for the existing game menus. */
+(function (root) {
+  'use strict';
+  root.createVikControllerMenus = function (adapter) {
+    let pads = [], padKey = null, previous = [], activeScreen = null, focused = null;
+    let hiddenByBlur = false, ownsFrame = false, releaseFire = false;
+    let directionHeld = null, repeatAt = 0, waitForDirectionRelease = false;
+    const doc = root.document;
+    const pressed = button => !!button && (button.pressed === true || button.value > 0.5);
+    const directions = [[12, 0, -1], [13, 0, 1], [14, -1, 0], [15, 1, 0]];
+
+    function usable(el) {
+      return el && !el.disabled && !el.hidden && el.style?.display !== 'none' && !el.classList?.contains('hud-context-hidden');
+    }
+    function clearFocus() {
+      if (focused) focused.classList.remove('vik-controller-focus');
+      focused = null;
+    }
+    function focus(el) {
+      if (!el) { clearFocus(); return; }
+      if (el !== focused) clearFocus();
+      focused = el;
+      focused.classList.add('vik-controller-focus');
+      focused.focus?.({preventScroll:true});
+      focused.scrollIntoView?.({block:'nearest', inline:'nearest'});
+    }
+    function options(screen) { return screen.choices().filter(usable); }
+
+    function move(screen, dx, dy) {
+      const choices = options(screen);
+      if (!choices.includes(focused)) { focus(choices[0]); return; }
+      const bounds = focused.getBoundingClientRect();
+      const x = bounds.left + bounds.width / 2, y = bounds.top + bounds.height / 2;
+      let best = null, bestScore = Infinity, distinct = false;
+      for (const el of choices) {
+        if (el === focused) continue;
+        const candidate = el.getBoundingClientRect();
+        const cx = candidate.left + candidate.width / 2 - x;
+        const cy = candidate.top + candidate.height / 2 - y;
+        if (Math.abs(cx) > 2 || Math.abs(cy) > 2) distinct = true;
+        const forward = cx * dx + cy * dy;
+        if (forward <= 2) continue;
+        const cross = Math.abs(cx * dy - cy * dx);
+        const score = forward + cross * 4 + (cross > forward ? 1000 : 0);
+        if (score < bestScore) { best = el; bestScore = score; }
+      }
+      // Older embedded browsers can report identical rectangles until their first paint.
+      if (!distinct) {
+        const columns = screen.columns || 1, index = choices.indexOf(focused);
+        best = choices[index + (columns > 1 ? dx + dy * columns : dx || dy)] || null;
+      }
+      if (best) focus(best);
+    }
+
+    function setScreen(screen, pad, held) {
+      if (screen?.key === activeScreen?.key) { activeScreen = screen; return; }
+      waitForDirectionRelease = !!activeScreen && !!held;
+      directionHeld = null;
+      clearFocus();
+      activeScreen = screen;
+      if (!screen || !pad) return;
+      const choices = options(screen);
+      focus(choices.includes(screen.initial) ? screen.initial : choices[0]);
+    }
+
+    function dropInput() {
+      pads = []; padKey = null; previous = []; directionHeld = null;
+      waitForDirectionRelease = false;
+      // The weapon controller separately requires release after a disconnect.
+      releaseFire = false;
+      clearFocus();
+    }
+    root.addEventListener('blur', () => { hiddenByBlur = true; dropInput(); });
+    root.addEventListener('focus', () => { hiddenByBlur = false; dropInput(); });
+    doc.addEventListener('visibilitychange', dropInput);
+
+    return {
+      tick(t) {
+        const before = adapter.screen();
+        ownsFrame = !!before;
+        if (doc.hidden || hiddenByBlur) { dropInput(); return; }
+        try { pads = Array.from(root.navigator?.getGamepads?.() || []); }
+        catch (_) { pads = []; }
+        const connected = pads.filter(pad => pad?.connected !== false && pad?.mapping === 'standard');
+        const identity = pad => `${pad.index}|${pad.id || ''}`;
+        const pad = connected.find(pad => identity(pad) === padKey) || connected[0];
+        if (!pad) { dropInput(); activeScreen = before; return; }
+        const nextKey = identity(pad), first = nextKey !== padKey;
+        const buttons = Array.from(pad.buttons || [], pressed);
+        const direction = directions.find(([index]) => buttons[index]);
+        if (first) { padKey = nextKey; previous = buttons; directionHeld = null; }
+        setScreen(before, pad, direction);
+        if (before && !focused) {
+          const choices = options(before);
+          focus(choices.includes(before.initial) ? before.initial : choices[0]);
+        }
+        const edge = index => !!buttons[index] && !previous[index];
+        const fireHeld = !!(buttons[0] || buttons[6] || buttons[7]);
+        if (!fireHeld) releaseFire = false;
+        if (ownsFrame && fireHeld) releaseFire = true;
+
+        if (edge(8) && adapter.togglePause()) {
+          ownsFrame = true;
+          if (fireHeld) releaseFire = true;
+        } else if (before) {
+          if (edge(1)) before.back?.();
+          else if (edge(0)) {
+            const choices = options(before);
+            const next = choices.includes(focused) ? focused : choices[0];
+            if (next?.tagName === 'SUMMARY') next.parentNode.open = !next.parentNode.open;
+            else next?.click();
+          } else if (direction && !waitForDirectionRelease && (direction[0] !== directionHeld || t >= repeatAt)) {
+            const repeating = direction[0] === directionHeld;
+            move(before, direction[1], direction[2]);
+            repeatAt = t + (repeating ? 155 : 360);
+          }
+        }
+        if (!direction) { directionHeld = null; waitForDirectionRelease = false; }
+        else directionHeld = direction[0];
+        previous = buttons;
+        const after = adapter.screen();
+        ownsFrame ||= !!after;
+        setScreen(after, pad, direction);
+      },
+      getGamepads: () => pads,
+      blocksDriving: () => ownsFrame,
+      blocksFire: () => ownsFrame || releaseFire,
+      getState: () => ({screen:activeScreen?.key || null, focusedId:focused?.id || focused?.dataset?.ride || null, connected:padKey !== null})
+    };
+  };
+})(window);
+
+const ctlFind=id=>document.getElementById(id);
+const ctlCover=ctlFind('cover'), ctlGarageDialog=ctlFind('vehicle-dialog'), ctlRideList=ctlFind('vehicle-choices');
+const ctlHomeGrid=ctlCover.querySelector('.world-select'), ctlHomeFooter=ctlCover.querySelector('.menu-bottom');
+const ctlSettings=ctlFind('hud-menu'), ctlStats=ctlFind('hud-details'), ctlRecord=ctlFind('record-dialog');
+const ctlTripSkip=ctlFind('trip-skip'), ctlPhoneResume=ctlFind('resume');
+const ctlPause=document.createElement('dialog');
+ctlPause.id='controller-pause';
+ctlPause.setAttribute('aria-labelledby','controller-pause-title');
+ctlPause.innerHTML='<h2 id="controller-pause-title">Paused</h2><div class="controller-pause-actions"><button type="button" id="controller-resume">Resume</button><button type="button" id="controller-garage">Garage</button><button type="button" id="controller-sound">Sound</button><button type="button" id="controller-worlds">Choose a world</button></div><p>D-pad to move · A to select · B to go back</p>';
+document.body.appendChild(ctlPause);
+const ctlResume=ctlFind('controller-resume'), ctlGarage=ctlFind('controller-garage'), ctlSound=ctlFind('controller-sound'), ctlWorlds=ctlFind('controller-worlds');
+let resumeAfterControllerPause=null, garageOpenedFromPause=false;
+
+function clearControllerActions(){
+  keys={};target=null;
+  window.vikTouchControls.cancel();
+  window.vikGamepadInput.cancel();
+  window.vikCannon.cancel();
+}
+function endControllerPause(){
+  const resume=resumeAfterControllerPause;
+  resumeAfterControllerPause=null;
+  if(ctlPause.open)ctlPause.close();
+  if(resume){resume();clearControllerActions();}
+}
+function openControllerPause(){
+  if(resumeAfterControllerPause||vehicleGarage.isOpen||!(started&&!phonePaused&&!flight&&!cityRuined&&!recordBusy))return false;
+  if(ctlSettings)ctlSettings.open=false;if(ctlStats)ctlStats.open=false;
+  clearControllerActions();
+  resumeAfterControllerPause=vehicleGarage.pauseGame();
+  ctlSound.textContent=muted?'Sound: off':'Sound: on';
+  ctlPause.showModal();
+  return true;
+}
+ctlPause.addEventListener('cancel',event=>{event.preventDefault();endControllerPause();});
+ctlPause.addEventListener('close',()=>{if(!ctlPause.open)endControllerPause();});
+ctlResume.onclick=endControllerPause;
+ctlGarage.onclick=()=>{
+  endControllerPause();
+  garageOpenedFromPause=vehicleGarage.open();
+  if(!garageOpenedFromPause)openControllerPause();
+};
+ctlSound.onclick=()=>{ctlFind('sound')?.click();ctlSound.textContent=muted?'Sound: off':'Sound: on';};
+ctlWorlds.onclick=()=>{endControllerPause();vikWorldNavigation.home();};
+
+function closeControllerGarage(){
+  const returnToPause=garageOpenedFromPause;
+  garageOpenedFromPause=false;
+  vehicleGarage.close();
+  if(returnToPause)openControllerPause();
+}
+ctlGarageDialog.addEventListener('close',()=>{if(!ctlGarageDialog.open)garageOpenedFromPause=false;});
+function controllerScreen(){
+  if(ctlGarageDialog.open)return {key:'garage',columns:innerWidth<=600?2:3,
+    choices:()=>[...ctlRideList.children,ctlFind('vehicle-back')],back:closeControllerGarage};
+  if(ctlPause.open)return {key:'pause',choices:()=>[ctlResume,ctlGarage,ctlSound,ctlWorlds],back:endControllerPause};
+  if(phonePaused&&ctlPhoneResume)return {key:'phone-pause',choices:()=>[ctlPhoneResume],back:()=>ctlPhoneResume.click()};
+  if(ctlRecord?.open)return {key:'record',choices:()=>[ctlFind('record-skip')]};
+  if(!started&&ctlCover.style.display!=='none')return {key:'home',columns:innerWidth<=700?2:4,initial:ctlFind('play'),
+    choices:()=>ctlHomeGrid?[...ctlHomeGrid.children,...(ctlHomeFooter?.querySelectorAll('button,summary')||[])]:[...ctlCover.querySelectorAll('button,a')]};
+  if(ctlSettings?.open)return {key:'settings',choices:()=>[...ctlSettings.querySelectorAll('summary,button,a')],back:()=>{ctlSettings.open=false;}};
+  if(ctlStats?.open)return {key:'stats',choices:()=>[ctlStats.querySelector('summary')],back:()=>{ctlStats.open=false;}};
+  return null;
+}
+window.vikControllerMenus=window.createVikControllerMenus({
+  screen:controllerScreen,
+  togglePause:()=>{
+    if(ctlGarageDialog.open){closeControllerGarage();return true;}
+    if(resumeAfterControllerPause){endControllerPause();return true;}
+    if(phonePaused&&ctlPhoneResume){ctlPhoneResume.click();return true;}
+    return openControllerPause();
+  }
+});
+const frameWithControllerDriving=frame;
+frame=function(t){
+  window.vikControllerMenus.tick(t);
+  if(resumeAfterControllerPause){
+    window.vikGamepadInput.tick();window.vikCannon.tick(t);
+    c.dataset.playState='paused';
+    requestAnimationFrame(frame);
+    return;
+  }
+  frameWithControllerDriving(t);
+};
 requestAnimationFrame(frame);
 </script><style id="viktor-brand-style">
 #cover .winter-title.brand-art{left:auto;right:3.4vw;top:2.5vh;width:min(41vw,490px);margin:0;text-align:right;text-shadow:none;line-height:0;transform:rotate(-1deg);pointer-events:none}
@@ -2142,4 +2741,12 @@ requestAnimationFrame(frame);
 @media(max-height:480px) and (min-width:701px){#cover .winter-title.brand-art{width:30vw;top:2vh}#viktor-wordmark{max-height:25vh}#cover .winter-title .winter-edition{font-size:8px;padding:3px 6px;margin-top:2px}}
 #cover .winter-title.seasonal-wordmark{position:static;width:min(240px,65vw);margin:0 auto 14px;line-height:0;text-shadow:none;transform:none}
 #cover .seasonal-wordmark #viktor-wordmark{max-height:18vh;object-position:center}
-</style></html>
+</style>
+<style>
+.vik-controller-focus{outline:3px solid #fff1ae!important;outline-offset:2px!important;box-shadow:0 0 0 3px #183a4a!important}
+#controller-pause{box-sizing:border-box;width:min(360px,90vw);padding:22px;color:#f4f9f6;background:#193e53;border:2px solid #eed793;border-radius:18px;font-family:system-ui}
+#controller-pause::backdrop{background:#061d2ac7}#controller-pause h2{margin:0 0 15px;color:#ffe8ad;text-align:center}
+#controller-pause .controller-pause-actions{display:grid;gap:9px}#controller-pause button{display:block;width:100%;min-height:44px;padding:9px 14px;border:1px solid #9eb9c1;border-radius:9px;background:#28576c;color:#fff;font:750 16px system-ui;cursor:pointer}
+#controller-pause p{margin:15px 0 0;text-align:center;color:#c9e0e5;font-size:12px}
+</style>
+</html>
