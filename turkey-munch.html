@@ -3,7 +3,7 @@
 // Run in <head>, before the game or any saved-run initializer.
 (function returnReloadToWorldMenu(root) {
   'use strict';
-  const release='1.53.6-winter';
+  const release='1.53.8-winter';
   let navigationType;
   try {
     const entries=root.performance?.getEntriesByType?.('navigation');
@@ -46,7 +46,7 @@
   }
 })(window);
 
-</script><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Viktor’s Monster Munch · Turkey Munch</title><meta name="game-release" content="1.53.6-winter"><style>*{box-sizing:border-box}body{margin:0;background:#102a40;font-family:system-ui,sans-serif;color:white;overflow:hidden}canvas{display:block;touch-action:none;width:100vw;height:100dvh}header{position:absolute;top:0;left:0;right:0;padding:14px 18px;background:linear-gradient(#102a40ed,transparent);pointer-events:none;display:flex;justify-content:space-between;gap:10px}h1{font-size:clamp(18px,3vw,30px);margin:0;color:#ffdd65;text-shadow:0 3px #112b40}small{color:#d5edf2}#stats{text-align:right;font-weight:900}#bar{height:8px;background:#375168;border-radius:9px;margin-top:5px;overflow:hidden}#fill{height:100%;background:#ffda55;width:0}footer{position:absolute;bottom:14px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:end;gap:10px}button{border:2px solid #fff4;border-radius:18px;background:#173d54;color:white;padding:12px 16px;font-weight:800;font-size:15px;cursor:pointer}#hint{max-width:280px;background:#102a40da;padding:10px 14px;border-radius:14px;font-size:14px}#cover{position:absolute;inset:0;background:#102a4099;display:grid;place-items:center}.card{text-align:center;background:#14364e;border:3px solid #53d6bf;border-radius:28px;padding:28px;max-width:360px;margin:20px;box-shadow:0 20px 80px #0006}.card h2{font-size:34px;color:#ffda55;margin:0 0 12px}.card button{background:#ffcc4d;color:#173044;font-size:23px;padding:16px 32px}.card p{line-height:1.5}#toast{position:absolute;top:205px;width:100%;text-align:center;font-size:26px;font-weight:900;color:#ffec80;pointer-events:none;text-shadow:0 3px #15334b}.card{max-height:90dvh;overflow:auto}#toast{padding:0 12px;font-size:clamp(18px,4vw,26px)}@media(max-width:520px){header{padding:10px}h1{max-width:175px}header small{font-size:10px}#stats{font-size:12px}#champion{max-width:145px}#hint{font-size:11px;padding:8px;max-width:150px}footer{left:8px;right:8px}footer button{padding:9px;font-size:12px}}</style><style>body{-webkit-user-select:none;user-select:none;overscroll-behavior:none}header{padding-top:calc(8px + env(safe-area-inset-top));padding-left:calc(12px + env(safe-area-inset-left));padding-right:calc(12px + env(safe-area-inset-right))}footer{bottom:calc(8px + env(safe-area-inset-bottom));left:calc(8px + env(safe-area-inset-left));right:calc(8px + env(safe-area-inset-right))}#phone-pause{position:fixed;inset:0;background:#102a40e8;z-index:20;display:grid;place-items:center}#phone-pause[hidden]{display:none}#hint{max-width:190px;font-size:11px}footer button{min-height:44px;padding:8px 12px;font-size:13px}#toast{top:165px}#bomb-warning{top:130px;z-index:4}@media(orientation:landscape){header{font-size:12px}#stats{font-size:12px}h1{font-size:20px}#champion{font-size:11px!important}#bar{height:5px}#stats>div{font-size:10px!important}#hint{max-width:155px}.card{max-width:520px;padding:16px;max-height:85dvh}.card p{font-size:12px;line-height:1.3}.card h2{font-size:26px}.card>div:first-child{font-size:30px!important}.card button{font-size:19px;padding:12px 22px}}</style><style>#return-city[hidden]{display:none}.card #turkey-play{font-size:18px;padding:12px 20px;background:#d99035}#turkey-play:hover{background:#ffcf75}</style><style>.seasonal-bonus{display:flex!important;flex-direction:column;gap:3px;width:100%;margin:12px 0!important;padding:12px!important;border:2px solid #edc275!important;border-radius:12px!important;background:linear-gradient(110deg,#71372a,#ae642e)!important;color:#fff1ce!important;box-shadow:0 3px 12px #0003}.seasonal-bonus span{font-size:10px;letter-spacing:2px}.seasonal-bonus strong{font-size:14px}#seasonal-game{position:fixed;inset:0;width:100%;height:100dvh;border:0;z-index:100;background:#173044}#seasonal-game[hidden]{display:none}</style></head><body><style>#apollo-escape{position:fixed;inset:0;z-index:40;background:#0c1c25;display:grid;grid-template-rows:1fr auto;text-align:center}#apollo-escape[hidden]{display:none}#apollo-escape img{width:100%;height:100%;min-height:0;object-fit:contain}#apollo-escape div{padding:12px;background:#102b35}#apollo-escape h2{margin:0 0 5px;color:#ffe0a0}#apollo-escape p{margin:0 0 8px}</style><section id="apollo-escape" hidden aria-label="Apollo got away"><img id="apollo-escape-art" src="munch-asset-ac0f105e6fa45564fcc7c788.png" alt="Apollo jumps over a farm fence while Viktor chases him"><div><h2>APOLLO GOT AWAY!</h2><p>Viktor is on his trail. Better luck next chase!</p><button id="apollo-continue">KEEP MUNCHING</button></div></section><canvas id="c"></canvas><img id="blast-art" alt="" style="display:none" src="munch-asset-2810062598f62cee4b9365cc.png"><header><div><h1>Viktor's Munch Mayhem</h1><small>CITY MAYHEM · Chomp. Grow. Explore.</small><small id="version" style="display:block">v1.27.2</small></div><div id="stats"><span id="level">Little Chomper</span><br><span id="count">0 munches</span><div id="champion" style="color:#ffdd65;font-size:13px;margin-top:5px">PERSONAL BEST · Connecting…</div><div id="chase-clock" style="font-size:12px;color:#ffdd65">☢ First chase in 3:00</div><div id="mode-status" style="font-size:12px;color:#ffdd65"></div><div id="streak" style="font-size:12px;color:#ffdd65"></div><div id="rocket-status" style="font-size:12px;color:#d5edf2"></div><div id="bar"><div id="fill"></div></div></div></header><div id="toast"></div><div id="bomb-warning" role="status" style="position:absolute;top:165px;left:8px;right:8px;text-align:center;color:#fff4ad;background:#812e29e8;border-radius:8px;font-weight:900;font-size:clamp(12px,2vw,18px);pointer-events:none"></div><footer><div id="hint">Drag anywhere to drive.<br>Snails pop and shrink you! 🐌</div><div><button id="pause" aria-label="Pause game">Ⅱ Pause</button> <button id="sound">Sound: off</button> <button id="return-city" hidden>Back to City</button><button id="reset">↻ Restart</button></div></footer><div id="phone-pause" hidden><div class="card"><h2>Paused</h2><p>Your game is saved. Ready for more?</p><button id="resume">RESUME</button></div></div><div id="cover"><div class="card"><h1 class="winter-title seasonal-wordmark"><img id="viktor-wordmark" src="munch-asset-4fd20f013e68f7a720b61cb8.png" alt="Viktor's Monster Munch"></h1><h2>Ready, Viktor?</h2><p>Your truck is hungry! Drive into little cars to grow. Then gobble picnic tables, swing sets, swimming pools, and whole buildings!</p><p>Watch out for snails! They go POP, fart, and shrink your truck. One chupacabra roams the map. Eat it at MEGA size, and another appears 30 seconds later!</p><p>✨ Catch golden cars for extra growth! Keep munching for streak bonuses, and find silly surprises inside houses.</p><p>🚀 Find Lift-Off Park, with its pond and trees! Drive through the water to splash. Visit the launch pad at MEGA size for ROCKET RUSH! Your truck shrinks and flies across the map to another neighborhood, then lands at full MEGA size. A new rocket arrives three minutes later.</p><p>☢ Bomb chase: the first starts after 3 minutes of play, then every 3, 5, or 7 minutes at random. Follow the red map marker and eat the bomb-carrying Chupacabra within 10 seconds at ANY size for +1,000 bonus points! If time runs out, the city explodes. Restart rebuilds the city.</p><p>🚧 At MEGA size, collect 10 cats to unlock 10 seconds as a yellow dozer! Push the city into piles without munching it.</p><button id="turkey-play" class="seasonal-bonus"><span>🦃 SEASONAL BONUS</span><strong>THANKSGIVING · TURKEY MUNCH</strong></button><button id="play">LET'S MUNCH!</button><p style="margin-bottom:0"><span style="color:#d5edf2;font-size:12px">iPhone preview · v1.27.2 · Saved on this device</span></p></div></div><script>
+</script><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Viktor’s Monster Munch · Turkey Munch</title><meta name="game-release" content="1.53.8-winter"><style>*{box-sizing:border-box}body{margin:0;background:#102a40;font-family:system-ui,sans-serif;color:white;overflow:hidden}canvas{display:block;touch-action:none;width:100vw;height:100dvh}header{position:absolute;top:0;left:0;right:0;padding:14px 18px;background:linear-gradient(#102a40ed,transparent);pointer-events:none;display:flex;justify-content:space-between;gap:10px}h1{font-size:clamp(18px,3vw,30px);margin:0;color:#ffdd65;text-shadow:0 3px #112b40}small{color:#d5edf2}#stats{text-align:right;font-weight:900}#bar{height:8px;background:#375168;border-radius:9px;margin-top:5px;overflow:hidden}#fill{height:100%;background:#ffda55;width:0}footer{position:absolute;bottom:14px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:end;gap:10px}button{border:2px solid #fff4;border-radius:18px;background:#173d54;color:white;padding:12px 16px;font-weight:800;font-size:15px;cursor:pointer}#hint{max-width:280px;background:#102a40da;padding:10px 14px;border-radius:14px;font-size:14px}#cover{position:absolute;inset:0;background:#102a4099;display:grid;place-items:center}.card{text-align:center;background:#14364e;border:3px solid #53d6bf;border-radius:28px;padding:28px;max-width:360px;margin:20px;box-shadow:0 20px 80px #0006}.card h2{font-size:34px;color:#ffda55;margin:0 0 12px}.card button{background:#ffcc4d;color:#173044;font-size:23px;padding:16px 32px}.card p{line-height:1.5}#toast{position:absolute;top:205px;width:100%;text-align:center;font-size:26px;font-weight:900;color:#ffec80;pointer-events:none;text-shadow:0 3px #15334b}.card{max-height:90dvh;overflow:auto}#toast{padding:0 12px;font-size:clamp(18px,4vw,26px)}@media(max-width:520px){header{padding:10px}h1{max-width:175px}header small{font-size:10px}#stats{font-size:12px}#champion{max-width:145px}#hint{font-size:11px;padding:8px;max-width:150px}footer{left:8px;right:8px}footer button{padding:9px;font-size:12px}}</style><style>body{-webkit-user-select:none;user-select:none;overscroll-behavior:none}header{padding-top:calc(8px + env(safe-area-inset-top));padding-left:calc(12px + env(safe-area-inset-left));padding-right:calc(12px + env(safe-area-inset-right))}footer{bottom:calc(8px + env(safe-area-inset-bottom));left:calc(8px + env(safe-area-inset-left));right:calc(8px + env(safe-area-inset-right))}#phone-pause{position:fixed;inset:0;background:#102a40e8;z-index:20;display:grid;place-items:center}#phone-pause[hidden]{display:none}#hint{max-width:190px;font-size:11px}footer button{min-height:44px;padding:8px 12px;font-size:13px}#toast{top:165px}#bomb-warning{top:130px;z-index:4}@media(orientation:landscape){header{font-size:12px}#stats{font-size:12px}h1{font-size:20px}#champion{font-size:11px!important}#bar{height:5px}#stats>div{font-size:10px!important}#hint{max-width:155px}.card{max-width:520px;padding:16px;max-height:85dvh}.card p{font-size:12px;line-height:1.3}.card h2{font-size:26px}.card>div:first-child{font-size:30px!important}.card button{font-size:19px;padding:12px 22px}}</style><style>#return-city[hidden]{display:none}.card #turkey-play{font-size:18px;padding:12px 20px;background:#d99035}#turkey-play:hover{background:#ffcf75}</style><style>.seasonal-bonus{display:flex!important;flex-direction:column;gap:3px;width:100%;margin:12px 0!important;padding:12px!important;border:2px solid #edc275!important;border-radius:12px!important;background:linear-gradient(110deg,#71372a,#ae642e)!important;color:#fff1ce!important;box-shadow:0 3px 12px #0003}.seasonal-bonus span{font-size:10px;letter-spacing:2px}.seasonal-bonus strong{font-size:14px}#seasonal-game{position:fixed;inset:0;width:100%;height:100dvh;border:0;z-index:100;background:#173044}#seasonal-game[hidden]{display:none}</style></head><body><style>#apollo-escape{position:fixed;inset:0;z-index:40;background:#0c1c25;display:grid;grid-template-rows:1fr auto;text-align:center}#apollo-escape[hidden]{display:none}#apollo-escape img{width:100%;height:100%;min-height:0;object-fit:contain}#apollo-escape div{padding:12px;background:#102b35}#apollo-escape h2{margin:0 0 5px;color:#ffe0a0}#apollo-escape p{margin:0 0 8px}</style><section id="apollo-escape" hidden aria-label="Apollo got away"><img id="apollo-escape-art" src="munch-asset-ac0f105e6fa45564fcc7c788.png" alt="Apollo jumps over a farm fence while Viktor chases him"><div><h2>APOLLO GOT AWAY!</h2><p>Viktor is on his trail. Better luck next chase!</p><button id="apollo-continue">KEEP MUNCHING</button></div></section><canvas id="c"></canvas><img id="blast-art" alt="" style="display:none" src="munch-asset-2810062598f62cee4b9365cc.png"><header><div><h1>Viktor's Munch Mayhem</h1><small>CITY MAYHEM · Chomp. Grow. Explore.</small><small id="version" style="display:block">v1.27.2</small></div><div id="stats"><span id="level">Little Chomper</span><br><span id="count">0 munches</span><div id="champion" style="color:#ffdd65;font-size:13px;margin-top:5px">PERSONAL BEST · Connecting…</div><div id="chase-clock" style="font-size:12px;color:#ffdd65">☢ First chase in 3:00</div><div id="mode-status" style="font-size:12px;color:#ffdd65"></div><div id="streak" style="font-size:12px;color:#ffdd65"></div><div id="rocket-status" style="font-size:12px;color:#d5edf2"></div><div id="bar"><div id="fill"></div></div></div></header><div id="toast"></div><div id="bomb-warning" role="status" style="position:absolute;top:165px;left:8px;right:8px;text-align:center;color:#fff4ad;background:#812e29e8;border-radius:8px;font-weight:900;font-size:clamp(12px,2vw,18px);pointer-events:none"></div><footer><div id="hint">Drag anywhere to drive.<br>Snails pop and shrink you! 🐌</div><div><button id="pause" aria-label="Pause game">Ⅱ Pause</button> <button id="sound">Sound: off</button> <button id="return-city" hidden>Back to City</button><button id="reset">↻ Restart</button></div></footer><div id="phone-pause" hidden><div class="card"><h2>Paused</h2><p>Your game is saved. Ready for more?</p><button id="resume">RESUME</button></div></div><div id="cover"><div class="card"><h1 class="winter-title seasonal-wordmark"><img id="viktor-wordmark" src="munch-asset-4fd20f013e68f7a720b61cb8.png" alt="Viktor's Monster Munch"></h1><h2>Ready, Viktor?</h2><p>Your truck is hungry! Drive into little cars to grow. Then gobble picnic tables, swing sets, swimming pools, and whole buildings!</p><p>Watch out for snails! They go POP, fart, and shrink your truck. One chupacabra roams the map. Eat it at MEGA size, and another appears 30 seconds later!</p><p>✨ Catch golden cars for extra growth! Keep munching for streak bonuses, and find silly surprises inside houses.</p><p>🚀 Find Lift-Off Park, with its pond and trees! Drive through the water to splash. Visit the launch pad at MEGA size for ROCKET RUSH! Your truck shrinks and flies across the map to another neighborhood, then lands at full MEGA size. A new rocket arrives three minutes later.</p><p>☢ Bomb chase: the first starts after 3 minutes of play, then every 3, 5, or 7 minutes at random. Follow the red map marker and eat the bomb-carrying Chupacabra within 10 seconds at ANY size for +1,000 bonus points! If time runs out, the city explodes. Restart rebuilds the city.</p><p>🚧 At MEGA size, collect 10 cats to unlock 10 seconds as a yellow dozer! Push the city into piles without munching it.</p><button id="turkey-play" class="seasonal-bonus"><span>🦃 SEASONAL BONUS</span><strong>THANKSGIVING · TURKEY MUNCH</strong></button><button id="play">LET'S MUNCH!</button><p style="margin-bottom:0"><span style="color:#d5edf2;font-size:12px">iPhone preview · v1.27.2 · Saved on this device</span></p></div></div><script>
 // Bump GAME_VERSION and CHANGELOG.md for every update.
 const GAME_VERSION='1.27.2';
 document.querySelector('#version').textContent='v'+GAME_VERSION;
@@ -1099,7 +1099,7 @@ gameHud.tick();
 
 </script><script>
 // Release label is separate from saved-game schema versions.
-const gameReleaseLabel=document.createElement('small');gameReleaseLabel.textContent='Winter update · v1.53.6';gameReleaseLabel.style.cssText='display:block;margin-top:10px;color:#b6d5db;font:600 10px system-ui';
+const gameReleaseLabel=document.createElement('small');gameReleaseLabel.textContent='Winter update · v1.53.8';gameReleaseLabel.style.cssText='display:block;margin-top:10px;color:#b6d5db;font:600 10px system-ui';
 document.querySelector('.hud-menu-panel')?.appendChild(gameReleaseLabel);
 </script><script>
 /* TOUCH AND WORLD ROUTE REPAIR */
@@ -1319,7 +1319,7 @@ updateGameSurface();
   const find=id=>document.getElementById(id);
   const isMain=typeof currentBiome!=='undefined'&&typeof biomeMaps!=='undefined';
   const validWorlds=['city','farm','ocean','moon','snow'];
-  const release='1.53.6-winter';
+  const release='1.53.8-winter';
   const query=new URLSearchParams(location.search);
   const resetRide=map=>{if(typeof vehicleGarage!=='undefined')vehicleGarage.resetForWorld?.(map)};
   if(query.get('play')==='1')vehicleGarage.setHomeChoice(query.get('ride'));
@@ -1836,11 +1836,11 @@ function munchObject(o,t){if(!o||o.dead)return false;if(o.type===8)saveCity(o,t)
     let shots=[],bursts=[],shotsFired=0,hits=0,lastTime=null,nextShot=0,flashUntil=0;
     let keyHeld=false,padHeld=false,needsRelease=true,blurred=false,destroyed=false,requested=false;
     let primaryQueued=false,rocketQueued=false;
-    let rocketCooldownMs=0,rocketFlashUntil=0,rocketRequested=false,rocketPadHeld=false,rocketNeedsRelease=true;
+    let rocketCooldownMs=0,rocketRequested=false,rocketPadHeld=false,rocketNeedsRelease=true;
     let padIdentity=null,lastContext=adapter.contextKey(),gesture=null,lastTap=null,reason='waiting';
     const previous={},handlers={},listeners=[];
     const allowed=()=>!destroyed&&!blurred&&!doc.hidden&&!!adapter.canFire();
-    function clear(why){shots=[];bursts=[];flashUntil=0;rocketFlashUntil=0;requested=false;rocketRequested=false;primaryQueued=false;rocketQueued=false;gesture=null;lastTap=null;needsRelease=true;rocketNeedsRelease=true;lastTime=null;reason=why;}
+    function clear(why){shots=[];bursts=[];flashUntil=0;requested=false;rocketRequested=false;primaryQueued=false;rocketQueued=false;gesture=null;lastTap=null;needsRelease=true;rocketNeedsRelease=true;lastTime=null;reason=why;}
     function sound(kind){try{adapter.sound?.(kind)}catch(_){}}
     function textInput(e){return /^(INPUT|TEXTAREA|SELECT)$/.test(e.target?.tagName||'')||e.target?.isContentEditable;}
     function keydown(e){if(textInput(e)||!allowed()||e.ctrlKey||e.metaKey||e.altKey)return;
@@ -1909,10 +1909,10 @@ function munchObject(o,t){if(!o||o.dead)return false;if(o.type===8)saveCity(o,t)
       }
       return nearest;
     }
-    function fireRocket(t){
+    function fireRocket(){
       const profile=secondaryProfile(),shot=makeShot(profile);
       shot.target=findRocketTarget(shot);shots.push(shot);shotsFired++;
-      rocketCooldownMs=10000;rocketFlashUntil=t+105;sound(profile===harpoon?'fire':'rocket');
+      rocketCooldownMs=10000;sound(profile===harpoon?'fire':'rocket');
     }
     function hitRadius(o){if(o.type===4)return Math.min(80,Math.max(38,(o.bw||80)*.45));return [19,23,29,27,42,16,20,31,40,25,18,19,30,38,25,13,22][o.type]||24}
     function burst(x,y,kind){bursts.push({x,y,kind,age:0,seed:hits%7,snow:String(adapter.contextKey()).split('|')[0]==='snow'});if(bursts.length>14)bursts.shift();sound(kind==='rocket'?'rocket-impact':'impact')}
@@ -1950,10 +1950,42 @@ function munchObject(o,t){if(!o||o.dead)return false;if(o.type===8)saveCity(o,t)
       g.fillStyle='#dbb069';g.fillRect(-8,-21,16,3);g.fillStyle='#233740';g.fillRect(-7,-36,14,4);
       g.restore();}
     function drawFlash(g,profile,timeLeft){
-      const light=profile===laser,large=profile===tank||profile===rocket;
+      const light=profile===laser,large=profile===tank;
       g.save();g.translate(profile.x,profile.y);g.scale(large?1.23:1,large?1.23:1);
       g.fillStyle=light?'#64e9d4':'#ffac4b';g.beginPath();g.moveTo(-6,1);g.lineTo(-11,-9);g.lineTo(-4,-7);g.lineTo(0,-18-6*Math.min(1,timeLeft/85));g.lineTo(4,-7);g.lineTo(11,-9);g.lineTo(6,1);g.closePath();g.fill();
       g.fillStyle=light?'#e9fffb':'#fff5c2';g.beginPath();g.ellipse(0,-5,3.5,7,0,0,7);g.fill();g.restore();
+    }
+    // Both drawings use a nose origin and the same fixed-size silhouette.
+    const rocketLength=30;
+    function drawRocketBody(g){
+      g.fillStyle='#dbe9e5';
+      g.strokeStyle='#294653';
+      g.lineWidth=1.3;
+      g.beginPath();
+      g.moveTo(0,0);g.lineTo(3.3,7);g.lineTo(6,10);g.lineTo(6,13);
+      g.lineTo(3.3,12);g.lineTo(3.3,21);g.lineTo(7,26);g.lineTo(7,29);
+      g.lineTo(3,28);g.lineTo(2.4,rocketLength);g.lineTo(-2.4,rocketLength);
+      g.lineTo(-3,28);g.lineTo(-7,29);g.lineTo(-7,26);g.lineTo(-3.3,21);
+      g.lineTo(-3.3,12);g.lineTo(-6,13);g.lineTo(-6,10);g.lineTo(-3.3,7);
+      g.closePath();g.fill();g.stroke();
+      g.fillStyle='#baffdc';g.fillRect(-2,10,4,3);
+      g.fillStyle='#739c9f';g.fillRect(-2.4,24,4.8,2);
+    }
+    function drawRocketFlight(g,shot,point){
+      g.save();g.translate(point.x,point.y);g.rotate(Math.atan2(shot.vy,shot.vx)+Math.PI/2);
+      const light=1-Math.min(1,shot.age/.15), plume=9+12*light;
+      const tail=rocketLength-1, wake=Math.min(26,shot.age*shot.speed);
+      if(wake>0){
+        g.strokeStyle='#b9b6a472';g.lineWidth=2.8;g.beginPath();
+        g.moveTo(0,tail+plume*.65);g.lineTo(0,tail+plume*.65+wake);g.stroke();
+      }
+      g.fillStyle='#ff9e45';g.beginPath();
+      g.moveTo(-3.5-light*2,tail);g.lineTo(0,tail+plume);g.lineTo(3.5+light*2,tail);
+      g.closePath();g.fill();
+      g.fillStyle='#fff5b6';g.beginPath();
+      g.moveTo(-2,tail);g.lineTo(0,tail+plume*.61);g.lineTo(2,tail);
+      g.closePath();g.fill();
+      drawRocketBody(g);g.restore();
     }
     function drawSecondary(g,profile){
       g.save();g.translate(profile.x,profile.y);
@@ -1962,11 +1994,11 @@ function munchObject(o,t){if(!o||o.dead)return false;if(o.type===8)saveCity(o,t)
         g.fillStyle='#b0bebe';g.fillRect(-2,1,4,20);
         if(rocketCooldownMs===0){g.fillStyle='#e7f5ed';g.beginPath();g.moveTo(0,0);g.lineTo(-5,8);g.lineTo(5,8);g.closePath();g.fill();}
       }else{
-        g.fillStyle='#263b45';g.fillRect(-8,9,14,12);
-        if(rocketCooldownMs===0){
-          g.fillStyle='#cdded9';g.beginPath();g.moveTo(0,0);g.quadraticCurveTo(-5,5,-5,9);g.lineTo(-5,17);g.lineTo(-8,23);g.lineTo(8,23);g.lineTo(5,17);g.lineTo(5,9);g.quadraticCurveTo(5,5,0,0);g.fill();
-          g.fillStyle='#ecae66';g.fillRect(-5,16,10,3);
-        }else{g.fillStyle='#728b96';g.fillRect(-4,4,8,18);}
+        const inverseScale=23/adapter.radius();
+        g.scale(inverseScale,inverseScale);
+        g.fillStyle='#263b45';g.fillRect(-5,9,11,18);
+        g.fillStyle='#728b96';g.fillRect(-4,11,9,3);g.fillRect(-4,22,9,3);
+        if(rocketCooldownMs===0)drawRocketBody(g);
       }
       g.restore();
     }
@@ -1975,26 +2007,24 @@ function munchObject(o,t){if(!o||o.dead)return false;if(o.type===8)saveCity(o,t)
       const t=lastTime??clock(),g=adapter.context(),profile=primaryProfile();
       // Driving has finished for this frame. Emit from the pose being drawn.
       if(primaryQueued){primaryQueued=false;fire(t);}
-      if(rocketQueued){rocketQueued=false;fireRocket(t);adapter.onRocketStatus?.(true,rocketCooldownMs);}
+      if(rocketQueued){rocketQueued=false;fireRocket();adapter.onRocketStatus?.(true,rocketCooldownMs);}
       if(profile===blaster)drawBlaster(g,t<flashUntil?2:0);
       if(profile===laser&&adapter.stockRover?.()){
         g.fillStyle='#567c86';g.beginPath();g.roundRect(-6,-43,12,10,3);g.fill();
         g.fillStyle='#b6ebed';g.fillRect(-4,-43,8,3);
       }
       if(t<flashUntil)drawFlash(g,profile,flashUntil-t);
-      const secondary=secondaryProfile();drawSecondary(g,secondary);
-      if(t<rocketFlashUntil&&secondary!==harpoon)drawFlash(g,secondary,rocketFlashUntil-t);
+      drawSecondary(g,secondaryProfile());
     }
     function worldPoint(p){const player=adapter.player();return {x:player.x+adapter.delta(p.x,player.x),y:player.y+adapter.delta(p.y,player.y)}}
     function drawWorld(){if((!shots.length&&!bursts.length)||!allowed())return;const g=adapter.context();g.save();g.lineCap='round';
       for(const shot of shots){
         const p=worldPoint(shot),dx=shot.vx/shot.speed,dy=shot.vy/shot.speed;
-        const laser=shot.kind==='laser',rocket=shot.kind==='rocket',harpoonShot=shot.kind==='harpoon',trail=Math.min(shot.age*shot.speed,rocket?34:laser?28:18);
+        const laser=shot.kind==='laser',rocket=shot.kind==='rocket',harpoonShot=shot.kind==='harpoon',trail=Math.min(shot.age*shot.speed,laser?28:18);
         if(rocket||harpoonShot){
           if(shot.target){const target=worldPoint(shot.target);g.strokeStyle='#f6d387';g.lineWidth=2;g.beginPath();g.arc(target.x,target.y,hitRadius(shot.target)+6,0,7);g.stroke();}
-          if(harpoonShot){
-            const bow=worldPoint(mount(harpoon));g.strokeStyle='#ead8aa';g.lineWidth=1.7;g.beginPath();g.moveTo(bow.x,bow.y);g.quadraticCurveTo((bow.x+p.x)/2,(bow.y+p.y)/2+9,p.x,p.y);g.stroke();
-          }else if(trail>0){g.strokeStyle='#e9b77699';g.lineWidth=4;g.beginPath();g.moveTo(p.x-dx*trail,p.y-dy*trail);g.lineTo(p.x-dx*6,p.y-dy*6);g.stroke();}
+          if(rocket){drawRocketFlight(g,shot,p);continue;}
+          const bow=worldPoint(mount(harpoon));g.strokeStyle='#ead8aa';g.lineWidth=1.7;g.beginPath();g.moveTo(bow.x,bow.y);g.quadraticCurveTo((bow.x+p.x)/2,(bow.y+p.y)/2+9,p.x,p.y);g.stroke();
           g.fillStyle='#e8f1ef';g.beginPath();g.moveTo(p.x+dx*9,p.y+dy*9);g.lineTo(p.x-dx*6+dy*4,p.y-dy*6-dx*4);g.lineTo(p.x-dx*4,p.y-dy*4);g.lineTo(p.x-dx*6-dy*4,p.y-dy*6+dx*4);g.closePath();g.fill();
           continue;
         }

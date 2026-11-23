@@ -1,3 +1,12 @@
+# v1.53.8 — Snow Summit art
+
+- Added shaded banks, icy curves, warm cabin doors and an amber garage entrance.
+- Tank treads leave short marks. Snowbank bumps kick up powder.
+
+# v1.53.7 — Rocket visual polish
+
+- A slender finned rocket keeps the same size on its mount and in flight, with bright tail ignition and a short exhaust trail.
+
 # v1.53.6 — Cartoon munch cannon
 
 - Xbox D-pad navigates the world picker, Garage and pause menu. A selects, B returns, and View (Select) pauses or resumes.
