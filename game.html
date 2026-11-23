@@ -3,7 +3,7 @@
 // Run in <head>, before the game or any saved-run initializer.
 (function returnReloadToWorldMenu(root) {
   'use strict';
-  const release='1.53.8-winter';
+  const release='1.54.0-winter';
   let navigationType;
   try {
     const entries=root.performance?.getEntriesByType?.('navigation');
@@ -46,7 +46,7 @@
   }
 })(window);
 
-</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Viktor’s Monster Munch · Winter Edition</title><meta name="game-release" content="1.53.8-winter"><style>*{box-sizing:border-box}body{margin:0;background:#102a40;font-family:system-ui,sans-serif;color:white;overflow:hidden}canvas{display:block;touch-action:none;width:100vw;height:100dvh}header{position:absolute;top:0;left:0;right:0;padding:14px 18px;background:linear-gradient(#102a40ed,transparent);pointer-events:none;display:flex;justify-content:space-between;gap:10px}h1{font-size:clamp(18px,3vw,30px);margin:0;color:#ffdd65;text-shadow:0 3px #112b40}small{color:#d5edf2}#stats{text-align:right;font-weight:900}#bar{height:8px;background:#375168;border-radius:9px;margin-top:5px;overflow:hidden}#fill{height:100%;background:#ffda55;width:0}footer{position:absolute;bottom:14px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:end;gap:10px}button{border:2px solid #fff4;border-radius:18px;background:#173d54;color:white;padding:12px 16px;font-weight:800;font-size:15px;cursor:pointer}#hint{display:none!important;max-width:280px;background:#102a40da;padding:10px 14px;border-radius:14px;font-size:14px}#cover{position:absolute;inset:0;background:#102a4099;display:grid;place-items:center}.card{text-align:center;background:#14364e;border:3px solid #53d6bf;border-radius:28px;padding:28px;max-width:360px;margin:20px;box-shadow:0 20px 80px #0006}.card h2{font-size:34px;color:#ffda55;margin:0 0 12px}.card button{background:#ffcc4d;color:#173044;font-size:23px;padding:16px 32px}.card p{line-height:1.5}#toast{position:absolute;top:205px;width:100%;text-align:center;font-size:26px;font-weight:900;color:#ffec80;pointer-events:none;text-shadow:0 3px #15334b}.card{max-height:90dvh;overflow:auto}#toast{padding:0 12px;font-size:clamp(18px,4vw,26px)}@media(max-width:520px){header{padding:10px}h1{max-width:175px}header small{font-size:10px}#stats{font-size:12px}#champion{max-width:145px}#hint{font-size:11px;padding:8px;max-width:150px}footer{left:8px;right:8px}footer button{padding:9px;font-size:12px}}#biome-guide{display:none!important}#bomb-warning:empty{display:none}@media(max-width:600px){footer>div:last-child{display:flex;gap:5px;justify-content:flex-end;flex-wrap:wrap;max-width:65vw}footer button{font-size:11px;padding:8px}#hint{max-width:31vw}}
+</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Viktor’s Monster Munch · Winter Edition</title><meta name="game-release" content="1.54.0-winter"><style>*{box-sizing:border-box}body{margin:0;background:#102a40;font-family:system-ui,sans-serif;color:white;overflow:hidden}canvas{display:block;touch-action:none;width:100vw;height:100dvh}header{position:absolute;top:0;left:0;right:0;padding:14px 18px;background:linear-gradient(#102a40ed,transparent);pointer-events:none;display:flex;justify-content:space-between;gap:10px}h1{font-size:clamp(18px,3vw,30px);margin:0;color:#ffdd65;text-shadow:0 3px #112b40}small{color:#d5edf2}#stats{text-align:right;font-weight:900}#bar{height:8px;background:#375168;border-radius:9px;margin-top:5px;overflow:hidden}#fill{height:100%;background:#ffda55;width:0}footer{position:absolute;bottom:14px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:end;gap:10px}button{border:2px solid #fff4;border-radius:18px;background:#173d54;color:white;padding:12px 16px;font-weight:800;font-size:15px;cursor:pointer}#hint{display:none!important;max-width:280px;background:#102a40da;padding:10px 14px;border-radius:14px;font-size:14px}#cover{position:absolute;inset:0;background:#102a4099;display:grid;place-items:center}.card{text-align:center;background:#14364e;border:3px solid #53d6bf;border-radius:28px;padding:28px;max-width:360px;margin:20px;box-shadow:0 20px 80px #0006}.card h2{font-size:34px;color:#ffda55;margin:0 0 12px}.card button{background:#ffcc4d;color:#173044;font-size:23px;padding:16px 32px}.card p{line-height:1.5}#toast{position:absolute;top:205px;width:100%;text-align:center;font-size:26px;font-weight:900;color:#ffec80;pointer-events:none;text-shadow:0 3px #15334b}.card{max-height:90dvh;overflow:auto}#toast{padding:0 12px;font-size:clamp(18px,4vw,26px)}@media(max-width:520px){header{padding:10px}h1{max-width:175px}header small{font-size:10px}#stats{font-size:12px}#champion{max-width:145px}#hint{font-size:11px;padding:8px;max-width:150px}footer{left:8px;right:8px}footer button{padding:9px;font-size:12px}}#biome-guide{display:none!important}#bomb-warning:empty{display:none}@media(max-width:600px){footer>div:last-child{display:flex;gap:5px;justify-content:flex-end;flex-wrap:wrap;max-width:65vw}footer button{font-size:11px;padding:8px}#hint{max-width:31vw}}
 #toast{top:100px;left:18px;right:auto;width:auto;max-width:min(360px,55vw);padding:0;text-align:left;font-size:14px;line-height:1.35}#bomb-warning{top:127px;left:18px;right:auto;width:auto;max-width:min(360px,55vw);text-align:left;font-size:12px;padding:5px 8px}@media(max-width:520px){#toast{top:92px;left:10px;max-width:47vw;font-size:11px}#bomb-warning{top:124px;left:10px;max-width:47vw;font-size:10px}}
  .card{max-width:560px;width:min(560px,92vw);border-color:#95bdad;background:linear-gradient(145deg,#19364d,#102638);padding:24px}.card h2{font-size:clamp(28px,6vw,43px);letter-spacing:2px}.card p{line-height:1.55}.card #moon-play{font-size:clamp(17px,4vw,22px)}#cover{background:radial-gradient(ellipse at top,#456875b0,#0d1d31ef)}details p{margin:10px 0}
 #cover{z-index:20;display:flex;align-items:flex-end;justify-content:center;overflow:auto;background:#0b1928}
@@ -71,7 +71,7 @@
 @media(max-width:700px){#cover{justify-content:center}#opening-art{position:relative;inset:auto;width:100%;height:auto;max-height:52dvh;object-fit:contain;object-position:center;flex:none}.world-menu{margin-top:0;padding:15px 12px;background:linear-gradient(#102b2e,#071b22)}.world-select{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}#cover .world-card{padding:11px 9px;gap:7px}.world-icon{flex-basis:30px;height:30px;font-size:19px}.world-card strong{font-size:10px;letter-spacing:0;margin:4px 0}.world-card small{font-size:7px;letter-spacing:.8px}.world-card em{font-size:8px}.world-card b{font-size:18px}.menu-bottom{gap:8px;font-size:8px;flex-wrap:wrap}.menu-bottom>span{order:3;flex-basis:100%}.menu-bottom details{margin-left:auto;max-width:100%}}
 @media(max-height:480px) and (min-width:701px){.world-menu{padding-top:23px;padding-bottom:8px}#cover .world-card{padding:9px}.world-icon{flex-basis:30px;height:30px;font-size:19px}.world-card strong{font-size:10px;margin:3px 0}.world-card em{display:none}.menu-bottom{margin-top:7px}}
  .trip-copy{background:linear-gradient(90deg,#071421cf,#07142100);padding:10px 14px;border-left:2px solid #b5c9c288;max-width:380px}#space-music{display:none!important}#cover .snow-card{background:linear-gradient(155deg,#65849b,#243f55 65%,#4b697b)}@media(max-width:700px){#cover #snow-play{grid-column:1/-1;justify-content:center}}@media(max-height:650px){#cover{overflow-y:auto}.world-menu{flex-shrink:0}}
-</style><style>.winter-title{margin:0 auto 8px;text-align:center;color:#fff2b9;font:900 clamp(25px,4vw,46px)/1 system-ui;text-shadow:0 3px 4px #123454,0 0 14px #17374a}.winter-title span{display:block;font-size:clamp(10px,1.2vw,15px);letter-spacing:.2em;color:#e6f9ff;margin-top:5px}.ginger-mascot img{width:58px;height:58px;object-fit:contain;filter:drop-shadow(0 3px 3px #0008)}.holiday-card{display:flex;text-decoration:none;text-align:left;color:#fff;background:#593d32;border:1px solid #e7c982;border-radius:10px;padding:12px;gap:10px;align-items:center}.holiday-card span:not(.world-icon){flex:1}.holiday-card small,.holiday-card strong,.holiday-card em{display:block}.holiday-card small{font-size:10px;color:#f8dca5}.holiday-card strong{font-size:12px}.holiday-card em{font-size:10px;color:#e5d7c7}#vehicle-open{position:fixed;top:116px;left:12px;z-index:11;font-size:13px;padding:9px;background:#285c72;border:2px solid #ffe39a;color:white}#vehicle-dialog{width:min(650px,90vw);max-height:85dvh;overflow:auto;background:#123749;color:#fff5da;border:3px solid #ffd879;border-radius:18px;padding:18px}#vehicle-dialog::backdrop{background:#06131ddd}#vehicle-dialog h2{margin:0;color:#ffe39a}#vehicle-choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:8px;margin:14px 0}#vehicle-choices button{background:#286075;border:2px solid #8bc3c9;color:white;padding:13px;font-size:15px}#vehicle-choices button[aria-pressed=true]{border-color:#ffdc63;background:#7b5b23}@media(max-width:700px){#vehicle-open{top:115px;font-size:11px}.winter-title{font-size:25px}.world-menu{max-height:58dvh;overflow:auto}}</style><div id="biome-guide" style="position:absolute;top:150px;left:50%;transform:translateX(-50%);background:#173d54dd;padding:6px 12px;border-radius:12px;font-size:11px;text-align:center;pointer-events:none;max-width:80vw;color:#ffe3a3"></div><style>#garage-open{position:fixed;left:14px;bottom:14px;z-index:10;padding:9px 12px;background:#23495bde;border-color:#f4ce72;color:#fff0bd;font-size:13px}footer{justify-content:flex-end;padding-left:155px}footer>div:last-child{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:4px}#mission-garage{width:min(720px,94vw);max-height:88dvh;overflow:auto;background:#102c3c;color:#f4f0d8;border:3px solid #d5b66e;border-radius:18px;padding:20px}#mission-garage::backdrop{background:#06131ddd}#mission-garage h2{margin:0;color:#ffdb80;font-size:26px}#garage-total{color:#bfe2d5;margin:5px 0 14px}#garage-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.mission-card{display:flex;gap:10px;background:#1b4050;border:1px solid #5d7e7a;border-radius:12px;padding:12px}.mission-card.earned{border-color:#eac967;background:#354c3e}.mission-badge{font-size:28px}.mission-card h3{font-size:14px;margin:0 0 5px;color:#ffe5a2}.mission-card p{font-size:12px;line-height:1.35;margin:0 0 7px;color:#d5e3d8}.mission-card strong{font-size:12px;color:#fff1c0}.mission-card .mission-clue{margin:6px 0 0;color:#aee1d4}#garage-close{margin-top:14px;background:#5a693f}@media(max-width:600px){#garage-list{grid-template-columns:1fr}#garage-open{left:8px;bottom:10px;font-size:11px;padding:8px}footer{padding-left:130px}}</style><button id="garage-open" aria-label="Open missions and trophy garage">🏆 Missions & Garage</button><dialog id="mission-garage" aria-labelledby="garage-title"><h2 id="garage-title">🏆 Vik’s Trophy Garage</h2><p id="garage-total"></p><p>Find the glowing surprises in each world. Your trophies are saved on this device.</p><div id="garage-list"></div><button id="garage-close">Back to the game</button></dialog><video id="real-launch" src="moon-launch.mp4" muted playsinline preload="auto" style="display:none" aria-hidden="true"></video><video id="real-orbit" src="nasa-orbit.mp4" muted playsinline preload="auto" style="display:none" aria-hidden="true"></video><video id="real-landing" src="apollo-landing.mp4" muted playsinline preload="auto" style="display:none" aria-hidden="true"></video><canvas id="c"></canvas><img id="blast-art" alt="" style="display:none"><header><div><h1>Viktor's Monster Munch</h1><small>CITY MAYHEM · Chomp. Grow. Explore.</small><small id="version" style="display:block">v1.7.0</small></div><div id="stats"><span id="level">Little Chomper</span><br><span id="count">0 munches</span><div id="champion" style="color:#ffdd65;font-size:13px;margin-top:5px">HIGH SCORE · Connecting…</div><div id="chase-clock" style="font-size:12px;color:#ffdd65">☢ First chase in 3:00</div><div id="mode-status" style="font-size:12px;color:#ffdd65"></div><div id="streak" style="font-size:12px;color:#ffdd65"></div><div id="rocket-status" style="font-size:12px;color:#d5edf2"></div><div id="bar"><div id="fill"></div></div></div></header><div id="toast"></div><div id="bomb-warning" role="status" style="position:absolute;top:165px;left:8px;right:8px;text-align:center;color:#fff4ad;background:#812e29e8;border-radius:8px;font-weight:900;font-size:clamp(12px,2vw,18px);pointer-events:none"></div><footer><div id="hint">Drag anywhere to drive.<br>Snails pop and shrink you! 🐌</div><div><button id="barn-play" style="display:none">★ Enter Big Barn</button> <button id="barn-reload" style="display:none">↻ Reload</button> <button id="barn-again" style="display:none">★ Play Again</button> <button id="ufo-flight" style="display:none">🛸 UFO FLY</button> <button id="moon-board" style="display:none;background:#d6b96e;color:#24384b">🚀 Launch to Moon</button> <button id="radio" style="display:none">Radio: on</button> <button id="space-music" style="display:none">♪ Music: on</button> <button id="sled-finish" style="display:none">Finish sled ride</button><button id="sound">Sound: off</button> <button id="reset">↻ Restart</button></div></footer><div id="trip-hud" role="region" aria-label="Moon flight controls" style="display:none"><div class="trip-copy"><span id="trip-route"></span><strong id="trip-phase"></strong><div class="trip-track"><div id="trip-fill"></div></div></div><div class="trip-actions"><button id="trip-sound">Sound: off</button><button id="trip-skip">Skip Flight ›</button></div></div><div id="cover"><img id="opening-art" src="munch-asset-7d3c7b53cc070e1ced12a356.png" alt="Viktor smiling from a snow-camouflage tank on a snowy alpine road."><h1 class="winter-title brand-art"><span class="brand-name">Viktor’s Monster Munch</span><img id="viktor-wordmark" src="munch-asset-4fd20f013e68f7a720b61cb8.png" alt="Viktor's Monster Munch"><span class="winter-edition">WINTER EDITION</span></h1><div class="world-menu"><h2 class="menu-sr">Viktor's Monster Munch — choose your world</h2><div class="world-select"><button id="play" class="world-card city-card"><span class="world-icon" aria-hidden="true">🚛</span><span><small>01 · THE CITY</small><strong>City</strong><em>Collect, munch & grow</em></span><b aria-hidden="true">›</b></button><button id="farm-play" class="world-card farm-card"><span class="world-icon" aria-hidden="true">🚜</span><span><small>02 · THE FARM</small><strong>Farm</strong><em>Tractors & barn adventures</em></span><b aria-hidden="true">›</b></button><button id="ocean-play" class="world-card ocean-card"><span class="world-icon" aria-hidden="true">⚓</span><span><small>03 · THE OCEAN</small><strong>Ocean</strong><em>Explore the harbor</em></span><b aria-hidden="true">›</b></button><button id="moon-play" class="world-card moon-card"><span class="world-icon" aria-hidden="true">🚀</span><span><small>04 · THE MOON</small><strong>Moon</strong><em>Launch into space</em></span><b aria-hidden="true">›</b></button><button id="snow-play" class="world-card snow-card"><span class="world-icon" aria-hidden="true">🏔️</span><span><small>05 · SNOW SUMMIT</small><strong>Snow Summit</strong><em>Snow, sleds & mountain roads</em></span><b aria-hidden="true">›</b></button><a class="world-card holiday-card" href="turkey-munch.html?play=1"><span class="world-icon">🦃</span><span><small>06 · THANKSGIVING</small><strong>Turkey Munch</strong><em>A turkey adventure</em></span><b>›</b></a><a class="world-card holiday-card" href="gingerbread-munch.html?play=1"><span class="world-icon ginger-mascot"><img alt="" src="munch-asset-cdae33a84a81d98fcde6e2f8.png"></span><span><small>07 · HOLIDAY</small><strong>Gingerbread Land</strong><em>Explore the cookie world</em></span><b>›</b></a></div><div class="menu-bottom"><button id="menu-audio">♫ AUDIO ON</button><span>Choose your world · Drag or arrows to drive</span><details><summary>HOW TO PLAY</summary><p>Collect smaller objects to grow. Ordinary monsters need MEGA; bomb carriers can be caught at any size. Portals connect the worlds and keep your progress.</p><p>City: T tunnel → farm. D dock → ocean. Rocket → Moon. On the Moon, H marks the laser habitat, UFO FLY launches orbital flight, and L is the return lander. Farm B marks the barn shooting gallery.</p><p>Tap targets in shooting games. Use Return to leave and keep bonuses. Sound mutes all audio; Music and Radio have separate controls. Flights can be skipped.</p><p class="archive-credit">Historic radio: NASA Apollo/Gemini archives. Independent game; no NASA endorsement.</p></details></div></div></div><video id="moon-launch-video" src="munch-asset-9f14d326e95356e096b181c8.mp3" muted playsinline preload="auto" style="display:none" aria-hidden="true"></video><!-- Three.js, Copyright 2010-2021 Three.js Authors
+</style><style>.winter-title{margin:0 auto 8px;text-align:center;color:#fff2b9;font:900 clamp(25px,4vw,46px)/1 system-ui;text-shadow:0 3px 4px #123454,0 0 14px #17374a}.winter-title span{display:block;font-size:clamp(10px,1.2vw,15px);letter-spacing:.2em;color:#e6f9ff;margin-top:5px}.ginger-mascot img{width:58px;height:58px;object-fit:contain;filter:drop-shadow(0 3px 3px #0008)}.holiday-card{display:flex;text-decoration:none;text-align:left;color:#fff;background:#593d32;border:1px solid #e7c982;border-radius:10px;padding:12px;gap:10px;align-items:center}.holiday-card span:not(.world-icon){flex:1}.holiday-card small,.holiday-card strong,.holiday-card em{display:block}.holiday-card small{font-size:10px;color:#f8dca5}.holiday-card strong{font-size:12px}.holiday-card em{font-size:10px;color:#e5d7c7}#vehicle-open{position:fixed;top:116px;left:12px;z-index:11;font-size:13px;padding:9px;background:#285c72;border:2px solid #ffe39a;color:white}#vehicle-dialog{width:min(650px,90vw);max-height:85dvh;overflow:auto;background:#123749;color:#fff5da;border:3px solid #ffd879;border-radius:18px;padding:18px}#vehicle-dialog::backdrop{background:#06131ddd}#vehicle-dialog h2{margin:0;color:#ffe39a}#vehicle-choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:8px;margin:14px 0}#vehicle-choices button{background:#286075;border:2px solid #8bc3c9;color:white;padding:13px;font-size:15px}#vehicle-choices button[aria-pressed=true]{border-color:#ffdc63;background:#7b5b23}@media(max-width:700px){#vehicle-open{top:115px;font-size:11px}.winter-title{font-size:25px}.world-menu{max-height:58dvh;overflow:auto}}</style><div id="biome-guide" style="position:absolute;top:150px;left:50%;transform:translateX(-50%);background:#173d54dd;padding:6px 12px;border-radius:12px;font-size:11px;text-align:center;pointer-events:none;max-width:80vw;color:#ffe3a3"></div><style>#garage-open{position:fixed;left:14px;bottom:14px;z-index:10;padding:9px 12px;background:#23495bde;border-color:#f4ce72;color:#fff0bd;font-size:13px}footer{justify-content:flex-end;padding-left:155px}footer>div:last-child{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:4px}#mission-garage{width:min(720px,94vw);max-height:88dvh;overflow:auto;background:#102c3c;color:#f4f0d8;border:3px solid #d5b66e;border-radius:18px;padding:20px}#mission-garage::backdrop{background:#06131ddd}#mission-garage h2{margin:0;color:#ffdb80;font-size:26px}#garage-total{color:#bfe2d5;margin:5px 0 14px}#garage-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.mission-card{display:flex;gap:10px;background:#1b4050;border:1px solid #5d7e7a;border-radius:12px;padding:12px}.mission-card.earned{border-color:#eac967;background:#354c3e}.mission-badge{font-size:28px}.mission-card h3{font-size:14px;margin:0 0 5px;color:#ffe5a2}.mission-card p{font-size:12px;line-height:1.35;margin:0 0 7px;color:#d5e3d8}.mission-card strong{font-size:12px;color:#fff1c0}.mission-card .mission-clue{margin:6px 0 0;color:#aee1d4}#garage-close{margin-top:14px;background:#5a693f}@media(max-width:600px){#garage-list{grid-template-columns:1fr}#garage-open{left:8px;bottom:10px;font-size:11px;padding:8px}footer{padding-left:130px}}</style><button id="garage-open" aria-label="Open missions and trophy garage">🏆 Missions & Garage</button><dialog id="mission-garage" aria-labelledby="garage-title"><h2 id="garage-title">🏆 Vik’s Trophy Garage</h2><p id="garage-total"></p><p>Find the glowing surprises in each world. Your trophies are saved on this device.</p><div id="garage-list"></div><button id="garage-close">Back to the game</button></dialog><video id="real-launch" src="moon-launch.mp4" muted playsinline preload="auto" style="display:none" aria-hidden="true"></video><video id="real-orbit" src="nasa-orbit.mp4" muted playsinline preload="auto" style="display:none" aria-hidden="true"></video><video id="real-landing" src="apollo-landing.mp4" muted playsinline preload="auto" style="display:none" aria-hidden="true"></video><canvas id="c"></canvas><img id="blast-art" alt="" style="display:none"><header><div><h1>Viktor's Monster Munch</h1><small>CITY MAYHEM · Chomp. Grow. Explore.</small><small id="version" style="display:block">v1.7.0</small></div><div id="stats"><span id="level">Little Chomper</span><br><span id="count">0 munches</span><div id="champion" style="color:#ffdd65;font-size:13px;margin-top:5px">HIGH SCORE · Connecting…</div><div id="chase-clock" style="font-size:12px;color:#ffdd65">☢ First chase in 3:00</div><div id="mode-status" style="font-size:12px;color:#ffdd65"></div><div id="streak" style="font-size:12px;color:#ffdd65"></div><div id="rocket-status" style="font-size:12px;color:#d5edf2"></div><div id="bar"><div id="fill"></div></div></div></header><div id="toast"></div><div id="bomb-warning" role="status" style="position:absolute;top:165px;left:8px;right:8px;text-align:center;color:#fff4ad;background:#812e29e8;border-radius:8px;font-weight:900;font-size:clamp(12px,2vw,18px);pointer-events:none"></div><footer><div id="hint">Drag anywhere to drive.<br>Snails pop and shrink you! 🐌</div><div><button id="barn-play" style="display:none">★ Enter Big Barn</button> <button id="barn-reload" style="display:none">↻ Reload</button> <button id="barn-again" style="display:none">★ Play Again</button> <button id="ufo-flight" style="display:none">🛸 UFO FLY</button> <button id="moon-board" style="display:none;background:#d6b96e;color:#24384b">🚀 Launch to Moon</button> <button id="radio" style="display:none">Radio: on</button> <button id="space-music" style="display:none">♪ Music: on</button> <button id="sled-finish" style="display:none">Finish sled ride</button><button id="sound">Sound: off</button> <button id="reset">↻ Restart</button></div></footer><div id="trip-hud" role="region" aria-label="Moon flight controls" style="display:none"><div class="trip-copy"><span id="trip-route"></span><strong id="trip-phase"></strong><div class="trip-track"><div id="trip-fill"></div></div></div><div class="trip-actions"><button id="trip-sound">Sound: off</button><button id="trip-skip">Skip Flight ›</button></div></div><div id="cover"><img id="opening-art" src="munch-asset-7d3c7b53cc070e1ced12a356.png" alt="Viktor smiling from a snow-camouflage tank on a snowy alpine road."><h1 class="winter-title brand-art"><span class="brand-name">Viktor’s Monster Munch</span><img id="viktor-wordmark" src="munch-asset-4fd20f013e68f7a720b61cb8.png" alt="Viktor's Monster Munch"><span class="winter-edition">WINTER EDITION</span></h1><div class="world-menu"><h2 class="menu-sr">Viktor's Monster Munch — choose your world</h2><div class="world-select"><button id="play" class="world-card city-card"><span class="world-icon" aria-hidden="true">🚛</span><span><small>01 · THE CITY</small><strong>City</strong><em>Collect, munch & grow</em></span><b aria-hidden="true">›</b></button><button id="farm-play" class="world-card farm-card"><span class="world-icon" aria-hidden="true">🚜</span><span><small>02 · THE FARM</small><strong>Farm</strong><em>Tractors & barn adventures</em></span><b aria-hidden="true">›</b></button><button id="ocean-play" class="world-card ocean-card"><span class="world-icon" aria-hidden="true">⚓</span><span><small>03 · THE OCEAN</small><strong>Ocean</strong><em>Explore the harbor</em></span><b aria-hidden="true">›</b></button><button id="moon-play" class="world-card moon-card"><span class="world-icon" aria-hidden="true">🚀</span><span><small>04 · THE MOON</small><strong>Moon</strong><em>Launch into space</em></span><b aria-hidden="true">›</b></button><button id="snow-play" class="world-card snow-card"><span class="world-icon" aria-hidden="true">🏔️</span><span><small>05 · SNOW SUMMIT</small><strong>Snow Summit</strong><em>Snow, sleds & mountain roads</em></span><b aria-hidden="true">›</b></button><a class="world-card holiday-card" href="turkey-munch.html?play=1"><span class="world-icon">🦃</span><span><small>06 · THANKSGIVING</small><strong>Turkey Munch</strong><em>A turkey adventure</em></span><b>›</b></a><a class="world-card holiday-card" href="gingerbread-munch.html?play=1"><span class="world-icon ginger-mascot"><img alt="" src="munch-asset-cdae33a84a81d98fcde6e2f8.png"></span><span><small>07 · HOLIDAY</small><strong>Gingerbread Land</strong><em>Explore the cookie world</em></span><b>›</b></a><a id="alphabet-play" class="world-card alphabet-card" href="alphabet-munch.html?play=1" aria-labelledby="alphabet-world-name" aria-describedby="alphabet-world-description"><span class="world-icon" aria-hidden="true">Aa</span><span><strong id="alphabet-world-name">Alphabet Yard</strong><em id="alphabet-world-description">Tow letters to spell</em></span><b aria-hidden="true">›</b></a></div><div class="menu-bottom"><button id="menu-audio">♫ AUDIO ON</button><span>Choose your world · Drag or arrows to drive</span><details><summary>HOW TO PLAY</summary><p>Collect smaller objects to grow. Ordinary monsters need MEGA; bomb carriers can be caught at any size. Portals connect the worlds and keep your progress.</p><p>City: T tunnel → farm. D dock → ocean. Rocket → Moon. On the Moon, H marks the laser habitat, UFO FLY launches orbital flight, and L is the return lander. Farm B marks the barn shooting gallery.</p><p>Tap targets in shooting games. Use Return to leave and keep bonuses. Sound mutes all audio; Music and Radio have separate controls. Flights can be skipped.</p><p class="archive-credit">Historic radio: NASA Apollo/Gemini archives. Independent game; no NASA endorsement.</p></details></div></div></div><video id="moon-launch-video" src="munch-asset-9f14d326e95356e096b181c8.mp3" muted playsinline preload="auto" style="display:none" aria-hidden="true"></video><!-- Three.js, Copyright 2010-2021 Three.js Authors
 
 MIT License
 
@@ -92,7 +92,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 // Bump GAME_VERSION and CHANGELOG.md for every update.
 const GAME_VERSION='1.52.0';
 document.querySelector('#version').textContent='v'+GAME_VERSION;
-const c=document.querySelector('#c'),g=c.getContext('2d');let W,H,dpr;function resize(){dpr=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;g.setTransform(dpr,0,0,dpr,0,0)}addEventListener('resize',resize);resize();const world=3120, block=520, roads=[260,780,1300,1820,2340,2860];function wrap(v){return ((v%world)+world)%world}function delta(a,b){return wrap(a-b+world/2)-world/2}let player,objects,particles,score,stage,munches,started=false,target=null,keys={},muted=true,audio,boostUntil=0,toastTime=0,gas=[],gasClock=0,hurtUntil=0,roamClock=0,musicNext=0,train=null,beastRespawn=null;const stages=[['Little Chomper',0,23],['Pickup Gobbler',8,32],['Bus Cruncher',20,44],['Building Biter',38,60],['MEGA MONSTER!',62,83]];function rnd(a,b){return a+Math.random()*(b-a)}function spawnCar(i=0){let vertical=Math.random()<.5;let road=roads[Math.floor(rnd(0,roads.length))];return {x:vertical?road+19:rnd(60,world-60),y:vertical?rnd(60,world-60):road-19,type:i<95?0:i<125?1:2,a:vertical?0:Math.PI/2,v:rnd(15,30),color:['#ec6870','#ffd264','#66bce4','#bb91e8'][i%4]}}
+const c=document.querySelector('#c'),g=c.getContext('2d');let W,H,dpr;function resize(){dpr=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;g.setTransform(dpr,0,0,dpr,0,0)}addEventListener('resize',resize);resize();const world=3120, block=520, roads=[260,780,1300,1820,2340,2860];function wrap(v){return ((v%world)+world)%world}function delta(a,b){return wrap(a-b+world/2)-world/2}let player,objects,particles,score,stage,munches,started=false,target=null,keys={},muted=true,audio,boostUntil=0,toastTime=0,gas=[],gasClock=0,hurtUntil=0,roamClock=0,musicNext=0,train=null,beastRespawn=null;let bigDogEarned=false;
+function playBigDogOnGrowth(){
+  if(bigDogEarned||stage!==stages.length-2)return;
+  bigDogEarned=true;
+  if(muted)return;
+  try{const sound=new Audio("data:audio/wav;base64,UklGRtKeAABXQVZFZm10IBAAAAABAAEAIlYAAESsAAACABAATElTVBoAAABJTkZPSVNGVA0AAABMYXZmNjEuNy4xMDAAAGRhdGGMngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAQAAAP///////wEAAgACAAEAAQAAAP7//f/+/wAAAgACAAEAAAD/////AQABAAEAAQABAAEAAAD//wAAAAAAAAAA/////wAAAQACAAEAAQD///3//f/+/wAAAwAEAAMAAAD+//7//v8AAAMAAwABAP///v/+///////////////+//7/AQAEAAQAAQD+//7//v/+/wAAAgAEAAQAAQD+//z//f///wEAAwADAAEA/f/7//3///8BAAMAAwACAAAA/v/+/wAAAgACAP7//P/9/wEABQAGAAMA/v/7//v//f8AAAMABQAEAP//+//7////AwAFAAQAAgABAAEAAgAAAP7//v///wAA//8AAAAA///+//7/AQACAAAA/v/+/wAAAgAEAAIA/v/7//v///8FAAgABQD///n/9v/5/wAABgAGAAIA/v/7//z///8CAAMAAQD/////AQACAAEA/////wAA///+////AAD+//z//f////7//f/8//7/AgAIAAgAAgD7//j//P8CAAcABwAGAAEA+v/2//j///8GAAkABQD+//n//P8CAAQAAgD9//v//P///wQABwAIAAYA///5//n//f8CAAcABwACAPv/9v/3//7/BQAIAAYAAwAAAPz/9//4////CAAKAAYAAgABAAIAAQAAAAIAAAD7//f/+f8AAAYABwADAP7/+P/0//n/AwAJAAwACgADAPz/+P/4//v///8EAAYAAwD///7///8BAAEA/f/8//7////9//7/BAAHAAMA/f/6//z/AQAIAAsABwD///r/+f/6//r//v8FAAoABwABAPz/+v/8/wAABAAFAAIAAAAAAAIABAAFAAIA/v/+/////f/7//7/BQAKAAsABgD9//b/9v/8/wQACgALAAQA+v/1//r/BQAMAAsABgABAPz/9v/2//z/AwAEAAAA+f/5/wAABgAHAAIA/P/4//j/+v///wgACwAGAP3/+P/6/wIACQAKAAYA/v/2//T/+P8AAAcACwAHAP//+f/4//z/AgAFAAYABAD+//j/+P/9/wUACwAMAAMA+v/3//r//P8AAAIAAAD+//3/AAAGAAoABwD9//L/7P/u//z/CgAXABwADwD6//H/9f/+/wQAAAD6//n/+//8/wEACgAOAAYA9v/o/+r/+/8KAA4ADQALAAYA+v/v//L///8KAA8ACQD8//b//v8MAAwA///y//D/9f/7/wIABwAKAAkA///1//b//v8GAAkAAgD2//L/9P/6/wMACwAPAA4ABgD4//P/+P/+/wAA/f/7//z//v/+/wAABgAJAAQA+v/z//f/AAAGAAYAAwAAAP//AwALABAACgD8/+7/5//s//z/EAAeAB4AEQAAAPD/6v/1/wYACwADAPj/9v8BAA4AEQAKAAMA+//2//L/8f/6/wsAFgAOAP7/+f8DABEAFAAKAPn/7v/v//n/BAANAA4AAQD2//X/+v8BAAcACAAGAAMAAQABAAIAAwAFAAYAAgD7//X/+f8EAA8AEgALAAIA/P/6//j/9//6/wAABQAKAAwACgADAP7/+//8//7/AAAEAAoADgAKAAAA9//0//j///8FAAwADAAEAPf/7f/q//X/CQAYABYACAD8//X/9P/2//j/+//6//r/BAASABkAEQD+/+3/5v/m/+//AgAVAB0AFAABAPP/8f/6/wMABgD+//H/6v/1/wsAGQAUAAIA9P/t/+z/+P8LABsAHgAPAPb/4//k//T/BQALAAYA///6//j/+/8AAAEA/f/8/////v/5//v/BQALAAcA+f/t/+7/+/8JABEAEAAGAPX/5//p//b/BAAMAAsAAwD4//H/9P8DABIAFQAJAPL/2//P/+X/DgAwADYAFwDt/9D/0P/r/wYAEwAYABMAAQDt/+j/9v8IAAcA8P/e/+T/+P8LABgAGgALAPL/4v/h/+3/AQAUABgADgD9/+7/7f/7/wUA/f/u/+j/8v8FABcAGQAKAPv/8P/k/9//7P8FAB8ALgAjAAEA3v/O/93/+f8OABIACAD9//v/+P/z//b//v8HAA4AEgARAA0A/v/u//H/BQAMAP3/8P/2/wYADAAKAAsACwAFAPr/8v/x//b/AwATABsAGAAMAAEA//8DAAQA/v/4//n/AAADAAYABgAAAP//AwAEAAAAAAALABMACQD6//T/+/8IABQAEAD8/+7/8P8AABQAHAAZABQACwD8//H/8P/4/wUAEQAWABAABwADAP//+P/1//r/BAARAB0AHwASAAAA9v/4/wEADAAPAAcA+//5/wUAEgAXABUADgAAAPf/+/8GAAoACQAFAAEA+//0//j/CQATAAwA///8/wAABgAJAAkABgABAP//AwAHAAQAAgAGAAsABQD0/+j/7v8CABMAFAABAO3/6//3/wYAEgAYABYADQADAPz/+P/4//7/CAANAAYA+P/w//T/AgANAA0A///v/+r/9f8FAAoAAwD7//b/9v/+/wYACAAFAAQAAAD3//D/8v/8/wEA/P/2//b/+v///wIAAAD8//n/+////wEAAAD9//r/+//6//j/9//2//X/9f/4//z/AAAGAAoACAAAAPn/9v/4//7////6//P/8f/3/wEABQACAPv/9P/z//v/CAANAAgA///7//v/+v/6////AQD+//n/9v/3/wEADAALAPz/6//i/+n//P8NABUAEQABAPT/8P/5/wYACgD///D/7//7/wgABgD3/+n/6//4/wcAEAAKAPz/8f/t//L//f8EAAMA/v/5//n//v8EAAkABgD7//L/8//6//7//v/9////AQADAAYACAACAPj/9P/4////BQAMAA4ABwD8//X/9P/1//f//P8FAAsAEQAZABkAEgAJAPz/7//u//j/AwAKAAwADAALAAkABwADAPv/8f/s//b/DAAjACsAGQACAPr/AQANABAABwD+//z///8BAAYAEAAYABMACQACAPn/8////xUAGAADAPD/8v8IAB8ALQAlAAUA6f/p/wMAHQAkAB8AGwAVAAgA+//z//P/+v8EAAoACwAJAAcACwASABUADgD+//L/9P/+/wYACAAIAAkACgAKAA4AEAAOAA0ACwAHAAIA+//z/+//8f/3/wEABwACAPb/5v/h//n/GgAjABAA9P/p//D/+v/+/////f/+//3/8//r//X/DgAfABsACgD8//X/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2P/L/9X/7/8KABoAFwAIAPb/7v/x//r/AAABAP3/9P/t/+v/8v/9/wcACQAEAAIADAAZAB8AHwAZAAoA+v/z//T//f8OAB0AHgAQAP7/9P/4/wcAFgAgABwADAD8//D/6v/p/+//+v8GAA4AEAALAAYABQAJAAkA/P/l/9f/3f/y/wkAHAAjABcAAgD2//v/CwAXABUABgD1/+v/7v8CABoAIQAWAAYA/v8CAAkADAALAAMA8//l/+b/9/8IAA8ACwADAPr/9v/6/wIABwAEAP7/9f/v//H/+f8EAA4AEAAQABQAEwALAAMA/f/5//7/BQAIAAcACgARABIACwACAP3//f8BAAMAAAD9//r/9f/v//L///8QABcAEAAGAP7/+v/3//b/9v/3//n/+v/9/wEAAQD7//j/+P/7/wMADQAVABYADwADAPr/9//2//b/+v8BAAcACAAGAAUABAAAAPv/9v/z//X/+f/+/wQACgAMAAkAAgD8//j/9v/4//r/+//7//n/9v/4//7/BAALABAADwAEAPn/9f/6/wEABQABAPj/9f/7/wEABQAHAAcAAAD4//T/+P8BAAYABQD+//f/8f/y//n/AQAGAAUA/f/z/+7/8P/6/wYADgALAAEA9//2//v/AAAAAP/////9//n/+v8AAAkADAAHAP7/+v/+/wQABQABAP///v/+//3//f8AAAYABgACAPz/+P/2//b/9//7/wAAAgAEAAMA///9////AwADAAAA/f/8//7/AQAAAP7///8BAAEA/////wQABwAIAAcABQABAP7//f/+/wAAAgAFAAUAAgD///7/AAADAAYABwAEAP7/+v/7////AwAGAAcABQACAAEAAwAFAAUAAgD///7//v/9//3//v8AAAMABAAFAAcABwAFAAQAAwD///r/9v/3//v/AAAFAAoADAAIAAAA+//8/wIABgACAPz/+f/6//7/AgADAAIAAQD///7//v8BAAQAAwD+//v//P8AAAMAAwACAAAAAAACAAIAAAD9//z//f8AAAMABQAGAAQA/v/4//n///8EAAUAAQD8//r/+//9/wEAAwADAAAA/v///wMABgAFAP//9//y//P/+/8EAAkACgAIAAQAAQD//wAAAgAEAAEA/f/8////AQABAP//AAABAAIAAQD//wAAAQABAAAA/v/+//7//v///wAAAQABAAEAAQAAAAAAAQACAAIAAQD+//z//P8AAAIAAgABAAEAAgACAP///f/8//3///8CAAIAAgADAAIA///9//3///8CAAMAAgAAAAEAAQABAP///v/+//7///8AAAEAAQABAAEAAAAAAP/////+//3//f/+/wAAAgADAAIAAAAAAAAA///////////+//7///8AAAAAAAD/////AAACAAIAAQD+//z/+//8//7///8AAAEAAgABAAAAAAAAAAAA/v/9//3//v///wAAAAAAAAAA///+////AAABAAIAAQAAAAAAAAABAAEAAQAAAP//////////AQACAAIAAAD+//7///8AAAEAAgACAAIAAAD+//7///8AAAEAAQABAAEAAQAAAAAA//8AAAAAAAD///////8AAAEAAQABAAEAAQABAAEAAAAAAAEAAAAAAP///////wAAAgADAAIAAQAAAAAAAAAAAAEAAQABAP///v///wEAAgACAAEAAAD+////AAACAAIAAQAAAAAA//8AAAAAAAAAAP7//v///wAAAgACAAEAAAD/////AAABAAEAAQD///7//v///wAAAQABAAEAAAABAAEAAQAAAAAA///+//3//v///wEAAQABAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAP///////wAAAAAAAAAAAAD//wAAAAAAAAAA////////AAABAAIAAgABAAAA///+/////////wAAAAAAAAAAAAAAAAAAAAD//////////wAAAAAAAAAAAAD/////AAABAAAAAAD///////8AAAAAAAABAAAAAAD//wAAAAABAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==");sound.volume=.68;sound.play().catch(()=>{});}catch{}
+}
+const stages=[['Little Chomper',0,23],['Pickup Gobbler',8,32],['Bus Cruncher',20,44],['Building Biter',38,60],['MEGA MONSTER!',62,83]];function rnd(a,b){return a+Math.random()*(b-a)}function spawnCar(i=0){let vertical=Math.random()<.5;let road=roads[Math.floor(rnd(0,roads.length))];return {x:vertical?road+19:rnd(60,world-60),y:vertical?rnd(60,world-60):road-19,type:i<95?0:i<125?1:2,a:vertical?0:Math.PI/2,v:rnd(15,30),color:['#ec6870','#ffd264','#66bce4','#bb91e8'][i%4]}}
 function initMap(){resetWormholes();resetRocket();resetExtras();beastRespawn=null;train={x:-100,y:1670,cars:7,next:0,bounceUntil:0};boostUntil=0;hurtUntil=0;roamClock=0;gas=[];gasClock=0;player={x:1300,y:1300,a:0};objects=[];particles=[];score=0;munches=0;stage=0;target=null;for(let i=0;i<150;i++)objects.push(spawnCar(i));for(let cx=520;cx<world+1;cx+=block)for(let cy=520;cy<world+1;cy+=block){let colors=['#e8a06d','#76b9b2','#b39ace','#e4c174'],xOff=130,yOff=136;for(let sx of [-1,1])for(let sy of [-1,1])objects.push({x:wrap(cx+sx*xOff),y:wrap(cy+sy*yOff),type:4,a:0,color:colors[(cx/520*3+cy/520*2+(sx>0?1:0)+(sy>0?2:0))%colors.length|0]});for(let sx of [-1,1])for(let sy of [-1,1])objects.push({x:wrap(cx+sx*207),y:wrap(cy+sy*205),type:3,a:0})}for(let x=520;x<world+1;x+=block)for(let y=520;y<world+1;y+=block){let items=[[12,-126,-8],[13,126,-8],[14,0,-137],[15,-15,90],[16,0,170]];for(let [type,dx,dy] of items){let yy=wrap(y+dy);if(Math.abs(delta(yy,1670))>105)objects.push({type,x:wrap(x+dx),y:yy,a:0,phase:rnd(0,7)})}}for(let i=0;i<2;i++)objects.push({x:1500+i*550,y:1300-i*550,type:6,a:0,v:75});for(let i=0;i<65;i++)objects.push({x:rnd(150,world-150),y:rnd(150,world-150),type:5,a:0,v:0,emoji:['🐈','🐕','🚶'][i%3]});for(let i=0;i<4;i++)objects.push({x:500+i*650,y:700+(i%2)*1400,type:7,a:0,phase:rnd(0,7)});objects.push(beast());for(let i=0;i<14;i++)objects.push(spawnSnail(i));for(let x=520;x<world+1;x+=block)for(let y=520;y<world+1;y+=block)objects.push({x:wrap(x+180),y:wrap(y+170),type:9,a:0});for(let rx of roads)for(let side of [-1,1])objects.push({x:rx+side*61,y:1670,type:10,a:0,side});objects=objects.filter(o=>!([3,4,9].includes(o.type)&&Math.abs(delta(o.y,1670))<125));objects=objects.filter(o=>!([3,4,9,12,13,14,15,16].includes(o.type)&&Math.abs(delta(o.x,spacePark.x))<235&&Math.abs(delta(o.y,spacePark.y))<235));objects=objects.filter(o=>!([3,4,9,12,13,14,15,16].includes(o.type)&&Math.hypot(delta(o.x,farmTunnel.x),delta(o.y,farmTunnel.y))<155));spawnGolden();updateUI()}
 
 let goldenClock=0,streak=0,streakUntil=0,bonusPoints=0,surprises=[];
@@ -275,7 +282,7 @@ function drawWormholeMap(x,y,scale){if(cityRuined)return;for(let p of wormholes)
 // Farm extension: shares the existing gameplay and collision rules.
 let currentBiome='city',biomeMaps={},tunnelLocked=false,tunnelNotice=0;
 const farmTunnel={x:780,y:260};
-function init(){currentBiome='city';biomeMaps={};tunnelLocked=false;initMap();updateBiomeHUD()}
+function init(){bigDogEarned=false;currentBiome='city';biomeMaps={};tunnelLocked=false;initMap();updateBiomeHUD()}
 function updateBiomeHUD(){document.querySelector('header small').textContent=currentBiome==='farm'?'SUNNY ACRES FARM · Chomp. Grow. Cluck!':'CITY MAYHEM · Chomp. Grow. Explore!';document.querySelector('#biome-guide').textContent=currentBiome==='farm'?'FARM · Tunnel to city: north, orange T on map':'CITY · Tunnel to farm: north, orange T on map'}
 function tickTunnel(t){
  let d=Math.hypot(delta(player.x,farmTunnel.x),delta(player.y,farmTunnel.y));
@@ -690,7 +697,7 @@ function driveGround(dt,t){if(motionBiome!==currentBiome){groundSpeed=0;groundSt
 if(snowEffects)snowEffects.advance(dt);
 if(!houseBlocked(x,player.y))player.x=x;else{if(snowEffects)snowEffects.hitBank(x,player.y,groundSpeed);groundSpeed*=.5;}
 if(!houseBlocked(player.x,y))player.y=y;else{if(snowEffects)snowEffects.hitBank(player.x,y,groundSpeed);groundSpeed*=.5;}
-if(snowEffects)snowEffects.recordTracks(oldX,oldY);
+if(snowEffects){snowEffects.recordTracks(oldX,oldY);window.vikSnowRescue?.tick(t,{x:oldX,y:oldY});}
 tickTunnel(t);tickWormholes(dt,t);tickWater(dt,groundSpeed>10);groundDustClock+=dt;if(currentBiome==='farm'&&groundSpeed>70&&groundDustClock>.09){groundDustClock=0;let scale=stages[stage][2]/23;for(let side of [-1,1])groundDust.push({x:wrap(player.x-Math.sin(player.a)*34*scale+Math.cos(player.a)*side*18*scale),y:wrap(player.y+Math.cos(player.a)*34*scale+Math.sin(player.a)*side*18*scale),life:.75,r:4*scale})}for(let p of groundDust){p.life-=dt;p.r+=dt*17}groundDust=groundDust.filter(p=>p.life>0).slice(-70)}
 function drawGroundDust(){if(currentBiome!=='farm')return;g.save();for(let p of groundDust){g.globalAlpha=p.life*.3;farmEllipse(player.x+delta(p.x,player.x),player.y+delta(p.y,player.y),p.r,p.r*.6,'#d5c29a')}g.restore()}
 function drawCityGround(){g.fillStyle='#a8bc98';g.fillRect(0,0,world,world);for(let d of cityDistricts){round(d.x-d.w/2-14,d.y-d.h/2-14,d.w+28,d.h+28,20,d.kind==='downtown'||d.kind==='depot'?'#b7b9aa':'#90b291');round(d.x-d.w/2,d.y-d.h/2,d.w,d.h,16,d.kind==='play'?'#d7bd8e':d.kind==='school'?'#c8c5a8':d.kind==='downtown'?'#d2c9b1':d.kind==='park'||d.kind==='civic'?'#91b282':'#b4bf9f');if(d.kind==='play'){round(d.x-185,d.y-145,370,285,34,'#d6b78d');round(d.x-160,d.y+45,320,98,25,'#b8ad86');g.strokeStyle='#b39068';g.lineWidth=2;g.strokeRect(d.x-180,d.y-141,360,280)}if(d.kind==='school'){round(d.x+65,d.y+45,120,80,4,'#8ea399');g.strokeStyle='#e8e2c4';g.lineWidth=2;g.strokeRect(d.x+71,d.y+51,108,68);g.beginPath();g.arc(d.x+125,d.y+85,21,0,7);g.moveTo(d.x+71,d.y+85);g.lineTo(d.x+179,d.y+85);g.stroke()}if(['park','civic'].includes(d.kind)){g.strokeStyle='#d6cdb0';g.lineWidth=20;g.beginPath();g.moveTo(d.x-d.w/2,d.y+d.h*.25);g.bezierCurveTo(d.x-70,d.y-50,d.x+75,d.y+45,d.x+d.w/2,d.y-d.h*.25);g.stroke()}}
@@ -732,7 +739,7 @@ const polishInitLate=initMap;initMap=function(){polishInitLate();if(currentBiome
 function updateUfoButton(){let b=document.querySelector('#ufo-flight');if(!b)return;let show=!!ufoFlight||(currentBiome==='moon'&&started&&!cityRuined&&!lunarTransit&&!flight);b.style.display=show?'inline-block':'none';b.textContent=ufoFlight?'↩ Return to Base':'🛸 UFO FLY';b.disabled=!ufoFlight&&!!bombCarrier;b.style.background=ufoFlight?'#e3c47c':'#557b91';b.style.color=ufoFlight?'#243b51':'#f2e9ce'}
 function spawnUfoWave(){let f=ufoFlight;if(!f)return;f.foes=[];let cols=W<650?6:8,rows=Math.min(5,3+Math.floor((f.wave-1)/2));for(let row=0;row<rows;row++)for(let col=0;col<cols;col++)f.foes.push({row,col,cols,alive:true,hp:row===0&&f.wave>1?2:1,kind:row%3,phase:col*.8+row,dive:null});f.nextDive=2;f.nextEnemyShot=1.5;f.waveDelay=0}
 function enterUfo(){if(ufoFlight||currentBiome!=='moon'||!started||cityRuined||bombCarrier||lunarTransit||flight)return false;stopRadio();stopMoonAudio();stopMarineAudio();stopDoomMusic();keys={};target=null;moonSpeed=0;ufoBayLock=true;ufoFlight={elapsed:0,last:0,startTime:performance.now(),ship:{x:W/2,y:H*.83},target:null,health:3,invulnerable:1.8,wave:1,points:0,kills:0,bullets:[],enemyBullets:[],bursts:[],foes:[],radioClock:2,radioTurn:0,shotClock:0,shotSerial:0,hitFlash:0,waveDelay:0};spawnUfoWave();updateUfoHud();return true}
-function leaveUfo(hit=false){let f=ufoFlight;if(!f)return;stopRadio();let paused=Math.max(0,performance.now()-f.startTime);ufoFlight=null;munches+=f.kills;bonusPoints+=f.points;score+=f.kills*.3;while(stage<4&&score>=stages[stage+1][1])stage++;for(let name of ['boostUntil','hurtUntil','streakUntil','toastTime']){if(name==='boostUntil'&&boostUntil)boostUntil+=paused;if(name==='hurtUntil'&&hurtUntil)hurtUntil+=paused;if(name==='streakUntil'&&streakUntil)streakUntil+=paused;if(name==='toastTime'&&toastTime)toastTime+=paused}if(train.next)train.next+=paused;if(train.bounceUntil)train.bounceUntil+=paused;document.querySelector('#chase-clock').style.display='';keys={};target=null;moonSpeed=0;moonRadioClock=10;ufoBayLock=true;updateUI();updateBiomeHUD();updateUfoButton();announce((hit?'SHIELDS LOW · BACK TO BASE!':'BACK TO THE ROVER!')+' +'+f.points+' bonus',performance.now(),2600)}
+function leaveUfo(hit=false){let f=ufoFlight;if(!f)return;stopRadio();let paused=Math.max(0,performance.now()-f.startTime);ufoFlight=null;munches+=f.kills;bonusPoints+=f.points;score+=f.kills*.3;while(stage<4&&score>=stages[stage+1][1]){stage++;playBigDogOnGrowth();}for(let name of ['boostUntil','hurtUntil','streakUntil','toastTime']){if(name==='boostUntil'&&boostUntil)boostUntil+=paused;if(name==='hurtUntil'&&hurtUntil)hurtUntil+=paused;if(name==='streakUntil'&&streakUntil)streakUntil+=paused;if(name==='toastTime'&&toastTime)toastTime+=paused}if(train.next)train.next+=paused;if(train.bounceUntil)train.bounceUntil+=paused;document.querySelector('#chase-clock').style.display='';keys={};target=null;moonSpeed=0;moonRadioClock=10;ufoBayLock=true;updateUI();updateBiomeHUD();updateUfoButton();announce((hit?'SHIELDS LOW · BACK TO BASE!':'BACK TO THE ROVER!')+' +'+f.points+' bonus',performance.now(),2600)}
 function updateUfoHud(){let f=ufoFlight;if(!f){updateUfoButton();return}document.querySelector('header small').textContent='LUNAR ORBIT · UFO FLIGHT';document.querySelector('#level').textContent='UFO FLY · WAVE '+f.wave;document.querySelector('#count').textContent=f.kills+' targets';document.querySelector('#streak').textContent=f.points+' flight bonus';document.querySelector('#mode-status').textContent=f.waveDelay>0?'WAVE CLEAR!':'Auto-fire · Drag or use arrow keys';document.querySelector('#rocket-status').textContent='SHIELDS '+Array(Math.max(0,f.health)).fill('●').join(' ');document.querySelector('#chase-clock').style.display='none';document.querySelector('#moon-board').style.display='none';updateRadioButton();document.querySelector('#hint').textContent='Drag or arrows to fly.\nAuto-fire is on. Return anytime.';document.querySelector('#fill').style.width=(f.health/3*100)+'%';document.querySelector('#toast').textContent='';updateUfoButton()}
 function foePosition(e,f){let spacing=Math.min(65,W*.105),x=W/2+(e.col-(e.cols-1)/2)*spacing+Math.sin(f.elapsed*.65)*W*.07,y=H*.16+e.row*Math.min(48,H*.07)+Math.sin(f.elapsed*1.4+e.col)*4;if(e.dive){let u=Math.min(1,e.dive.age/3.7);x=e.dive.x+(e.dive.target-e.dive.x)*Math.sin(u*Math.PI)+Math.sin(u*Math.PI*2)*W*.13;y=e.dive.y+Math.sin(u*Math.PI)*H*.67}return {x,y}}
 function ufoBurst(x,y,color,count=12){let f=ufoFlight;if(!f)return;for(let i=0;i<count;i++){let a=i/count*Math.PI*2;f.bursts.push({x,y,vx:Math.cos(a)*rnd(35,130),vy:Math.sin(a)*rnd(35,130),life:.6,max:.6,r:rnd(1.5,3.5),color})}}
@@ -768,7 +775,7 @@ const polishLocatorBefore=drawLocator;drawLocator=function(){if(currentBiome!=='
 const ratBarn={x:1050,y:2450};let barnGame=null,barnLock=false;
 function barnSound(kind){if(barnGame?.skin==='lunar'){laserGallerySound(kind);return}if(muted||document.hidden)return;try{audio ||=new(window.AudioContext||window.webkitAudioContext)();audio.resume();let now=audio.currentTime,o=audio.createOscillator(),v=audio.createGain();o.type=kind==='shot'?'sawtooth':'triangle';o.frequency.setValueAtTime(kind==='shot'?130:kind==='reload'?620:920,now);o.frequency.exponentialRampToValueAtTime(kind==='shot'?45:kind==='reload'?260:1300,now+.1);v.gain.setValueAtTime(.0001,now);v.gain.linearRampToValueAtTime(kind==='shot'?.045:.025,now+.005);v.gain.exponentialRampToValueAtTime(.0001,now+.13);o.connect(v).connect(audio.destination);o.onended=()=>{o.disconnect();v.disconnect()};o.start();o.stop(now+.15)}catch{}}
 function enterBarn(skin='barn'){if(barnGame||(skin==='lunar'?currentBiome!=='moon':currentBiome!=='farm')||!started||cityRuined||bombCarrier||flight||lunarTransit)return false;stopRadio();stopMoonAudio();stopMarineAudio();stopDoomMusic();keys={};target=null;groundSpeed=0;moonSpeed=0;barnLock=true;if(skin==='lunar')habitatLock=true;barnGame={skin,start:performance.now(),last:0,time:60,elapsed:0,ammo:6,reload:0,shotAge:10,cylinderTurn:0,cylinderTarget:0,gunAim:{x:W/2,y:H/2},cooldown:0,hits:0,shots:0,combo:0,points:0,next:.4,rats:[],puffs:[],aim:{x:W*.5,y:H*.5},recoil:0,done:false,serial:0};barnHud();return true}
-function leaveBarn(){let f=barnGame;if(!f)return;let paused=performance.now()-f.start;barnGame=null;bonusPoints+=f.points;munches+=f.hits;score+=f.hits*.2;while(stage<4&&score>=stages[stage+1][1])stage++;if(boostUntil)boostUntil+=paused;if(hurtUntil)hurtUntil+=paused;if(streakUntil)streakUntil+=paused;if(toastTime)toastTime+=paused;if(train.next)train.next+=paused;if(train.bounceUntil)train.bounceUntil+=paused;player.x=f.skin==='lunar'?alienHabitat.x:ratBarn.x;player.y=f.skin==='lunar'?alienHabitat.y+185:ratBarn.y+145;moonSpeed=0;if(f.skin==='lunar')habitatLock=true;keys={};target=null;groundSpeed=0;barnLock=true;document.querySelector('#chase-clock').style.display='';updateUI();updateBiomeHUD();updateBarnButton();announce((f.skin==='lunar'?'BACK TO THE MOON BASE! +':'BACK TO THE FARM! +')+f.points+(f.skin==='lunar'?' laser bonus':' barn bonus'),performance.now(),2600)}
+function leaveBarn(){let f=barnGame;if(!f)return;let paused=performance.now()-f.start;barnGame=null;bonusPoints+=f.points;munches+=f.hits;score+=f.hits*.2;while(stage<4&&score>=stages[stage+1][1]){stage++;playBigDogOnGrowth();}if(boostUntil)boostUntil+=paused;if(hurtUntil)hurtUntil+=paused;if(streakUntil)streakUntil+=paused;if(toastTime)toastTime+=paused;if(train.next)train.next+=paused;if(train.bounceUntil)train.bounceUntil+=paused;player.x=f.skin==='lunar'?alienHabitat.x:ratBarn.x;player.y=f.skin==='lunar'?alienHabitat.y+185:ratBarn.y+145;moonSpeed=0;if(f.skin==='lunar')habitatLock=true;keys={};target=null;groundSpeed=0;barnLock=true;document.querySelector('#chase-clock').style.display='';updateUI();updateBiomeHUD();updateBarnButton();announce((f.skin==='lunar'?'BACK TO THE MOON BASE! +':'BACK TO THE FARM! +')+f.points+(f.skin==='lunar'?' laser bonus':' barn bonus'),performance.now(),2600)}
 function reloadBarn(){let f=barnGame;if(!f||f.done||f.reload>0||f.ammo===6)return;f.reload=barnReloadDuration;barnSound('reload');barnHud()}
 function barnSlot(i){return {x:W*(.18+(i%3)*.32),y:H*(.32+Math.floor(i/3)*.22)}}
 function barnRatPos(r){let p=barnSlot(r.slot);if(r.hit)return {x:r.hitX??p.x,y:(r.hitY??p.y)+barnEase(r.age/.32)*65,visible:true};let rise=barnEase(r.age/.32),fall=barnEase((r.age-(r.life-.32))/.32),u=rise*(1-fall);return {x:p.x+Math.sin(r.age*2.5+r.slot)*2,y:p.y+72*(1-u),visible:u>.15}}
@@ -793,7 +800,7 @@ const barnPointBefore=point;point=function(e){if(barnGame){let r=c.getBoundingCl
 addEventListener('keydown',e=>{if(!barnGame)return;if(e.code==='Space'){e.preventDefault();shootBarn(barnGame.aim.x,barnGame.aim.y)}if(e.key.toLowerCase()==='r')reloadBarn()});
 const barnTextBefore=updateFarmText;updateFarmText=function(){barnTextBefore();if(barnGame)barnHud();else updateBarnButton()};
 const barnInitBefore=init;init=function(){barnGame=null;barnLock=false;barnInitBefore();updateBarnButton()};
-document.querySelector('#barn-play').onclick=()=>barnGame?leaveBarn():enterBarn(currentBiome==='moon'?'lunar':'barn');document.querySelector('#barn-reload').onclick=reloadBarn;document.querySelector('#barn-again').onclick=()=>{let f=barnGame;if(!f||!f.done)return;bonusPoints+=f.points;munches+=f.hits;score+=f.hits*.2;while(stage<4&&score>=stages[stage+1][1])stage++;let originalStart=f.start;barnGame=null;enterBarn(f.skin);barnGame.start=originalStart};
+document.querySelector('#barn-play').onclick=()=>barnGame?leaveBarn():enterBarn(currentBiome==='moon'?'lunar':'barn');document.querySelector('#barn-reload').onclick=reloadBarn;document.querySelector('#barn-again').onclick=()=>{let f=barnGame;if(!f||!f.done)return;bonusPoints+=f.points;munches+=f.hits;score+=f.hits*.2;while(stage<4&&score>=stages[stage+1][1]){stage++;playBigDogOnGrowth();}let originalStart=f.start;barnGame=null;enterBarn(f.skin);barnGame.start=originalStart};
 function installBarnControls(){let old=document.querySelector('#reset').onclick;document.querySelector('#reset').onclick=()=>{if(barnGame)leaveBarn();old()}}
 const barnLocatorBefore=drawLocator;drawLocator=function(){barnLocatorBefore();if(currentBiome!=='farm')return;let x=16,y=Math.max(130,H-236),s=124/world;g.save();farmEllipse(x+ratBarn.x*s,y+ratBarn.y*s,6,6,'#e5ba78');g.fillStyle='#573c2d';g.font='bold 9px system-ui';g.textAlign='center';g.fillText('B',x+ratBarn.x*s,y+ratBarn.y*s+3);g.fillStyle='#e7d8ac';g.font='9px system-ui';g.textAlign='left';g.restore()};
 c.addEventListener('pointermove',e=>{if(!barnGame)return;let r=c.getBoundingClientRect();barnGame.aim={x:e.clientX-r.left,y:e.clientY-r.top}});
@@ -1114,12 +1121,62 @@ const sourceAudioTickBefore=tickTripAudio;tickTripAudio=function(){sourceAudioTi
 const sourceRocketBefore=tickRocket;tickRocket=function(dt,t){syncLaunchSound();if(lunarTransit&&!lunarTransit.returning&&lunarTransit.elapsed<16&&!launchVideoFailed&&launchVideo&&launchVideo.readyState>=2)lunarTransit.radioSent=true;sourceRocketBefore(dt,t)};
 
 // Snow Summit: sparse, connected mountain routes and a two-way city cave.
+const snowGarageSite = {
+  trail:[[1175,2024],[1216,2139],[1205,2267],[1176,2358],[1172,2438]],
+  building:[1045,2397],
+  lot:{x:1148,y:2445,r:184},
+  dropoff:{x:1238,y:2450}
+};
+
+function snowGarageWalkable(x,y,margin) {
+  const {lot,trail} = snowGarageSite;
+  if (Math.hypot(x-lot.x,y-lot.y) < lot.r-margin) return true;
+  for (let index=1; index<trail.length; index++) {
+    if (segmentDistance(x,y,trail[index-1],trail[index]) < 120-margin) return true;
+  }
+  return false;
+}
+
+function snowGarageReserved(x,y) {
+  const {lot,trail} = snowGarageSite;
+  if (Math.hypot(x-lot.x,y-lot.y) < lot.r+72) return true;
+  // Keep the driveway clear while sharing the public road at the junction.
+  for (let index=2; index<trail.length; index++) {
+    if (segmentDistance(x,y,trail[index-1],trail[index]) < 165) return true;
+  }
+  return false;
+}
+
+function snowGarageWall(x,y) {
+  const [buildingX,buildingY] = snowGarageSite.building;
+  return Math.abs(x-buildingX) < 82 && y > buildingY-89 && y < buildingY+46;
+}
+
+function drawSnowGarageTrailOnMap() {
+  if (currentBiome !== 'snow') return;
+  const scale = 124/world;
+  const top = Math.max(130,H-236);
+  g.save();
+  g.strokeStyle = '#ffcf76';
+  g.lineWidth = 3.5;
+  g.lineJoin = 'round';
+  g.lineCap = 'round';
+  g.beginPath();
+  snowGarageSite.trail.forEach(([x,y],index) => {
+    if (index) g.lineTo(16+x*scale,top+y*scale);
+    else g.moveTo(16+x*scale,top+y*scale);
+  });
+  g.lineTo(16+snowGarageSite.building[0]*scale,top+snowGarageSite.building[1]*scale);
+  g.stroke();
+  g.restore();
+}
+
 const mountainPass={x:2860,y:780},snowCave={x:420,y:2680};
 const snowTrails=[[[420,2680],[590,2440],[780,2180],[1100,2050],[1480,1920],[1840,2080],[2240,2340],[2580,2160],[2720,1700],[2550,1300],[2220,980],[1880,720],[1500,560],[1100,620],[700,900],[480,1320],[650,1740],[780,2180]],[[700,900],[1050,1150],[1460,1320],[1840,1480],[2180,1610],[2720,1700]],[[1480,1920],[1460,1320],[1500,560]]];
 const snowVillages=[{x:420,y:2680,r:230},{x:780,y:2180,r:265},{x:1480,y:1920,r:275},{x:2240,y:2340,r:260},{x:2720,y:1700,r:265},{x:2220,y:980,r:260},{x:1500,y:560,r:275},{x:700,y:900,r:265},{x:1460,y:1320,r:235}];
 let snowLocked=false,snowTransit=null;
 function segmentDistance(x,y,a,b){let dx=b[0]-a[0],dy=b[1]-a[1],u=Math.max(0,Math.min(1,((x-a[0])*dx+(y-a[1])*dy)/(dx*dx+dy*dy)));return Math.hypot(x-a[0]-u*dx,y-a[1]-u*dy)}
-function snowWalkable(x,y,margin=0){if(x<90||y<90||x>3030||y>3030)return false;return snowVillages.some(p=>Math.hypot(x-p.x,y-p.y)<p.r-margin)||snowTrails.some(line=>line.slice(1).some((p,i)=>segmentDistance(x,y,line[i],p)<120-margin))}
+function snowWalkable(x,y,margin=0){if(x<90||y<90||x>3030||y>3030)return false;return snowGarageWalkable(x,y,margin)||snowVillages.some(p=>Math.hypot(x-p.x,y-p.y)<p.r-margin)||snowTrails.some(line=>line.slice(1).some((p,i)=>segmentDistance(x,y,line[i],p)<120-margin))}
 function snowSpot(){for(let i=0;i<80;i++){let x=rnd(150,2970),y=rnd(150,2970);if(snowWalkable(x,y,35)&&Math.hypot(x-snowCave.x,y-snowCave.y)>200)return {x,y}}return {x:1480,y:1920}}
 function snowPathPoint(n){let line=snowTrails[n%3],i=Math.floor(n/3)%(line.length-1),u=(n*.618)%1;return {x:line[i][0]*(1-u)+line[i+1][0]*u,y:line[i][1]*(1-u)+line[i+1][1]*u,a:Math.atan2(line[i+1][0]-line[i][0],-(line[i+1][1]-line[i][1]))}}
 const snowSpawnBefore=spawnCar;spawnCar=function(i=0){if(currentBiome!=='snow')return snowSpawnBefore(i);return {...snowPathPoint(i),type:i<95?0:i<125?1:2,v:0,phase:rnd(0,7),color:['#cf6b49','#dfbb61','#558c9c'][i%3]}};
@@ -1132,9 +1189,9 @@ buildingSurprise=function(){};drawSurprises=function(){if(surprises.length)surpr
 function enterSnowPass(t){if(!started||snowTransit||flight||lunarTransit||cityRuined||!['city','snow'].includes(currentBiome)||bombCarrier)return false;snowTransit={elapsed:0,last:t,from:currentBiome,committed:false};keys={};target=null;stopRadio();stopMoonAudio();stopTripAudio();stopLaunchVideo();return true}
 function completeSnowTravel(t){const progress={score,stage,munches,bonusPoints,streak,streakUntil,goldenClock,catsSaved,specialMode,modeLeft,secretGoats,modeSerial,boostUntil,hurtUntil};let next=currentBiome==='snow'?'city':'snow';biomeMaps[currentBiome]=captureBiome();currentBiome=next;if(biomeMaps[next])restoreBiome(biomeMaps[next]);else initMap();({score,stage,munches,bonusPoints,streak,streakUntil,goldenClock,catsSaved,specialMode,modeLeft,secretGoats,modeSerial,boostUntil,hurtUntil}=progress);player.x=next==='snow'?snowCave.x:mountainPass.x;player.y=next==='snow'?snowCave.y-190:mountainPass.y+190;player.a=next==='snow'?0:Math.PI;keys={};target=null;particles=[];gas=[];surprises=[];groundDust=[];groundSpeed=0;waterInside=false;wormholeCooldown=2;wormholeExit=null;snowLocked=true;tunnelLocked=true;dockLocked=true;moonLaunchLock=true;hurtUntil=Math.max(hurtUntil,t+2000);train.next=t+12000;updateUI();updateBiomeHUD()}
 const snowTunnelTickBefore=tickTunnel;tickTunnel=function(t){if(['city','snow'].includes(currentBiome)){let p=currentBiome==='snow'?snowCave:mountainPass,d=Math.hypot(delta(player.x,p.x),delta(player.y,p.y));if(snowLocked){if(d>250)snowLocked=false}else if(d<68){if(bombCarrier){if(t>tunnelNotice){announce('Catch the bomb carrier before entering the pass!',t);tunnelNotice=t+2500}}else if(enterSnowPass(t))return}}if(currentBiome!=='snow')snowTunnelTickBefore(t)};
-const snowBlockedBefore=houseBlocked;houseBlocked=function(x,y){if(currentBiome!=='snow')return snowBlockedBefore(x,y);if(!snowWalkable(x,y,Math.min(18,stages[stage][2]*.15)))return true;return stage<3&&objects.some(o=>o.type===4&&!o.dead&&Math.abs(delta(x,o.x))<49&&Math.abs(delta(y,o.y))<41)};
+const snowBlockedBefore=houseBlocked;houseBlocked=function(x,y){if(currentBiome!=='snow')return snowBlockedBefore(x,y);if(snowGarageWall(x,y)||!snowWalkable(x,y,Math.min(18,stages[stage][2]*.15)))return true;return stage<3&&objects.some(o=>o.type===4&&!o.dead&&Math.abs(delta(x,o.x))<49&&Math.abs(delta(y,o.y))<41)};
 function mountainPeak(x,y,w,h){farmEllipse(x+15,y+45,w*.55,40,'#4b6d8533');barnPath([[x-w*.6,y+25],[x-w*.22,y-h*.64],[x,y-h],[x+w*.30,y-h*.48],[x+w*.6,y+25]],'#7792a6','#647f94',2);barnPath([[x,y-h],[x+w*.3,y-h*.48],[x+w*.6,y+25],[x-w*.06,y-10]],'#53738b');barnPath([[x-w*.22,y-h*.64],[x,y-h],[x+w*.19,y-h*.68],[x+w*.08,y-h*.58],[x-w*.03,y-h*.68],[x-w*.13,y-h*.54]],'#edf5f7');g.strokeStyle='#b2c8d4';g.lineWidth=3;g.beginPath();g.moveTo(x-5,y-h*.75);g.lineTo(x-42,y-h*.25);g.lineTo(x-32,y);g.stroke()}
-function drawSnowGround(){g.fillStyle='#9db9ca';g.fillRect(0,0,world,world);for(let [x,y,w,h] of [[280,610,420,410],[1220,400,480,330],[2030,510,590,440],[2830,1010,410,450],[180,1910,390,430],[1100,1700,480,400],[1960,1930,480,480],[2780,2720,650,620],[1260,2920,660,400]])mountainPeak(x,y,w,h);for(let line of snowTrails){g.lineCap='round';g.lineJoin='round';for(let [width,col] of [[265,'#809fb4'],[240,'#bdd0db'],[214,'#e3edf0'],[150,'#d5e2e8']]){g.strokeStyle=col;g.lineWidth=width;g.beginPath();line.forEach((p,i)=>i?g.lineTo(...p):g.moveTo(...p));g.stroke()}}for(let p of snowVillages){farmEllipse(p.x+12,p.y+14,p.r+8,p.r*.8,'#8daabd');farmEllipse(p.x,p.y,p.r,p.r*.8,'#e1ecef')}for(let i=0;i<45;i++){let p=snowPathPoint(i);g.strokeStyle='#abc1ce66';g.lineWidth=2;g.beginPath();g.moveTo(p.x-10,p.y+12);g.lineTo(p.x+22,p.y+7);g.stroke()}}
+function drawSnowGround(){g.fillStyle='#9db9ca';g.fillRect(0,0,world,world);for(let [x,y,w,h] of [[280,610,420,410],[1220,400,480,330],[2030,510,590,440],[2830,1010,410,450],[180,1910,390,430],[1100,1700,480,400],[1960,1930,480,480],[2780,2720,650,620],[1260,3015,660,400]])mountainPeak(x,y,w,h);for(let line of [...snowTrails,snowGarageSite.trail]){g.lineCap='round';g.lineJoin='round';for(let [width,col] of [[265,'#809fb4'],[240,'#bdd0db'],[214,'#e3edf0'],[150,'#d5e2e8']]){g.strokeStyle=col;g.lineWidth=width;g.beginPath();line.forEach((p,i)=>i?g.lineTo(...p):g.moveTo(...p));g.stroke()}}for(let p of [...snowVillages,snowGarageSite.lot]){farmEllipse(p.x+12,p.y+14,p.r+8,p.r*.8,'#8daabd');farmEllipse(p.x,p.y,p.r,p.r*.8,'#e1ecef')}for(let i=0;i<45;i++){let p=snowPathPoint(i);g.strokeStyle='#abc1ce66';g.lineWidth=2;g.beginPath();g.moveTo(p.x-10,p.y+12);g.lineTo(p.x+22,p.y+7);g.stroke()}}
 const snowGroundBefore=drawCityGround;drawCityGround=function(){if(currentBiome==='snow')drawSnowGround();else snowGroundBefore()};
 function drawSnowPine(x,y,s=1){g.save();g.translate(x,y);g.scale(s,s);farmEllipse(12,30,34,13,'#7193aa44');round(-5,4,10,29,2,'#726252');for(let i=2;i>=0;i--){let yy=-62+i*26,w=22+i*10;barnPath([[-w,yy+35],[0,yy-13],[w,yy+35]],'#365e66','#294b59',1);barnPath([[-w+3,yy+25],[0,yy-13],[w-6,yy+24],[8,yy+18],[-5,yy+26]],'#eef6f7')}g.restore()}
 function drawSnowCabin(o){g.save();g.translate(o.x,o.y);farmEllipse(8,43,74,19,'#7093ab44');round(-56,-19,112,73,5,o.color||'#986c4e');for(let y=-12;y<50;y+=11){round(-55,y,110,3,0,'#664f3d');for(let x of [-54,47])round(x,y-2,8,6,2,'#b39166')}barnPath([[-70,-13],[0,-69],[70,-13]],'#4d6778','#344c5e',2);barnPath([[-73,-19],[-2,-75],[73,-19],[61,-11],[12,-46],[-13,-44],[-60,-9]],'#f1f7f8','#c8dbe4',2);round(28,-65,14,33,2,'#7e7771');round(25,-68,20,7,3,'#f0f7f8');round(-11,12,24,42,3,'#526b76');for(let x of [-40,24]){round(x,2,19,21,2,'#ffc673');round(x+8,2,2,21,0,'#775c42');round(x,11,19,2,0,'#775c42')}round(-63,50,126,9,4,'#f2f7f6');g.restore()}
@@ -1179,7 +1236,7 @@ const sledMapBefore=drawLocator;drawLocator=function(){sledMapBefore();if(curren
 const sledTextBefore=updateFarmText;updateFarmText=function(){sledTextBefore();if(currentBiome==='snow'&&!cityRuined)document.querySelector('#hint').textContent='M: either cave returns to city\nS: sled hill · Gold ring: sled exit'};
 
 
-function snowEntryClear(x,y){return [snowCave,snowReturnCave,sledHill].every(p=>Math.hypot(delta(x,p.x),delta(y,p.y))>205)}
+function snowEntryClear(x,y){return !snowGarageReserved(x,y)&& [snowCave,snowReturnCave,sledHill].every(p=>Math.hypot(delta(x,p.x),delta(y,p.y))>205)}
 const clearSnowSpotBefore=snowSpot;snowSpot=function(){for(let i=0;i<40;i++){let p=clearSnowSpotBefore();if(snowEntryClear(p.x,p.y))return p}return {x:1480,y:1920}};
 const clearSnowSpawnBefore=spawnCar;spawnCar=function(i=0){let o=clearSnowSpawnBefore(i);if(currentBiome==='snow'&&!snowEntryClear(o.x,o.y))Object.assign(o,snowSpot());return o};
 const clearSnowMapBefore=initMap;initMap=function(){clearSnowMapBefore();if(currentBiome==='snow')objects=objects.filter(o=>snowEntryClear(o.x,o.y))};
@@ -1254,7 +1311,9 @@ function missionTick(t){if(!started||document.hidden||flight||lunarTransit||snow
 function missionDraw(t){if(!started||flight||lunarTransit||snowTransit||snowRide||cityRuined)return;let m=missions[currentBiome];if(!m)return;let found=missionProgress[currentBiome]||[];m.points.forEach((p,i)=>{if(found.includes(i))return;let x=player.x+delta(p[0],player.x),y=player.y+delta(p[1],player.y);if(Math.abs(x-player.x)>W/2+80||Math.abs(y-player.y)>H/2+80)return;g.save();g.translate(x,y);g.fillStyle='#ffe37e55';g.beginPath();g.arc(0,0,31+Math.sin(t/300)*4,0,Math.PI*2);g.fill();g.strokeStyle='#fff4b8';g.lineWidth=3;g.beginPath();g.arc(0,0,28,0,Math.PI*2);g.stroke();g.font='32px system-ui';g.textAlign='center';g.textBaseline='middle';g.fillText(m.icon,0,-2);g.restore()})}
 function missionDirection(id){let m=missions[id],found=missionProgress[id]||[];if(id!==currentBiome)return 'Travel to '+m.name+' to search.';if(found.length===3)return 'All three found!';let best=m.points.filter((p,i)=>!found.includes(i)).map(p=>({x:delta(p[0],player.x),y:delta(p[1],player.y)})).sort((a,b)=>Math.hypot(a.x,a.y)-Math.hypot(b.x,b.y))[0],direction=(best.y<-80?'north':best.y>80?'south':'')+(Math.abs(best.x)>80?(Math.abs(best.y)>80?'-':'')+(best.x<0?'west':'east'):'');return 'Nearest clue: '+(direction||'very close')+' · about '+Math.round(Math.hypot(best.x,best.y)/100)*100+' away.'}
 const garage=document.querySelector('#mission-garage');let garageResume=false;
-function renderGarage(){let total=Object.keys(missions).filter(id=>missionCount(id)===3).length;document.querySelector('#garage-total').textContent=total+' / 5 trophies earned';document.querySelector('#garage-list').innerHTML=Object.entries(missions).map(([id,m])=>{let n=missionCount(id);return '<article class="mission-card '+(n===3?'earned':'')+'"><div class="mission-badge">'+(n===3?'🏆':m.icon)+'</div><div><h3>'+m.name+' · '+m.title+'</h3><p>'+m.story+'</p><strong>'+n+' / 3 found · '+(n===3?'🏆 '+m.trophy:'🔒 '+m.trophy)+'</strong><p class="mission-clue">'+missionDirection(id)+'</p></div></article>'}).join('')}
+function renderGarage(){const rescued=window.vikSnowRescue?.earned===true;let total=Object.keys(missions).filter(id=>missionCount(id)===3).length+Number(rescued);document.querySelector('#garage-total').textContent=total+' / 6 trophies earned';document.querySelector('#garage-list').innerHTML=Object.entries(missions).map(([id,m])=>{let n=missionCount(id);return '<article class="mission-card '+(n===3?'earned':'')+'"><div class="mission-badge">'+(n===3?'🏆':m.icon)+'</div><div><h3>'+m.name+' · '+m.title+'</h3><p>'+m.story+'</p><strong>'+n+' / 3 found · '+(n===3?'🏆 '+m.trophy:'🔒 '+m.trophy)+'</strong><p class="mission-clue">'+missionDirection(id)+'</p></div></article>'}).join('')+
+  '<article class="mission-card '+(rescued?'earned':'')+'"><div class="mission-badge">'+(rescued?'🏆':'🛻')+'</div><div><h3>Snow Summit Rescue Crew</h3><p>Clear the road and bring the stranded delivery truck back to the garage.</p><strong>'+
+  (rescued?'🏆 Snow Summit Tow Crew':'🔒 Snow Summit Tow Crew')+'</strong></div></article>'}
 function closeGarage(){garage.close()}
 document.querySelector('#garage-open').onclick=()=>{if(!started||flight||lunarTransit||snowTransit||snowRide||barnGame||ufoFlight||cityRuined)return;garageResume=started;started=false;target=null;keys={};renderGarage();garage.showModal()};
 document.querySelector('#garage-close').onclick=closeGarage;garage.addEventListener('close',()=>{started=garageResume;garageResume=false;prev=performance.now()});garage.addEventListener('cancel',()=>{});
@@ -5600,11 +5659,11 @@ const frameHomeCover=document.getElementById("cover");let prev=0;addEventListene
 if(currentBiome==='snow')window.vikSnowEffects?.drawTracks();
 if(started&&t<boostUntil&&currentBiome!=='ocean'&&currentBiome!=='moon'){gasClock+=dt;if(gasClock>.06){gasClock=0;let rear=radius*1.5;gas.push({x:wrap(player.x-Math.sin(player.a)*rear+rnd(-8,8)),y:wrap(player.y+Math.cos(player.a)*rear+rnd(-8,8)),life:1.5,r:radius*.35,vx:rnd(-12,12),vy:rnd(-12,12)})}}
 for(let p of gas){p.life-=dt;p.x=wrap(p.x+p.vx*dt);p.y=wrap(p.y+p.vy*dt);p.r+=dt*18;g.globalAlpha=Math.max(0,p.life/1.5)*.48;g.fillStyle=currentBiome==='snow'?'#d8edf4':'#8bd23f';g.beginPath();g.arc(p.x,p.y,p.r,0,7);g.fill();g.fillStyle=currentBiome==='snow'?'#f1f8fa':'#c2ef68';g.beginPath();g.arc(p.x-p.r*.25,p.y-p.r*.2,p.r*.55,0,7);g.fill()}gas=gas.filter(p=>p.life>0);g.globalAlpha=1;
-if(currentBiome==='ocean')drawOceanWake();if(!cityRuined){drawSpacePark(t);drawTunnel(t);drawWormholes(t);drawLaunchPad();drawLandingZone(t);missionDraw(t);vehicleGarage.drawWorld(t);if(typeof worldActivities!=='undefined')worldActivities.drawWorld(t)}drawBombWorld();for(let o of objects)for(let tx=-1;tx<=1;tx++)for(let ty=-1;ty<=1;ty++){let ox=o.x+tx*world,oy=o.y+ty*world;if(Math.abs(ox-player.x)<W/2+(o.type===4?260:130)&&Math.abs(oy-player.y)<H/2+(o.type===4?260:130))drawObj({...o,x:ox,y:oy},requiredStage(o)<=stage)}if(train.cars>0)for(let tx=-1;tx<=1;tx++)for(let ty=-1;ty<=1;ty++)for(let i=train.cars-1;i>=0;i--){let x=train.x-i*88+tx*world;if(Math.abs(x-player.x)>W/2+160||Math.abs(train.y+ty*world-player.y)>H/2+120)continue;g.save();g.translate(x,train.y+ty*world);if(currentBiome==='moon'){if(i===0)drawMoonCrawler(t)}else if(currentBiome==='ocean'){if(i===0)drawOceanTanker(t)}else if(currentBiome==='farm'){drawFarmTrainCar(i)}else{drawCityRailCar(i,t);}g.restore()}
+if(currentBiome==='ocean')drawOceanWake();if(!cityRuined){drawSpacePark(t);drawTunnel(t);drawWormholes(t);drawLaunchPad();drawLandingZone(t);missionDraw(t);if(currentBiome==='snow'&&started){drawSnowGarageApproach(g,snowGarageSite,(x,y,padding=100)=>Math.abs(x-player.x)<W/2+padding&&Math.abs(y-player.y)<H/2+padding)}vehicleGarage.drawWorld(t);if(typeof worldActivities!=='undefined')worldActivities.drawWorld(t);window.vikSnowRescue?.drawWorld(t)}drawBombWorld();for(let o of objects)for(let tx=-1;tx<=1;tx++)for(let ty=-1;ty<=1;ty++){let ox=o.x+tx*world,oy=o.y+ty*world;if(Math.abs(ox-player.x)<W/2+(o.type===4?260:130)&&Math.abs(oy-player.y)<H/2+(o.type===4?260:130))drawObj({...o,x:ox,y:oy},requiredStage(o)<=stage)}if(train.cars>0)for(let tx=-1;tx<=1;tx++)for(let ty=-1;ty<=1;ty++)for(let i=train.cars-1;i>=0;i--){let x=train.x-i*88+tx*world;if(Math.abs(x-player.x)>W/2+160||Math.abs(train.y+ty*world-player.y)>H/2+120)continue;g.save();g.translate(x,train.y+ty*world);if(currentBiome==='moon'){if(i===0)drawMoonCrawler(t)}else if(currentBiome==='ocean'){if(i===0)drawOceanTanker(t)}else if(currentBiome==='farm'){drawFarmTrainCar(i)}else{drawCityRailCar(i,t);}g.restore()}
 for(let p of particles){p.life-=dt*2;p.x=wrap(p.x+p.vx*dt);p.y=wrap(p.y+p.vy*dt);g.fillStyle=p.color||'#ffde69';g.globalAlpha=Math.max(0,p.life);g.beginPath();g.arc(p.x,p.y,p.r||5,0,7);g.fill()}g.globalAlpha=1;particles=particles.filter(p=>p.life>0);drawSurprises(dt);drawWaterEffects(dt);drawRocketSmoke(dt);drawFlightShadow();g.save();g.translate(player.x,player.y-flightHeight());if(t<hurtUntil)g.globalAlpha=.65+.35*Math.sin(t/70);g.rotate(player.a);let s=stages[stage][2]/23;if(flight)s*=1-.78*Math.sin(Math.PI*Math.min(1,flight.elapsed/5));g.scale(s,s);if(lunarTransit)g.globalAlpha=0;drawFlightFlames(t);
 if(vehicleGarage.choice!=='default'){vehicleGarage.drawRide(g,t,Math.max(Math.abs(groundSpeed),Math.abs(moonSpeed),Math.abs(seaSpeed)))}else if(specialMode==='dozer'){drawDozer(t)}else{if(currentBiome!=='ocean'&&currentBiome!=='moon')drawForks();if(currentBiome==='moon'){drawMoonRover(t,specialMode==='flipper')}else if(currentBiome==='ocean'){drawTug(t,specialMode==='flipper')}else if(currentBiome==='farm'){drawFarmPlayer(t)}else if(currentBiome==='snow'){drawSnowVehicle(t)}else{
 drawCityTruck(t);
-}}if(window.vikCannon)window.vikCannon.drawMount(t);g.restore();if(window.vikCannon)window.vikCannon.drawWorld(t);drawGroundDust();if(currentBiome==='snow')window.vikSnowEffects?.drawPowder();if(currentBiome==='moon')drawMoonDust();if(currentBiome==='ocean')drawOceanSmoke();if(target&&started){g.strokeStyle='#fff9';g.lineWidth=2;g.beginPath();g.arc(target.x,target.y,12,0,7);g.stroke()}g.restore();drawBlast();if(!cityRuined||blast.age<3.3){drawLocator();vehicleGarage.drawLocator();if(typeof worldActivities!=='undefined')worldActivities.drawLocator()}drawMoonTransit();if(t>toastTime)document.querySelector('#toast').textContent='';tickFarmAudio(dt);updateFarmText();requestAnimationFrame(frame)}function point(e){if(flight)return;let r=c.getBoundingClientRect();target={x:player.x+e.clientX-r.left-W/2,y:player.y+e.clientY-r.top-H/2}}c.onpointerdown=e=>{c.setPointerCapture(e.pointerId);point(e)};c.onpointermove=e=>{if(e.buttons)point(e)};c.onpointerup=()=>target=null;c.onpointercancel=()=>target=null;addEventListener('keydown',e=>{keys[e.key]=true;if(e.key.startsWith('Arrow'))e.preventDefault()});addEventListener('keyup',e=>keys[e.key]=false);addEventListener('blur',()=>{keys={};target=null});document.querySelector('#play').onclick=()=>{muted=false;document.querySelector('#sound').textContent='Sound: on';beep();started=true;document.querySelector('#cover').style.display='none'};document.querySelector('#reset').onclick=()=>finishRun();document.querySelector('#sound').onclick=()=>{muted=!muted;if(muted){stopRocketSound();stopDoomMusic()}document.querySelector('#sound').textContent='Sound: '+(muted?'off':'on');if(!muted)beep()};installMoonSoundControl();installUfoSoundControl();installBarnControls();installSpaceOpening();installFilmControls();installWorldMenu();document.querySelector("#snow-play").onclick=()=>{startMenuCity();enterSnowPass(performance.now())};installLaunchSound();document.querySelector("#sled-finish").onclick=()=>finishSnowRide(performance.now());init();
+}}if(window.vikCannon)window.vikCannon.drawMount(t);g.restore();if(window.vikCannon)window.vikCannon.drawWorld(t);drawGroundDust();if(currentBiome==='snow')window.vikSnowEffects?.drawPowder();if(currentBiome==='moon')drawMoonDust();if(currentBiome==='ocean')drawOceanSmoke();if(target&&started){g.strokeStyle='#fff9';g.lineWidth=2;g.beginPath();g.arc(target.x,target.y,12,0,7);g.stroke()}g.restore();drawBlast();if(!cityRuined||blast.age<3.3){drawLocator();drawSnowGarageTrailOnMap();vehicleGarage.drawLocator();if(typeof worldActivities!=='undefined')worldActivities.drawLocator();window.vikSnowRescue?.drawLocator()}drawMoonTransit();if(t>toastTime)document.querySelector('#toast').textContent='';tickFarmAudio(dt);updateFarmText();requestAnimationFrame(frame)}function point(e){if(flight)return;let r=c.getBoundingClientRect();target={x:player.x+e.clientX-r.left-W/2,y:player.y+e.clientY-r.top-H/2}}c.onpointerdown=e=>{c.setPointerCapture(e.pointerId);point(e)};c.onpointermove=e=>{if(e.buttons)point(e)};c.onpointerup=()=>target=null;c.onpointercancel=()=>target=null;addEventListener('keydown',e=>{keys[e.key]=true;if(e.key.startsWith('Arrow'))e.preventDefault()});addEventListener('keyup',e=>keys[e.key]=false);addEventListener('blur',()=>{keys={};target=null});document.querySelector('#play').onclick=()=>{muted=false;document.querySelector('#sound').textContent='Sound: on';beep();started=true;document.querySelector('#cover').style.display='none'};document.querySelector('#reset').onclick=()=>finishRun();document.querySelector('#sound').onclick=()=>{muted=!muted;if(muted){stopRocketSound();stopDoomMusic()}document.querySelector('#sound').textContent='Sound: '+(muted?'off':'on');if(!muted)beep()};installMoonSoundControl();installUfoSoundControl();installBarnControls();installSpaceOpening();installFilmControls();installWorldMenu();document.querySelector("#snow-play").onclick=()=>{startMenuCity();enterSnowPass(performance.now())};installLaunchSound();document.querySelector("#sled-finish").onclick=()=>finishSnowRide(performance.now());init();
 </script>
 <style>
 #record-dialog{color:white;background:#14364e;border:3px solid #53d6bf;border-radius:22px;max-width:360px;width:calc(100% - 32px);padding:24px;text-align:center;max-height:90dvh;overflow:auto}
@@ -5658,14 +5717,16 @@ window.createVikVehicleGarage = function (adapter) {
     {id:'race', name:'Race car', note:'Red paint and racing stripes', color:'#ef6460'},
     {id:'truck', name:'Work truck', note:'A trusty blue pickup', color:'#58bdd6'},
     {id:'tank', name:'Abrams tank', note:'Armored tracks and a big turret', color:'#a5ad78'},
-    {id:'moon-rover', name:'Moon Rover', note:'White-and-gold lunar buggy with quick lasers', color:'#b5dfda'}
+    {id:'moon-rover', name:'Moon Rover', note:'White-and-gold lunar buggy with quick lasers', color:'#b5dfda'},
+    {id:'tow', name:'Tow Truck', note:'Winch and amber lights for Snow Summit rescues', color:'#e2a444'}
   ];
   const storageKey='vikVehicleChoices-v2', choices=Object.create(null);
   const validRide=id=>rides.some(ride=>ride.id===id);
+  const availableRide=(id,world)=>validRide(id)&&(id!=='tow'||world==='snow');
   const validWorld=world=>typeof world==='string'&&Object.prototype.hasOwnProperty.call(adapter.markers,world);
   // Old versions saved one ride for every map. Start those saves with the map's
   // original vehicle instead of carrying an unrelated vehicle into a new world.
-  try {const saved=JSON.parse(localStorage.getItem(storageKey)||'{}');if(saved&&typeof saved==='object'&&!Array.isArray(saved))for(const world of Object.keys(saved))if(validWorld(world)&&validRide(saved[world]))choices[world]=saved[world];} catch {}
+  try {const saved=JSON.parse(localStorage.getItem(storageKey)||'{}');if(saved&&typeof saved==='object'&&!Array.isArray(saved))for(const world of Object.keys(saved))if(validWorld(world)&&availableRide(saved[world],world))choices[world]=saved[world];} catch {}
   let choice='default', choiceWorld=null, paused=false, pausedWorld=null, resumeGame=null, nearLatched=false, lastNear=false, readyMessage='', homePick=false, pendingHomeRide=null;
   function saveChoices(){try{localStorage.setItem(storageKey,JSON.stringify(choices))}catch{}}
   function syncWorld(){const world=adapter.map();if(world!==choiceWorld){choiceWorld=world;choice=choices[world]||'default';nearLatched=false;lastNear=false;}return world}
@@ -5673,7 +5734,7 @@ window.createVikVehicleGarage = function (adapter) {
     const button=document.querySelector('#home-garage');
     if(button){const ride=rides.find(ride=>ride.id===pendingHomeRide);button.textContent='Choose your ride'+(ride?' · '+ride.name:'');button.dataset.ride=pendingHomeRide||'default'}
   }
-  function setHomeChoice(id){if(!validRide(id))return false;pendingHomeRide=id;updateHomeLabel();return true}
+  function setHomeChoice(id){if(!availableRide(id,null))return false;pendingHomeRide=id;updateHomeLabel();return true}
   function takeHomeChoice(){const id=pendingHomeRide;pendingHomeRide=null;updateHomeLabel();return id}
   function applyHomeChoice(world){
     if(pendingHomeRide===null||!validWorld(world))return false;
@@ -5708,7 +5769,7 @@ window.createVikVehicleGarage = function (adapter) {
     document.querySelector('#vehicle-back').textContent=fromHome?'Choose a world ›':'Back to the game ›';
     document.querySelector('.vehicle-intro').textContent=fromHome?'Pick a ride, then choose any world.':'Choose a favorite and keep exploring.';
     const selected=fromHome?(pendingHomeRide||'default'):choice;
-    for(const p of previews){p.card.setAttribute('aria-pressed',String(p.ride.id===selected));p.status.textContent=p.ride.id===selected?'YOUR RIDE':'CHOOSE'}
+    for(const p of previews){p.card.hidden=!availableRide(p.ride.id,fromHome?null:pausedWorld);p.card.setAttribute('aria-pressed',String(p.ride.id===selected));p.status.textContent=p.ride.id===selected?'YOUR RIDE':'CHOOSE'}
     try{dialog.showModal()}catch{finishClose();return false}
     animatePreviews(performance.now());return true;
   }
@@ -5732,7 +5793,7 @@ window.createVikVehicleGarage = function (adapter) {
   },true);
   function animatePreviews(t){
     if(!dialog.open)return;
-    for(const p of previews){let ctx=p.preview.getContext('2d');ctx.clearRect(0,0,230,150);ctx.save();ctx.translate(115,77);ctx.fillStyle='#0a2938';ctx.beginPath();ctx.ellipse(0,30,65,18,0,0,Math.PI*2);ctx.fill();ctx.rotate(-.28);ctx.scale(.78,.78);drawRide(ctx,t,choice===p.ride.id?25:0,p.ride.id);ctx.restore()}
+    for(const p of previews){if(p.card.hidden)continue;let ctx=p.preview.getContext('2d');ctx.clearRect(0,0,230,150);ctx.save();ctx.translate(115,77);ctx.fillStyle='#0a2938';ctx.beginPath();ctx.ellipse(0,30,65,18,0,0,Math.PI*2);ctx.fill();ctx.rotate(-.28);ctx.scale(.78,.78);drawRide(ctx,t,choice===p.ride.id?25:0,p.ride.id);ctx.restore()}
     requestAnimationFrame(animatePreviews);
   }
   function marker(){return adapter.markers[adapter.map()]}
@@ -5743,7 +5804,7 @@ window.createVikVehicleGarage = function (adapter) {
     let pos=adapter.player(),dx=adapter.delta(pos.x,p[0]),dy=adapter.delta(pos.y,p[1]+60),d=Math.hypot(dx,dy);
     lastNear=d<175;button.textContent=lastNear?'🚗 Enter garage':'🚗 Garage';
     if(d>180)nearLatched=false;
-    if(d<58&&!nearLatched){nearLatched=true;open()}
+    if(d<(map==='snow'?42:58)&&!nearLatched){nearLatched=true;open()}
   }
   function rounded(ctx,x,y,w,h,r,fill){ctx.fillStyle=fill;ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.fill()}
   function drawRide(ctx,t,speed=0,id=choice){
@@ -5826,6 +5887,17 @@ window.createVikVehicleGarage = function (adapter) {
     rounded(ctx,-21,-39,42,79,10,color);rounded(ctx,-18,-35,36,7,3,'#fff0b066');
     if(race){rounded(ctx,-4,-36,8,73,1,'#fff1ca');rounded(ctx,-17,-16,34,31,8,'#223f58');rounded(ctx,-13,-13,26,20,5,'#8bd4e5');rounded(ctx,-28,29,56,7,2,'#a72e36');rounded(ctx,-14,12,28,4,1,'#263e50')}
     else{rounded(ctx,-16,-27,32,30,5,'#224c64');rounded(ctx,-13,-24,26,21,4,'#95dae6');rounded(ctx,-10,-22,8,12,3,'#dff8f6');rounded(ctx,-18,9,36,24,4,dozer?'#cc9a2b':plow?'#b9582d':'#265a75');for(let y=13;y<31;y+=7)rounded(ctx,-14,y,28,2,1,'#fff3b944')}
+    if(id==='tow'){
+      rounded(ctx,-18,7,36,28,4,'#70586a');
+      for(const x of [-15,9])rounded(ctx,x,9,6,24,2,'#e7bf63');
+      rounded(ctx,-9,12,18,12,4,'#2d4250');
+      ctx.strokeStyle='#d7e6e5';ctx.lineWidth=4;ctx.beginPath();
+      ctx.moveTo(-10,15);ctx.lineTo(0,26);ctx.lineTo(0,45);ctx.lineTo(6,45);ctx.stroke();
+      rounded(ctx,-13,-4,26,7,3,'#623d32');
+      const lamps=Math.floor(t/270)%2;
+      rounded(ctx,-12,-3,10,5,2,lamps?'#fff0a4':'#d67634');
+      rounded(ctx,2,-3,10,5,2,lamps?'#d67634':'#fff0a4');
+    }
     if(monster){rounded(ctx,-24,-34,48,6,2,'#efc879');rounded(ctx,-23,33,46,6,2,'#b8d0d3')}
     if(plow||dozer){ctx.strokeStyle='#d6e1db';ctx.lineWidth=4;for(let side of [-1,1]){ctx.beginPath();ctx.moveTo(side*17,-27);ctx.lineTo(side*28,-47);ctx.stroke()}rounded(ctx,-38,-52,76,15,5,plow?'#b8d5de':'#d5a32d');rounded(ctx,-37,-52,74,4,2,plow?'#f6ffff':'#ffe082');rounded(ctx,-7,-35,14,5,2,'#ffcf56');if(Math.sin(t/180)>0)rounded(ctx,-4,-35,8,4,2,'#fff5c2')}
     for(let x of [-16,10])rounded(ctx,x,-39,6,5,2,'#fff2ad');rounded(ctx,-17,36,7,4,1,'#ed7165');rounded(ctx,10,36,7,4,1,'#ed7165');ctx.restore();
@@ -5854,7 +5926,7 @@ var vehicleGarage=window.createVikVehicleGarage({
   player:()=>player,context:()=>g,delta,world,clearInput:()=>{keys={};target=null;window.vikTouchControls?.cancel?.()},
   drawDefault:(ctx,t)=>{ctx.save();ctx.textAlign='center';ctx.font='64px system-ui';ctx.fillText(({city:'🚛',farm:'🚜',ocean:'🚢',moon:'🛰️',snow:'🚜'}[currentBiome]||'🚛'),0,20);ctx.restore()},
 
-  map:()=>currentBiome,markers:{city:[780,1300],farm:[1300,780],ocean:[1900,1500],moon:[1520,1300],snow:[1460,1320]},
+  map:()=>currentBiome,markers:{city:[780,1300],farm:[1300,780],ocean:[1900,1500],moon:[1520,1300],snow:snowGarageSite.building},
   canOpen:()=>started&&!document.hidden&&!flight&&!lunarTransit&&!snowTransit&&!snowRide&&!barnGame&&!ufoFlight&&!cityRuined&&!recordBusy&&!garage.open,
   canDraw:()=>started&&!flight&&!lunarTransit&&!snowTransit&&!snowRide&&!barnGame&&!ufoFlight&&!cityRuined,
   announce:message=>announce(message,performance.now(),2300),
@@ -5878,6 +5950,7 @@ var vehicleGarage=window.createVikVehicleGarage({
 #vehicle-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
 #vehicle-choices .vehicle-card{position:relative;display:flex;flex-direction:column;align-items:center;min-width:0;padding:8px 10px 12px;background:#163c51;border:2px solid #4c7a8c;border-radius:14px;color:#eaf7f4;text-align:center;cursor:pointer}
 #vehicle-choices .vehicle-card[aria-pressed=true]{background:#36594e;border-color:#f1d386}#vehicle-choices .vehicle-card:hover{background:#29546a;border-color:#cce9e7}#vehicle-choices .vehicle-card:focus-visible{outline:3px solid #ffdf86;outline-offset:3px}
+#vehicle-choices .vehicle-card[hidden]{display:none!important}
 #vehicle-choices canvas{display:block;width:100%;height:112px;object-fit:contain;touch-action:auto}#vehicle-choices strong{font-size:15px}#vehicle-choices span{font-size:10px;line-height:1.4;margin:4px 0 9px;color:#b7d7de}#vehicle-choices small{font-size:9px;letter-spacing:1px;font-weight:900;color:#ffe1a4}
 #vehicle-back{display:block;width:100%;background:#e4c578;color:#1c4154;border:1px solid #ffebad;border-radius:11px;font:900 14px system-ui;padding:12px}
 @media(max-width:600px){#vehicle-open{font-size:11px;padding:8px 10px;top:auto;bottom:56px;left:8px}#vehicle-dialog{padding:16px}#vehicle-choices{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}#vehicle-choices canvas{height:90px}#vehicle-choices .vehicle-card{padding:5px 6px 9px}#vehicle-choices strong{font-size:13px}#vehicle-choices span{font-size:9px}}
@@ -6218,7 +6291,7 @@ window.createVikHUD=function(adapter){
     activity.hidden=!task||!!state.special;
     if(task&&!state.special){
       activityTitle.textContent=task.title||'Explore';activityProgress.textContent=task.progress||'';
-      activityHint.textContent=task.prompt||task.hint||'';activityHint.hidden=!task.available;
+      activityHint.textContent=task.prompt||task.hint||'';activityHint.hidden=!task.available&&!task.showHint;
       const choices=task.available&&Array.isArray(task.choices)?task.choices:[],choiceKey=choices.map(c=>String(c.id)+':'+String(c.label)).join('|');
       activityChoices.hidden=!choices.length;
       if(choiceKey!==lastChoiceKey){activityChoices.replaceChildren();for(const choice of choices){const option=make('button',null,'hud-learning-choice',String(choice.label));option.type='button';option.onclick=()=>adapter.onChoice?.(choice.id);activityChoices.append(option)}lastChoiceKey=choiceKey}
@@ -6247,7 +6320,7 @@ var worldActivities=window.createVikWorldActivities({
 var gameHud=window.createVikHUD({
   getState:()=>({playing:started,cinematic:!!(flight||lunarTransit||snowTransit||snowRide),special:!!(barnGame||ufoFlight),garageOpen:vehicleGarage.isOpen,canHear:!muted&&!!window.speechSynthesis,
     world:({city:'City',farm:'Farm',ocean:'Ocean',moon:'Moon',snow:'Snow Summit',turkey:'Turkey Munch',gingerbread:'Gingerbread Munch'})[currentBiome],
-    activity:(started&&!document.hidden&&!flight&&!lunarTransit&&!snowTransit&&!snowRide&&!barnGame&&!ufoFlight&&!cityRuined&&!recordBusy&&!garage.open&&!vehicleGarage.isOpen)?worldActivities.getHUD():null}),
+    activity:(started&&!document.hidden&&!flight&&!lunarTransit&&!snowTransit&&!snowRide&&!barnGame&&!ufoFlight&&!cityRuined&&!recordBusy&&!garage.open&&!vehicleGarage.isOpen)?(window.vikSnowRescue?.getHUD()||worldActivities.getHUD()):null}),
   onActivity:()=>worldActivities.interact(),onChoice:id=>worldActivities.choose(id),
 });
 const beforeLearningSoundClick=document.querySelector('#sound').onclick;
@@ -6263,7 +6336,7 @@ gameHud.tick();
 
 </script><script>
 // Release label is separate from saved-game schema versions.
-const gameReleaseLabel=document.createElement('small');gameReleaseLabel.textContent='Winter update · v1.53.8';gameReleaseLabel.style.cssText='display:block;margin-top:10px;color:#b6d5db;font:600 10px system-ui';
+const gameReleaseLabel=document.createElement('small');gameReleaseLabel.textContent='Winter update · v1.54.0';gameReleaseLabel.style.cssText='display:block;margin-top:10px;color:#b6d5db;font:600 10px system-ui';
 document.querySelector('.hud-menu-panel')?.appendChild(gameReleaseLabel);
 </script><script>
 /* TOUCH AND WORLD ROUTE REPAIR */
@@ -6483,7 +6556,7 @@ updateGameSurface();
   const find=id=>document.getElementById(id);
   const isMain=typeof currentBiome!=='undefined'&&typeof biomeMaps!=='undefined';
   const validWorlds=['city','farm','ocean','moon','snow'];
-  const release='1.53.8-winter';
+  const release='1.54.0-winter';
   const query=new URLSearchParams(location.search);
   const resetRide=map=>{if(typeof vehicleGarage!=='undefined')vehicleGarage.resetForWorld?.(map)};
   if(query.get('play')==='1')vehicleGarage.setHomeChoice(query.get('ride'));
@@ -6536,6 +6609,7 @@ updateGameSurface();
       homeAt=null;
     }
     function loadWorld(next,t){
+      window.vikSnowRescue?.resetTow();
       const progress={score,stage,munches,bonusPoints,streak,streakUntil,goldenClock,catsSaved,modeSerial,boostUntil,hurtUntil};
       const leaving=currentBiome;
       if(leaving!==next)biomeMaps[leaving]=captureBiome();
@@ -6558,6 +6632,11 @@ updateGameSurface();
       resetRide(next);updateUI();updateBiomeHUD();updateFarmText();
     }
     function selectWorld(next){
+      if(next==='alphabet'){
+        clearInput();
+        stopSounds();
+        return go('alphabet-munch.html?play=1');
+      }
       if(next==='turkey'||next==='gingerbread'){const ride=vehicleGarage.takeHomeChoice();return go(next+'-munch.html?world='+next+'&play=1'+(ride?'&ride='+encodeURIComponent(ride):''))}
       if(!validWorlds.includes(next))return false;
       closePanels();stopSounds();
@@ -6581,6 +6660,11 @@ updateGameSurface();
       return true;
     }
     function bindMenu(){
+      const alphabetEntry=find('alphabet-play');
+      if(alphabetEntry){
+        alphabetEntry.href=releaseHref('alphabet-munch.html?play=1');
+        alphabetEntry.onclick=event=>{event?.preventDefault?.();selectWorld('alphabet');};
+      }
       for(const [id,next] of Object.entries({play:'city','farm-play':'farm','ocean-play':'ocean','moon-play':'moon','snow-play':'snow'}))if(find(id))find(id).onclick=()=>selectWorld(next);
       for(const kind of ['turkey','gingerbread']){
         const entry=document.querySelector('a[href*="'+kind+'-munch.html"]');
@@ -6968,7 +7052,7 @@ frame=function(t){window.vikGamepadInput.tick();if(window.vikCannon)window.vikCa
 
 
 /* SHARED CONTACT AND RANGED MUNCH REWARDS */
-function munchObject(o,t){if(!o||o.dead)return false;if(o.type===8)saveCity(o,t);collectCat(o,t);o.dead=true;if(currentBiome==='farm')farmSoundKind=o.type===8?'moo':o.type===5?'oink':o.type===11?'croak':o.type===6?'cluck':'bleat';if(o.type===8)beastRespawn=30;if(o.type===6){fart();boostUntil=t+5000;document.querySelector('#toast').textContent='GOAT GAS TURBO! 🐐 💨';toastTime=t+2200}score+=o.golden?5:o.type===5?.2:o.type===4?3:o.type===8?2:1;munches++;recordMunch(t);if(o.golden){goldenClock=0;announce("GOLDEN MUNCH! Extra growth! ✨",t,2400)}if(o.type===4)buildingSurprise(o,t);if(o.type!==6){if(currentBiome==='moon')moonSfx('collect');else if(currentBiome==='ocean')oceanSound(o.type<5?'crunch':'bubble');else beep();}for(let i=0;i<8;i++)particles.push({x:o.x,y:o.y,vx:rnd(-90,90),vy:rnd(-90,90),life:1});if(stage<4&&score>=stages[stage+1][1]){stage++;document.querySelector('#toast').textContent=stages[stage][0]+' ✨';toastTime=t+2400}updateUI();return true}
+function munchObject(o,t){if(!o||o.dead)return false;if(o.type===8)saveCity(o,t);collectCat(o,t);o.dead=true;if(currentBiome==='farm')farmSoundKind=o.type===8?'moo':o.type===5?'oink':o.type===11?'croak':o.type===6?'cluck':'bleat';if(o.type===8)beastRespawn=30;if(o.type===6){fart();boostUntil=t+5000;document.querySelector('#toast').textContent='GOAT GAS TURBO! 🐐 💨';toastTime=t+2200}score+=o.golden?5:o.type===5?.2:o.type===4?3:o.type===8?2:1;munches++;recordMunch(t);if(o.golden){goldenClock=0;announce("GOLDEN MUNCH! Extra growth! ✨",t,2400)}if(o.type===4)buildingSurprise(o,t);if(o.type!==6){if(currentBiome==='moon')moonSfx('collect');else if(currentBiome==='ocean')oceanSound(o.type<5?'crunch':'bubble');else beep();}for(let i=0;i<8;i++)particles.push({x:o.x,y:o.y,vx:rnd(-90,90),vy:rnd(-90,90),life:1});if(stage<4&&score>=stages[stage+1][1]){stage++;playBigDogOnGrowth();document.querySelector('#toast').textContent=stages[stage][0]+' ✨';toastTime=t+2400}updateUI();return true}
 /* OPTIONAL CARTOON CANNON: input and projectiles never enter saved game state. */
 /* Compact vehicle blaster: additive input, swept hits and bounded comic effects. */
 (function(root){
@@ -7469,6 +7553,7 @@ const frameWithControllerDriving=frame;
 frame=function(t){
   window.vikControllerMenus.tick(t);
   window.vikSnowEffects?.sync();
+  window.vikSnowRescue?.sync();
   if(resumeAfterControllerPause){
     window.vikGamepadInput.tick();window.vikCannon.tick(t);
     c.dataset.playState='paused';
@@ -7503,7 +7588,7 @@ frame=function(t){
     var peaks = [
       [280,610,420,410], [1220,400,480,330], [2030,510,590,440],
       [2830,1010,410,450], [180,1910,390,430], [1100,1700,480,400],
-      [1960,1930,480,480], [2780,2720,650,620], [1260,2920,660,400]
+      [1960,1930,480,480], [2780,2720,650,620], [1260,3015,660,400]
     ];
 
     function surface(width, height, pixelScale, opaque) {
@@ -7866,7 +7951,7 @@ frame=function(t){
   };
 })(window);
 
-window.vikSnowSummitArt=window.createVikSnowSummitArt({document,world,scale:.6,trails:snowTrails,villages:snowVillages});
+window.vikSnowSummitArt=window.createVikSnowSummitArt({document,world,scale:.6,trails:[...snowTrails,snowGarageSite.trail],villages:[...snowVillages,snowGarageSite.lot]});
 const drawOriginalSnowGround=drawSnowGround,drawOriginalSnowCabin=drawSnowCabin;
 drawSnowGround=function(){if(!window.vikSnowSummitArt.drawTerrain(g))drawOriginalSnowGround();};
 drawSnowCabin=function(o){if(!window.vikSnowSummitArt.drawCabin(g,o))drawOriginalSnowCabin(o);};
@@ -7875,6 +7960,584 @@ window.vikSnowEffects=window.createVikSnowEffects({
   ride:()=>vehicleGarage.choice, player:()=>player, radius:()=>stages[stage][2],
   context:()=>g, viewport:()=>({width:W,height:H}), wrap,delta,
   walkable:(x,y)=>snowWalkable(x,y,Math.min(18,stages[stage][2]*.15))
+});
+function createSnowRescue(adapter) {
+  const saveKey = 'vik-snow-rescue-v1';
+  const title = 'Snow Summit Rescue Crew';
+  const trophy = 'Snow Summit Tow Crew';
+  const drifts = [{x:532,y:2520}, {x:625,y:2390}, {x:727,y:2250}];
+  const roadside = {x:973,y:2104,a:1.2};
+  const destination = snowGarageSite.dropoff;
+  const replay = {x:610,y:2525};
+  const route = [roadside, {x:1100,y:2050},
+    ...snowGarageSite.trail.map(([x,y])=>({x,y})), destination];
+  const trailLength = 101;
+  const approach = 76;
+  const dist = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
+  const roadMarkers = route.slice(1).flatMap((end,index) => {
+    const start = route[index];
+    const stepCount = Math.max(1,Math.round(dist(start,end)/115));
+    const heading = Math.atan2(end.y-start.y,end.x-start.x);
+    return Array.from({length:stepCount},(_,step) => {
+      const fraction = (step+.58)/stepCount;
+      return {x:start.x+(end.x-start.x)*fraction, y:start.y+(end.y-start.y)*fraction, heading};
+    });
+  });
+  let cleared = drifts.map(() => false);
+  const clearedAt = drifts.map(() => -Infinity);
+  let phase = 'discover';
+  let van = {...roadside};
+  let trail = [];
+  let finishTime = -Infinity;
+  let replaySince = null;
+  let earned = false;
+
+  try {
+    const saved = JSON.parse(adapter.storage.getItem(saveKey));
+    earned = saved?.earned === true;
+    // The first preview wrote only "earned" for a finished delivery.
+    if (earned && saved.delivered !== false) {
+      cleared = drifts.map(() => true);
+      phase = 'complete';
+      van = {...destination, a:Math.PI / 2};
+    } else if (Array.isArray(saved?.cleared)) {
+      cleared = drifts.map((_, index) => saved.cleared[index] === true);
+      if (cleared.every(Boolean)) phase = 'hook';
+      else if (cleared.some(Boolean)) phase = 'clear';
+    }
+  } catch {}
+
+  function save() {
+    try { adapter.storage.setItem(saveKey, JSON.stringify({cleared, earned, delivered:phase === 'complete'})); } catch {}
+  }
+
+  function nextStop() {
+    if (phase === 'discover') return {...drifts[0], label:'RESCUE CREW HERE'};
+    if (phase === 'clear') return {...drifts[cleared.indexOf(false)], label:'CLEAR THIS DRIFT'};
+    if (phase === 'hook') return {...roadside, label:'PULL UP TO TOW'};
+    if (phase === 'complete') return {...replay, label:'RESCUE AGAIN'};
+    return {...destination, label:'TOW TO GARAGE'};
+  }
+
+  function updateTrailer(player, moved) {
+    if (dist(player, trail[trail.length - 1]) >= 8) trail.push({x:player.x, y:player.y});
+    let forward = player;
+    let remaining = trailLength;
+    for (let index = trail.length - 1; index >= 0; index--) {
+      const rear = trail[index];
+      const length = dist(forward, rear);
+      if (length >= remaining) {
+        const ratio = remaining / length;
+        van.x = forward.x + (rear.x - forward.x) * ratio;
+        van.y = forward.y + (rear.y - forward.y) * ratio;
+        const heading = Math.atan2(forward.x - rear.x, rear.y - forward.y);
+        const turn = Math.atan2(Math.sin(heading - van.a), Math.cos(heading - van.a));
+        van.a += turn * Math.min(1, moved / 18);
+        if (index) trail.splice(0, index);
+        return;
+      }
+      remaining -= length;
+      forward = rear;
+    }
+  }
+
+  function resetTow() {
+    if (phase !== 'tow') return;
+    phase = 'hook';
+    trail = [];
+    van = {...roadside};
+  }
+
+  function sync() {
+    if (adapter.towInterrupted()) resetTow();
+    if (!adapter.active()) replaySince = null;
+  }
+
+  function tick(t, previous) {
+    if (!adapter.active()) return;
+    const player = adapter.player();
+    const ride = adapter.ride();
+    // A vehicle change or a map transfer releases the tow without losing the cleared road.
+    if (phase === 'tow' && (ride !== 'tow' || dist(player, trail[trail.length-1]) > 145)) {
+      resetTow();
+      adapter.notify('The truck is back on the roadside, ready to tow.', t);
+      return;
+    }
+    if (phase === 'complete') {
+      if (dist(player,replay) >= 33 || adapter.speed() > 25) {
+        replaySince = null;
+        return;
+      }
+      replaySince ??= t;
+      if (t-replaySince >= 650) {
+        replaySince = null;
+        cleared = drifts.map(() => false);
+        clearedAt.fill(-Infinity);
+        phase = 'clear';
+        van = {...roadside};
+        save();
+        adapter.notify('Another truck needs help! Clear the three snowdrifts.', t);
+      }
+      return;
+    }
+    const moved = dist(player, previous);
+    if (moved <= 0 || moved >= 90) return;
+    if (phase === 'discover' && dist(player, drifts[0]) < 150) {
+      phase = 'clear';
+      adapter.notify('A truck is stuck. Clear three drifts with your snowplow!', t);
+    }
+    if (phase === 'clear' && (ride === 'default' || ride === 'plow')) {
+      let changed = false;
+      drifts.forEach((drift,index) => {
+        if (!cleared[index] && dist(player, drift) < 45) {
+          cleared[index] = true;
+          changed = true;
+          clearedAt[index] = t;
+        }
+      });
+      if (changed) {
+        if (cleared.every(Boolean)) {
+          phase = 'hook';
+          adapter.notify('Road clear! Pick the Tow Truck in Garage.', t);
+        }
+        save();
+      }
+    }
+    if (phase === 'hook' && ride === 'tow' && dist(player, roadside) < approach) {
+      phase = 'tow';
+      trail = [{x:van.x,y:van.y}, {x:player.x,y:player.y}];
+      adapter.notify('Hitched up! Follow the gold arrows to the garage.', t);
+      return;
+    }
+    if (phase !== 'tow') return;
+    updateTrailer(player, moved);
+    if (dist(van, destination) < 54) {
+      phase = 'complete';
+      trail = [];
+      finishTime = t;
+      const firstDelivery = !earned;
+      earned = true;
+      save();
+      adapter.finish(t, firstDelivery ? trophy : null);
+    }
+  }
+
+  function getHUD() {
+    if (!adapter.active()) return null;
+    const player = adapter.player();
+    const next = nextStop();
+    const towing = phase === 'tow';
+    const done = phase === 'complete';
+    const nearReplay = done && dist(player, replay) < 220;
+    if (done && !nearReplay && dist(player, destination) > 245) return null;
+    if (!towing && !done && dist(player, next) > 280 &&
+      !drifts.some(drift => dist(player, drift) < 125)) return null;
+    const count = cleared.filter(Boolean).length;
+    const ride = adapter.ride();
+    const hooked = ride === 'tow';
+    const plowing = ride === 'default' || ride === 'plow';
+    const hint = done ? (nearReplay ? 'Park on the gold circle to play again.' : 'Snow Summit Tow Crew trophy earned.')
+      : towing ? 'Follow the gold arrows and drive past the parking marker.'
+      : phase === 'hook' ? (hooked ? 'Pull up to the stranded truck.' : 'Choose the Tow Truck in Garage.')
+      : plowing ? 'Drive through the marked snowdrifts.' : 'Choose the Snowplow in Garage.';
+    const progress = done ? (nearReplay ? 'Play again' : 'Truck rescued ✓') : towing ? 'Truck hitched' : phase === 'hook' ? 'Road clear' : count + ' / 3 drifts';
+    return {title, progress, hint, showHint:true, available:false, done};
+  }
+
+  function drawWorld(t) {
+    if (!adapter.active()) return;
+    const player = adapter.player();
+    const area = adapter.viewport();
+    const visible = (x,y,padding=120) =>
+      Math.abs(x-player.x) < area.width/2+padding && Math.abs(y-player.y) < area.height/2+padding;
+    const hitch = phase === 'tow'
+      ? {x:player.x-Math.sin(player.a)*49, y:player.y+Math.cos(player.a)*49} : null;
+    drawSnowRescueScene(adapter.context(), t, {
+      phase, drifts:drifts.map((drift,index) => ({
+        ...drift, cleared:cleared[index], clearing:Math.max(0,1-(t-clearedAt[index])/620)
+      })),
+      van, next:nextStop(), destination, hitch, visible, roadMarkers,
+      celebrating: phase === 'complete' && t-finishTime < 2200
+    });
+  }
+
+  function drawLocator() {
+    if (!adapter.active()) return;
+    const next = nextStop();
+    const area = adapter.viewport();
+    const scale = 124 / adapter.world;
+    const top = Math.max(130,area.height-236);
+    const pinX = 16 + next.x * scale;
+    const x = pinX + (phase === 'tow' ? 13 : 0);
+    const y = top + next.y * scale;
+    const ctx = adapter.context();
+    ctx.save();
+    if (phase === 'tow') {
+      ctx.strokeStyle = '#deaa42';
+      ctx.lineWidth = 2.5;
+      ctx.setLineDash([3,2]);
+      ctx.beginPath();
+      ctx.moveTo(16+route[0].x*scale,top+route[0].y*scale);
+      for (let index = 1; index < route.length; index++) {
+        ctx.lineTo(16+route[index].x*scale,top+route[index].y*scale);
+      }
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.beginPath();
+      ctx.moveTo(pinX,y);
+      ctx.lineTo(x,y);
+      ctx.stroke();
+    }
+    ctx.textAlign = 'center';
+    ctx.font = '900 12px system-ui';
+    ctx.fillStyle = '#203e52';
+    ctx.beginPath();
+    ctx.arc(x,y,7,0,2*Math.PI);
+    ctx.fill();
+    ctx.fillStyle = '#ffd982';
+    ctx.fillText(phase === 'complete' ? '↻' : '!',x,y+4);
+    ctx.restore();
+  }
+
+  return {tick, sync, resetTow, drawWorld, drawLocator, getHUD, get earned() { return earned; }};
+}
+
+// Draw in world space, before the player. The rescue owns all game state.
+function drawSnowRescueScene(ctx, t, scene) {
+  const {phase, drifts, van, destination, next, hitch, visible, celebrating, roadMarkers} = scene;
+  const ink = '#234257';
+  const blue = '#668da6';
+  const snow = '#eefaff';
+  const amber = '#ffdd8c';
+  const delivered = phase === 'complete';
+  const signalsOn = Math.floor(t / 380) % 2 === 0;
+
+  if (phase === 'tow' || delivered) {
+    if (visible(destination.x, destination.y, 56)) drawBay();
+  }
+  if (phase === 'tow') {
+    for (const marker of roadMarkers) {
+      if (visible(marker.x, marker.y, 26)) drawChevron(marker);
+    }
+  }
+  for (const drift of drifts) {
+    if (visible(drift.x, drift.y, 48)) drawDrift(drift);
+  }
+  if (hitch && (visible(van.x, van.y, 52) || visible(hitch.x, hitch.y, 52))) drawCable();
+  if (visible(van.x, van.y, 58)) drawVan();
+  if (delivered && visible(destination.x,destination.y,96)) {
+    drawMarker({...destination,label:'TRUCK RESCUED!'});
+  }
+  if (next && visible(next.x, next.y, 96)) {
+    if (delivered) drawReplayCircle();
+    drawMarker(next);
+  }
+
+  function drawChevron(marker) {
+    ctx.save();
+    ctx.translate(marker.x,marker.y);
+    ctx.rotate(marker.heading);
+    ctx.beginPath();
+    ctx.moveTo(-12,-10);
+    ctx.lineTo(3,0);
+    ctx.lineTo(-12,10);
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.strokeStyle = '#9b692b';
+    ctx.lineWidth = 6;
+    ctx.stroke();
+    ctx.strokeStyle = '#ffe5a0';
+    ctx.lineWidth = 3;
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function drawReplayCircle() {
+    ctx.save();
+    ctx.translate(next.x,next.y);
+    ellipse(0,0,29,26,'#ffc75f70');
+    ctx.beginPath();
+    ctx.ellipse(0,0,29,26,0,0,2*Math.PI);
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = '#a16d32';
+    ctx.stroke();
+    ctx.fillStyle = ink;
+    ctx.font = 'bold 32px system-ui';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('↻',0,1);
+    ctx.restore();
+  }
+
+  function rounded(x, y, width, height, radius, fill) {
+    ctx.beginPath();
+    ctx.roundRect(x, y, width, height, radius);
+    ctx.fillStyle = fill;
+    ctx.fill();
+  }
+
+  function ellipse(x, y, rx, ry, fill) {
+    ctx.beginPath();
+    ctx.ellipse(x, y, rx, ry, 0, 0, Math.PI * 2);
+    ctx.fillStyle = fill;
+    ctx.fill();
+  }
+
+  function drawDrift(drift) {
+    ctx.save();
+    ctx.translate(drift.x, drift.y);
+    if (drift.cleared) {
+      ellipse(-28, 2, 9, 5, '#c4e0ef');
+      ellipse(27, 8, 12, 6, '#c4e0ef');
+      ellipse(26, 5, 9, 4, snow);
+      if (drift.clearing > 0) {
+        const travel = 1 - drift.clearing;
+        ctx.globalAlpha = drift.clearing;
+        for (const side of [-1, 1]) {
+          for (let chip = 0; chip < 3; chip++) {
+            ellipse(side*(12+travel*(36+8*chip)), -5+chip*6-travel*17,
+              4+chip, 3+chip*.5, snow);
+          }
+        }
+      }
+    } else {
+      ellipse(3, 11, 36, 17, '#628da84d');
+      ctx.beginPath();
+      ctx.moveTo(-35, 11);
+      ctx.bezierCurveTo(-31, -1, -22, -13, -10, -15);
+      ctx.bezierCurveTo(2, -19, 15, -11, 25, -4);
+      ctx.quadraticCurveTo(31, 0, 35, 11);
+      ctx.quadraticCurveTo(12, 23, -35, 11);
+      ctx.fillStyle = '#b5d6e9';
+      ctx.fill();
+      ctx.beginPath();
+      ctx.moveTo(-35, 11);
+      ctx.bezierCurveTo(-31, -2, -23, -17, -10, -18);
+      ctx.bezierCurveTo(2, -20, 16, -13, 28, 1);
+      ctx.quadraticCurveTo(16, -3, 7, 2);
+      ctx.quadraticCurveTo(-12, 12, -35, 11);
+      ctx.fillStyle = snow;
+      ctx.fill();
+      ctx.save();
+      ctx.translate(28, 7);
+      ctx.rotate(0.9);
+      rounded(-2.5, -15, 5, 23, 2, blue);
+      rounded(-2.5, -15, 5, 9, 2, '#eb904c');
+      ctx.restore();
+    }
+    ctx.restore();
+  }
+
+  function drawVan() {
+    ctx.save();
+    ctx.translate(van.x, van.y);
+    ctx.rotate(van.a || 0);
+    ellipse(6, 10, 31, 48, '#34586e51');
+    for (const x of [-24, 15]) {
+      for (const y of [-26, 21]) rounded(x, y, 9, 15, 3, '#233d50');
+    }
+    rounded(-22, -43, 44, 86, 8, ink);
+    rounded(-20, -41, 40, 81, 7, '#de8b4f');
+    rounded(-17, -39, 34, 21, 5, '#eeb277');
+    rounded(-16, -34, 32, 12, 4, '#4e778f');
+    rounded(-14, -33, 11, 3, 1, '#a7cada');
+    rounded(-21, -19, 42, 56, 5, '#a96a44');
+    rounded(-19, -18, 38, 53, 5, '#eee1cc');
+    rounded(-17, -16, 34, 9, 3, '#f7f3e7');
+    rounded(-17, -5, 34, 4, 1, '#d98950');
+    rounded(-17, 21, 34, 3, 1, '#d98950');
+    drawParcelMark();
+    rounded(-18, 35, 36, 5, 2, '#708b98');
+    for (const x of [-16, 11]) {
+      rounded(x, -42, 5, 4, 1, '#fff2c7');
+      rounded(x, 35, 5, 4, 1, '#b9664b');
+      if (signalsOn && phase !== 'tow' && (!delivered || celebrating)) rounded(x - 1, 34, 7, 6, 2, amber);
+    }
+    ctx.restore();
+  }
+
+  function drawParcelMark() {
+    ctx.beginPath();
+    ctx.moveTo(0, 3);
+    ctx.lineTo(9, 8);
+    ctx.lineTo(9, 16);
+    ctx.lineTo(0, 21);
+    ctx.lineTo(-9, 16);
+    ctx.lineTo(-9, 8);
+    ctx.closePath();
+    ctx.fillStyle = '#c58656';
+    ctx.fill();
+    ctx.beginPath();
+    ctx.moveTo(-8, 8);
+    ctx.lineTo(0, 12);
+    ctx.lineTo(8, 8);
+    ctx.moveTo(0, 12);
+    ctx.lineTo(0, 20);
+    ctx.strokeStyle = '#ffebc9';
+    ctx.lineWidth = 1.3;
+    ctx.stroke();
+  }
+
+  function drawCable() {
+    const noseX = van.x + Math.sin(van.a || 0) * 44;
+    const noseY = van.y - Math.cos(van.a || 0) * 44;
+    ctx.save();
+    ctx.lineCap = 'round';
+    ctx.beginPath();
+    ctx.moveTo(hitch.x, hitch.y);
+    ctx.lineTo(noseX, noseY);
+    ctx.strokeStyle = '#304551';
+    ctx.lineWidth = 5;
+    ctx.stroke();
+    ctx.strokeStyle = '#f5ce80';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function drawBay() {
+    ctx.save();
+    ctx.translate(destination.x, destination.y);
+    const stripe = delivered ? '#c9f0dc' : amber;
+    rounded(-42, -44, 84, 88, 12, '#284f681f');
+    ctx.beginPath();
+    ctx.roundRect(-37, -39, 74, 78, 9);
+    ctx.setLineDash([8, 7]);
+    ctx.strokeStyle = stripe;
+    ctx.lineWidth = 3;
+    ctx.stroke();
+    ctx.setLineDash([]);
+    for (const x of [-43, 36]) {
+      rounded(x, -35, 7, 15, 2, blue);
+      rounded(x, -35, 7, 6, 2, stripe);
+    }
+    ctx.restore();
+  }
+
+  function drawMarker(marker) {
+    ctx.save();
+    ctx.translate(marker.x, marker.y);
+    const atopVan = Math.hypot(marker.x - van.x, marker.y - van.y) < 45;
+    const atopBay = marker.x === destination.x && marker.y === destination.y;
+    const fill = delivered && atopBay ? '#c9f0dc' : amber;
+    const top = atopVan || atopBay ? -75 : -58;
+    ctx.font = '900 12px system-ui';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    const width = Math.ceil(ctx.measureText(marker.label).width) + 25;
+    rounded(-width / 2, top, width, 24, 7, ink);
+    rounded(-width / 2 + 4, top + 6, 3, 12, 1, fill);
+    ctx.fillStyle = fill;
+    ctx.fillText(marker.label, 2, top + 12);
+    ctx.beginPath();
+    ctx.moveTo(-6, top + 22);
+    ctx.lineTo(6, top + 22);
+    ctx.lineTo(0, top + 30);
+    ctx.fillStyle = ink;
+    ctx.fill();
+    ctx.restore();
+  }
+}
+
+// Paint the signed driveway and door apron alongside the cached garage sprite.
+function drawSnowGarageApproach(ctx, site, visible) {
+  const {trail, building, dropoff} = site;
+  if (!visible(site.lot.x, (trail[0][1]+site.lot.y)/2, 280)) return;
+  const slate = '#34576d';
+  const amber = '#ffdc91';
+
+  function paintRect(x, y, width, height, radius, fill) {
+    ctx.fillStyle = fill;
+    ctx.beginPath();
+    ctx.roundRect(x, y, width, height, radius);
+    ctx.fill();
+  }
+
+  function post(x, y) {
+    if (!visible(x, y, 23) || Math.hypot(x-dropoff.x,y-dropoff.y) < 64) return;
+    paintRect(x-7, y-2, 17, 6, 3, '#7195aa80');
+    paintRect(x-3, y-15, 6, 17, 2, slate);
+    paintRect(x-4, y-15, 8, 7, 2, amber);
+    paintRect(x-3, y-14, 5, 2, 1, '#fff0bb');
+  }
+
+  const [garageX, garageY] = building;
+  ctx.save();
+  if (visible(garageX, garageY+97, 75)) {
+    paintRect(garageX-49, garageY+63, 98, 71, 9, '#8cafc33b');
+    paintRect(garageX-46, garageY+65, 92, 66, 7, '#d3e7ef');
+    for (const side of [-1, 1]) {
+      paintRect(garageX+side*41-2, garageY+78, 4, 43, 2, '#c4914b');
+      post(garageX+side*56, garageY+109);
+    }
+    paintRect(garageX-38, garageY+126, 76, 3, 1, '#f8fcfa');
+  }
+
+  for (let section = 1; section < trail.length-1; section++) {
+    const [startX,startY] = trail[section-1];
+    const [endX,endY] = trail[section];
+    const dx = endX-startX, dy = endY-startY;
+    const length = Math.hypot(dx,dy);
+    const x = startX+dx*.72, y = startY+dy*.72;
+    const offset = 73/length;
+    post(x+dy*offset,y-dx*offset);
+    post(x-dy*offset,y+dx*offset);
+  }
+
+  const [turnX,turnY] = trail[0];
+  const signX = turnX+103, signY = turnY+62;
+  if (!visible(signX,signY,68)) {
+    ctx.restore();
+    return;
+  }
+  ctx.translate(signX,signY);
+  paintRect(-39,3,82,8,4,'#7799ad74');
+  paintRect(-36,-12,6,20,2,slate);
+  paintRect(30,-12,6,20,2,slate);
+  paintRect(-51,-34,105,29,6,'#203d54');
+  paintRect(-50,-34,103,3,1,'#e4eff6');
+  paintRect(-45,-26,3,15,1,amber);
+  ctx.fillStyle = '#fff1c4';
+  ctx.font = '900 12px system-ui';
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('GARAGE',-36,-18);
+  ctx.beginPath();
+  ctx.moveTo(37,-24);
+  ctx.lineTo(24,-12);
+  ctx.moveTo(32,-12);
+  ctx.lineTo(24,-12);
+  ctx.lineTo(24,-20);
+  ctx.strokeStyle = amber;
+  ctx.lineWidth = 2.5;
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
+  ctx.stroke();
+  ctx.restore();
+}
+
+window.vikSnowRescue = createSnowRescue({
+  storage:localStorage, world, player:()=>player, context:()=>g, viewport:()=>({width:W,height:H}),
+  active:()=>currentBiome==='snow'&&started&&!document.hidden&&!flight&&!lunarTransit&&!snowTransit&&!snowRide&&!barnGame&&!ufoFlight&&!cityRuined&&!recordBusy&&!garage.open&&!vehicleGarage.isOpen,
+  speed:()=>Math.abs(groundSpeed),
+  towInterrupted:()=>currentBiome!=='snow'||!!(snowTransit||snowRide||cityRuined),
+  ride:()=>vehicleGarage.choice==='default'&&specialMode?'special':vehicleGarage.choice,
+  notify:(message,t)=>{announce(message,t,3800);sayLearningPrompt(message);},
+  finish:(t,trophy)=>{
+    announce(trophy?'🏆 Trophy earned: '+trophy+'!':'Truck safely back at the garage!',t,4200);
+    if(muted)return;
+    try{
+      audio ||= new (window.AudioContext||window.webkitAudioContext)();
+      for(const delay of [0,.23]){
+        const now=audio.currentTime+delay, horn=audio.createOscillator(), volume=audio.createGain();
+        horn.type='triangle';horn.frequency.value=155;
+        volume.gain.setValueAtTime(.001,now);
+        volume.gain.exponentialRampToValueAtTime(.035,now+.025);
+        volume.gain.exponentialRampToValueAtTime(.001,now+.18);
+        horn.connect(volume).connect(audio.destination);horn.start(now);horn.stop(now+.19);
+      }
+    }catch{}
+  }
 });
 requestAnimationFrame(frame);
 </script><style id="viktor-brand-style">
@@ -7893,5 +8556,11 @@ requestAnimationFrame(frame);
 #controller-pause::backdrop{background:#061d2ac7}#controller-pause h2{margin:0 0 15px;color:#ffe8ad;text-align:center}
 #controller-pause .controller-pause-actions{display:grid;gap:9px}#controller-pause button{display:block;width:100%;min-height:44px;padding:9px 14px;border:1px solid #9eb9c1;border-radius:9px;background:#28576c;color:#fff;font:750 16px system-ui;cursor:pointer}
 #controller-pause p{margin:15px 0 0;text-align:center;color:#c9e0e5;font-size:12px}
+</style>
+<style id="alphabet-world-card-style">
+#cover #alphabet-play{background:linear-gradient(145deg,#386b68,#193e4e);border-color:#a9d6a5;text-decoration:none}
+#cover #alphabet-play .world-icon{background:#245959;border-color:#82b59e;color:#deefa3;font:900 clamp(16px,2.8vw,23px)/1 system-ui}
+#cover #alphabet-play strong{color:#ebf4c2}
+#cover #alphabet-play em{color:#d5e9db}
 </style>
 </html>

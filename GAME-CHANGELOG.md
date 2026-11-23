@@ -1,3 +1,9 @@
+# v1.54.0 — Alphabet Yard and Snow Summit Rescue
+
+- Added Alphabet Yard, a letter-towing world with spoken spelling cues, family celebrations and shuffled picture-word practice.
+- Added Snow Summit Rescue Crew, a tow truck, a standalone garage with its own driveway, and a separate rescue drop-off.
+- Added a spoken Big Dog celebration when Viktor grows to that stage.
+
 # v1.53.8 — Snow Summit art
 
 - Added shaded banks, icy curves, warm cabin doors and an amber garage entrance.
